@@ -7,7 +7,7 @@ import sys
 from pip._vendor.distlib.compat import raw_input
 
 tokens = [
-    'COMA', 'PUNTOCOMA',
+    'COMA', 'PUNTOCOMA','DOSPUNTOS',
     'REG', 'IMM', 'LABEL'
 ]
 
@@ -35,6 +35,7 @@ t_ignore = ' \t'
 
 t_COMA = r','
 t_PUNTOCOMA = r';'
+t_DOSPUNTOS = r':'
 
 def t_REG(t):
     r'[R][0-9]+'
@@ -73,3 +74,7 @@ test = 'D:/Isaac Porras/Semestre 8/Arqui/Proyecto2/FantasmCompiler/TestFiles/tes
 def FantASMAnalizer(cadena):
     analizador = lex.lex()
     analizador.input(cadena)
+    while True:
+        tok = analizador.token()
+        if not tok: break
+        print(tok)
