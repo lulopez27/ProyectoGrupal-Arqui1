@@ -1,0 +1,20 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmeticaTest.sv}
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv}
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Negativo.sv}
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Desborde.sv}
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Cero.sv}
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv}
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos/Mux8ALU.sv}
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv}
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Suma.sv}
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Resta.sv}
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Multiplicacion.sv}
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Modulo.sv}
+
