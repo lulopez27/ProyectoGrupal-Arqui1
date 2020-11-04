@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "immout",
+					"strict" : false
+				},
+				{
+					"name" : "wmem",
+					"strict" : false
+				},
+				{
+					"name" : "rmem",
+					"strict" : false
+				},
+				{
+					"name" : "wreg",
+					"strict" : false
+				},
+				{
+					"name" : "ALUins[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUins[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUins[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ExtndSel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ExtndSel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "immin",
+					"strict" : false
+				},
+				{
+					"name" : "inst[0]",
+					"strict" : false
+				},
+				{
+					"name" : "op[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[1]",
+					"strict" : false
+				},
+				{
+					"name" : "op[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
