@@ -1,6 +1,6 @@
 module PipelineEx( input clk, rst,
 						input[31:0]R1i,R2i,R3i,input[3:0]destRegi,input[2:0] ALUinsi,input wmemi,rmemi,wregi,immi,
-						output logic[31:0]R1o,R2o,R3o output logic[3:0]destRegi,
+						output logic[31:0]R1o,R2o,R3o, output logic[3:0]destReg,
 						output logic[2:0] ALUinso,output logic wmemo,rmemo,wrego,immo);
 	always_ff@(posedge clk or posedge rst)
 		if(rst) begin

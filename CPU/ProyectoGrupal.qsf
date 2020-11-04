@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY ControlUnit
+set_global_assignment -name TOP_LEVEL_ENTITY UnidadLogicoAritmetica
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:48:50  NOVEMBER 02, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
@@ -48,13 +48,25 @@ set_global_assignment -name BOARD "DE1-SoC Board"
 set_global_assignment -name QIP_FILE memory.qip
 set_global_assignment -name SYSTEMVERILOG_FILE ControlUnit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ControlUnitDeco.sv
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name SYSTEMVERILOG_FILE ExtendDeco.sv
 set_global_assignment -name SYSTEMVERILOG_FILE PipelineDecode.sv
 set_global_assignment -name SYSTEMVERILOG_FILE PipelineEx.sv
 set_global_assignment -name SYSTEMVERILOG_FILE PipelineMem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE PipelineWB.sv
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SYSTEMVERILOG_FILE forwardMem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/UnidadLogicoAritmeticaTest.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/UnidadLogicoAritmetica.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/Banderas/Negativo.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/Banderas/Desborde.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/Banderas/Cero.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/Banderas/Acarreo.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/Modulos/Mux8ALU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/Operaciones/DesplazamientoDerecha.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/Operaciones/Suma.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/Operaciones/Resta.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/Operaciones/Multiplicacion.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU/Operaciones/Modulo.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
