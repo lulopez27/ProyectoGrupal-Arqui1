@@ -24,7 +24,7 @@ def p_cuerpo(p):
             | label
 
     '''
-    p[0] = p[1]
+    p[0] = (p[1])
 
 def p_label(p):
     '''
@@ -33,40 +33,102 @@ def p_label(p):
     '''
 
     if (p[1] != '$'):
-        p[0] = p[1]
+        p[0] = (p[1])
         print(p[0])
     else:
         p[0] = p[1]
 def p_instruccion(p):
     '''
-    instruccion : instName REG COMA REG COMA REG PUNTOCOMA cuerpo
-                | instName REG COMA REG COMA IMM PUNTOCOMA cuerpo
+    instruccion : arimtethicInstruction
+                  | CompareInstruction
+                  | memoryInstruction
+                  | jumpInstruction
+                  | espInstruction
+    '''
+    p[0] = p[1]
+    
+
+def p_espInstruction(p):
+    '''
+    espInstruction : ESP PUNTOCOMA cuerpo
+                    | empty
+    '''
+    p[0] = (p[1])
+    print(p[0])
+
+def p_CompareInstruction(p):
+    '''
+    CompareInstruction : CompareInstName REG COMA REG PUNTOCOMA cuerpo
+                        | CompareInstName REG COMA IMM PUNTOCOMA cuerpo
+                        | empty
+    '''
+    p[0] = (p[1],p[2],p[4])
+    print(p[0])
+def p_jumpInstruction(p):
+    '''
+    jumpInstruction : JumpInstName LABEL PUNTOCOMA cuerpo
+    | empty
+    '''
+    p[0] = (p[1], p[2])
+    print(p[0])
+
+def p_memoryInstruction(p):
+    '''
+    memoryInstruction : MemoryInstName REG COMA REG PUNTOCOMA cuerpo
+                        | MemoryInstName REG COMA IMM PUNTOCOMA cuerpo
+                        | empty
+    '''
+    p[0] = (p[1], p[2], p[4])
+    print(p[0])
+
+def p_arimtethicInstruction(p):
+    '''
+    arimtethicInstruction : ArithmeticInstName REG COMA REG COMA REG PUNTOCOMA cuerpo
+                | ArithmeticInstName REG COMA REG COMA IMM PUNTOCOMA cuerpo
                 | empty
     '''
     if(p[1] != '$'):
-        p[0] = (p[1],p[2],p[4],p[6])
-        print(p[0])
+            p[0] = (p[1],p[2],p[4],p[6])
+            print(p[0])
     else:
         p[0] = p[1]
 
 
-
-def p_instName(p):
+def p_CompareInstName(p):
     '''
-    instName : GDR
+    CompareInstName :  CMPR
+                        | CMPI
+
+    '''
+
+    p[0] = p[1]
+def p_JumpInstName(p):
+    '''
+    JumpInstName :  SAL
+            | SIG
+    '''
+
+    p[0] = p[1]
+
+def p_MemoryInstName(p):
+    '''
+    MemoryInstName : GDR
             | CAR
             | MOVR
             | MOVI
-            | SUM
+    '''
+
+    p[0] = p[1]
+
+
+def p_ArithmeticInstName(p):
+    '''
+    ArithmeticInstName :  SUM
             | RES
             | MOD
             | MUL
             | DDR
-            | CMPR
-            | CMPI
             | SAL
-            | SIG
-            | ESP
     '''
 
     p[0] = p[1]
@@ -77,6 +139,9 @@ def p_empty(p):
     '''
     p[0] = '$'
 
+def p_error(p):
+    print("error de sintaxis " + str(p))
+    print("error en la linea " + str(p.lineno))
 
 def FantASMSintacticAnalizer(cadena):
     parser = yacc.yacc()
