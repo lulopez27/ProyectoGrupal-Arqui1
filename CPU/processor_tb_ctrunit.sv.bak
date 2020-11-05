@@ -1,0 +1,6 @@
+module processor_tb_ctrunit();
+	processor prcs(clk, rst);
+	always
+	
+	end
+endmodule
