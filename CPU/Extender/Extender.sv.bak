@@ -1,0 +1,18 @@
+module Extender (input logic [27:0] inmeIn,
+				     input logic [1:0] Sel,
+					  output logic [31:0] inmeOut);
+	
+	always_comb
+		case(Sel)
+		// 15 bits
+		2'b00: inmeOut = {inmeIn[14], 17'b0, inme[13:0]};
+		// 19 bits
+		2'b01: inmeOut = {inmeIn[18], 13'b0, inme[17:0]};
+		// 23 bits
+		2'b10: inmeOut = {inmeIn[22], 9'b0, inme[21:0]};
+		// 28 bits
+		2'b11: inmeOut = {inmeIn[27], 4'b0, inme[26:0]}
+		default: inmeOut = 0;
+		endcase
+		
+endmodule 
