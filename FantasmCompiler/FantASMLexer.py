@@ -1,10 +1,5 @@
 import ply.lex as lex
-import re
-import codecs
-import os
-import sys
 
-from pip._vendor.distlib.compat import raw_input
 
 tokens = [
     'COMA', 'PUNTOCOMA','DOSPUNTOS',
@@ -27,6 +22,8 @@ reservadas = {
     'SAL': 'SAL',
     'SIG': 'SIG',
     'ESP': 'ESP',
+    'INICIO': 'INICIO',
+    'FIN': 'FIN',
 }
 
 tokens = tokens + list(reservadas.values())
@@ -65,16 +62,20 @@ def t_IMM(t):
     return t
 
 def t_error(t):
-    print("Caracter ilegal '%s'" % t.value[0])
+    #print("Caracter ilegal '%s'" % t.value[0])
     t.lexer.skip(1)
 
 
 
-test = 'D:/Isaac Porras/Semestre 8/Arqui/Proyecto2/FantasmCompiler/TestFiles/test.txt'
-def FantASMAnalizer(cadena):
+
+def FantASMLexicalAnalizer(cadena):
+    lexerResult = []
     analizador = lex.lex()
     analizador.input(cadena)
     while True:
         tok = analizador.token()
         if not tok: break
-        print(tok)
+        lexerResult.append(tok)
+    return lexerResult
+
+

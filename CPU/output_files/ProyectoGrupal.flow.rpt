@@ -1,5 +1,5 @@
 Flow report for ProyectoGrupal
-Wed Nov 04 14:05:27 2020
+Thu Nov 05 12:15:47 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,10 +41,10 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Wed Nov 04 14:05:27 2020       ;
+; Flow Status                 ; Successful - Thu Nov 05 12:15:47 2020       ;
 ; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name               ; ProyectoGrupal                              ;
-; Top-level Entity Name       ; ExtenderTest                                ;
+; Top-level Entity Name       ; InstructionMemoryTest                       ;
 ; Family                      ; Cyclone V                                   ;
 ; Device                      ; 5CSEMA5F31C6                                ;
 ; Timing Models               ; Final                                       ;
@@ -63,27 +63,26 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/04/2020 14:05:17 ;
+; Start date & time ; 11/05/2020 12:15:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ProyectoGrupal      ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                              ;
-+-------------------------------------+----------------------------------------+----------------+--------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name  ; Section Id     ;
-+-------------------------------------+----------------------------------------+----------------+--------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 134660530029841.160452031719508        ; --             ; --           ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --             ; --           ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>         ; --           ; --             ;
-; MISC_FILE                           ; memory_bb.v                            ; --             ; --           ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; ExtenderTest ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; ExtenderTest ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; ExtenderTest ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --           ; --             ;
-; TOP_LEVEL_ENTITY                    ; ExtenderTest                           ; ProyectoGrupal ; --           ; --             ;
-+-------------------------------------+----------------------------------------+----------------+--------------+----------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                       ;
++-------------------------------------+----------------------------------------+----------------+-----------------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name           ; Section Id     ;
++-------------------------------------+----------------------------------------+----------------+-----------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 134660530029841.160460013502748        ; --             ; --                    ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --             ; --                    ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>         ; --                    ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; InstructionMemoryTest ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; InstructionMemoryTest ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; InstructionMemoryTest ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --                    ; --             ;
+; TOP_LEVEL_ENTITY                    ; InstructionMemoryTest                  ; ProyectoGrupal ; --                    ; --             ;
++-------------------------------------+----------------------------------------+----------------+-----------------------+----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -91,8 +90,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4767 MB             ; 00:00:25                           ;
-; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:25                           ;
+; Analysis & Elaboration ; 00:00:12     ; 1.0                     ; 4765 MB             ; 00:00:26                           ;
+; Total                  ; 00:00:12     ; --                      ; --                  ; 00:00:26                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,0 +1,13 @@
+module ControlUnitDeco(input [4:0] in, output [2:0] inst)
+	always @(in)
+	begin
+		case(in)
+			5'b11000 : inst = 000; //ADD
+			5'b11001 : inst = 001; //LSR
+			5'b11010 : inst = 010; //SUB
+			5'b10100 : inst = 011; //MOV
+			5'b11100 : inst = 100; //MOD
+			5'b11110 : inst = 110; //MUL
+			default  : inst = 111; //NONE
+			
+endmodule
