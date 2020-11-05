@@ -1,4 +1,4 @@
-module processor_tb_ctrunit();
+module ctrlunit_tb();
 	logic [1:0] op, inst;
 	logic immediatei;
 	logic immediateo, wmem, rmem, wreg;

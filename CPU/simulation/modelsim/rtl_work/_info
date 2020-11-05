@@ -7,56 +7,107 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/simulation/modelsim
-vInstructionMemory
+Z0 dC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/simulation/modelsim
+vControlUnit
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1604600162
+!s110 1604609775
 !i10b 1
-!s100 lfi47^FelbgPY=VFJnaWc1
-I?9Jo7>MFSFB;gkoPn<gb11
+!s100 A1:`g2:H<L<ca]EGm8X6>0
+IEGSD`80Aa^oYIXcMWhzCF2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
-!s105 InstructionMemory_sv_unit
+!s105 ControlUnit_sv_unit
 S1
 R0
-w1604596441
-8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv
-FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv
+w1604605547
+8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv
+FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv
 L0 1
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1604600161.000000
-!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv|
+!s108 1604609774.000000
+!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv|
 !i113 1
 Z4 o-sv -work work
-Z5 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias}
-Z6 tCvgOpt 0
-n@instruction@memory
-vInstructionMemoryTest
+!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit
+Z5 tCvgOpt 0
+n@control@unit
+vControlUnitDeco
 R1
-!s110 1604600161
+Z6 !s110 1604609777
 !i10b 1
-!s100 75[N1l_oNiD=9fmmZ>IbX1
-I<h[DJ8kk^4Q[k8EZ`PLH<0
+!s100 lzEGIR:RIU5liK>jBjBbG2
+IAj]ON^9]U9oOPBVzR8R0Y1
 R2
-!s105 InstructionMemoryTest_sv_unit
+!s105 ControlUnitDeco_sv_unit
 S1
 R0
-w1604600108
-8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemoryTest.sv
-FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemoryTest.sv
+w1604609515
+8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ControlUnitDeco.sv
+FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ControlUnitDeco.sv
 L0 1
 R3
 r1
 !s85 0
 31
-!s108 1604600160.000000
-!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemoryTest.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemoryTest.sv|
+!s108 1604609776.000000
+!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ControlUnitDeco.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ControlUnitDeco.sv|
 !i113 1
 R4
+Z7 !s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders
 R5
+n@control@unit@deco
+vctrlunit_tb
+R1
 R6
-n@instruction@memory@test
+!i10b 1
+!s100 cFH3T9P9d=NigUUfUjP9N0
+I69bkYX5IM62XCnoAjIC_J2
+R2
+!s105 ctrlunit_tb_sv_unit
+S1
+R0
+w1604608406
+8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv
+FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1604609777.000000
+!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv|
+!i113 1
+R4
+!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests
+R5
+vExtendDeco
+R1
+!s110 1604609776
+!i10b 1
+!s100 =J73HYk4hl<7YCcGkLoNJ1
+I5cRm:HIelNDHY6ozhJj[33
+R2
+!s105 ExtendDeco_sv_unit
+S1
+R0
+w1604609756
+8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ExtendDeco.sv
+FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ExtendDeco.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1604609775.000000
+!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ExtendDeco.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ExtendDeco.sv|
+!i113 1
+R4
+R7
+R5
+n@extend@deco
