@@ -1,0 +1,520 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> Start
+Rule 1     Start -> code
+Rule 2     code -> INICIO DOSPUNTOS cuerpo FIN
+Rule 3     cuerpo -> instruccion
+Rule 4     cuerpo -> label
+Rule 5     label -> LABEL DOSPUNTOS cuerpo
+Rule 6     label -> empty
+Rule 7     instruccion -> instName REG COMA REG COMA REG PUNTOCOMA cuerpo
+Rule 8     instruccion -> instName REG COMA REG COMA IMM PUNTOCOMA cuerpo
+Rule 9     instruccion -> empty
+Rule 10    instName -> GDR
+Rule 11    instName -> CAR
+Rule 12    instName -> MOVR
+Rule 13    instName -> MOVI
+Rule 14    instName -> SUM
+Rule 15    instName -> RES
+Rule 16    instName -> MOD
+Rule 17    instName -> MUL
+Rule 18    instName -> DDR
+Rule 19    instName -> CMPR
+Rule 20    instName -> CMPI
+Rule 21    instName -> SAL
+Rule 22    instName -> SIG
+Rule 23    instName -> ESP
+Rule 24    empty -> <empty>
+
+Terminals, with rules where they appear
+
+CAR                  : 11
+CMPI                 : 20
+CMPR                 : 19
+COMA                 : 7 7 8 8
+DDR                  : 18
+DOSPUNTOS            : 2 5
+ESP                  : 23
+FIN                  : 2
+GDR                  : 10
+IMM                  : 8
+INICIO               : 2
+LABEL                : 5
+MOD                  : 16
+MOVI                 : 13
+MOVR                 : 12
+MUL                  : 17
+PUNTOCOMA            : 7 8
+REG                  : 7 7 7 8 8
+RES                  : 15
+SAL                  : 21
+SIG                  : 22
+SUM                  : 14
+error                : 
+
+Nonterminals, with rules where they appear
+
+Start                : 0
+code                 : 1
+cuerpo               : 2 5 7 8
+empty                : 6 9
+instName             : 7 8
+instruccion          : 3
+label                : 4
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . Start
+    (1) Start -> . code
+    (2) code -> . INICIO DOSPUNTOS cuerpo FIN
+
+    INICIO          shift and go to state 3
+
+    Start                          shift and go to state 1
+    code                           shift and go to state 2
+
+state 1
+
+    (0) S' -> Start .
+
+
+
+state 2
+
+    (1) Start -> code .
+
+    $end            reduce using rule 1 (Start -> code .)
+
+
+state 3
+
+    (2) code -> INICIO . DOSPUNTOS cuerpo FIN
+
+    DOSPUNTOS       shift and go to state 4
+
+
+state 4
+
+    (2) code -> INICIO DOSPUNTOS . cuerpo FIN
+    (3) cuerpo -> . instruccion
+    (4) cuerpo -> . label
+    (7) instruccion -> . instName REG COMA REG COMA REG PUNTOCOMA cuerpo
+    (8) instruccion -> . instName REG COMA REG COMA IMM PUNTOCOMA cuerpo
+    (9) instruccion -> . empty
+    (5) label -> . LABEL DOSPUNTOS cuerpo
+    (6) label -> . empty
+    (10) instName -> . GDR
+    (11) instName -> . CAR
+    (12) instName -> . MOVR
+    (13) instName -> . MOVI
+    (14) instName -> . SUM
+    (15) instName -> . RES
+    (16) instName -> . MOD
+    (17) instName -> . MUL
+    (18) instName -> . DDR
+    (19) instName -> . CMPR
+    (20) instName -> . CMPI
+    (21) instName -> . SAL
+    (22) instName -> . SIG
+    (23) instName -> . ESP
+    (24) empty -> .
+
+    LABEL           shift and go to state 10
+    GDR             shift and go to state 11
+    CAR             shift and go to state 12
+    MOVR            shift and go to state 13
+    MOVI            shift and go to state 14
+    SUM             shift and go to state 15
+    RES             shift and go to state 16
+    MOD             shift and go to state 17
+    MUL             shift and go to state 18
+    DDR             shift and go to state 19
+    CMPR            shift and go to state 20
+    CMPI            shift and go to state 21
+    SAL             shift and go to state 22
+    SIG             shift and go to state 23
+    ESP             shift and go to state 24
+    FIN             reduce using rule 24 (empty -> .)
+
+    cuerpo                         shift and go to state 5
+    instruccion                    shift and go to state 6
+    label                          shift and go to state 7
+    instName                       shift and go to state 8
+    empty                          shift and go to state 9
+
+state 5
+
+    (2) code -> INICIO DOSPUNTOS cuerpo . FIN
+
+    FIN             shift and go to state 25
+
+
+state 6
+
+    (3) cuerpo -> instruccion .
+
+    FIN             reduce using rule 3 (cuerpo -> instruccion .)
+
+
+state 7
+
+    (4) cuerpo -> label .
+
+    FIN             reduce using rule 4 (cuerpo -> label .)
+
+
+state 8
+
+    (7) instruccion -> instName . REG COMA REG COMA REG PUNTOCOMA cuerpo
+    (8) instruccion -> instName . REG COMA REG COMA IMM PUNTOCOMA cuerpo
+
+    REG             shift and go to state 26
+
+
+state 9
+
+    (9) instruccion -> empty .
+    (6) label -> empty .
+
+  ! reduce/reduce conflict for FIN resolved using rule 6 (label -> empty .)
+    FIN             reduce using rule 6 (label -> empty .)
+
+  ! FIN             [ reduce using rule 9 (instruccion -> empty .) ]
+
+
+state 10
+
+    (5) label -> LABEL . DOSPUNTOS cuerpo
+
+    DOSPUNTOS       shift and go to state 27
+
+
+state 11
+
+    (10) instName -> GDR .
+
+    REG             reduce using rule 10 (instName -> GDR .)
+
+
+state 12
+
+    (11) instName -> CAR .
+
+    REG             reduce using rule 11 (instName -> CAR .)
+
+
+state 13
+
+    (12) instName -> MOVR .
+
+    REG             reduce using rule 12 (instName -> MOVR .)
+
+
+state 14
+
+    (13) instName -> MOVI .
+
+    REG             reduce using rule 13 (instName -> MOVI .)
+
+
+state 15
+
+    (14) instName -> SUM .
+
+    REG             reduce using rule 14 (instName -> SUM .)
+
+
+state 16
+
+    (15) instName -> RES .
+
+    REG             reduce using rule 15 (instName -> RES .)
+
+
+state 17
+
+    (16) instName -> MOD .
+
+    REG             reduce using rule 16 (instName -> MOD .)
+
+
+state 18
+
+    (17) instName -> MUL .
+
+    REG             reduce using rule 17 (instName -> MUL .)
+
+
+state 19
+
+    (18) instName -> DDR .
+
+    REG             reduce using rule 18 (instName -> DDR .)
+
+
+state 20
+
+    (19) instName -> CMPR .
+
+    REG             reduce using rule 19 (instName -> CMPR .)
+
+
+state 21
+
+    (20) instName -> CMPI .
+
+    REG             reduce using rule 20 (instName -> CMPI .)
+
+
+state 22
+
+    (21) instName -> SAL .
+
+    REG             reduce using rule 21 (instName -> SAL .)
+
+
+state 23
+
+    (22) instName -> SIG .
+
+    REG             reduce using rule 22 (instName -> SIG .)
+
+
+state 24
+
+    (23) instName -> ESP .
+
+    REG             reduce using rule 23 (instName -> ESP .)
+
+
+state 25
+
+    (2) code -> INICIO DOSPUNTOS cuerpo FIN .
+
+    $end            reduce using rule 2 (code -> INICIO DOSPUNTOS cuerpo FIN .)
+
+
+state 26
+
+    (7) instruccion -> instName REG . COMA REG COMA REG PUNTOCOMA cuerpo
+    (8) instruccion -> instName REG . COMA REG COMA IMM PUNTOCOMA cuerpo
+
+    COMA            shift and go to state 28
+
+
+state 27
+
+    (5) label -> LABEL DOSPUNTOS . cuerpo
+    (3) cuerpo -> . instruccion
+    (4) cuerpo -> . label
+    (7) instruccion -> . instName REG COMA REG COMA REG PUNTOCOMA cuerpo
+    (8) instruccion -> . instName REG COMA REG COMA IMM PUNTOCOMA cuerpo
+    (9) instruccion -> . empty
+    (5) label -> . LABEL DOSPUNTOS cuerpo
+    (6) label -> . empty
+    (10) instName -> . GDR
+    (11) instName -> . CAR
+    (12) instName -> . MOVR
+    (13) instName -> . MOVI
+    (14) instName -> . SUM
+    (15) instName -> . RES
+    (16) instName -> . MOD
+    (17) instName -> . MUL
+    (18) instName -> . DDR
+    (19) instName -> . CMPR
+    (20) instName -> . CMPI
+    (21) instName -> . SAL
+    (22) instName -> . SIG
+    (23) instName -> . ESP
+    (24) empty -> .
+
+    LABEL           shift and go to state 10
+    GDR             shift and go to state 11
+    CAR             shift and go to state 12
+    MOVR            shift and go to state 13
+    MOVI            shift and go to state 14
+    SUM             shift and go to state 15
+    RES             shift and go to state 16
+    MOD             shift and go to state 17
+    MUL             shift and go to state 18
+    DDR             shift and go to state 19
+    CMPR            shift and go to state 20
+    CMPI            shift and go to state 21
+    SAL             shift and go to state 22
+    SIG             shift and go to state 23
+    ESP             shift and go to state 24
+    FIN             reduce using rule 24 (empty -> .)
+
+    cuerpo                         shift and go to state 29
+    instruccion                    shift and go to state 6
+    label                          shift and go to state 7
+    instName                       shift and go to state 8
+    empty                          shift and go to state 9
+
+state 28
+
+    (7) instruccion -> instName REG COMA . REG COMA REG PUNTOCOMA cuerpo
+    (8) instruccion -> instName REG COMA . REG COMA IMM PUNTOCOMA cuerpo
+
+    REG             shift and go to state 30
+
+
+state 29
+
+    (5) label -> LABEL DOSPUNTOS cuerpo .
+
+    FIN             reduce using rule 5 (label -> LABEL DOSPUNTOS cuerpo .)
+
+
+state 30
+
+    (7) instruccion -> instName REG COMA REG . COMA REG PUNTOCOMA cuerpo
+    (8) instruccion -> instName REG COMA REG . COMA IMM PUNTOCOMA cuerpo
+
+    COMA            shift and go to state 31
+
+
+state 31
+
+    (7) instruccion -> instName REG COMA REG COMA . REG PUNTOCOMA cuerpo
+    (8) instruccion -> instName REG COMA REG COMA . IMM PUNTOCOMA cuerpo
+
+    REG             shift and go to state 32
+    IMM             shift and go to state 33
+
+
+state 32
+
+    (7) instruccion -> instName REG COMA REG COMA REG . PUNTOCOMA cuerpo
+
+    PUNTOCOMA       shift and go to state 34
+
+
+state 33
+
+    (8) instruccion -> instName REG COMA REG COMA IMM . PUNTOCOMA cuerpo
+
+    PUNTOCOMA       shift and go to state 35
+
+
+state 34
+
+    (7) instruccion -> instName REG COMA REG COMA REG PUNTOCOMA . cuerpo
+    (3) cuerpo -> . instruccion
+    (4) cuerpo -> . label
+    (7) instruccion -> . instName REG COMA REG COMA REG PUNTOCOMA cuerpo
+    (8) instruccion -> . instName REG COMA REG COMA IMM PUNTOCOMA cuerpo
+    (9) instruccion -> . empty
+    (5) label -> . LABEL DOSPUNTOS cuerpo
+    (6) label -> . empty
+    (10) instName -> . GDR
+    (11) instName -> . CAR
+    (12) instName -> . MOVR
+    (13) instName -> . MOVI
+    (14) instName -> . SUM
+    (15) instName -> . RES
+    (16) instName -> . MOD
+    (17) instName -> . MUL
+    (18) instName -> . DDR
+    (19) instName -> . CMPR
+    (20) instName -> . CMPI
+    (21) instName -> . SAL
+    (22) instName -> . SIG
+    (23) instName -> . ESP
+    (24) empty -> .
+
+    LABEL           shift and go to state 10
+    GDR             shift and go to state 11
+    CAR             shift and go to state 12
+    MOVR            shift and go to state 13
+    MOVI            shift and go to state 14
+    SUM             shift and go to state 15
+    RES             shift and go to state 16
+    MOD             shift and go to state 17
+    MUL             shift and go to state 18
+    DDR             shift and go to state 19
+    CMPR            shift and go to state 20
+    CMPI            shift and go to state 21
+    SAL             shift and go to state 22
+    SIG             shift and go to state 23
+    ESP             shift and go to state 24
+    FIN             reduce using rule 24 (empty -> .)
+
+    instName                       shift and go to state 8
+    cuerpo                         shift and go to state 36
+    instruccion                    shift and go to state 6
+    label                          shift and go to state 7
+    empty                          shift and go to state 9
+
+state 35
+
+    (8) instruccion -> instName REG COMA REG COMA IMM PUNTOCOMA . cuerpo
+    (3) cuerpo -> . instruccion
+    (4) cuerpo -> . label
+    (7) instruccion -> . instName REG COMA REG COMA REG PUNTOCOMA cuerpo
+    (8) instruccion -> . instName REG COMA REG COMA IMM PUNTOCOMA cuerpo
+    (9) instruccion -> . empty
+    (5) label -> . LABEL DOSPUNTOS cuerpo
+    (6) label -> . empty
+    (10) instName -> . GDR
+    (11) instName -> . CAR
+    (12) instName -> . MOVR
+    (13) instName -> . MOVI
+    (14) instName -> . SUM
+    (15) instName -> . RES
+    (16) instName -> . MOD
+    (17) instName -> . MUL
+    (18) instName -> . DDR
+    (19) instName -> . CMPR
+    (20) instName -> . CMPI
+    (21) instName -> . SAL
+    (22) instName -> . SIG
+    (23) instName -> . ESP
+    (24) empty -> .
+
+    LABEL           shift and go to state 10
+    GDR             shift and go to state 11
+    CAR             shift and go to state 12
+    MOVR            shift and go to state 13
+    MOVI            shift and go to state 14
+    SUM             shift and go to state 15
+    RES             shift and go to state 16
+    MOD             shift and go to state 17
+    MUL             shift and go to state 18
+    DDR             shift and go to state 19
+    CMPR            shift and go to state 20
+    CMPI            shift and go to state 21
+    SAL             shift and go to state 22
+    SIG             shift and go to state 23
+    ESP             shift and go to state 24
+    FIN             reduce using rule 24 (empty -> .)
+
+    instName                       shift and go to state 8
+    cuerpo                         shift and go to state 37
+    instruccion                    shift and go to state 6
+    label                          shift and go to state 7
+    empty                          shift and go to state 9
+
+state 36
+
+    (7) instruccion -> instName REG COMA REG COMA REG PUNTOCOMA cuerpo .
+
+    FIN             reduce using rule 7 (instruccion -> instName REG COMA REG COMA REG PUNTOCOMA cuerpo .)
+
+
+state 37
+
+    (8) instruccion -> instName REG COMA REG COMA IMM PUNTOCOMA cuerpo .
+
+    FIN             reduce using rule 8 (instruccion -> instName REG COMA REG COMA IMM PUNTOCOMA cuerpo .)
+
+WARNING: 
+WARNING: Conflicts:
+WARNING: 
+WARNING: reduce/reduce conflict in state 9 resolved using rule (label -> empty)
+WARNING: rejected rule (instruccion -> empty) in state 9
+WARNING: Rule (instruccion -> empty) is never reduced
