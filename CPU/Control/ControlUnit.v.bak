@@ -1,4 +1,0 @@
-module ControlUnit(input clk, rst, input[1:0] no_operands, input[3:0] operation);
-
-
-endmodule

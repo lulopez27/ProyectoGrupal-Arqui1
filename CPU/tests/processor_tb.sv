@@ -1,3 +1,3 @@
 module processor_tb();
-	processor prcs(clk, rst);
+	//processor prcs(clk, rst);
 endmodule
