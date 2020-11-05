@@ -11,15 +11,12 @@ def p_Start(p):
     '''
     Start : code
     '''
-    print(p[0])
+
 
 def p_Code(p):
     '''
     code : INICIO DOSPUNTOS cuerpo FIN
     '''
-    
-
-    print(p[0])
 
 def p_cuerpo(p):
     '''
@@ -34,15 +31,25 @@ def p_label(p):
     label : LABEL DOSPUNTOS cuerpo
             | empty
     '''
-    p[0] = p[1]
+
+    if (p[1] != '$'):
+        p[0] = p[1]
+        print(p[0])
+    else:
+        p[0] = p[1]
 def p_instruccion(p):
     '''
     instruccion : instName REG COMA REG COMA REG PUNTOCOMA cuerpo
                 | instName REG COMA REG COMA IMM PUNTOCOMA cuerpo
                 | empty
     '''
-    p[0] = (p[1],p[2],p[4],p[6])
-    print(p[0])
+    if(p[1] != '$'):
+        p[0] = (p[1],p[2],p[4],p[6])
+        print(p[0])
+    else:
+        p[0] = p[1]
+
+
 
 def p_instName(p):
     '''
@@ -68,7 +75,7 @@ def p_empty(p):
     '''
     empty :
     '''
-    pass
+    p[0] = '$'
 
 
 def FantASMSintacticAnalizer(cadena):
