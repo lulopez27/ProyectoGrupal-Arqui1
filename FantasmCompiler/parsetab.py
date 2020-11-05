@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'CAR CMPI CMPR COMA DDR DOSPUNTOS ESP FIN GDR IMM INICIO LABEL MOD MOVI MOVR MUL PUNTOCOMA REG RES SAL SIG SUM\n    Start : code\n    \n    code : INICIO DOSPUNTOS cuerpo FIN\n    \n    cuerpo : instruccion\n            | label\n\n    \n    label : LABEL DOSPUNTOS cuerpo\n            | empty\n    \n    instruccion : instName REG COMA REG COMA REG PUNTOCOMA cuerpo\n                | instName REG COMA REG COMA IMM PUNTOCOMA cuerpo\n                | empty\n    \n    instName : GDR\n            | CAR\n            | MOVR\n            | MOVI\n            | SUM\n            | RES\n            | MOD\n            | MUL\n            | DDR\n            | CMPR\n            | CMPI\n            | SAL\n            | SIG\n            | ESP\n    \n    empty :\n    '
+_lr_signature = 'CAR CMPI CMPR COMA DDR DOSPUNTOS ESP FIN GDR IMM INICIO LABEL MOD MOVI MOVR MUL PUNTOCOMA REG RES SAL SIG SUM\n    Start : code\n    \n    code : INICIO DOSPUNTOS cuerpo FIN\n    \n    cuerpo : instruccion\n            | label\n\n    \n    label : LABEL DOSPUNTOS cuerpo\n            | empty\n    \n    instruccion : arimtethicInstruction\n                  | CompareInstruction\n                  | memoryInstruction\n                  | jumpInstruction\n                  | espInstruction\n    \n    espInstruction : ESP PUNTOCOMA cuerpo\n                    | empty\n    \n    CompareInstruction : CompareInstName REG COMA REG PUNTOCOMA cuerpo\n                        | CompareInstName REG COMA IMM PUNTOCOMA cuerpo\n                        | empty\n    \n    jumpInstruction : JumpInstName LABEL PUNTOCOMA cuerpo\n    | empty\n    \n    memoryInstruction : MemoryInstName REG COMA REG PUNTOCOMA cuerpo\n                        | MemoryInstName REG COMA IMM PUNTOCOMA cuerpo\n                        | empty\n    \n    arimtethicInstruction : ArithmeticInstName REG COMA REG COMA REG PUNTOCOMA cuerpo\n                | ArithmeticInstName REG COMA REG COMA IMM PUNTOCOMA cuerpo\n                | empty\n    \n    CompareInstName :  CMPR\n                        | CMPI\n\n    \n    JumpInstName :  SAL\n            | SIG\n    \n    MemoryInstName : GDR\n            | CAR\n            | MOVR\n            | MOVI\n    \n    ArithmeticInstName :  SUM\n            | RES\n            | MOD\n            | MUL\n            | DDR\n            | SAL\n    \n    empty :\n    '
     
-_lr_action_items = {'INICIO':([0,],[3,]),'$end':([1,2,25,],[0,-1,-2,]),'DOSPUNTOS':([3,10,],[4,27,]),'LABEL':([4,27,34,35,],[10,10,10,10,]),'GDR':([4,27,34,35,],[11,11,11,11,]),'CAR':([4,27,34,35,],[12,12,12,12,]),'MOVR':([4,27,34,35,],[13,13,13,13,]),'MOVI':([4,27,34,35,],[14,14,14,14,]),'SUM':([4,27,34,35,],[15,15,15,15,]),'RES':([4,27,34,35,],[16,16,16,16,]),'MOD':([4,27,34,35,],[17,17,17,17,]),'MUL':([4,27,34,35,],[18,18,18,18,]),'DDR':([4,27,34,35,],[19,19,19,19,]),'CMPR':([4,27,34,35,],[20,20,20,20,]),'CMPI':([4,27,34,35,],[21,21,21,21,]),'SAL':([4,27,34,35,],[22,22,22,22,]),'SIG':([4,27,34,35,],[23,23,23,23,]),'ESP':([4,27,34,35,],[24,24,24,24,]),'FIN':([4,5,6,7,9,27,29,34,35,36,37,],[-24,25,-3,-4,-6,-24,-5,-24,-24,-7,-8,]),'REG':([8,11,12,13,14,15,16,17,18,19,20,21,22,23,24,28,31,],[26,-10,-11,-12,-13,-14,-15,-16,-17,-18,-19,-20,-21,-22,-23,30,32,]),'COMA':([26,30,],[28,31,]),'IMM':([31,],[33,]),'PUNTOCOMA':([32,33,],[34,35,]),}
+_lr_action_items = {'INICIO':([0,],[3,]),'$end':([1,2,33,],[0,-1,-2,]),'DOSPUNTOS':([3,13,],[4,34,]),'LABEL':([4,18,25,32,34,39,44,53,54,55,56,63,64,],[13,38,-27,-28,13,13,13,13,13,13,13,13,13,]),'ESP':([4,34,39,44,53,54,55,56,63,64,],[19,19,19,19,19,19,19,19,19,19,]),'FIN':([4,5,6,7,8,9,10,11,12,14,34,39,40,44,45,51,53,54,55,56,59,60,61,62,63,64,65,66,],[-39,33,-3,-4,-7,-8,-9,-10,-11,-6,-39,-39,-5,-39,-12,-17,-39,-39,-39,-39,-14,-15,-19,-20,-39,-39,-22,-23,]),'SUM':([4,34,39,44,53,54,55,56,63,64,],[20,20,20,20,20,20,20,20,20,20,]),'RES':([4,34,39,44,53,54,55,56,63,64,],[21,21,21,21,21,21,21,21,21,21,]),'MOD':([4,34,39,44,53,54,55,56,63,64,],[22,22,22,22,22,22,22,22,22,22,]),'MUL':([4,34,39,44,53,54,55,56,63,64,],[23,23,23,23,23,23,23,23,23,23,]),'DDR':([4,34,39,44,53,54,55,56,63,64,],[24,24,24,24,24,24,24,24,24,24,]),'SAL':([4,34,39,44,53,54,55,56,63,64,],[25,25,25,25,25,25,25,25,25,25,]),'CMPR':([4,34,39,44,53,54,55,56,63,64,],[26,26,26,26,26,26,26,26,26,26,]),'CMPI':([4,34,39,44,53,54,55,56,63,64,],[27,27,27,27,27,27,27,27,27,27,]),'GDR':([4,34,39,44,53,54,55,56,63,64,],[28,28,28,28,28,28,28,28,28,28,]),'CAR':([4,34,39,44,53,54,55,56,63,64,],[29,29,29,29,29,29,29,29,29,29,]),'MOVR':([4,34,39,44,53,54,55,56,63,64,],[30,30,30,30,30,30,30,30,30,30,]),'MOVI':([4,34,39,44,53,54,55,56,63,64,],[31,31,31,31,31,31,31,31,31,31,]),'SIG':([4,34,39,44,53,54,55,56,63,64,],[32,32,32,32,32,32,32,32,32,32,]),'REG':([15,16,17,20,21,22,23,24,25,26,27,28,29,30,31,41,42,43,52,],[35,36,37,-33,-34,-35,-36,-37,-38,-25,-26,-29,-30,-31,-32,46,47,49,57,]),'PUNTOCOMA':([19,38,47,48,49,50,57,58,],[39,44,53,54,55,56,63,64,]),'COMA':([35,36,37,46,],[41,42,43,52,]),'IMM':([42,43,52,],[48,50,58,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -17,7 +17,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'Start':([0,],[1,]),'code':([0,],[2,]),'cuerpo':([4,27,34,35,],[5,29,36,37,]),'instruccion':([4,27,34,35,],[6,6,6,6,]),'label':([4,27,34,35,],[7,7,7,7,]),'instName':([4,27,34,35,],[8,8,8,8,]),'empty':([4,27,34,35,],[9,9,9,9,]),}
+_lr_goto_items = {'Start':([0,],[1,]),'code':([0,],[2,]),'cuerpo':([4,34,39,44,53,54,55,56,63,64,],[5,40,45,51,59,60,61,62,65,66,]),'instruccion':([4,34,39,44,53,54,55,56,63,64,],[6,6,6,6,6,6,6,6,6,6,]),'label':([4,34,39,44,53,54,55,56,63,64,],[7,7,7,7,7,7,7,7,7,7,]),'arimtethicInstruction':([4,34,39,44,53,54,55,56,63,64,],[8,8,8,8,8,8,8,8,8,8,]),'CompareInstruction':([4,34,39,44,53,54,55,56,63,64,],[9,9,9,9,9,9,9,9,9,9,]),'memoryInstruction':([4,34,39,44,53,54,55,56,63,64,],[10,10,10,10,10,10,10,10,10,10,]),'jumpInstruction':([4,34,39,44,53,54,55,56,63,64,],[11,11,11,11,11,11,11,11,11,11,]),'espInstruction':([4,34,39,44,53,54,55,56,63,64,],[12,12,12,12,12,12,12,12,12,12,]),'empty':([4,34,39,44,53,54,55,56,63,64,],[14,14,14,14,14,14,14,14,14,14,]),'ArithmeticInstName':([4,34,39,44,53,54,55,56,63,64,],[15,15,15,15,15,15,15,15,15,15,]),'CompareInstName':([4,34,39,44,53,54,55,56,63,64,],[16,16,16,16,16,16,16,16,16,16,]),'MemoryInstName':([4,34,39,44,53,54,55,56,63,64,],[17,17,17,17,17,17,17,17,17,17,]),'JumpInstName':([4,34,39,44,53,54,55,56,63,64,],[18,18,18,18,18,18,18,18,18,18,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -29,26 +29,41 @@ _lr_productions = [
   ("S' -> Start","S'",1,None,None,None),
   ('Start -> code','Start',1,'p_Start','FantASMSintax.py',12),
   ('code -> INICIO DOSPUNTOS cuerpo FIN','code',4,'p_Code','FantASMSintax.py',18),
-  ('cuerpo -> instruccion','cuerpo',1,'p_cuerpo','FantASMSintax.py',26),
-  ('cuerpo -> label','cuerpo',1,'p_cuerpo','FantASMSintax.py',27),
-  ('label -> LABEL DOSPUNTOS cuerpo','label',3,'p_label','FantASMSintax.py',34),
-  ('label -> empty','label',1,'p_label','FantASMSintax.py',35),
-  ('instruccion -> instName REG COMA REG COMA REG PUNTOCOMA cuerpo','instruccion',8,'p_instruccion','FantASMSintax.py',40),
-  ('instruccion -> instName REG COMA REG COMA IMM PUNTOCOMA cuerpo','instruccion',8,'p_instruccion','FantASMSintax.py',41),
-  ('instruccion -> empty','instruccion',1,'p_instruccion','FantASMSintax.py',42),
-  ('instName -> GDR','instName',1,'p_instName','FantASMSintax.py',48),
-  ('instName -> CAR','instName',1,'p_instName','FantASMSintax.py',49),
-  ('instName -> MOVR','instName',1,'p_instName','FantASMSintax.py',50),
-  ('instName -> MOVI','instName',1,'p_instName','FantASMSintax.py',51),
-  ('instName -> SUM','instName',1,'p_instName','FantASMSintax.py',52),
-  ('instName -> RES','instName',1,'p_instName','FantASMSintax.py',53),
-  ('instName -> MOD','instName',1,'p_instName','FantASMSintax.py',54),
-  ('instName -> MUL','instName',1,'p_instName','FantASMSintax.py',55),
-  ('instName -> DDR','instName',1,'p_instName','FantASMSintax.py',56),
-  ('instName -> CMPR','instName',1,'p_instName','FantASMSintax.py',57),
-  ('instName -> CMPI','instName',1,'p_instName','FantASMSintax.py',58),
-  ('instName -> SAL','instName',1,'p_instName','FantASMSintax.py',59),
-  ('instName -> SIG','instName',1,'p_instName','FantASMSintax.py',60),
-  ('instName -> ESP','instName',1,'p_instName','FantASMSintax.py',61),
-  ('empty -> <empty>','empty',0,'p_empty','FantASMSintax.py',68),
+  ('cuerpo -> instruccion','cuerpo',1,'p_cuerpo','FantASMSintax.py',23),
+  ('cuerpo -> label','cuerpo',1,'p_cuerpo','FantASMSintax.py',24),
+  ('label -> LABEL DOSPUNTOS cuerpo','label',3,'p_label','FantASMSintax.py',31),
+  ('label -> empty','label',1,'p_label','FantASMSintax.py',32),
+  ('instruccion -> arimtethicInstruction','instruccion',1,'p_instruccion','FantASMSintax.py',42),
+  ('instruccion -> CompareInstruction','instruccion',1,'p_instruccion','FantASMSintax.py',43),
+  ('instruccion -> memoryInstruction','instruccion',1,'p_instruccion','FantASMSintax.py',44),
+  ('instruccion -> jumpInstruction','instruccion',1,'p_instruccion','FantASMSintax.py',45),
+  ('instruccion -> espInstruction','instruccion',1,'p_instruccion','FantASMSintax.py',46),
+  ('espInstruction -> ESP PUNTOCOMA cuerpo','espInstruction',3,'p_espInstruction','FantASMSintax.py',53),
+  ('espInstruction -> empty','espInstruction',1,'p_espInstruction','FantASMSintax.py',54),
+  ('CompareInstruction -> CompareInstName REG COMA REG PUNTOCOMA cuerpo','CompareInstruction',6,'p_CompareInstruction','FantASMSintax.py',61),
+  ('CompareInstruction -> CompareInstName REG COMA IMM PUNTOCOMA cuerpo','CompareInstruction',6,'p_CompareInstruction','FantASMSintax.py',62),
+  ('CompareInstruction -> empty','CompareInstruction',1,'p_CompareInstruction','FantASMSintax.py',63),
+  ('jumpInstruction -> JumpInstName LABEL PUNTOCOMA cuerpo','jumpInstruction',4,'p_jumpInstruction','FantASMSintax.py',69),
+  ('jumpInstruction -> empty','jumpInstruction',1,'p_jumpInstruction','FantASMSintax.py',70),
+  ('memoryInstruction -> MemoryInstName REG COMA REG PUNTOCOMA cuerpo','memoryInstruction',6,'p_memoryInstruction','FantASMSintax.py',77),
+  ('memoryInstruction -> MemoryInstName REG COMA IMM PUNTOCOMA cuerpo','memoryInstruction',6,'p_memoryInstruction','FantASMSintax.py',78),
+  ('memoryInstruction -> empty','memoryInstruction',1,'p_memoryInstruction','FantASMSintax.py',79),
+  ('arimtethicInstruction -> ArithmeticInstName REG COMA REG COMA REG PUNTOCOMA cuerpo','arimtethicInstruction',8,'p_arimtethicInstruction','FantASMSintax.py',86),
+  ('arimtethicInstruction -> ArithmeticInstName REG COMA REG COMA IMM PUNTOCOMA cuerpo','arimtethicInstruction',8,'p_arimtethicInstruction','FantASMSintax.py',87),
+  ('arimtethicInstruction -> empty','arimtethicInstruction',1,'p_arimtethicInstruction','FantASMSintax.py',88),
+  ('CompareInstName -> CMPR','CompareInstName',1,'p_CompareInstName','FantASMSintax.py',99),
+  ('CompareInstName -> CMPI','CompareInstName',1,'p_CompareInstName','FantASMSintax.py',100),
+  ('JumpInstName -> SAL','JumpInstName',1,'p_JumpInstName','FantASMSintax.py',107),
+  ('JumpInstName -> SIG','JumpInstName',1,'p_JumpInstName','FantASMSintax.py',108),
+  ('MemoryInstName -> GDR','MemoryInstName',1,'p_MemoryInstName','FantASMSintax.py',115),
+  ('MemoryInstName -> CAR','MemoryInstName',1,'p_MemoryInstName','FantASMSintax.py',116),
+  ('MemoryInstName -> MOVR','MemoryInstName',1,'p_MemoryInstName','FantASMSintax.py',117),
+  ('MemoryInstName -> MOVI','MemoryInstName',1,'p_MemoryInstName','FantASMSintax.py',118),
+  ('ArithmeticInstName -> SUM','ArithmeticInstName',1,'p_ArithmeticInstName','FantASMSintax.py',126),
+  ('ArithmeticInstName -> RES','ArithmeticInstName',1,'p_ArithmeticInstName','FantASMSintax.py',127),
+  ('ArithmeticInstName -> MOD','ArithmeticInstName',1,'p_ArithmeticInstName','FantASMSintax.py',128),
+  ('ArithmeticInstName -> MUL','ArithmeticInstName',1,'p_ArithmeticInstName','FantASMSintax.py',129),
+  ('ArithmeticInstName -> DDR','ArithmeticInstName',1,'p_ArithmeticInstName','FantASMSintax.py',130),
+  ('ArithmeticInstName -> SAL','ArithmeticInstName',1,'p_ArithmeticInstName','FantASMSintax.py',131),
+  ('empty -> <empty>','empty',0,'p_empty','FantASMSintax.py',138),
 ]
