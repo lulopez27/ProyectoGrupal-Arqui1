@@ -10,4 +10,4 @@ module ControlUnitDeco(input [4:0] in, output [2:0] ALUControl);
 			default  : ALUControl = 3'b111; //NONE
 		endcase
 	end
-endmodule
+endmodule 
