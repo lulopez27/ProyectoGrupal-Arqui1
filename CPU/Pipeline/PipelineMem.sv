@@ -16,4 +16,4 @@ module PipelineMem(input clk, rst,
 		rmemo = rmemi;
 		wrego = wregi;
 		end
-endmodule
+endmodule 

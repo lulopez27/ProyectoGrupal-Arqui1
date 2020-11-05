@@ -10,37 +10,41 @@
 # Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Extender {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender/Extender.sv}
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Memorias {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemoryTest.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:05:38 on Nov 04,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender/Extender.sv 
-# -- Compiling module Extender
+# Start time: 12:16:00 on Nov 05,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemoryTest.sv 
+# -- Compiling module InstructionMemoryTest
 # 
 # Top level modules:
-# 	Extender
-# End time: 14:05:38 on Nov 04,2020, Elapsed time: 0:00:00
+# 	InstructionMemoryTest
+# End time: 12:16:01 on Nov 05,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Extender {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender/ExtenderTest.sv}
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Memorias {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:05:38 on Nov 04,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender/ExtenderTest.sv 
-# -- Compiling module ExtenderTest
+# Start time: 12:16:01 on Nov 05,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv 
+# -- Compiling module InstructionMemory
 # 
 # Top level modules:
-# 	ExtenderTest
-# End time: 14:05:38 on Nov 04,2020, Elapsed time: 0:00:00
+# 	InstructionMemory
+# End time: 12:16:02 on Nov 05,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-vsim work.ExtenderTest
-# vsim work.ExtenderTest 
-# Start time: 14:05:42 on Nov 04,2020
+vsim work.InstructionMemoryTest
+# vsim work.InstructionMemoryTest 
+# Start time: 12:16:09 on Nov 05,2020
 # Loading sv_std.std
-# Loading work.ExtenderTest
-# Loading work.Extender
+# Loading work.InstructionMemoryTest
+# Loading work.InstructionMemory
 add wave -position insertpoint  \
-sim:/ExtenderTest/inmeIn \
-sim:/ExtenderTest/Sel \
-sim:/ExtenderTest/inmeOut
+sim:/InstructionMemoryTest/addr \
+sim:/InstructionMemoryTest/rd
 run 100
-# End time: 14:06:56 on Nov 04,2020, Elapsed time: 0:01:14
-# Errors: 0, Warnings: 0
+# ** Warning: (vsim-7) Failed to open readmem file "instructions.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv(7)
+#    Time: 0 ps  Iteration: 0  Instance: /InstructionMemoryTest/DUT
+restart
+run 100
+# End time: 12:17:51 on Nov 05,2020, Elapsed time: 0:01:42
+# Errors: 0, Warnings: 1

@@ -10,4 +10,5 @@ module ControlUnit(input[1:0] op, input[1:0] inst, input immin, //input clk, rst
 	assign wreg = (op[1]&op[0])|(op[1]&~op[0]&~(inst[1]&inst[0]));
 	ControlUnitDeco ALUDeco(ALUinst, ALUins);
 	ExtendDeco ExtDeco(ExtSel, ExtndSel);
-endmodule
+	
+endmodule 

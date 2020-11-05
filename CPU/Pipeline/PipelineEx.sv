@@ -25,4 +25,4 @@ module PipelineEx( input clk, rst,
 		wrego = wregi;
 		immo = immi;
 		end
-endmodule
+endmodule 

@@ -9,4 +9,4 @@ module ExtendDeco(input [3:0] in, output [1:0] ALUControl);
 			default : ALUControl = 2'b00; //NONE
 		endcase
 	end
-endmodule
+endmodule 

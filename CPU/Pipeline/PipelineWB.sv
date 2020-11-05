@@ -10,4 +10,4 @@ module PipelineWB(input clk, rst,
 		WrDatao = WrDatai;
 		wrego = wregi;
 		end
-endmodule
+endmodule 
