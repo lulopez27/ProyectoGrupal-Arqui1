@@ -2,7 +2,9 @@ from tkinter import *
 import sys
 from tkinter import filedialog as fd
 from tkinter import messagebox as mb
-from FantASMLexer import FantASMAnalizer
+from FantASMLexer import FantASMLexicalAnalizer
+from FantASMSintax import FantASMSintacticAnalizer
+
 
 
 class Gui:
@@ -71,9 +73,8 @@ class Gui:
     def compileButtonClick(self):
         cadena = self.CodeTextArea.get("1.0", END)
         print(cadena)
-        FantASMAnalizer(cadena)
-
-        FantASMAnalizer(cadena)
+        FantASMLexicalAnalizer(cadena)
+        FantASMSintacticAnalizer(cadena)
 
 
     def setCodeTextArea(self, output):

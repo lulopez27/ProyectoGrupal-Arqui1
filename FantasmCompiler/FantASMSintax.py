@@ -3,7 +3,7 @@ import ply.yacc as yacc
 import codecs
 
 from FantASMLexer import tokens
-from FantASMLexer import FantASMAnalizer
+from FantASMLexer import FantASMLexicalAnalizer
 
 
 
@@ -46,7 +46,7 @@ def p_instruccion(p):
                   | espInstruction
     '''
     p[0] = p[1]
-    
+
 
 def p_espInstruction(p):
     '''
@@ -163,6 +163,6 @@ def test():
 
     #print(cadena)
 
-    FantASMAnalizer(cadena)
+    FantASMLexicalAnalizer(cadena)
     FantASMSintacticAnalizer(cadena)
 test()

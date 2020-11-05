@@ -68,9 +68,14 @@ def t_error(t):
 
 
 
-def FantASMAnalizer(cadena):
+def FantASMLexicalAnalizer(cadena):
+    lexerResult = []
     analizador = lex.lex()
     analizador.input(cadena)
-
+    while True:
+        tok = analizador.token()
+        if not tok: break
+        lexerResult.append(tok)
+    return lexerResult
 
 
