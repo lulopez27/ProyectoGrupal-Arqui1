@@ -1,11 +1,11 @@
 import ply.yacc as yacc
-
+import numpy as np
 import codecs
 
 from FantASMLexer import tokens
 from FantASMLexer import FantASMLexicalAnalizer
 
-
+sintaxResult = []
 
 def p_Start(p):
     '''
@@ -25,6 +25,7 @@ def p_cuerpo(p):
 
     '''
     p[0] = (p[1])
+    #sintaxResult.append(p[0])
 
 def p_label(p):
     '''
@@ -34,7 +35,7 @@ def p_label(p):
 
     if (p[1] != '$'):
         p[0] = (p[1])
-        print(p[0])
+        sintaxResult.append(p[0])
     else:
         p[0] = p[1]
 def p_instruccion(p):
@@ -46,15 +47,16 @@ def p_instruccion(p):
                   | espInstruction
     '''
     p[0] = p[1]
-
+    #sintaxResult.append(p[0])
 
 def p_espInstruction(p):
     '''
     espInstruction : ESP PUNTOCOMA cuerpo
                     | empty
     '''
-    p[0] = (p[1])
-    print(p[0])
+    p[0] = (p[1],'-')
+    #print(p[0])
+    sintaxResult.append(p[0])
 
 def p_CompareInstruction(p):
     '''
@@ -63,14 +65,16 @@ def p_CompareInstruction(p):
                         | empty
     '''
     p[0] = (p[1],p[2],p[4])
-    print(p[0])
+    sintaxResult.append(p[0])
+    #print(p[0])
 def p_jumpInstruction(p):
     '''
     jumpInstruction : JumpInstName LABEL PUNTOCOMA cuerpo
     | empty
     '''
     p[0] = (p[1], p[2])
-    print(p[0])
+    sintaxResult.append(p[0])
+    #print(p[0])
 
 def p_memoryInstruction(p):
     '''
@@ -79,7 +83,8 @@ def p_memoryInstruction(p):
                         | empty
     '''
     p[0] = (p[1], p[2], p[4])
-    print(p[0])
+    sintaxResult.append(p[0])
+    #print(p[0])
 
 def p_arimtethicInstruction(p):
     '''
@@ -89,7 +94,8 @@ def p_arimtethicInstruction(p):
     '''
     if(p[1] != '$'):
             p[0] = (p[1],p[2],p[4],p[6])
-            print(p[0])
+            sintaxResult.append(p[0])
+            #print(p[0])
     else:
         p[0] = p[1]
 
@@ -100,7 +106,6 @@ def p_CompareInstName(p):
                         | CMPI
 
     '''
-
     p[0] = p[1]
 def p_JumpInstName(p):
     '''
@@ -109,6 +114,7 @@ def p_JumpInstName(p):
     '''
 
     p[0] = p[1]
+
 
 def p_MemoryInstName(p):
     '''
@@ -146,7 +152,7 @@ def p_error(p):
 def FantASMSintacticAnalizer(cadena):
     parser = yacc.yacc()
     parser.parse(cadena)
-
+    return sintaxResult[::-1]
 # documentar esta funcion si va a probar codigo en el GUI
 
 
@@ -161,8 +167,11 @@ def test():
     cadena = fp.read()
     fp.close()
 
-    #print(cadena)
+
 
     FantASMLexicalAnalizer(cadena)
     FantASMSintacticAnalizer(cadena)
-test()
+
+
+
+

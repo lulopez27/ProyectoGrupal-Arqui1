@@ -6,11 +6,13 @@ Holi2:
 	MOVR R13,R2;
 	MOVI R13,18;
 	SUM R13,R2,R3;
+Holi3:
 	RES R13,R2,R3;
 	MOD R13,R2,R3;
 	MUL R13,R2,R3;
 	DDR R13,R2,R3;
 	CMPR R13,R2;
+Holi4:
 	CMPI R13,90;	
 	SAL Holi;
 	SIG  Holi;
