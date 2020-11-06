@@ -1,5 +1,5 @@
 INICIO:
 	
-	MOVI R13,8;
+	SUM R13,R2,R3;
 
 FIN

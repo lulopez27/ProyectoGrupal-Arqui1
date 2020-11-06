@@ -40,6 +40,7 @@ jumpInst = {'SAL': int('00001', 2),
 
 stallInst = {'ESP': int('01000', 2)}
 bitsBasura19 = '0000000000000000000'
+bitsBasura15 = '000000000000000'
 
 def compile(codigo):
     FantASMLexicalAnalizer(codigo)
@@ -91,7 +92,7 @@ def analiceInst(inst):
         else:
             binCode += bitsBasura19
             binCode += registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1]))
-            binCode = binCode
+
 
 
 
@@ -99,13 +100,16 @@ def analiceInst(inst):
 
 
     elif str(inst[0]) in arithmeticInst:
-        binCode += str(format(arithmeticInst.get(inst[0]), '#010b'))[2:]
+        binCode += str(format(arithmeticInst.get(inst[0]), '#010b'))[5:]
+        binCode += bitsBasura15
+        binCode += registerNumber.get(str(inst[3])) + registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1]))
+
     elif str(inst[0]) in compInst:
-        binCode += str(format(compInst.get(inst[0]), '#010b'))[2:]
+        binCode += str(format(compInst.get(inst[0]), '#010b'))[5:]
     elif str(inst[0]) in jumpInst:
-        binCode += str(format(jumpInst.get(inst[0]), '#010b'))[2:]
+        binCode += str(format(jumpInst.get(inst[0]), '#010b'))[5:]
     elif str(inst[0]) in stallInst:
-        binCode += str(format(stallInst.get(inst[0]), '#010b'))[2:]
+        binCode += str(format(stallInst.get(inst[0]), '#010b'))[5:]
 
     print('El codigo es: ' + binCode)
     print(len(binCode))
