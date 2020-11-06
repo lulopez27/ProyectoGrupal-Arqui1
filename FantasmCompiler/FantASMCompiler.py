@@ -74,11 +74,13 @@ def analiceInst(inst):
             print('El registro ' + str(inst[2]) + ' no existe')
             return
         elif isinstance(inst[2], int):
-            print(str(bin(inst[2]))[2:])
-            binCode += shiftNumber(str(bin(inst[2]))[2:]) + registerNumber.get(str(inst[1]))
+            print(str(bin(inst[2])))
+            binCode += shiftNumber(str(bin(inst[2]))) + registerNumber.get(str(inst[1]))
+            binCode = binCode[3:]
         else:
             binCode += bitsBasura19
             binCode += registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1]))
+            binCode = binCode[3:]
 
 
 
@@ -86,13 +88,13 @@ def analiceInst(inst):
 
 
     elif str(inst[0]) in arithmeticInst:
-        binCode += str(format(arithmeticInst.get(inst[0]), '#010b'))
+        binCode += str(format(arithmeticInst.get(inst[0]), '#010b'))[2:]
     elif str(inst[0]) in compInst:
-        binCode += str(format(compInst.get(inst[0]), '#010b'))
+        binCode += str(format(compInst.get(inst[0]), '#010b'))[2:]
     elif str(inst[0]) in jumpInst:
-        binCode += str(format(jumpInst.get(inst[0]), '#010b'))
+        binCode += str(format(jumpInst.get(inst[0]), '#010b'))[2:]
     elif str(inst[0]) in stallInst:
-        binCode += str(format(stallInst.get(inst[0]), '#010b'))
+        binCode += str(format(stallInst.get(inst[0]), '#010b'))[2:]
 
     print('El codigo es: ' + binCode)
 
