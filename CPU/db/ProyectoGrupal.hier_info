@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 |processor
 clk => clk.IN3
 rst => rst.IN3
 
 
 |processor|ControlUnit:ctrlunit
+=======
+|ctrlunit_tb
+
+
+|ctrlunit_tb|ControlUnit:ctrlunit
+>>>>>>> main
 op[0] => ExtSel[2].IN2
 op[1] => ExtSel[3].IN2
 inst[0] => ExtSel[0].IN2
@@ -13,8 +20,11 @@ immout <= immout.DB_MAX_OUTPUT_PORT_TYPE
 wmem <= wmem.DB_MAX_OUTPUT_PORT_TYPE
 rmem <= rmem.DB_MAX_OUTPUT_PORT_TYPE
 wreg <= wreg.DB_MAX_OUTPUT_PORT_TYPE
+<<<<<<< HEAD
 wpc <= wpc.DB_MAX_OUTPUT_PORT_TYPE
 jmp <= jmp.DB_MAX_OUTPUT_PORT_TYPE
+=======
+>>>>>>> main
 ALUins[0] <= ControlUnitDeco:ALUDeco.port1
 ALUins[1] <= ControlUnitDeco:ALUDeco.port1
 ALUins[2] <= ControlUnitDeco:ALUDeco.port1
@@ -22,7 +32,11 @@ ExtndSel[0] <= ExtendDeco:ExtDeco.port1
 ExtndSel[1] <= ExtendDeco:ExtDeco.port1
 
 
+<<<<<<< HEAD
 |processor|ControlUnit:ctrlunit|ControlUnitDeco:ALUDeco
+=======
+|ctrlunit_tb|ControlUnit:ctrlunit|ControlUnitDeco:ALUDeco
+>>>>>>> main
 in[0] => Decoder0.IN4
 in[1] => Decoder0.IN3
 in[2] => Decoder0.IN2
@@ -33,13 +47,18 @@ ALUControl[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 ALUControl[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+<<<<<<< HEAD
 |processor|ControlUnit:ctrlunit|ExtendDeco:ExtDeco
+=======
+|ctrlunit_tb|ControlUnit:ctrlunit|ExtendDeco:ExtDeco
+>>>>>>> main
 in[0] => Decoder0.IN3
 in[1] => Decoder0.IN2
 in[2] => Decoder0.IN1
 in[3] => Decoder0.IN0
 ALUControl[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 ALUControl[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+<<<<<<< HEAD
 
 
 |processor|PipelineEx:comb_4
@@ -805,5 +824,7 @@ WrDatao[29] <= WrDatao[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 WrDatao[30] <= WrDatao[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 WrDatao[31] <= WrDatao[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 wrego <= wrego~reg0.DB_MAX_OUTPUT_PORT_TYPE
+=======
+>>>>>>> main
 
 

@@ -1,5 +1,9 @@
 Analysis & Elaboration report for ProyectoGrupal
+<<<<<<< HEAD
 Thu Nov 05 20:24:28 2020
+=======
+Thu Nov 05 14:34:40 2020
+>>>>>>> main
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -10,11 +14,16 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
+<<<<<<< HEAD
   5. Port Connectivity Checks: "PipelineWB:comb_6"
   6. Port Connectivity Checks: "PipelineMem:comb_5"
   7. Port Connectivity Checks: "PipelineEx:comb_4"
   8. Port Connectivity Checks: "ControlUnit:ctrlunit"
   9. Analysis & Elaboration Messages
+=======
+  5. Port Connectivity Checks: "ControlUnit:ctrlunit"
+  6. Analysis & Elaboration Messages
+>>>>>>> main
 
 
 
@@ -41,10 +50,17 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Elaboration Status ; Successful - Thu Nov 05 20:24:28 2020       ;
 ; Quartus Prime Version         ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                 ; ProyectoGrupal                              ;
 ; Top-level Entity Name         ; processor                                   ;
+=======
+; Analysis & Elaboration Status ; Successful - Thu Nov 05 14:34:40 2020       ;
+; Quartus Prime Version         ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                 ; ProyectoGrupal                              ;
+; Top-level Entity Name         ; ctrlunit_tb                                 ;
+>>>>>>> main
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -78,7 +94,11 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+<<<<<<< HEAD
 ; Top-level entity name                                                           ; processor          ; ProyectoGrupal     ;
+=======
+; Top-level entity name                                                           ; ctrlunit_tb        ; ProyectoGrupal     ;
+>>>>>>> main
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -159,6 +179,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
+<<<<<<< HEAD
 +-------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "PipelineWB:comb_6"                                                                     ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -195,11 +216,21 @@ https://fpgasoftware.intel.com/eula.
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
+=======
+>>>>>>> main
 +--------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ControlUnit:ctrlunit"                                                                   ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
+<<<<<<< HEAD
+=======
+; immout   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wmem     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rmem     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wreg     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ALUins   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+>>>>>>> main
 ; ExtndSel ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -210,12 +241,19 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Thu Nov 05 20:24:16 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoGrupal -c ProyectoGrupal --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file processor.sv
     Info (12023): Found entity 1: processor File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 1
+=======
+    Info: Processing started: Thu Nov 05 14:34:28 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoGrupal -c ProyectoGrupal --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+>>>>>>> main
 Info (12021): Found 1 design units, including 1 entities, in source file tests/processor_tb.sv
     Info (12023): Found entity 1: processor_tb File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/processor_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/unidadlogicoaritmeticatest.sv
@@ -275,6 +313,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file muxes/m
     Info (12023): Found entity 1: Mux2 File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Muxes/Mux2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/ctrlunit_tb.sv
     Info (12023): Found entity 1: ctrlunit_tb File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv Line: 1
+<<<<<<< HEAD
 Info (12021): Found 1 design units, including 1 entities, in source file controlunit/condunit.sv
     Info (12023): Found entity 1: condUnit File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/condUnit.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at processor.sv(11): created implicit net for "immin" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 11
@@ -297,5 +336,17 @@ Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 9 warnings
     Info: Processing ended: Thu Nov 05 20:24:28 2020
     Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:29
+=======
+Info (12127): Elaborating entity "ctrlunit_tb" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at ctrlunit_tb.sv(7): object "ans" assigned a value but never read File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv Line: 7
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:ctrlunit" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv Line: 10
+Info (12128): Elaborating entity "ControlUnitDeco" for hierarchy "ControlUnit:ctrlunit|ControlUnitDeco:ALUDeco" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv Line: 11
+Info (12128): Elaborating entity "ExtendDeco" for hierarchy "ControlUnit:ctrlunit|ExtendDeco:ExtDeco" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv Line: 12
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4774 megabytes
+    Info: Processing ended: Thu Nov 05 14:34:40 2020
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:28
+>>>>>>> main
 
 
