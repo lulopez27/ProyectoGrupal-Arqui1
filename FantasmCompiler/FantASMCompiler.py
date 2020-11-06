@@ -41,6 +41,7 @@ jumpInst = {'SAL': int('00001', 2),
 stallInst = {'ESP': int('01000', 2)}
 bitsBasura19 = '0000000000000000000'
 bitsBasura15 = '000000000000000'
+bitsBasura4 = '0000'
 
 def compile(codigo):
     FantASMLexicalAnalizer(codigo)
@@ -87,16 +88,11 @@ def analiceInst(inst):
             return
         elif isinstance(inst[2], int):
             print(str(bin(inst[2])))
-            binCode += shiftNumber(str(bin(inst[2]))[2:],23) + registerNumber.get(str(inst[1]))
+            binCode += shiftNumber(str(bin(inst[2]))[2:] , 23) + registerNumber.get(str(inst[1]))
 
         else:
             binCode += bitsBasura19
             binCode += registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1]))
-
-
-
-
-
 
 
     elif str(inst[0]) in arithmeticInst:
@@ -105,7 +101,13 @@ def analiceInst(inst):
         binCode += registerNumber.get(str(inst[3])) + registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1]))
 
     elif str(inst[0]) in compInst:
-        binCode += str(format(compInst.get(inst[0]), '#010b'))[5:]
+        if not isinstance(inst[2], int):            #Si es una operacion de comparacion R-R
+            binCode += str(format(compInst.get(inst[0]), '#010b'))[5:]
+            binCode += bitsBasura15
+            binCode += registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1])) + bitsBasura4
+        else:
+            binCode += str(format(compInst.get(inst[0]), '#010b'))[5:]
+            binCode += shiftNumber(str(bin(inst[2]))[2:],19) + registerNumber.get(str(inst[1])) + bitsBasura4
     elif str(inst[0]) in jumpInst:
         binCode += str(format(jumpInst.get(inst[0]), '#010b'))[5:]
     elif str(inst[0]) in stallInst:
@@ -132,4 +134,7 @@ test = 'D:/Isaac Porras/Semestre 8/Arqui/Proyecto2/FantasmCompiler/TestFiles/tes
 fp = codecs.open(test, "r", "utf-8")
 cadena = fp.read()
 fp.close()
+
+#print(int('010',2))
+
 compile(cadena)

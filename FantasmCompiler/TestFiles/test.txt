@@ -1,5 +1,5 @@
 INICIO:
 	
-	SUM R13,R2,R3;
+	CMPI R13,90;
 
 FIN
