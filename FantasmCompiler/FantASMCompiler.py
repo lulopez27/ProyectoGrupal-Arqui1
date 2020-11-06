@@ -22,11 +22,22 @@ registerNumber = {
 
 }
 
-memoryInst = {'GDR': int('10000', 2), 'CAR': int('10010', 2), 'MOVR': int('10100', 2), 'MOVI': int('10101', 2)}
-arithmeticInst = {'SUM': int('11000', 2), 'RES': int('11010', 2), 'MOD': int('11100', 2), 'MUL': int('11110', 2),
+memoryInst = {'GDR': int('10000', 2),
+              'CAR': int('10010', 2),
+              'MOVR': int('10100', 2),
+              'MOVI': int('10101', 2)}
+arithmeticInst = {'SUM': int('11000', 2),
+                  'RES': int('11010', 2),
+                  'MOD': int('11100', 2),
+                  'MUL': int('11110', 2),
                   'DDR': int('11001', 2)}
-compInst = {'CMPR': int('10110', 2), 'CMPI': int('10111', 2)}
-jumpInst = {'SAL': int('00001', 2), 'SIG': int('00111', 2)}
+
+compInst = {'CMPR': int('10110', 2),
+            'CMPI': int('10111', 2)}
+
+jumpInst = {'SAL': int('00001', 2),
+            'SIG': int('00111', 2)}
+
 stallInst = {'ESP': int('01000', 2)}
 bitsBasura19 = '0000000000000000000'
 
@@ -65,7 +76,7 @@ def analiceInst(inst):
     binCode = ''
 
     if str(inst[0]) in memoryInst:
-        binCode += str(format(memoryInst.get(inst[0]), '#010b'))[2:]
+        binCode += str(format(memoryInst.get(inst[0]), '#010b'))[5:]
 
         if inst[1] not in registerNumber:
             print('El registro ' + str(inst[1]) + ' no existe')
@@ -75,12 +86,12 @@ def analiceInst(inst):
             return
         elif isinstance(inst[2], int):
             print(str(bin(inst[2])))
-            binCode += shiftNumber(str(bin(inst[2]))) + registerNumber.get(str(inst[1]))
-            binCode = binCode[3:]
+            binCode += shiftNumber(str(bin(inst[2]))[2:],23) + registerNumber.get(str(inst[1]))
+
         else:
             binCode += bitsBasura19
             binCode += registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1]))
-            binCode = binCode[3:]
+            binCode = binCode
 
 
 
@@ -97,13 +108,14 @@ def analiceInst(inst):
         binCode += str(format(stallInst.get(inst[0]), '#010b'))[2:]
 
     print('El codigo es: ' + binCode)
+    print(len(binCode))
 
 
 
-def shiftNumber(num):
+def shiftNumber(num,shift):
     largo = len(num)
-    if(largo < 19):
-        while largo < 19:
+    if(largo < shift):
+        while largo < shift:
             num = '0' + num
             largo +=1
         return num

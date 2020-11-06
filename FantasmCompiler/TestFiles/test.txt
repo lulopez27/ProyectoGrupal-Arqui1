@@ -1,5 +1,5 @@
 INICIO:
-	GDR R13,R2;
-	CAR R13,R4;
+	
+	MOVI R13,8;
 
 FIN
