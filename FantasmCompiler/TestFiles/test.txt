@@ -1,9 +1,6 @@
 INICIO:
-	SAL Holis;
-	SIG Holis2;
-Holis:
-	MOD R13,R2,R3;
-	MOD R13,R2,R3;
-Holis2:
-	MOD R13,R2,R3;
+	GDR R13,R2;
 FIN
+
+
+
