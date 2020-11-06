@@ -1,9 +1,5 @@
-Analysis & Elaboration report for ProyectoGrupal
-<<<<<<< HEAD
-Thu Nov 05 20:24:28 2020
-=======
-Thu Nov 05 14:34:40 2020
->>>>>>> main
+Analysis & Synthesis report for ProyectoGrupal
+Fri Nov 06 09:18:30 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -11,19 +7,21 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-<<<<<<< HEAD
-  5. Port Connectivity Checks: "PipelineWB:comb_6"
-  6. Port Connectivity Checks: "PipelineMem:comb_5"
-  7. Port Connectivity Checks: "PipelineEx:comb_4"
-  8. Port Connectivity Checks: "ControlUnit:ctrlunit"
-  9. Analysis & Elaboration Messages
-=======
-  5. Port Connectivity Checks: "ControlUnit:ctrlunit"
-  6. Analysis & Elaboration Messages
->>>>>>> main
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: FlipFlop:ffPC
+ 10. Port Connectivity Checks: "FlipFlop:ffPC"
+ 11. Port Connectivity Checks: "PipelineMem:comb_5"
+ 12. Port Connectivity Checks: "PipelineEx:comb_4"
+ 13. Port Connectivity Checks: "ControlUnit:ctrlunit"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -47,58 +45,36 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-<<<<<<< HEAD
-; Analysis & Elaboration Status ; Successful - Thu Nov 05 20:24:28 2020       ;
-; Quartus Prime Version         ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
-; Revision Name                 ; ProyectoGrupal                              ;
-; Top-level Entity Name         ; processor                                   ;
-=======
-; Analysis & Elaboration Status ; Successful - Thu Nov 05 14:34:40 2020       ;
-; Quartus Prime Version         ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
-; Revision Name                 ; ProyectoGrupal                              ;
-; Top-level Entity Name         ; ctrlunit_tb                                 ;
->>>>>>> main
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Nov 06 09:18:30 2020       ;
+; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                   ; ProyectoGrupal                              ;
+; Top-level Entity Name           ; processor                                   ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 2                                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-<<<<<<< HEAD
 ; Top-level entity name                                                           ; processor          ; ProyectoGrupal     ;
-=======
-; Top-level entity name                                                           ; ctrlunit_tb        ; ProyectoGrupal     ;
->>>>>>> main
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -179,81 +155,186 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-<<<<<<< HEAD
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; processor.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv                  ;         ;
+; ControlUnit/ControlUnit.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv    ;         ;
+; Decoders/ExtendDeco.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ExtendDeco.sv        ;         ;
+; Decoders/ControlUnitDeco.sv      ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ControlUnitDeco.sv   ;         ;
+; Pipeline/PipelineWB.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineWB.sv        ;         ;
+; Pipeline/PipelineMem.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineMem.sv       ;         ;
+; Pipeline/PipelineEx.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineEx.sv        ;         ;
+; Memorias/RegisterFile.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/RegisterFile.sv      ;         ;
+; Memorias/InstructionMemory.sv    ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/InstructionMemory.sv ;         ;
+; Fliflops/FlipFlop.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Fliflops/FlipFlop.sv          ;         ;
+; memorias/instructions.txt        ; yes             ; Auto-Found File              ; C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/memorias/instructions.txt     ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 2     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |processor                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 2    ; 0            ; |processor          ; processor   ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FlipFlop:ffPC ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; N              ; 32    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:ffPC"                                                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; q[26..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PipelineWB:comb_6"                                                                     ;
+; Port Connectivity Checks: "PipelineMem:comb_5"                                                                    ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port    ; Type   ; Severity ; Details                                                                             ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
-; WrDatao ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; wrego   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; WrDesto ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wmemo   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rmemo   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; jmpo    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PipelineMem:comb_5"                                                                                                                                  ;
-+---------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                           ;
-+---------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; WrDesti ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "WrDesti[31..4]" will be connected to GND. ;
-; WrDesto ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                               ;
-; wmemo   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                               ;
-; rmemo   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                               ;
-; jmpo    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                               ;
-+---------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PipelineEx:comb_4"                                                                                                                                                                     ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; R3i      ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "R3i[31..4]" will be connected to GND.                                      ;
+; destRegi ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "destRegi[3..3]" will be connected to GND.                                   ;
+; ALUinsi  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "ALUinsi[2..1]" will be connected to GND.                                    ;
+; jmpi     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; R1o      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; R2o      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; R3o      ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (4 bits) it drives; bit(s) "R3o[31..4]" have no fanouts                                                           ;
+; destRego ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (3 bits) it drives; bit(s) "destRego[3..3]" have no fanouts                                                        ;
+; destRego ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; ALUinso  ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "ALUinso[2..1]" have no fanouts                                                         ;
+; wrego    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; jmpo     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PipelineEx:comb_4"                                                                     ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; R1o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; R2o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; R3o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ALUinso ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; immo    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-=======
->>>>>>> main
 +--------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ControlUnit:ctrlunit"                                                                   ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
-<<<<<<< HEAD
-=======
-; immout   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; wmem     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; rmem     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; wreg     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ALUins   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
->>>>>>> main
 ; ExtndSel ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 2                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-<<<<<<< HEAD
-    Info: Processing started: Thu Nov 05 20:24:16 2020
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoGrupal -c ProyectoGrupal --analysis_and_elaboration
+    Info: Processing started: Fri Nov 06 09:18:06 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoGrupal -c ProyectoGrupal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file processor.sv
     Info (12023): Found entity 1: processor File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 1
-=======
-    Info: Processing started: Thu Nov 05 14:34:28 2020
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoGrupal -c ProyectoGrupal --analysis_and_elaboration
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
->>>>>>> main
 Info (12021): Found 1 design units, including 1 entities, in source file tests/processor_tb.sv
     Info (12023): Found entity 1: processor_tb File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/processor_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/unidadlogicoaritmeticatest.sv
@@ -311,42 +392,43 @@ Info (12021): Found 1 design units, including 1 entities, in source file memoria
     Info (12023): Found entity 1: InstructionMemoryTest File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/InstructionMemoryTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux2.sv
     Info (12023): Found entity 1: Mux2 File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Muxes/Mux2.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file tests/ctrlunit_tb.sv
-    Info (12023): Found entity 1: ctrlunit_tb File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv Line: 1
-<<<<<<< HEAD
 Info (12021): Found 1 design units, including 1 entities, in source file controlunit/condunit.sv
     Info (12023): Found entity 1: condUnit File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/condUnit.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at processor.sv(11): created implicit net for "immin" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 11
-Warning (10236): Verilog HDL Implicit Net warning at processor.sv(12): created implicit net for "immout" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 12
-Critical Warning (10846): Verilog HDL Instantiation warning at processor.sv(14): instance has no name File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file fliflops/flipflop.sv
+    Info (12023): Found entity 1: FlipFlop File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Fliflops/FlipFlop.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tests/ctrlunit_tb.sv
+    Info (12023): Found entity 1: ctrlunit_tb File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv Line: 1
 Critical Warning (10846): Verilog HDL Instantiation warning at processor.sv(16): instance has no name File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 16
 Critical Warning (10846): Verilog HDL Instantiation warning at processor.sv(18): instance has no name File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 18
+Critical Warning (10846): Verilog HDL Instantiation warning at processor.sv(20): instance has no name File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 20
 Info (12127): Elaborating entity "processor" for the top level hierarchy
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:ctrlunit" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 12
+Warning (10036): Verilog HDL or VHDL warning at processor.sv(10): object "imme" assigned a value but never read File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 10
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:ctrlunit" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 14
 Info (12128): Elaborating entity "ControlUnitDeco" for hierarchy "ControlUnit:ctrlunit|ControlUnitDeco:ALUDeco" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv Line: 13
 Info (12128): Elaborating entity "ExtendDeco" for hierarchy "ControlUnit:ctrlunit|ExtendDeco:ExtDeco" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv Line: 14
-Info (12128): Elaborating entity "PipelineEx" for hierarchy "PipelineEx:comb_4" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 14
-Info (12128): Elaborating entity "PipelineMem" for hierarchy "PipelineMem:comb_5" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 16
-Warning (10230): Verilog HDL assignment warning at PipelineMem.sv(7): truncated value with size 32 to match size of target (4) File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineMem.sv Line: 7
-Warning (10230): Verilog HDL assignment warning at PipelineMem.sv(15): truncated value with size 32 to match size of target (4) File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineMem.sv Line: 15
-Info (12128): Elaborating entity "PipelineWB" for hierarchy "PipelineWB:comb_6" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 18
+Info (12128): Elaborating entity "PipelineEx" for hierarchy "PipelineEx:comb_4" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 16
+Info (12128): Elaborating entity "PipelineMem" for hierarchy "PipelineMem:comb_5" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 18
+Info (12128): Elaborating entity "PipelineWB" for hierarchy "PipelineWB:comb_6" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 20
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:InsMem" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 21
+Warning (10850): Verilog HDL warning at InstructionMemory.sv(7): number of words (52) in memory file does not match the number of elements in the address range [0:127] File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/InstructionMemory.sv Line: 7
+Warning (10030): Net "ROM.data_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/InstructionMemory.sv Line: 4
+Warning (10030): Net "ROM.waddr_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/InstructionMemory.sv Line: 4
+Warning (10030): Net "ROM.we_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/InstructionMemory.sv Line: 4
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "FlipFlop:ffPC" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 22
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:regFile" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 30
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4775 megabytes
-    Info: Processing ended: Thu Nov 05 20:24:28 2020
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:29
-=======
-Info (12127): Elaborating entity "ctrlunit_tb" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at ctrlunit_tb.sv(7): object "ans" assigned a value but never read File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv Line: 7
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:ctrlunit" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv Line: 10
-Info (12128): Elaborating entity "ControlUnitDeco" for hierarchy "ControlUnit:ctrlunit|ControlUnitDeco:ALUDeco" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv Line: 11
-Info (12128): Elaborating entity "ExtendDeco" for hierarchy "ControlUnit:ctrlunit|ExtendDeco:ExtDeco" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv Line: 12
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4774 megabytes
-    Info: Processing ended: Thu Nov 05 14:34:40 2020
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:28
->>>>>>> main
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 1
+    Warning (15610): No output dependent on input pin "rst" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv Line: 1
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4804 megabytes
+    Info: Processing ended: Fri Nov 06 09:18:30 2020
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:30
 
 

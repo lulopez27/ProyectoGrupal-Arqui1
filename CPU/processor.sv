@@ -7,6 +7,7 @@ module processor(input clk, rst);
 	logic [31:0] R2i,R3i,R1o,R2o,R3o,ALURo;
 	logic [31:0] ALURi,ALURi3,ALURo3;
 	logic [31:0] PC,PCF,PCinst;
+	logic [26:0] imme;
 	logic [3:0] destRegi,destRego,WrDesti,WrDesto,WrDesti2,WrDesto2,R2,R3;
 	assign jmpo1 = wpco & jmpo;
 	ControlUnit ctrlunit(op,inst,immin,
