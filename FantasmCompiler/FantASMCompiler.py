@@ -116,7 +116,7 @@ def analiceInst(inst, pc):
             binCode += str(format(compInst.get(inst[0]), '#010b'))[5:]
             binCode += shiftNumber(str(bin(inst[2]))[2:], 19) + registerNumber.get(str(inst[1])) + bitsBasura4
     elif str(inst[0]) in jumpInst:
-        print(jumpLabels)
+
         if str(inst[1]) in jumpLabels:
             jumpDir = jumpLabels.get(inst[1])
             binCode += str(format(jumpInst.get(inst[0]), '#010b'))[5:]
@@ -125,16 +125,16 @@ def analiceInst(inst, pc):
             print(pcmenosjmpAdd)
 
             if (pcmenosjmpAdd < 0):
-                print('El salto es hacia atras')
+
                 pcmenosjmpAdd = bin(abs(pcmenosjmpAdd))[2:]
-                print(pcmenosjmpAdd)
+
                 complemento = complementoADos(pcmenosjmpAdd)
                 binCode += complemento
 
 
 
             else:
-                print('el salto es hacia adelante')
+
                 pcmenosjmpAdd = bin(pcmenosjmpAdd)[2:]
                 binCode += str(shiftNumber(pcmenosjmpAdd,27))
 
@@ -145,8 +145,18 @@ def analiceInst(inst, pc):
         binCode += str(format(stallInst.get(inst[0]), '#010b'))[5:]
 
     binInstructions.append(binCode)
-    binCode = int(binCode, 2)
-    hexInstructions.append(hex(binCode))
+    print('El codigo de la operacion es:')
+    print(binCode[0:5])
+    if str(binCode[0:5]) == '00001' or str(binCode[0:5]) == '00111':
+        print('Hubo un jump')
+        binCode = "010000000000000000000000"
+        binInstructions.append(binCode)
+        hexInstructions.append('0x400000')
+    else:
+    
+        binCode = int(binCode, 2)
+        hexInstructions.append(hex(binCode))
+
 
 
 
