@@ -1,0 +1,43 @@
+module ImageMemory (input logic [31:0] addr,
+						  output logic [31:0] rd);
+	
+	logic [7:0] ROM1[9999:0];
+	logic [7:0] ROM2[9999:0];
+	logic [7:0] ROM3[9999:0];
+	logic [7:0] ROM4[9999:0];
+	logic [7:0] ROM5[9999:0];
+	logic [7:0] ROM6[9999:0];
+	logic [7:0] ROM7[9999:0];
+	logic [7:0] ROM8[9999:0];
+	logic [7:0] ROM9[9999:0];
+	logic [7:0] ROM10[9999:0];
+	logic [7:0] ROM11[9999:0];
+	logic [7:0] ROM12[9999:0];
+	logic [7:0] ROM13[9999:0];
+	logic [7:0] ROM14[9999:0];
+	logic [7:0] ROM15[9999:0];
+	logic [7:0] ROM16[9999:0];
+	
+	initial
+		begin
+		$readmemh("image1.txt", ROM1);
+		$readmemh("image2.txt", ROM2);
+		$readmemh("image3.txt", ROM3);
+		$readmemh("image4.txt", ROM4);
+		$readmemh("image5.txt", ROM5);
+		$readmemh("image6.txt", ROM6);
+		$readmemh("image7.txt", ROM7);
+		$readmemh("image8.txt", ROM8);
+		$readmemh("image9.txt", ROM9);
+		$readmemh("image10.txt", ROM10);
+		$readmemh("image11.txt", ROM11);
+		$readmemh("image12.txt", ROM12);
+		$readmemh("image13.txt", ROM13);
+		$readmemh("image14.txt", ROM14);
+		$readmemh("image15.txt", ROM15);
+		$readmemh("image16.txt", ROM16);
+		end
+		
+	assign rd = {24'b0, ROM1[addr[31:0]]};
+	
+endmodule 

@@ -1,74 +1,53 @@
-# ** Warning: (vish-14) Failed to open "C:\intelFPGA\19.1\modelsim_ase\win32aloem" specified by the MODELSIM environment variable.
-# No such file or directory. (errno = ENOENT)
 # Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
-# ** Warning: (vsim-14) Failed to open "C:\intelFPGA\19.1\modelsim_ase\win32aloem" specified by the MODELSIM environment variable.
-# No such file or directory. (errno = ENOENT)
 # do ProyectoGrupal_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# ** Warning: (vish-14) Failed to open "C:\intelFPGA\19.1\modelsim_ase\win32aloem" specified by the MODELSIM environment variable.
-# No such file or directory. (errno = ENOENT)
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap work rtl_work 
 # Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit {C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv}
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Memorias {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemoryTest.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:14 on Nov 05,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit" C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv 
-# -- Compiling module ControlUnit
+# Start time: 12:24:09 on Nov 06,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemoryTest.sv 
+# -- Compiling module DataMemoryTest
 # 
 # Top level modules:
-# 	ControlUnit
-# End time: 14:56:15 on Nov 05,2020, Elapsed time: 0:00:01
+# 	DataMemoryTest
+# End time: 12:24:09 on Nov 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders {C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ExtendDeco.sv}
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Memorias {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:15 on Nov 05,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders" C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ExtendDeco.sv 
-# -- Compiling module ExtendDeco
+# Start time: 12:24:09 on Nov 06,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemory.sv 
+# -- Compiling module DataMemory
 # 
 # Top level modules:
-# 	ExtendDeco
-# End time: 14:56:16 on Nov 05,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders {C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ControlUnitDeco.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:16 on Nov 05,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders" C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ControlUnitDeco.sv 
-# -- Compiling module ControlUnitDeco
-# 
-# Top level modules:
-# 	ControlUnitDeco
-# End time: 14:56:17 on Nov 05,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests {C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:17 on Nov 05,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests" C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv 
-# -- Compiling module ctrlunit_tb
-# 
-# Top level modules:
-# 	ctrlunit_tb
-# End time: 14:56:18 on Nov 05,2020, Elapsed time: 0:00:01
+# 	DataMemory
+# End time: 12:24:09 on Nov 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim work.ctrlunit_tb
-# vsim work.ctrlunit_tb 
-# Start time: 14:56:24 on Nov 05,2020
+vsim work.DataMemoryTest
+# vsim work.DataMemoryTest 
+# Start time: 12:24:33 on Nov 06,2020
 # Loading sv_std.std
-# Loading work.ctrlunit_tb
-# Loading work.ControlUnit
-# Loading work.ControlUnitDeco
-# Loading work.ExtendDeco
-add wave -position end sim:/ctrlunit_tb/*
+# Loading work.DataMemoryTest
+# Loading work.DataMemory
+add wave -position insertpoint  \
+sim:/DataMemoryTest/clk \
+sim:/DataMemoryTest/we \
+sim:/DataMemoryTest/addr \
+sim:/DataMemoryTest/wd \
+sim:/DataMemoryTest/rd
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: luisd  Hostname: DESKTOP-6I0S59P  ProcessID: 14184
-#           Attempting to use alternate WLF file "./wlftb9wdry".
+#           Attempting to use alternate WLF file "./wlftmfnrsw".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftb9wdry
-run 100
+#           Using alternate file: ./wlftmfnrsw
+run 1000
+# End time: 12:25:53 on Nov 06,2020, Elapsed time: 0:01:20
+# Errors: 0, Warnings: 2

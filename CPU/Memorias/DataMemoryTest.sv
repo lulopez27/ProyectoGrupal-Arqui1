@@ -8,22 +8,9 @@ module DataMemoryTest();
 	initial begin
 		
 		clk = 1'b1;
-		we = 1'b0;
-		addr = 32'b0;
-		wd = 32'b0;
-		
-		#10;
-		
-		wd = 32'd131;
 		we = 1'b1;
-		clk = 1'b0;
-		
-		#10;
-		
-		clk = 1'b1;
-		we = 1'b0;
-		addr = 32'd1;
-		wd = 32'd65;
+		addr = 32'b0;
+		wd = 32'hAFAF;
 		
 		#10;
 		
@@ -31,10 +18,34 @@ module DataMemoryTest();
 		
 		#10;
 		
-		addr = 32'd0;
 		clk = 1'b1;
+		addr = 32'd10000;
+		wd = 32'hFFFF;
+		
+		#10;
+		
+		clk = 1'b0;
+		
+		#10;
+		
+		clk = 1'b1;
+		addr = 32'd152100;
+		wd = 32'hABCDEFAA;
 	
 		#10;
+		
+		clk = 1'b0;
+		
+		#10;
+		
+		clk = 1'b1;
+		addr = 32'b0;
+		we = 1'b0;
+		wd = 32'd1;
+		
+		#10;
+		
+		clk = 1'b0;
 	
 	end
 

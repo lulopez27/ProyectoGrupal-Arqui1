@@ -5,8 +5,6 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit {C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv}
-vlog -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders {C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ExtendDeco.sv}
-vlog -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders {C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ControlUnitDeco.sv}
-vlog -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests {C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/ctrlunit_tb.sv}
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Memorias {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemoryTest.sv}
+vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Memorias {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemory.sv}
 
