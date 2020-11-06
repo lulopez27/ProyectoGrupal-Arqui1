@@ -1,13 +1,13 @@
 module ctrlunit_tb();
 	logic [1:0] op, inst;
 	logic immediatei;
-	logic immediateo, wmem, rmem, wreg;
+	logic immediateo, wmem, rmem, wreg,wpc,jmp;
 	logic [2:0] ALUins;
 	logic [1:0] ExtndSel;
 	logic [8:0]ans;
 	assign ans = {immediateo,wmem,rmem,wreg,ALUins,ExtndSel};
 	ControlUnit ctrlunit(op, inst, immediatei,
-					immediateo, wmem, rmem, wreg,ALUins,ExtndSel);
+					immediateo,wmem,rmem,wreg,wpc,jmp,ALUins,ExtndSel);
 	
 	initial begin
 	op =2'b10; //GDR

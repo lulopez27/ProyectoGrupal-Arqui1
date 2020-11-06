@@ -2,6 +2,7 @@
 	"partitions" : [
 		{
 			"name" : "Top",
+<<<<<<< HEAD
 			"pins" : [
 				{
 					"name" : "rd[0]",
@@ -164,6 +165,9 @@
 					"strict" : false
 				}
 			]
+=======
+			"pins" : []
+>>>>>>> main
 		}
 	]
 }
