@@ -78,6 +78,9 @@ def compile(codigo):
 
     print(hexInstructions)
     print(binInstructions)
+    with open('./OutputFiles/outputFile.txt', 'w') as f:
+        for item in hexInstructions:
+            f.write("%s\n" % item)
 
 
 def analiceInst(inst, pc):
@@ -153,7 +156,7 @@ def analiceInst(inst, pc):
         binInstructions.append(binCode)
         hexInstructions.append('0x400000')
     else:
-    
+
         binCode = int(binCode, 2)
         hexInstructions.append(hex(binCode))
 
@@ -206,11 +209,11 @@ def complementoADos(num):
 # def getRegNumber(inst):
 
 
-test = 'D:/Isaac Porras/Semestre 8/Arqui/Proyecto2/FantasmCompiler/TestFiles/test.txt'
+test = './TestFiles/test.txt'
 fp = codecs.open(test, "r", "utf-8")
 cadena = fp.read()
 fp.close()
 
 # print(int('010',2))
-print(len('00001000000000000000000000000100'))
+
 compile(cadena)
