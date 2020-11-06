@@ -141,8 +141,10 @@ def analiceInst(inst, pc):
     elif str(inst[0]) in stallInst:
         binCode += str(format(stallInst.get(inst[0]), '#010b'))[5:]
 
-    print('El codigo es: ' + binCode)
-    print(len(binCode))
+    print( binCode)
+    binCode = int(binCode,2)
+    print(hex(binCode))
+
 
 
 
@@ -186,7 +188,7 @@ def complementoADos(num):
 
     return num
 
-complementoADos('1010')
+
 # def getRegNumber(inst):
 
 
