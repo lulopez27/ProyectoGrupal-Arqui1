@@ -44,6 +44,8 @@ bitsBasura4 = '0000'
 
 jumpLabels = {}
 
+hexInstructions = []
+binInstructions = []
 
 def compile(codigo):
     FantASMLexicalAnalizer(codigo)
@@ -53,7 +55,7 @@ def compile(codigo):
     dir = 0
     for statement in sintaxResult:
         if type(statement) == type(tuple()):  # Si es una tupla significa que es una instruccion norma
-            dir += 4
+            dir += 1
         else:
             jumpLabels.update({statement: hex(dir)})
 
@@ -67,18 +69,15 @@ def compile(codigo):
 
             instruction.append(statement)
             analiceInst(statement, hex(dir))
-            dir += 4
+            dir += 1
 
 
         else:
 
             pass
 
-    i = 0
-    while i < len(hexDirection):
-        # print(hexDirection[i])
-        # print(instruction[i])
-        i += 1
+    print(hexInstructions)
+    print(binInstructions)
 
 
 def analiceInst(inst, pc):
@@ -117,33 +116,38 @@ def analiceInst(inst, pc):
             binCode += str(format(compInst.get(inst[0]), '#010b'))[5:]
             binCode += shiftNumber(str(bin(inst[2]))[2:], 19) + registerNumber.get(str(inst[1])) + bitsBasura4
     elif str(inst[0]) in jumpInst:
-
-        jumpDir = jumpLabels.get(inst[1])
-        binCode += str(format(jumpInst.get(inst[0]), '#010b'))[5:]
-        pcmenosjmpAdd = int(jumpDir, 16) - int(pc, 16)
-        #pcmenosjmpAdd = int(pc, 16) - int(jumpDir, 16)
-        print(pcmenosjmpAdd)
-
-        if (pcmenosjmpAdd < 0):
-            print('El salto es hacia atras')
-            pcmenosjmpAdd = bin(abs(pcmenosjmpAdd))[2:]
+        print(jumpLabels)
+        if str(inst[1]) in jumpLabels:
+            jumpDir = jumpLabels.get(inst[1])
+            binCode += str(format(jumpInst.get(inst[0]), '#010b'))[5:]
+            pcmenosjmpAdd = int(jumpDir, 16) - int(pc, 16)
+            #pcmenosjmpAdd = int(pc, 16) - int(jumpDir, 16)
             print(pcmenosjmpAdd)
-            complemento = complementoADos(pcmenosjmpAdd)
-            binCode += complemento
+
+            if (pcmenosjmpAdd < 0):
+                print('El salto es hacia atras')
+                pcmenosjmpAdd = bin(abs(pcmenosjmpAdd))[2:]
+                print(pcmenosjmpAdd)
+                complemento = complementoADos(pcmenosjmpAdd)
+                binCode += complemento
 
 
+
+            else:
+                print('el salto es hacia adelante')
+                pcmenosjmpAdd = bin(pcmenosjmpAdd)[2:]
+                binCode += str(shiftNumber(pcmenosjmpAdd,27))
 
         else:
-            print('el salto es hacia adelante')
-            pcmenosjmpAdd = bin(pcmenosjmpAdd)[2:]
-            binCode += str(shiftNumber(pcmenosjmpAdd,28))
+            print('La etiqueta a la que quiere saltar no existe')
 
     elif str(inst[0]) in stallInst:
         binCode += str(format(stallInst.get(inst[0]), '#010b'))[5:]
 
-    print( binCode)
-    binCode = int(binCode,2)
-    print(hex(binCode))
+    binInstructions.append(binCode)
+    binCode = int(binCode, 2)
+    hexInstructions.append(hex(binCode))
+
 
 
 
@@ -160,7 +164,7 @@ def shiftNumber(num, shift):
 
 def complementoADos(num):
 
-    num = shiftNumber(num, 28)
+    num = shiftNumber(num, 27)
     num = num[::-1]
     num  = list(num)
 
@@ -198,5 +202,5 @@ cadena = fp.read()
 fp.close()
 
 # print(int('010',2))
-
+print(len('00001000000000000000000000000100'))
 compile(cadena)
