@@ -1,5 +1,5 @@
 module ControlUnit(input[1:0] op, input[1:0] inst, input immin, //input clk, rst, 
-						output immout, wmem, rmem, wreg, wpc, jmp, output[2:0] ALUins, output[1:0] ExtndSel);
+						output wmem, rmem, wreg, wpc, jmp, output[2:0] ALUins, output[1:0] ExtndSel);
 	logic[4:0] ALUinst;
 	assign ALUinst = {op, inst, immin};
 	logic[3:0] ExtSel;

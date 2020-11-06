@@ -8,7 +8,7 @@ module ExtenderTest();
 	
 	initial begin
 		
-		inmeIn = 15'd45;
+		inmeIn = -15'd45;
 		Sel = 2'b00;
 		
 		#10;
@@ -18,7 +18,7 @@ module ExtenderTest();
 		
 		#10;
 		
-		inmeIn = 23'd57
+		inmeIn = 23'd57;
 		Sel = 2'b10;
 		
 		#10;
