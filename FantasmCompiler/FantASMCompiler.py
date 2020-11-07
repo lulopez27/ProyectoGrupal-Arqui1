@@ -25,6 +25,7 @@ memoryInst = {'GDR': int('10000', 2),
               'CAR': int('10010', 2),
               'MOVR': int('10100', 2),
               'MOVI': int('10101', 2)}
+
 arithmeticInst = {'SUM': int('11000', 2),
                   'RES': int('11010', 2),
                   'MOD': int('11100', 2),
@@ -93,15 +94,20 @@ def analiceInst(inst, pc):
             # print('El registro ' + str(inst[1]) + ' no existe')
             return
         elif inst[2] not in registerNumber and not isinstance(inst[2], int):
-            # print('El registro ' + str(inst[2]) + ' no existe')
+            print('El registro ' + str(inst[2]) + ' no existe')
             return
         elif isinstance(inst[2], int):
             # print(str(bin(inst[2])))
             binCode += shiftNumber(str(bin(inst[2]))[2:], 23) + registerNumber.get(str(inst[1]))
 
         else:
-            binCode += bitsBasura19
-            binCode += registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1]))
+            if str(inst[0]) == 'GDR':
+                binCode += bitsBasura15
+                binCode += registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1])) + bitsBasura4
+
+            else:
+                binCode += bitsBasura19
+                binCode += registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1]))
 
 
     elif str(inst[0]) in arithmeticInst:
