@@ -149,8 +149,9 @@ def analiceInst(inst, pc):
 
     binInstructions.append(binCode)
     print('El codigo de la operacion es:')
-    print(binCode[0:5])
-    if str(binCode[0:5]) == '00001' or str(binCode[0:5]) == '00111':
+
+    instrCode = int(binCode[0:5],2)
+    if instrCode == memoryInst.get('GDR') or instrCode == memoryInst.get('CAR'):
         print('Hubo un jump')
         binCode = "010000000000000000000000"
         binInstructions.append(binCode)
