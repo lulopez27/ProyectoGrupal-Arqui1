@@ -1,6 +1,6 @@
 module DataMemory (input logic clk, we,
 						 input logic [31:0] addr, wd,
-						 output logic [31:0] rd);
+						 output logic [31:0] rd, output logic [7:0] GPIO,output logic GPIOEn);
 				
 	logic [7:0] RAM1[9999:0];
 	logic [7:0] RAM2[9999:0];
@@ -98,8 +98,15 @@ module DataMemory (input logic clk, we,
 					else if (addr >= 'd150000 && addr <= 'd152099)
 						RAM16[addr - 'd150000] <= wd[7:0];
 					else if (addr >= 'd152100 && addr <= 'd152355)
-						RAMD[addr - 'd152100] <= wd;				
+						RAMD[addr - 'd152100] <= wd;
 				end
 		end
+		always_ff @(negedge clk)
+			if (we) 
+					if (addr >= 'd0 && addr <= 'd152099)
+						GPIO = wd[7:0];
+						GPIOEn = 1'b1;
+		always_ff @(posedge clk)
+			GPIOEn = 1'b0;
 	
 endmodule 
