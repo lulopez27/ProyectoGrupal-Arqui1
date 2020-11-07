@@ -29,8 +29,8 @@ module processor(input clk, rst);
 //	assign R3 = PCinst[11:8];
 //	RegisterFile regFile(clk,wrego3,R2,R3,destRegi,ALURo3,PCF,R2i,R3i);//Pegarle el mux mas a la derecha en vez de ALURo3
 //	
-	logic clk,rst;
-	mux_32 PC_Mux (JumpEn,ALURes,curr_pc)
+//	logic clk,rst;
+	mux_32 PC_Mux (JumpEn,ALURes,curr_pc);
 	logic[31:0] next_pc,curr_pc,pc_p1;
 	PC (clk,rst,next_pc,curr_pc);
 	PC_1 (curr_pc,pc_p1);
@@ -38,7 +38,7 @@ module processor(input clk, rst);
 	logic immF;
 	logic[3:0] R2,R3,DestR;
 	logic[26:0] immediate;
-	InstructionMemory (curr_pc,num_op,inst,immF,R2,R3,DestR,immediate)
+	InstructionMemory (curr_pc,num_op,inst,immF,R2,R3,DestR,immediate);
 	logic Wmem,Rmem,Wreg,Jmp,Wpc;
 	logic [2:0]ALUIns;
 	logic [1:0]ExtndSel;
