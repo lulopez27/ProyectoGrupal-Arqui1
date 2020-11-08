@@ -14,7 +14,7 @@ module MemoryController (input logic clk, we,
 					trueAddr = addr;
 					rd = ROMRd;
 				end
-			else if (addr >= 'd152100 && addr <= 'd304455)
+			else if (addr >= 'd152100 && addr <= 'd305735)
 				begin
 					trueAddr = addr - 'd152100;
 					rd = RAMRd;

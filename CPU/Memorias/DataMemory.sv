@@ -18,7 +18,7 @@ module DataMemory (input logic clk, we,
 	logic [7:0] RAM14[9999:0];
 	logic [7:0] RAM15[9999:0];
 	logic [7:0] RAM16[2099:0];
-	logic [31:0] RAMD[255:0];
+	logic [31:0] RAMD[1535:0];
 	
 	always_comb
 		begin
@@ -54,7 +54,7 @@ module DataMemory (input logic clk, we,
 				rd = {24'b0, RAM15[addr - 'd140000]};
 			else if (addr >= 'd150000 && addr <= 'd152099)
 				rd = {24'b0, RAM16[addr - 'd150000]};
-			else if (addr >= 'd152100 && addr <= 'd152355)
+			else if (addr >= 'd152100 && addr <= 'd153635)
 				rd = RAMD[addr - 'd152100];
 			else
 				rd = 32'b0;
@@ -97,7 +97,7 @@ module DataMemory (input logic clk, we,
 						RAM15[addr - 'd140000] <= wd[7:0];
 					else if (addr >= 'd150000 && addr <= 'd152099)
 						RAM16[addr - 'd150000] <= wd[7:0];
-					else if (addr >= 'd152100 && addr <= 'd152355)
+					else if (addr >= 'd152100 && addr <= 'd153635)
 						RAMD[addr - 'd152100] <= wd;
 				end
 		end
@@ -105,7 +105,7 @@ module DataMemory (input logic clk, we,
 			if (we) 
 					if (addr >= 'd0 && addr <= 'd152099)begin
 						GPIO = wd[7:0];
-						GPIOEn  = 1'b1;
+						GPIOEn = 1'b1;
 						end
 					else
 						GPIOEn = 1'b0;
