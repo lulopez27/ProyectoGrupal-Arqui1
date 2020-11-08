@@ -111,6 +111,7 @@ def p_JumpInstName(p):
     '''
     JumpInstName :  SAL
             | SIG
+            | SMY
     '''
 
     p[0] = p[1]

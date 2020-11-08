@@ -36,7 +36,8 @@ compInst = {'CMPR': int('10110', 2),
             'CMPI': int('10111', 2)}
 
 jumpInst = {'SAL': int('00001', 2),
-            'SIG': int('00111', 2)}
+            'SIG': int('00111', 2),
+            'SMY': int('00011', 2)}
 
 stallInst = {'ESP': int('01000', 2)}
 bitsBasura19 = '0000000000000000000'
@@ -167,7 +168,7 @@ def analiceInst(inst, pc):
                  hexCode= '0' + hexCode
                  lenHexCode += 1
             hexCode = '0x' + hexCode
-            print('Acaaaa : '+hexCode)
+
 
         hexInstructions.append(hexCode)
 
@@ -176,7 +177,7 @@ def analiceInst(inst, pc):
         print('Hubo un jump')
         binCode = "010000000000000000000000"
         binInstructions.append(binCode)
-        hexInstructions.append('0x400000')
+        hexInstructions.append('0x40000000')
     else:
 
         binCode = int(binCode, 2)

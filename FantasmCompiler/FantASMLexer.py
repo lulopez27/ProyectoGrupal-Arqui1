@@ -21,6 +21,7 @@ reservadas = {
     'CMPI': 'CMPI',
     'SAL': 'SAL',
     'SIG': 'SIG',
+    'SMY': 'SMY',
     'ESP': 'ESP',
     'INICIO': 'INICIO',
     'FIN': 'FIN',

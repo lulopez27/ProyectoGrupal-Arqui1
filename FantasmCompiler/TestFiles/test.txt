@@ -11,9 +11,13 @@ INICIO:
 	CMPI R13,90;
 	SAL Holi2;
 	SIG  Holi;
+	SMY  Holi;
 Holi:
 	GDR R13,R2;
 Holi2:
+	GDR R13,R2;
+	SMY  Holi3;
+Holi3:
 	GDR R13,R2;
 FIN
 
