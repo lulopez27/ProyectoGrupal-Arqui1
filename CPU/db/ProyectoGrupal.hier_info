@@ -1,9 +1,12 @@
-|processor
+|processor_tb
+
+
+|processor_tb|processor:proce
 clk => clk.IN7
 rst => rst.IN3
 
 
-|processor|Mux2:PC_Mux
+|processor_tb|processor:proce|Mux2:PC_Mux
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -103,7 +106,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|FlipFlop:PC
+|processor_tb|processor:proce|FlipFlop:PC
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 clk => q[2]~reg0.CLK
@@ -234,7 +237,7 @@ q[30] <= q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[31] <= q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|Suma:PC_1
+|processor_tb|processor:proce|Suma:PC_1
 A[0] => Add0.IN32
 A[1] => Add0.IN31
 A[2] => Add0.IN30
@@ -334,7 +337,7 @@ C[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|InstructionMemory:InsMem
+|processor_tb|processor:proce|InstructionMemory:InsMem
 addr[0] => ROM.RADDR
 addr[1] => ROM.RADDR1
 addr[2] => ROM.RADDR2
@@ -401,7 +404,7 @@ rd[30] <= ROM.DATAOUT30
 rd[31] <= ROM.DATAOUT31
 
 
-|processor|FlipFlop:pipelineFetch
+|processor_tb|processor:proce|FlipFlop:pipelineFetch
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 clk => q[2]~reg0.CLK
@@ -532,7 +535,7 @@ q[30] <= q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[31] <= q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|ControlUnit:CtrlUnit
+|processor_tb|processor:proce|ControlUnit:CtrlUnit
 op[0] => ExtSel[2].IN2
 op[1] => ExtSel[3].IN2
 inst[0] => jmpF[0].IN2
@@ -551,7 +554,7 @@ ExtndSel[0] <= ExtendDeco:ExtDeco.port1
 ExtndSel[1] <= ExtendDeco:ExtDeco.port1
 
 
-|processor|ControlUnit:CtrlUnit|ControlUnitDeco:ALUDeco
+|processor_tb|processor:proce|ControlUnit:CtrlUnit|ControlUnitDeco:ALUDeco
 in[0] => Decoder0.IN4
 in[1] => Decoder0.IN3
 in[2] => Decoder0.IN2
@@ -562,7 +565,7 @@ ALUControl[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 ALUControl[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|ControlUnit:CtrlUnit|ExtendDeco:ExtDeco
+|processor_tb|processor:proce|ControlUnit:CtrlUnit|ExtendDeco:ExtDeco
 in[0] => Decoder0.IN3
 in[1] => Decoder0.IN2
 in[2] => Decoder0.IN1
@@ -571,7 +574,7 @@ ALUControl[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 ALUControl[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|RegisterFile:RegFile
+|processor_tb|processor:proce|RegisterFile:RegFile
 clk => regs.we_a.CLK
 clk => regs.waddr_a[3].CLK
 clk => regs.waddr_a[2].CLK
@@ -758,7 +761,7 @@ rd2[30] <= regs.PORTBDATAOUT30
 rd2[31] <= regs.PORTBDATAOUT31
 
 
-|processor|Extender:extnd
+|processor_tb|processor:proce|Extender:extnd
 inmeIn[0] => Mux22.IN3
 inmeIn[1] => Mux21.IN3
 inmeIn[2] => Mux20.IN3
@@ -925,7 +928,7 @@ inmeOut[30] <= <GND>
 inmeOut[31] <= <GND>
 
 
-|processor|Mux2:Extend_Mux
+|processor_tb|processor:proce|Mux2:Extend_Mux
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -1025,7 +1028,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|Mux2:PCReg_Mux
+|processor_tb|processor:proce|Mux2:PCReg_Mux
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -1125,7 +1128,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|PipelineMem:pipeMem
+|processor_tb|processor:proce|PipelineMem:pipeMem
 clk => wpco~reg0.CLK
 clk => jmpo[0]~reg0.CLK
 clk => jmpo[1]~reg0.CLK
@@ -1468,7 +1471,7 @@ DestRo[2] <= DestRo[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DestRo[3] <= DestRo[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|ForwardUnitALU:FwrdUnitALU
+|processor_tb|processor:proce|ForwardUnitALU:FwrdUnitALU
 R2res3[0] => R2res3[0].IN1
 R2res3[1] => R2res3[1].IN1
 R2res3[2] => R2res3[2].IN1
@@ -1533,30 +1536,30 @@ R3res3[28] => R3res3[28].IN1
 R3res3[29] => R3res3[29].IN1
 R3res3[30] => R3res3[30].IN1
 R3res3[31] => R3res3[31].IN1
-R2_2[0] => comb.IN0
-R2_2[0] => comb.IN0
-R2_2[1] => comb.IN0
-R2_2[1] => comb.IN0
-R2_2[2] => comb.IN0
-R2_2[2] => comb.IN0
-R2_2[3] => comb.IN0
-R2_2[3] => comb.IN0
-R3_2[0] => comb.IN0
-R3_2[0] => comb.IN0
-R3_2[1] => comb.IN0
-R3_2[1] => comb.IN0
-R3_2[2] => comb.IN0
-R3_2[2] => comb.IN0
-R3_2[3] => comb.IN0
-R3_2[3] => comb.IN0
-DestR_3[0] => comb.IN1
-DestR_3[0] => comb.IN1
-DestR_3[1] => comb.IN1
-DestR_3[1] => comb.IN1
-DestR_3[2] => comb.IN1
-DestR_3[2] => comb.IN1
-DestR_3[3] => comb.IN1
-DestR_3[3] => comb.IN1
+R2_2[0] => Equal0.IN3
+R2_2[0] => Equal1.IN3
+R2_2[1] => Equal0.IN2
+R2_2[1] => Equal1.IN2
+R2_2[2] => Equal0.IN1
+R2_2[2] => Equal1.IN1
+R2_2[3] => Equal0.IN0
+R2_2[3] => Equal1.IN0
+R3_2[0] => Equal2.IN3
+R3_2[0] => Equal3.IN3
+R3_2[1] => Equal2.IN2
+R3_2[1] => Equal3.IN2
+R3_2[2] => Equal2.IN1
+R3_2[2] => Equal3.IN1
+R3_2[3] => Equal2.IN0
+R3_2[3] => Equal3.IN0
+DestR_3[0] => Equal1.IN7
+DestR_3[0] => Equal3.IN7
+DestR_3[1] => Equal1.IN6
+DestR_3[1] => Equal3.IN6
+DestR_3[2] => Equal1.IN5
+DestR_3[2] => Equal3.IN5
+DestR_3[3] => Equal1.IN4
+DestR_3[3] => Equal3.IN4
 Res[0] => Res[0].IN2
 Res[1] => Res[1].IN2
 Res[2] => Res[2].IN2
@@ -1589,14 +1592,14 @@ Res[28] => Res[28].IN2
 Res[29] => Res[29].IN2
 Res[30] => Res[30].IN2
 Res[31] => Res[31].IN2
-DestR_4[0] => comb.IN1
-DestR_4[0] => comb.IN1
-DestR_4[1] => comb.IN1
-DestR_4[1] => comb.IN1
-DestR_4[2] => comb.IN1
-DestR_4[2] => comb.IN1
-DestR_4[3] => comb.IN1
-DestR_4[3] => comb.IN1
+DestR_4[0] => Equal0.IN7
+DestR_4[0] => Equal2.IN7
+DestR_4[1] => Equal0.IN6
+DestR_4[1] => Equal2.IN6
+DestR_4[2] => Equal0.IN5
+DestR_4[2] => Equal2.IN5
+DestR_4[3] => Equal0.IN4
+DestR_4[3] => Equal2.IN4
 Res1[0] => Res1[0].IN2
 Res1[1] => Res1[1].IN2
 Res1[2] => Res1[2].IN2
@@ -1695,7 +1698,7 @@ R3res4[30] <= Mux2:ExR3.port3
 R3res4[31] <= Mux2:ExR3.port3
 
 
-|processor|ForwardUnitALU:FwrdUnitALU|Mux2:WbR2
+|processor_tb|processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:WbR2
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -1795,7 +1798,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|ForwardUnitALU:FwrdUnitALU|Mux2:ExR2
+|processor_tb|processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:ExR2
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -1895,7 +1898,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|ForwardUnitALU:FwrdUnitALU|Mux2:WbR3
+|processor_tb|processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:WbR3
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -1995,7 +1998,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|ForwardUnitALU:FwrdUnitALU|Mux2:ExR3
+|processor_tb|processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:ExR3
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -2095,7 +2098,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU
 A[0] => A[0].IN5
 A[1] => A[1].IN5
 A[2] => A[2].IN5
@@ -2201,7 +2204,7 @@ banDesborde <= Desborde:BanOve.port4
 banAcarreo <= Acarreo:BanCar.port4
 
 
-|processor|UnidadLogicoAritmetica:ALU|Suma:Sum
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Suma:Sum
 A[0] => Add0.IN32
 A[1] => Add0.IN31
 A[2] => Add0.IN30
@@ -2301,7 +2304,7 @@ C[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Resta:Res
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Resta:Res
 A[0] => Add0.IN64
 A[1] => Add0.IN63
 A[2] => Add0.IN62
@@ -2401,7 +2404,7 @@ C[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Multiplicacion:Mul
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Multiplicacion:Mul
 A[0] => Mult0.IN31
 A[1] => Mult0.IN30
 A[2] => Mult0.IN29
@@ -2501,7 +2504,7 @@ C[31] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Modulo:Mod
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Modulo:Mod
 A[0] => Mod0.IN31
 A[1] => Mod0.IN30
 A[2] => Mod0.IN29
@@ -2600,7 +2603,7 @@ C[30] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
 C[31] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|DesplazamientoDerecha:DespDer
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|DesplazamientoDerecha:DespDer
 A[0] => ShiftRight0.IN32
 A[1] => ShiftRight0.IN31
 A[2] => ShiftRight0.IN30
@@ -2699,7 +2702,7 @@ C[30] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
 C[31] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Mux8ALU:Mux8
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Mux8ALU:Mux8
 result0[0] => Mux0.IN2
 result0[1] => Mux1.IN2
 result0[2] => Mux2.IN2
@@ -3025,13 +3028,13 @@ Out[30] <= Out[30].DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Negativo:BanNeg
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Negativo:BanNeg
 UltBit => Res.IN0
 Sel => Res.IN1
 Res <= Res.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Cero:BanCer
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Cero:BanCer
 C[0] => Equal0.IN31
 C[1] => Equal0.IN30
 C[2] => Equal0.IN29
@@ -3068,7 +3071,7 @@ Sel => Res.IN1
 Res <= Res.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Desborde:BanOve
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Desborde:BanOve
 MSBA => SignoOperandos.IN0
 MSBA => CambioSigno.IN0
 MSBB => SignoOperandos.IN1
@@ -3079,7 +3082,7 @@ Sel[2] => Equal0.IN0
 Res <= Res.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Acarreo:BanCar
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Acarreo:BanCar
 CarSuma => Res.IN1
 CarResta => Res.IN1
 CarMultiplicacion => Res.IN1
@@ -3095,7 +3098,7 @@ Sel[2] => Equal2.IN1
 Res <= Res.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|condUnit:CondUnit
+|processor_tb|processor:proce|condUnit:CondUnit
 jmpF[0] => Equal0.IN1
 jmpF[0] => Equal1.IN1
 jmpF[1] => Equal0.IN0
@@ -3109,7 +3112,7 @@ Cflag => ~NO_FANOUT~
 jmpR <= jmpR.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|PipelineEx:pipeEx
+|processor_tb|processor:proce|PipelineEx:pipeEx
 clk => rmemo~reg0.CLK
 clk => wmemo~reg0.CLK
 clk => wrego~reg0.CLK
@@ -3396,7 +3399,7 @@ destRego[2] <= destRego[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 destRego[3] <= destRego[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|MemoryController:ChipSel
+|processor_tb|processor:proce|MemoryController:ChipSel
 clk => clk.IN1
 we => we.IN1
 addr[0] => LessThan0.IN64
@@ -3666,7 +3669,7 @@ GPIO[7] <= DataMemory:RAM.port5
 GPIOEn <= DataMemory:RAM.port6
 
 
-|processor|MemoryController:ChipSel|DataMemory:RAM
+|processor_tb|processor:proce|MemoryController:ChipSel|DataMemory:RAM
 clk => RAM1.we_a.CLK
 clk => RAM1.waddr_a[13].CLK
 clk => RAM1.waddr_a[12].CLK
@@ -4034,6 +4037,9 @@ clk => RAM16.data_a[2].CLK
 clk => RAM16.data_a[1].CLK
 clk => RAM16.data_a[0].CLK
 clk => RAMD.we_a.CLK
+clk => RAMD.waddr_a[10].CLK
+clk => RAMD.waddr_a[9].CLK
+clk => RAMD.waddr_a[8].CLK
 clk => RAMD.waddr_a[7].CLK
 clk => RAMD.waddr_a[6].CLK
 clk => RAMD.waddr_a[5].CLK
@@ -6285,7 +6291,7 @@ GPIO[7] <= GPIO[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 GPIOEn <= GPIOEn~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|MemoryController:ChipSel|ImageROM:ROM
+|processor_tb|processor:proce|MemoryController:ChipSel|ImageROM:ROM
 addr[0] => LessThan0.IN64
 addr[0] => LessThan1.IN64
 addr[0] => LessThan2.IN64
@@ -7838,7 +7844,7 @@ rd[30] <= <GND>
 rd[31] <= <GND>
 
 
-|processor|Mux2:MemMux
+|processor_tb|processor:proce|Mux2:MemMux
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -7938,7 +7944,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|PipelineWB:pipeWb
+|processor_tb|processor:proce|PipelineWB:pipeWb
 clk => wrego~reg0.CLK
 clk => DestRo[0]~reg0.CLK
 clk => DestRo[1]~reg0.CLK
