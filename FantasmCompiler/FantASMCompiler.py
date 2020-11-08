@@ -154,10 +154,25 @@ def analiceInst(inst, pc):
         binCode += str(format(stallInst.get(inst[0]), '#010b'))[5:]
 
     binInstructions.append(binCode)
-    print('El codigo de la operacion es:')
+    #print('El codigo de la operacion es:')
 
     instrCode = int(binCode[0:5],2)
     if instrCode == memoryInst.get('GDR') or instrCode == memoryInst.get('CAR'):
+        binCode = int(binCode, 2)
+        hexCode = hex(binCode)
+        lenHexCode = len(hexCode)
+        if lenHexCode != 10:
+            hexCode = hexCode[2:]
+            while lenHexCode < 10:
+                 hexCode= '0' + hexCode
+                 lenHexCode += 1
+            hexCode = '0x' + hexCode
+            print('Acaaaa : '+hexCode)
+
+        hexInstructions.append(hexCode)
+
+
+
         print('Hubo un jump')
         binCode = "010000000000000000000000"
         binInstructions.append(binCode)
@@ -165,7 +180,15 @@ def analiceInst(inst, pc):
     else:
 
         binCode = int(binCode, 2)
-        hexInstructions.append(hex(binCode))
+        hexCode = hex(binCode)
+        lenHexCode = len(hexCode)
+        if lenHexCode != 10:
+            hexCode = hexCode[2:]
+            while lenHexCode < 10:
+                hexCode = '0' + hexCode
+                lenHexCode += 1
+            hexCode = '0x' + hexCode
+        hexInstructions.append(hexCode)
 
 
 
