@@ -31,42 +31,44 @@ Rule 25    CompareInstName -> CMPR
 Rule 26    CompareInstName -> CMPI
 Rule 27    JumpInstName -> SAL
 Rule 28    JumpInstName -> SIG
-Rule 29    MemoryInstName -> GDR
-Rule 30    MemoryInstName -> CAR
-Rule 31    MemoryInstName -> MOVR
-Rule 32    MemoryInstName -> MOVI
-Rule 33    ArithmeticInstName -> SUM
-Rule 34    ArithmeticInstName -> RES
-Rule 35    ArithmeticInstName -> MOD
-Rule 36    ArithmeticInstName -> MUL
-Rule 37    ArithmeticInstName -> DDR
-Rule 38    ArithmeticInstName -> SAL
-Rule 39    empty -> <empty>
+Rule 29    JumpInstName -> SMY
+Rule 30    MemoryInstName -> GDR
+Rule 31    MemoryInstName -> CAR
+Rule 32    MemoryInstName -> MOVR
+Rule 33    MemoryInstName -> MOVI
+Rule 34    ArithmeticInstName -> SUM
+Rule 35    ArithmeticInstName -> RES
+Rule 36    ArithmeticInstName -> MOD
+Rule 37    ArithmeticInstName -> MUL
+Rule 38    ArithmeticInstName -> DDR
+Rule 39    ArithmeticInstName -> SAL
+Rule 40    empty -> <empty>
 
 Terminals, with rules where they appear
 
-CAR                  : 30
+CAR                  : 31
 CMPI                 : 26
 CMPR                 : 25
 COMA                 : 14 15 19 20 22 22 23 23
-DDR                  : 37
+DDR                  : 38
 DOSPUNTOS            : 2 5
 ESP                  : 12
 FIN                  : 2
-GDR                  : 29
+GDR                  : 30
 IMM                  : 15 20 23
 INICIO               : 2
 LABEL                : 5 17
-MOD                  : 35
-MOVI                 : 32
-MOVR                 : 31
-MUL                  : 36
+MOD                  : 36
+MOVI                 : 33
+MOVR                 : 32
+MUL                  : 37
 PUNTOCOMA            : 12 14 15 17 19 20 22 23
 REG                  : 14 14 15 19 19 20 22 22 22 23 23
-RES                  : 34
-SAL                  : 27 38
+RES                  : 35
+SAL                  : 27 39
 SIG                  : 28
-SUM                  : 33
+SMY                  : 29
+SUM                  : 34
 error                : 
 
 Nonterminals, with rules where they appear
@@ -145,25 +147,26 @@ state 4
     (18) jumpInstruction -> . empty
     (12) espInstruction -> . ESP PUNTOCOMA cuerpo
     (13) espInstruction -> . empty
-    (39) empty -> .
-    (33) ArithmeticInstName -> . SUM
-    (34) ArithmeticInstName -> . RES
-    (35) ArithmeticInstName -> . MOD
-    (36) ArithmeticInstName -> . MUL
-    (37) ArithmeticInstName -> . DDR
-    (38) ArithmeticInstName -> . SAL
+    (40) empty -> .
+    (34) ArithmeticInstName -> . SUM
+    (35) ArithmeticInstName -> . RES
+    (36) ArithmeticInstName -> . MOD
+    (37) ArithmeticInstName -> . MUL
+    (38) ArithmeticInstName -> . DDR
+    (39) ArithmeticInstName -> . SAL
     (25) CompareInstName -> . CMPR
     (26) CompareInstName -> . CMPI
-    (29) MemoryInstName -> . GDR
-    (30) MemoryInstName -> . CAR
-    (31) MemoryInstName -> . MOVR
-    (32) MemoryInstName -> . MOVI
+    (30) MemoryInstName -> . GDR
+    (31) MemoryInstName -> . CAR
+    (32) MemoryInstName -> . MOVR
+    (33) MemoryInstName -> . MOVI
     (27) JumpInstName -> . SAL
     (28) JumpInstName -> . SIG
+    (29) JumpInstName -> . SMY
 
     LABEL           shift and go to state 13
     ESP             shift and go to state 19
-    FIN             reduce using rule 39 (empty -> .)
+    FIN             reduce using rule 40 (empty -> .)
     SUM             shift and go to state 20
     RES             shift and go to state 21
     MOD             shift and go to state 22
@@ -177,6 +180,7 @@ state 4
     MOVR            shift and go to state 30
     MOVI            shift and go to state 31
     SIG             shift and go to state 32
+    SMY             shift and go to state 33
 
     cuerpo                         shift and go to state 5
     instruccion                    shift and go to state 6
@@ -196,7 +200,7 @@ state 5
 
     (2) code -> INICIO DOSPUNTOS cuerpo . FIN
 
-    FIN             shift and go to state 33
+    FIN             shift and go to state 34
 
 
 state 6
@@ -252,7 +256,7 @@ state 13
 
     (5) label -> LABEL . DOSPUNTOS cuerpo
 
-    DOSPUNTOS       shift and go to state 34
+    DOSPUNTOS       shift and go to state 35
 
 
 state 14
@@ -283,7 +287,7 @@ state 15
     (22) arimtethicInstruction -> ArithmeticInstName . REG COMA REG COMA REG PUNTOCOMA cuerpo
     (23) arimtethicInstruction -> ArithmeticInstName . REG COMA REG COMA IMM PUNTOCOMA cuerpo
 
-    REG             shift and go to state 35
+    REG             shift and go to state 36
 
 
 state 16
@@ -291,7 +295,7 @@ state 16
     (14) CompareInstruction -> CompareInstName . REG COMA REG PUNTOCOMA cuerpo
     (15) CompareInstruction -> CompareInstName . REG COMA IMM PUNTOCOMA cuerpo
 
-    REG             shift and go to state 36
+    REG             shift and go to state 37
 
 
 state 17
@@ -299,64 +303,64 @@ state 17
     (19) memoryInstruction -> MemoryInstName . REG COMA REG PUNTOCOMA cuerpo
     (20) memoryInstruction -> MemoryInstName . REG COMA IMM PUNTOCOMA cuerpo
 
-    REG             shift and go to state 37
+    REG             shift and go to state 38
 
 
 state 18
 
     (17) jumpInstruction -> JumpInstName . LABEL PUNTOCOMA cuerpo
 
-    LABEL           shift and go to state 38
+    LABEL           shift and go to state 39
 
 
 state 19
 
     (12) espInstruction -> ESP . PUNTOCOMA cuerpo
 
-    PUNTOCOMA       shift and go to state 39
+    PUNTOCOMA       shift and go to state 40
 
 
 state 20
 
-    (33) ArithmeticInstName -> SUM .
+    (34) ArithmeticInstName -> SUM .
 
-    REG             reduce using rule 33 (ArithmeticInstName -> SUM .)
+    REG             reduce using rule 34 (ArithmeticInstName -> SUM .)
 
 
 state 21
 
-    (34) ArithmeticInstName -> RES .
+    (35) ArithmeticInstName -> RES .
 
-    REG             reduce using rule 34 (ArithmeticInstName -> RES .)
+    REG             reduce using rule 35 (ArithmeticInstName -> RES .)
 
 
 state 22
 
-    (35) ArithmeticInstName -> MOD .
+    (36) ArithmeticInstName -> MOD .
 
-    REG             reduce using rule 35 (ArithmeticInstName -> MOD .)
+    REG             reduce using rule 36 (ArithmeticInstName -> MOD .)
 
 
 state 23
 
-    (36) ArithmeticInstName -> MUL .
+    (37) ArithmeticInstName -> MUL .
 
-    REG             reduce using rule 36 (ArithmeticInstName -> MUL .)
+    REG             reduce using rule 37 (ArithmeticInstName -> MUL .)
 
 
 state 24
 
-    (37) ArithmeticInstName -> DDR .
+    (38) ArithmeticInstName -> DDR .
 
-    REG             reduce using rule 37 (ArithmeticInstName -> DDR .)
+    REG             reduce using rule 38 (ArithmeticInstName -> DDR .)
 
 
 state 25
 
-    (38) ArithmeticInstName -> SAL .
+    (39) ArithmeticInstName -> SAL .
     (27) JumpInstName -> SAL .
 
-    REG             reduce using rule 38 (ArithmeticInstName -> SAL .)
+    REG             reduce using rule 39 (ArithmeticInstName -> SAL .)
     LABEL           reduce using rule 27 (JumpInstName -> SAL .)
 
 
@@ -376,30 +380,30 @@ state 27
 
 state 28
 
-    (29) MemoryInstName -> GDR .
+    (30) MemoryInstName -> GDR .
 
-    REG             reduce using rule 29 (MemoryInstName -> GDR .)
+    REG             reduce using rule 30 (MemoryInstName -> GDR .)
 
 
 state 29
 
-    (30) MemoryInstName -> CAR .
+    (31) MemoryInstName -> CAR .
 
-    REG             reduce using rule 30 (MemoryInstName -> CAR .)
+    REG             reduce using rule 31 (MemoryInstName -> CAR .)
 
 
 state 30
 
-    (31) MemoryInstName -> MOVR .
+    (32) MemoryInstName -> MOVR .
 
-    REG             reduce using rule 31 (MemoryInstName -> MOVR .)
+    REG             reduce using rule 32 (MemoryInstName -> MOVR .)
 
 
 state 31
 
-    (32) MemoryInstName -> MOVI .
+    (33) MemoryInstName -> MOVI .
 
-    REG             reduce using rule 32 (MemoryInstName -> MOVI .)
+    REG             reduce using rule 33 (MemoryInstName -> MOVI .)
 
 
 state 32
@@ -411,12 +415,19 @@ state 32
 
 state 33
 
+    (29) JumpInstName -> SMY .
+
+    LABEL           reduce using rule 29 (JumpInstName -> SMY .)
+
+
+state 34
+
     (2) code -> INICIO DOSPUNTOS cuerpo FIN .
 
     $end            reduce using rule 2 (code -> INICIO DOSPUNTOS cuerpo FIN .)
 
 
-state 34
+state 35
 
     (5) label -> LABEL DOSPUNTOS . cuerpo
     (3) cuerpo -> . instruccion
@@ -441,25 +452,26 @@ state 34
     (18) jumpInstruction -> . empty
     (12) espInstruction -> . ESP PUNTOCOMA cuerpo
     (13) espInstruction -> . empty
-    (39) empty -> .
-    (33) ArithmeticInstName -> . SUM
-    (34) ArithmeticInstName -> . RES
-    (35) ArithmeticInstName -> . MOD
-    (36) ArithmeticInstName -> . MUL
-    (37) ArithmeticInstName -> . DDR
-    (38) ArithmeticInstName -> . SAL
+    (40) empty -> .
+    (34) ArithmeticInstName -> . SUM
+    (35) ArithmeticInstName -> . RES
+    (36) ArithmeticInstName -> . MOD
+    (37) ArithmeticInstName -> . MUL
+    (38) ArithmeticInstName -> . DDR
+    (39) ArithmeticInstName -> . SAL
     (25) CompareInstName -> . CMPR
     (26) CompareInstName -> . CMPI
-    (29) MemoryInstName -> . GDR
-    (30) MemoryInstName -> . CAR
-    (31) MemoryInstName -> . MOVR
-    (32) MemoryInstName -> . MOVI
+    (30) MemoryInstName -> . GDR
+    (31) MemoryInstName -> . CAR
+    (32) MemoryInstName -> . MOVR
+    (33) MemoryInstName -> . MOVI
     (27) JumpInstName -> . SAL
     (28) JumpInstName -> . SIG
+    (29) JumpInstName -> . SMY
 
     LABEL           shift and go to state 13
     ESP             shift and go to state 19
-    FIN             reduce using rule 39 (empty -> .)
+    FIN             reduce using rule 40 (empty -> .)
     SUM             shift and go to state 20
     RES             shift and go to state 21
     MOD             shift and go to state 22
@@ -473,8 +485,9 @@ state 34
     MOVR            shift and go to state 30
     MOVI            shift and go to state 31
     SIG             shift and go to state 32
+    SMY             shift and go to state 33
 
-    cuerpo                         shift and go to state 40
+    cuerpo                         shift and go to state 41
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
     arimtethicInstruction          shift and go to state 8
@@ -488,38 +501,38 @@ state 34
     MemoryInstName                 shift and go to state 17
     JumpInstName                   shift and go to state 18
 
-state 35
+state 36
 
     (22) arimtethicInstruction -> ArithmeticInstName REG . COMA REG COMA REG PUNTOCOMA cuerpo
     (23) arimtethicInstruction -> ArithmeticInstName REG . COMA REG COMA IMM PUNTOCOMA cuerpo
-
-    COMA            shift and go to state 41
-
-
-state 36
-
-    (14) CompareInstruction -> CompareInstName REG . COMA REG PUNTOCOMA cuerpo
-    (15) CompareInstruction -> CompareInstName REG . COMA IMM PUNTOCOMA cuerpo
 
     COMA            shift and go to state 42
 
 
 state 37
 
-    (19) memoryInstruction -> MemoryInstName REG . COMA REG PUNTOCOMA cuerpo
-    (20) memoryInstruction -> MemoryInstName REG . COMA IMM PUNTOCOMA cuerpo
+    (14) CompareInstruction -> CompareInstName REG . COMA REG PUNTOCOMA cuerpo
+    (15) CompareInstruction -> CompareInstName REG . COMA IMM PUNTOCOMA cuerpo
 
     COMA            shift and go to state 43
 
 
 state 38
 
-    (17) jumpInstruction -> JumpInstName LABEL . PUNTOCOMA cuerpo
+    (19) memoryInstruction -> MemoryInstName REG . COMA REG PUNTOCOMA cuerpo
+    (20) memoryInstruction -> MemoryInstName REG . COMA IMM PUNTOCOMA cuerpo
 
-    PUNTOCOMA       shift and go to state 44
+    COMA            shift and go to state 44
 
 
 state 39
+
+    (17) jumpInstruction -> JumpInstName LABEL . PUNTOCOMA cuerpo
+
+    PUNTOCOMA       shift and go to state 45
+
+
+state 40
 
     (12) espInstruction -> ESP PUNTOCOMA . cuerpo
     (3) cuerpo -> . instruccion
@@ -544,25 +557,26 @@ state 39
     (18) jumpInstruction -> . empty
     (12) espInstruction -> . ESP PUNTOCOMA cuerpo
     (13) espInstruction -> . empty
-    (39) empty -> .
-    (33) ArithmeticInstName -> . SUM
-    (34) ArithmeticInstName -> . RES
-    (35) ArithmeticInstName -> . MOD
-    (36) ArithmeticInstName -> . MUL
-    (37) ArithmeticInstName -> . DDR
-    (38) ArithmeticInstName -> . SAL
+    (40) empty -> .
+    (34) ArithmeticInstName -> . SUM
+    (35) ArithmeticInstName -> . RES
+    (36) ArithmeticInstName -> . MOD
+    (37) ArithmeticInstName -> . MUL
+    (38) ArithmeticInstName -> . DDR
+    (39) ArithmeticInstName -> . SAL
     (25) CompareInstName -> . CMPR
     (26) CompareInstName -> . CMPI
-    (29) MemoryInstName -> . GDR
-    (30) MemoryInstName -> . CAR
-    (31) MemoryInstName -> . MOVR
-    (32) MemoryInstName -> . MOVI
+    (30) MemoryInstName -> . GDR
+    (31) MemoryInstName -> . CAR
+    (32) MemoryInstName -> . MOVR
+    (33) MemoryInstName -> . MOVI
     (27) JumpInstName -> . SAL
     (28) JumpInstName -> . SIG
+    (29) JumpInstName -> . SMY
 
     LABEL           shift and go to state 13
     ESP             shift and go to state 19
-    FIN             reduce using rule 39 (empty -> .)
+    FIN             reduce using rule 40 (empty -> .)
     SUM             shift and go to state 20
     RES             shift and go to state 21
     MOD             shift and go to state 22
@@ -576,8 +590,9 @@ state 39
     MOVR            shift and go to state 30
     MOVI            shift and go to state 31
     SIG             shift and go to state 32
+    SMY             shift and go to state 33
 
-    cuerpo                         shift and go to state 45
+    cuerpo                         shift and go to state 46
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
     arimtethicInstruction          shift and go to state 8
@@ -591,40 +606,40 @@ state 39
     MemoryInstName                 shift and go to state 17
     JumpInstName                   shift and go to state 18
 
-state 40
+state 41
 
     (5) label -> LABEL DOSPUNTOS cuerpo .
 
     FIN             reduce using rule 5 (label -> LABEL DOSPUNTOS cuerpo .)
 
 
-state 41
+state 42
 
     (22) arimtethicInstruction -> ArithmeticInstName REG COMA . REG COMA REG PUNTOCOMA cuerpo
     (23) arimtethicInstruction -> ArithmeticInstName REG COMA . REG COMA IMM PUNTOCOMA cuerpo
 
-    REG             shift and go to state 46
-
-
-state 42
-
-    (14) CompareInstruction -> CompareInstName REG COMA . REG PUNTOCOMA cuerpo
-    (15) CompareInstruction -> CompareInstName REG COMA . IMM PUNTOCOMA cuerpo
-
     REG             shift and go to state 47
-    IMM             shift and go to state 48
 
 
 state 43
 
-    (19) memoryInstruction -> MemoryInstName REG COMA . REG PUNTOCOMA cuerpo
-    (20) memoryInstruction -> MemoryInstName REG COMA . IMM PUNTOCOMA cuerpo
+    (14) CompareInstruction -> CompareInstName REG COMA . REG PUNTOCOMA cuerpo
+    (15) CompareInstruction -> CompareInstName REG COMA . IMM PUNTOCOMA cuerpo
 
-    REG             shift and go to state 49
-    IMM             shift and go to state 50
+    REG             shift and go to state 48
+    IMM             shift and go to state 49
 
 
 state 44
+
+    (19) memoryInstruction -> MemoryInstName REG COMA . REG PUNTOCOMA cuerpo
+    (20) memoryInstruction -> MemoryInstName REG COMA . IMM PUNTOCOMA cuerpo
+
+    REG             shift and go to state 50
+    IMM             shift and go to state 51
+
+
+state 45
 
     (17) jumpInstruction -> JumpInstName LABEL PUNTOCOMA . cuerpo
     (3) cuerpo -> . instruccion
@@ -649,25 +664,26 @@ state 44
     (18) jumpInstruction -> . empty
     (12) espInstruction -> . ESP PUNTOCOMA cuerpo
     (13) espInstruction -> . empty
-    (39) empty -> .
-    (33) ArithmeticInstName -> . SUM
-    (34) ArithmeticInstName -> . RES
-    (35) ArithmeticInstName -> . MOD
-    (36) ArithmeticInstName -> . MUL
-    (37) ArithmeticInstName -> . DDR
-    (38) ArithmeticInstName -> . SAL
+    (40) empty -> .
+    (34) ArithmeticInstName -> . SUM
+    (35) ArithmeticInstName -> . RES
+    (36) ArithmeticInstName -> . MOD
+    (37) ArithmeticInstName -> . MUL
+    (38) ArithmeticInstName -> . DDR
+    (39) ArithmeticInstName -> . SAL
     (25) CompareInstName -> . CMPR
     (26) CompareInstName -> . CMPI
-    (29) MemoryInstName -> . GDR
-    (30) MemoryInstName -> . CAR
-    (31) MemoryInstName -> . MOVR
-    (32) MemoryInstName -> . MOVI
+    (30) MemoryInstName -> . GDR
+    (31) MemoryInstName -> . CAR
+    (32) MemoryInstName -> . MOVR
+    (33) MemoryInstName -> . MOVI
     (27) JumpInstName -> . SAL
     (28) JumpInstName -> . SIG
+    (29) JumpInstName -> . SMY
 
     LABEL           shift and go to state 13
     ESP             shift and go to state 19
-    FIN             reduce using rule 39 (empty -> .)
+    FIN             reduce using rule 40 (empty -> .)
     SUM             shift and go to state 20
     RES             shift and go to state 21
     MOD             shift and go to state 22
@@ -681,9 +697,10 @@ state 44
     MOVR            shift and go to state 30
     MOVI            shift and go to state 31
     SIG             shift and go to state 32
+    SMY             shift and go to state 33
 
     JumpInstName                   shift and go to state 18
-    cuerpo                         shift and go to state 51
+    cuerpo                         shift and go to state 52
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
     arimtethicInstruction          shift and go to state 8
@@ -696,66 +713,66 @@ state 44
     CompareInstName                shift and go to state 16
     MemoryInstName                 shift and go to state 17
 
-state 45
+state 46
 
     (12) espInstruction -> ESP PUNTOCOMA cuerpo .
 
     FIN             reduce using rule 12 (espInstruction -> ESP PUNTOCOMA cuerpo .)
 
 
-state 46
+state 47
 
     (22) arimtethicInstruction -> ArithmeticInstName REG COMA REG . COMA REG PUNTOCOMA cuerpo
     (23) arimtethicInstruction -> ArithmeticInstName REG COMA REG . COMA IMM PUNTOCOMA cuerpo
 
-    COMA            shift and go to state 52
-
-
-state 47
-
-    (14) CompareInstruction -> CompareInstName REG COMA REG . PUNTOCOMA cuerpo
-
-    PUNTOCOMA       shift and go to state 53
+    COMA            shift and go to state 53
 
 
 state 48
 
-    (15) CompareInstruction -> CompareInstName REG COMA IMM . PUNTOCOMA cuerpo
+    (14) CompareInstruction -> CompareInstName REG COMA REG . PUNTOCOMA cuerpo
 
     PUNTOCOMA       shift and go to state 54
 
 
 state 49
 
-    (19) memoryInstruction -> MemoryInstName REG COMA REG . PUNTOCOMA cuerpo
+    (15) CompareInstruction -> CompareInstName REG COMA IMM . PUNTOCOMA cuerpo
 
     PUNTOCOMA       shift and go to state 55
 
 
 state 50
 
-    (20) memoryInstruction -> MemoryInstName REG COMA IMM . PUNTOCOMA cuerpo
+    (19) memoryInstruction -> MemoryInstName REG COMA REG . PUNTOCOMA cuerpo
 
     PUNTOCOMA       shift and go to state 56
 
 
 state 51
 
+    (20) memoryInstruction -> MemoryInstName REG COMA IMM . PUNTOCOMA cuerpo
+
+    PUNTOCOMA       shift and go to state 57
+
+
+state 52
+
     (17) jumpInstruction -> JumpInstName LABEL PUNTOCOMA cuerpo .
 
     FIN             reduce using rule 17 (jumpInstruction -> JumpInstName LABEL PUNTOCOMA cuerpo .)
 
 
-state 52
+state 53
 
     (22) arimtethicInstruction -> ArithmeticInstName REG COMA REG COMA . REG PUNTOCOMA cuerpo
     (23) arimtethicInstruction -> ArithmeticInstName REG COMA REG COMA . IMM PUNTOCOMA cuerpo
 
-    REG             shift and go to state 57
-    IMM             shift and go to state 58
+    REG             shift and go to state 58
+    IMM             shift and go to state 59
 
 
-state 53
+state 54
 
     (14) CompareInstruction -> CompareInstName REG COMA REG PUNTOCOMA . cuerpo
     (3) cuerpo -> . instruccion
@@ -780,25 +797,26 @@ state 53
     (18) jumpInstruction -> . empty
     (12) espInstruction -> . ESP PUNTOCOMA cuerpo
     (13) espInstruction -> . empty
-    (39) empty -> .
-    (33) ArithmeticInstName -> . SUM
-    (34) ArithmeticInstName -> . RES
-    (35) ArithmeticInstName -> . MOD
-    (36) ArithmeticInstName -> . MUL
-    (37) ArithmeticInstName -> . DDR
-    (38) ArithmeticInstName -> . SAL
+    (40) empty -> .
+    (34) ArithmeticInstName -> . SUM
+    (35) ArithmeticInstName -> . RES
+    (36) ArithmeticInstName -> . MOD
+    (37) ArithmeticInstName -> . MUL
+    (38) ArithmeticInstName -> . DDR
+    (39) ArithmeticInstName -> . SAL
     (25) CompareInstName -> . CMPR
     (26) CompareInstName -> . CMPI
-    (29) MemoryInstName -> . GDR
-    (30) MemoryInstName -> . CAR
-    (31) MemoryInstName -> . MOVR
-    (32) MemoryInstName -> . MOVI
+    (30) MemoryInstName -> . GDR
+    (31) MemoryInstName -> . CAR
+    (32) MemoryInstName -> . MOVR
+    (33) MemoryInstName -> . MOVI
     (27) JumpInstName -> . SAL
     (28) JumpInstName -> . SIG
+    (29) JumpInstName -> . SMY
 
     LABEL           shift and go to state 13
     ESP             shift and go to state 19
-    FIN             reduce using rule 39 (empty -> .)
+    FIN             reduce using rule 40 (empty -> .)
     SUM             shift and go to state 20
     RES             shift and go to state 21
     MOD             shift and go to state 22
@@ -812,9 +830,10 @@ state 53
     MOVR            shift and go to state 30
     MOVI            shift and go to state 31
     SIG             shift and go to state 32
+    SMY             shift and go to state 33
 
     CompareInstName                shift and go to state 16
-    cuerpo                         shift and go to state 59
+    cuerpo                         shift and go to state 60
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
     arimtethicInstruction          shift and go to state 8
@@ -827,7 +846,7 @@ state 53
     MemoryInstName                 shift and go to state 17
     JumpInstName                   shift and go to state 18
 
-state 54
+state 55
 
     (15) CompareInstruction -> CompareInstName REG COMA IMM PUNTOCOMA . cuerpo
     (3) cuerpo -> . instruccion
@@ -852,25 +871,26 @@ state 54
     (18) jumpInstruction -> . empty
     (12) espInstruction -> . ESP PUNTOCOMA cuerpo
     (13) espInstruction -> . empty
-    (39) empty -> .
-    (33) ArithmeticInstName -> . SUM
-    (34) ArithmeticInstName -> . RES
-    (35) ArithmeticInstName -> . MOD
-    (36) ArithmeticInstName -> . MUL
-    (37) ArithmeticInstName -> . DDR
-    (38) ArithmeticInstName -> . SAL
+    (40) empty -> .
+    (34) ArithmeticInstName -> . SUM
+    (35) ArithmeticInstName -> . RES
+    (36) ArithmeticInstName -> . MOD
+    (37) ArithmeticInstName -> . MUL
+    (38) ArithmeticInstName -> . DDR
+    (39) ArithmeticInstName -> . SAL
     (25) CompareInstName -> . CMPR
     (26) CompareInstName -> . CMPI
-    (29) MemoryInstName -> . GDR
-    (30) MemoryInstName -> . CAR
-    (31) MemoryInstName -> . MOVR
-    (32) MemoryInstName -> . MOVI
+    (30) MemoryInstName -> . GDR
+    (31) MemoryInstName -> . CAR
+    (32) MemoryInstName -> . MOVR
+    (33) MemoryInstName -> . MOVI
     (27) JumpInstName -> . SAL
     (28) JumpInstName -> . SIG
+    (29) JumpInstName -> . SMY
 
     LABEL           shift and go to state 13
     ESP             shift and go to state 19
-    FIN             reduce using rule 39 (empty -> .)
+    FIN             reduce using rule 40 (empty -> .)
     SUM             shift and go to state 20
     RES             shift and go to state 21
     MOD             shift and go to state 22
@@ -884,9 +904,10 @@ state 54
     MOVR            shift and go to state 30
     MOVI            shift and go to state 31
     SIG             shift and go to state 32
+    SMY             shift and go to state 33
 
     CompareInstName                shift and go to state 16
-    cuerpo                         shift and go to state 60
+    cuerpo                         shift and go to state 61
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
     arimtethicInstruction          shift and go to state 8
@@ -899,7 +920,7 @@ state 54
     MemoryInstName                 shift and go to state 17
     JumpInstName                   shift and go to state 18
 
-state 55
+state 56
 
     (19) memoryInstruction -> MemoryInstName REG COMA REG PUNTOCOMA . cuerpo
     (3) cuerpo -> . instruccion
@@ -924,25 +945,26 @@ state 55
     (18) jumpInstruction -> . empty
     (12) espInstruction -> . ESP PUNTOCOMA cuerpo
     (13) espInstruction -> . empty
-    (39) empty -> .
-    (33) ArithmeticInstName -> . SUM
-    (34) ArithmeticInstName -> . RES
-    (35) ArithmeticInstName -> . MOD
-    (36) ArithmeticInstName -> . MUL
-    (37) ArithmeticInstName -> . DDR
-    (38) ArithmeticInstName -> . SAL
+    (40) empty -> .
+    (34) ArithmeticInstName -> . SUM
+    (35) ArithmeticInstName -> . RES
+    (36) ArithmeticInstName -> . MOD
+    (37) ArithmeticInstName -> . MUL
+    (38) ArithmeticInstName -> . DDR
+    (39) ArithmeticInstName -> . SAL
     (25) CompareInstName -> . CMPR
     (26) CompareInstName -> . CMPI
-    (29) MemoryInstName -> . GDR
-    (30) MemoryInstName -> . CAR
-    (31) MemoryInstName -> . MOVR
-    (32) MemoryInstName -> . MOVI
+    (30) MemoryInstName -> . GDR
+    (31) MemoryInstName -> . CAR
+    (32) MemoryInstName -> . MOVR
+    (33) MemoryInstName -> . MOVI
     (27) JumpInstName -> . SAL
     (28) JumpInstName -> . SIG
+    (29) JumpInstName -> . SMY
 
     LABEL           shift and go to state 13
     ESP             shift and go to state 19
-    FIN             reduce using rule 39 (empty -> .)
+    FIN             reduce using rule 40 (empty -> .)
     SUM             shift and go to state 20
     RES             shift and go to state 21
     MOD             shift and go to state 22
@@ -956,9 +978,10 @@ state 55
     MOVR            shift and go to state 30
     MOVI            shift and go to state 31
     SIG             shift and go to state 32
+    SMY             shift and go to state 33
 
     MemoryInstName                 shift and go to state 17
-    cuerpo                         shift and go to state 61
+    cuerpo                         shift and go to state 62
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
     arimtethicInstruction          shift and go to state 8
@@ -971,7 +994,7 @@ state 55
     CompareInstName                shift and go to state 16
     JumpInstName                   shift and go to state 18
 
-state 56
+state 57
 
     (20) memoryInstruction -> MemoryInstName REG COMA IMM PUNTOCOMA . cuerpo
     (3) cuerpo -> . instruccion
@@ -996,25 +1019,26 @@ state 56
     (18) jumpInstruction -> . empty
     (12) espInstruction -> . ESP PUNTOCOMA cuerpo
     (13) espInstruction -> . empty
-    (39) empty -> .
-    (33) ArithmeticInstName -> . SUM
-    (34) ArithmeticInstName -> . RES
-    (35) ArithmeticInstName -> . MOD
-    (36) ArithmeticInstName -> . MUL
-    (37) ArithmeticInstName -> . DDR
-    (38) ArithmeticInstName -> . SAL
+    (40) empty -> .
+    (34) ArithmeticInstName -> . SUM
+    (35) ArithmeticInstName -> . RES
+    (36) ArithmeticInstName -> . MOD
+    (37) ArithmeticInstName -> . MUL
+    (38) ArithmeticInstName -> . DDR
+    (39) ArithmeticInstName -> . SAL
     (25) CompareInstName -> . CMPR
     (26) CompareInstName -> . CMPI
-    (29) MemoryInstName -> . GDR
-    (30) MemoryInstName -> . CAR
-    (31) MemoryInstName -> . MOVR
-    (32) MemoryInstName -> . MOVI
+    (30) MemoryInstName -> . GDR
+    (31) MemoryInstName -> . CAR
+    (32) MemoryInstName -> . MOVR
+    (33) MemoryInstName -> . MOVI
     (27) JumpInstName -> . SAL
     (28) JumpInstName -> . SIG
+    (29) JumpInstName -> . SMY
 
     LABEL           shift and go to state 13
     ESP             shift and go to state 19
-    FIN             reduce using rule 39 (empty -> .)
+    FIN             reduce using rule 40 (empty -> .)
     SUM             shift and go to state 20
     RES             shift and go to state 21
     MOD             shift and go to state 22
@@ -1028,9 +1052,10 @@ state 56
     MOVR            shift and go to state 30
     MOVI            shift and go to state 31
     SIG             shift and go to state 32
+    SMY             shift and go to state 33
 
     MemoryInstName                 shift and go to state 17
-    cuerpo                         shift and go to state 62
+    cuerpo                         shift and go to state 63
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
     arimtethicInstruction          shift and go to state 8
@@ -1043,49 +1068,49 @@ state 56
     CompareInstName                shift and go to state 16
     JumpInstName                   shift and go to state 18
 
-state 57
-
-    (22) arimtethicInstruction -> ArithmeticInstName REG COMA REG COMA REG . PUNTOCOMA cuerpo
-
-    PUNTOCOMA       shift and go to state 63
-
-
 state 58
 
-    (23) arimtethicInstruction -> ArithmeticInstName REG COMA REG COMA IMM . PUNTOCOMA cuerpo
+    (22) arimtethicInstruction -> ArithmeticInstName REG COMA REG COMA REG . PUNTOCOMA cuerpo
 
     PUNTOCOMA       shift and go to state 64
 
 
 state 59
 
+    (23) arimtethicInstruction -> ArithmeticInstName REG COMA REG COMA IMM . PUNTOCOMA cuerpo
+
+    PUNTOCOMA       shift and go to state 65
+
+
+state 60
+
     (14) CompareInstruction -> CompareInstName REG COMA REG PUNTOCOMA cuerpo .
 
     FIN             reduce using rule 14 (CompareInstruction -> CompareInstName REG COMA REG PUNTOCOMA cuerpo .)
 
 
-state 60
+state 61
 
     (15) CompareInstruction -> CompareInstName REG COMA IMM PUNTOCOMA cuerpo .
 
     FIN             reduce using rule 15 (CompareInstruction -> CompareInstName REG COMA IMM PUNTOCOMA cuerpo .)
 
 
-state 61
+state 62
 
     (19) memoryInstruction -> MemoryInstName REG COMA REG PUNTOCOMA cuerpo .
 
     FIN             reduce using rule 19 (memoryInstruction -> MemoryInstName REG COMA REG PUNTOCOMA cuerpo .)
 
 
-state 62
+state 63
 
     (20) memoryInstruction -> MemoryInstName REG COMA IMM PUNTOCOMA cuerpo .
 
     FIN             reduce using rule 20 (memoryInstruction -> MemoryInstName REG COMA IMM PUNTOCOMA cuerpo .)
 
 
-state 63
+state 64
 
     (22) arimtethicInstruction -> ArithmeticInstName REG COMA REG COMA REG PUNTOCOMA . cuerpo
     (3) cuerpo -> . instruccion
@@ -1110,25 +1135,26 @@ state 63
     (18) jumpInstruction -> . empty
     (12) espInstruction -> . ESP PUNTOCOMA cuerpo
     (13) espInstruction -> . empty
-    (39) empty -> .
-    (33) ArithmeticInstName -> . SUM
-    (34) ArithmeticInstName -> . RES
-    (35) ArithmeticInstName -> . MOD
-    (36) ArithmeticInstName -> . MUL
-    (37) ArithmeticInstName -> . DDR
-    (38) ArithmeticInstName -> . SAL
+    (40) empty -> .
+    (34) ArithmeticInstName -> . SUM
+    (35) ArithmeticInstName -> . RES
+    (36) ArithmeticInstName -> . MOD
+    (37) ArithmeticInstName -> . MUL
+    (38) ArithmeticInstName -> . DDR
+    (39) ArithmeticInstName -> . SAL
     (25) CompareInstName -> . CMPR
     (26) CompareInstName -> . CMPI
-    (29) MemoryInstName -> . GDR
-    (30) MemoryInstName -> . CAR
-    (31) MemoryInstName -> . MOVR
-    (32) MemoryInstName -> . MOVI
+    (30) MemoryInstName -> . GDR
+    (31) MemoryInstName -> . CAR
+    (32) MemoryInstName -> . MOVR
+    (33) MemoryInstName -> . MOVI
     (27) JumpInstName -> . SAL
     (28) JumpInstName -> . SIG
+    (29) JumpInstName -> . SMY
 
     LABEL           shift and go to state 13
     ESP             shift and go to state 19
-    FIN             reduce using rule 39 (empty -> .)
+    FIN             reduce using rule 40 (empty -> .)
     SUM             shift and go to state 20
     RES             shift and go to state 21
     MOD             shift and go to state 22
@@ -1142,9 +1168,10 @@ state 63
     MOVR            shift and go to state 30
     MOVI            shift and go to state 31
     SIG             shift and go to state 32
+    SMY             shift and go to state 33
 
     ArithmeticInstName             shift and go to state 15
-    cuerpo                         shift and go to state 65
+    cuerpo                         shift and go to state 66
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
     arimtethicInstruction          shift and go to state 8
@@ -1157,7 +1184,7 @@ state 63
     MemoryInstName                 shift and go to state 17
     JumpInstName                   shift and go to state 18
 
-state 64
+state 65
 
     (23) arimtethicInstruction -> ArithmeticInstName REG COMA REG COMA IMM PUNTOCOMA . cuerpo
     (3) cuerpo -> . instruccion
@@ -1182,25 +1209,26 @@ state 64
     (18) jumpInstruction -> . empty
     (12) espInstruction -> . ESP PUNTOCOMA cuerpo
     (13) espInstruction -> . empty
-    (39) empty -> .
-    (33) ArithmeticInstName -> . SUM
-    (34) ArithmeticInstName -> . RES
-    (35) ArithmeticInstName -> . MOD
-    (36) ArithmeticInstName -> . MUL
-    (37) ArithmeticInstName -> . DDR
-    (38) ArithmeticInstName -> . SAL
+    (40) empty -> .
+    (34) ArithmeticInstName -> . SUM
+    (35) ArithmeticInstName -> . RES
+    (36) ArithmeticInstName -> . MOD
+    (37) ArithmeticInstName -> . MUL
+    (38) ArithmeticInstName -> . DDR
+    (39) ArithmeticInstName -> . SAL
     (25) CompareInstName -> . CMPR
     (26) CompareInstName -> . CMPI
-    (29) MemoryInstName -> . GDR
-    (30) MemoryInstName -> . CAR
-    (31) MemoryInstName -> . MOVR
-    (32) MemoryInstName -> . MOVI
+    (30) MemoryInstName -> . GDR
+    (31) MemoryInstName -> . CAR
+    (32) MemoryInstName -> . MOVR
+    (33) MemoryInstName -> . MOVI
     (27) JumpInstName -> . SAL
     (28) JumpInstName -> . SIG
+    (29) JumpInstName -> . SMY
 
     LABEL           shift and go to state 13
     ESP             shift and go to state 19
-    FIN             reduce using rule 39 (empty -> .)
+    FIN             reduce using rule 40 (empty -> .)
     SUM             shift and go to state 20
     RES             shift and go to state 21
     MOD             shift and go to state 22
@@ -1214,9 +1242,10 @@ state 64
     MOVR            shift and go to state 30
     MOVI            shift and go to state 31
     SIG             shift and go to state 32
+    SMY             shift and go to state 33
 
     ArithmeticInstName             shift and go to state 15
-    cuerpo                         shift and go to state 66
+    cuerpo                         shift and go to state 67
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
     arimtethicInstruction          shift and go to state 8
@@ -1229,14 +1258,14 @@ state 64
     MemoryInstName                 shift and go to state 17
     JumpInstName                   shift and go to state 18
 
-state 65
+state 66
 
     (22) arimtethicInstruction -> ArithmeticInstName REG COMA REG COMA REG PUNTOCOMA cuerpo .
 
     FIN             reduce using rule 22 (arimtethicInstruction -> ArithmeticInstName REG COMA REG COMA REG PUNTOCOMA cuerpo .)
 
 
-state 66
+state 67
 
     (23) arimtethicInstruction -> ArithmeticInstName REG COMA REG COMA IMM PUNTOCOMA cuerpo .
 
