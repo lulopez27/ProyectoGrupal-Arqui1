@@ -103,10 +103,10 @@ module DataMemory (input logic clk, we,
 		end
 		always_ff @(negedge clk)
 			if (we) 
-					if (addr >= 'd0 && addr <= 'd152099)
+					if (addr >= 'd0 && addr <= 'd152099)begin
 						GPIO = wd[7:0];
-						GPIOEn = 1'b1;
-		always_ff @(posedge clk)
-			GPIOEn = 1'b0;
-	
+						GPIOEn  = 1'b1;
+						end
+					else
+						GPIOEn = 1'b0;
 endmodule 

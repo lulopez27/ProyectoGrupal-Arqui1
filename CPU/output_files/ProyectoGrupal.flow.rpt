@@ -1,5 +1,5 @@
 Flow report for ProyectoGrupal
-Sat Nov 07 14:44:47 2020
+Sat Nov 07 22:36:38 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,10 +41,10 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Sat Nov 07 14:44:47 2020       ;
+; Flow Status                 ; Successful - Sat Nov 07 22:36:38 2020       ;
 ; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name               ; ProyectoGrupal                              ;
-; Top-level Entity Name       ; MemoryControllerTest                        ;
+; Top-level Entity Name       ; processor                                   ;
 ; Family                      ; Cyclone V                                   ;
 ; Device                      ; 5CSEMA5F31C6                                ;
 ; Timing Models               ; Final                                       ;
@@ -63,30 +63,30 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/07/2020 14:44:29 ;
+; Start date & time ; 11/07/2020 22:36:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ProyectoGrupal      ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                      ;
-+-------------------------------------+----------------------------------------+----------------+----------------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name          ; Section Id     ;
-+-------------------------------------+----------------------------------------+----------------+----------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 134660530029841.160478186921612        ; --             ; --                   ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --             ; --                   ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>         ; --                   ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --                   ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --                   ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; MemoryControllerTest ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; MemoryControllerTest ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; MemoryControllerTest ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --                   ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --                   ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --                   ; --             ;
-; TOP_LEVEL_ENTITY                    ; MemoryControllerTest                   ; ProyectoGrupal ; --                   ; --             ;
-+-------------------------------------+----------------------------------------+----------------+----------------------+----------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 93180993733489.160481018210824         ; --             ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --             ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>         ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; processor   ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; processor   ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; processor   ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; processor                              ; ProyectoGrupal ; --          ; --             ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -94,8 +94,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:18     ; 1.0                     ; 4988 MB             ; 00:00:35                           ;
-; Total                  ; 00:00:18     ; --                      ; --                  ; 00:00:35                           ;
+; Analysis & Elaboration ; 00:00:16     ; 1.0                     ; 5004 MB             ; 00:00:33                           ;
+; Total                  ; 00:00:16     ; --                      ; --                  ; 00:00:33                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -104,7 +104,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+------------------+------------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; DESKTOP-VRFLMRQ  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Elaboration ; DESKTOP-6I0S59P  ; Windows 10 ; 10.0       ; x86_64         ;
 +------------------------+------------------+------------+------------+----------------+
 
 
