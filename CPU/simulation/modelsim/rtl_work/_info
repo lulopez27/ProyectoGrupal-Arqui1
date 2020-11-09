@@ -7,31 +7,31 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/simulation/modelsim
+Z0 dC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/simulation/modelsim
 vAcarreo
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1604875042
+Z2 !s110 1604879208
 !i10b 1
 !s100 oHD;DNJQfBiGoMzbEKe=l1
-Id:[BCbci8^mgYQ8F>8<0L3
+Iz<[[ia_57hXS=1No:W>=C0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 Acarreo_sv_unit
 S1
 R0
-Z4 w1604516342
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Acarreo.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Acarreo.sv
+Z4 w1604621189
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv
 L0 1
 Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1604875042.000000
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Acarreo.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Acarreo.sv|
+Z6 !s108 1604879208.000000
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv|
 !i113 1
 Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas
+Z8 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas}
 Z9 tCvgOpt 0
 n@acarreo
 vCero
@@ -39,22 +39,22 @@ R1
 R2
 !i10b 1
 !s100 G5Y^Y0EFfUC>fAz3eb9V90
-I0zMZ=cB9`aQh`6[P3QigO3
+Ih<RX@E4G9e[iR6C7nCkO`2
 R3
 !s105 Cero_sv_unit
 S1
 R0
 R4
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Cero.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Cero.sv
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Cero.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Cero.sv
 L0 1
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Cero.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Cero.sv|
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Cero.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Cero.sv|
 !i113 1
 R7
 R8
@@ -62,106 +62,106 @@ R9
 n@cero
 vcondUnit
 R1
-Z10 !s110 1604875044
+Z10 !s110 1604879212
 !i10b 1
 !s100 egGb]Fc^C:Nj@RAbX4M3F0
-IzIMc5i1Z;54F1Yi0Ke`XO0
+ITkb>CW]B]m3n@H[fjVRf;3
 R3
 !s105 condUnit_sv_unit
 S1
 R0
-w1604871251
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/condUnit.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/condUnit.sv
+Z11 w1604875385
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv
 L0 1
 R5
 r1
 !s85 0
 31
-Z11 !s108 1604875044.000000
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/condUnit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/condUnit.sv|
+Z12 !s108 1604879211.000000
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv|
 !i113 1
 R7
-Z12 !s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit
+Z13 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit}
 R9
 ncond@unit
 vControlUnit
 R1
-Z13 !s110 1604875043
+Z14 !s110 1604879210
 !i10b 1
-!s100 ^R=2;C>_GLAN8LYa?ceFD1
-IW?GLTY5CF473fGFHjb2>Z2
+!s100 ]dWe>AD;6IBA<n?AI6nHO1
+I;WUXAT45KAL]@]V???k;21
 R3
 !s105 ControlUnit_sv_unit
 S1
 R0
-w1604809328
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv
+w1604879171
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv
 L0 1
 R5
 r1
 !s85 0
 31
-Z14 !s108 1604875043.000000
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ControlUnit/ControlUnit.sv|
+Z15 !s108 1604879210.000000
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv|
 !i113 1
 R7
-R12
+R13
 R9
 n@control@unit
 vControlUnitDeco
 R1
-R10
+R14
 !i10b 1
 !s100 lzEGIR:RIU5liK>jBjBbG2
-IAj]ON^9]U9oOPBVzR8R0Y1
+IZcK7fVCHn_HlQcKL<?K=@3
 R3
 !s105 ControlUnitDeco_sv_unit
 S1
 R0
-w1604609515
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ControlUnitDeco.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ControlUnitDeco.sv
+R4
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ControlUnitDeco.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ControlUnitDeco.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ControlUnitDeco.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ControlUnitDeco.sv|
+R15
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ControlUnitDeco.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ControlUnitDeco.sv|
 !i113 1
 R7
-Z15 !s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders
+Z16 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders}
 R9
 n@control@unit@deco
 vDataMemory
 R1
-Z16 !s110 1604875045
+R10
 !i10b 1
 !s100 i5S0z^a`;V6:U`JlGV<g40
-IhOblnJ>Rm4FAbHWPiI:530
+I]3DeIBX3J]4U47AdECT;[1
 R3
 !s105 DataMemory_sv_unit
 S1
 R0
-w1604870503
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/DataMemory.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/DataMemory.sv
+w1604866494
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemory.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemory.sv
 L0 1
 R5
 r1
 !s85 0
 31
-Z17 !s108 1604875045.000000
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/DataMemory.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/DataMemory.sv|
+Z17 !s108 1604879212.000000
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemory.sv|
 !i113 1
 R7
-Z18 !s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias
+Z18 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias}
 R9
 n@data@memory
 vDesborde
@@ -169,22 +169,22 @@ R1
 R2
 !i10b 1
 !s100 ke:MO8Bo:fOT6]N[24:hC2
-IIE[c?G:A8gb]?85?aeOl=1
+I8UJz62?5_dGe7:HA[LjW72
 R3
 !s105 Desborde_sv_unit
 S1
 R0
 R4
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Desborde.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Desborde.sv
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Desborde.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Desborde.sv
 L0 1
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Desborde.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Desborde.sv|
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Desborde.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Desborde.sv|
 !i113 1
 R7
 R8
@@ -192,181 +192,181 @@ R9
 n@desborde
 vDesplazamientoDerecha
 R1
-R2
+Z19 !s110 1604879209
 !i10b 1
 !s100 YBBC5iX<B=eIdETA8E<zX2
-IimbBF0a8ZEeE8I7H05hc43
+I`02`ChJ[;zfNl2moWi]^53
 R3
 !s105 DesplazamientoDerecha_sv_unit
 S1
 R0
 R4
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv|
+Z20 !s108 1604879209.000000
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv|
 !i113 1
 R7
-Z19 !s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones
+Z21 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones}
 R9
 n@desplazamiento@derecha
 vExtendDeco
 R1
-R13
+R14
 !i10b 1
 !s100 =J73HYk4hl<7YCcGkLoNJ1
-I5cRm:HIelNDHY6ozhJj[33
+IBM2Fd@>4dL@h]6XHW]n4f3
 R3
 !s105 ExtendDeco_sv_unit
 S1
 R0
-w1604609756
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ExtendDeco.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ExtendDeco.sv
+R4
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ExtendDeco.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ExtendDeco.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R14
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ExtendDeco.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Decoders/ExtendDeco.sv|
+R15
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ExtendDeco.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ExtendDeco.sv|
 !i113 1
 R7
-R15
+R16
 R9
 n@extend@deco
 vExtender
 R1
-R13
+R14
 !i10b 1
 !s100 m0_hDnM6YHZ_9XmTRaHW81
-I4@HGX28oE8GQgckTV9X>J3
+IBPD?4TeRbK7f3dHf3=kgE3
 R3
 !s105 Extender_sv_unit
 S1
 R0
-w1604702352
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Extender/Extender.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Extender/Extender.sv
+w1604680130
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender/Extender.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender/Extender.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R14
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Extender/Extender.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Extender|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Extender/Extender.sv|
+R15
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender/Extender.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender/Extender.sv|
 !i113 1
 R7
-!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Extender
+!s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender}
 R9
 n@extender
 vFlipFlop
 R1
-R16
+R10
 !i10b 1
-!s100 ac2ZRWafk2?Z54IFYXDPB2
-I4d5QkD1SlO^I?B5<m<YEE1
+!s100 8m7P;[7^g3cl6_Lcah8kK0
+Ie1<W=S_ZV<hZ[0?Ma09Pe2
 R3
 !s105 FlipFlop_sv_unit
 S1
 R0
-w1604872116
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Fliflops/FlipFlop.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Fliflops/FlipFlop.sv
+w1604877705
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv
 L0 1
 R5
 r1
 !s85 0
 31
 R17
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Fliflops/FlipFlop.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Fliflops|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Fliflops/FlipFlop.sv|
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Fliflops|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv|
 !i113 1
 R7
-!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Fliflops
+!s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Fliflops}
 R9
 n@flip@flop
 vForwardUnitALU
 R1
-R16
+R10
 !i10b 1
 !s100 oN4K^`oH72mHNFziZSZoS0
-Ie:MEl`B^;[MUAP7T>E9ZB1
+IZL]>da`Z7U`lHfJ3fVnQ[1
 R3
 !s105 ForwardUnitALU_sv_unit
 S1
 R0
-w1604869432
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/FowrdUnit/ForwardUnitALU.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/FowrdUnit/ForwardUnitALU.sv
+R11
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit/ForwardUnitALU.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit/ForwardUnitALU.sv
 L0 1
 R5
 r1
 !s85 0
 31
 R17
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/FowrdUnit/ForwardUnitALU.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/FowrdUnit|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/FowrdUnit/ForwardUnitALU.sv|
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit/ForwardUnitALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit/ForwardUnitALU.sv|
 !i113 1
 R7
-!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/FowrdUnit
+!s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit}
 R9
 n@forward@unit@a@l@u
 vImageROM
 R1
-R16
+Z22 !s110 1604879213
 !i10b 1
 !s100 365j7?Z[2[W_YSGCz>WW_1
-I747AY7OSN[<hgo^>UQPgN0
+I;^1ljCIDJK50;cI7P9XZO1
 R3
 !s105 ImageROM_sv_unit
 S1
 R0
-w1604870506
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/ImageROM/ImageROM.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/ImageROM/ImageROM.sv
+w1604686327
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R17
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/ImageROM/ImageROM.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/ImageROM|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/ImageROM/ImageROM.sv|
+Z23 !s108 1604879213.000000
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv|
 !i113 1
 R7
-!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/ImageROM
+!s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM}
 R9
 n@image@r@o@m
 vInstructionMemory
 R1
-R16
+R22
 !i10b 1
 !s100 lfi47^FelbgPY=VFJnaWc1
-I4e[aO^XNzRneT=7L`LYfT0
+I?9Jo7>MFSFB;gkoPn<gb11
 R3
 !s105 InstructionMemory_sv_unit
 S1
 R0
-Z20 w1604605547
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/InstructionMemory.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/InstructionMemory.sv
+R4
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R17
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/InstructionMemory.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/InstructionMemory.sv|
+R23
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv|
 !i113 1
 R7
 R18
@@ -374,25 +374,25 @@ R9
 n@instruction@memory
 vMemoryController
 R1
-R16
+R10
 !i10b 1
 !s100 EJ64^f0J7mEIY3jjmj2H`2
-IHUcSf^9GSf@flMdQn_I2`0
+I=cdU47U<>FHA6hBnaATUj1
 R3
 !s105 MemoryController_sv_unit
 S1
 R0
-w1604866910
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/MemoryController.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/MemoryController.sv
+w1604866583
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/MemoryController.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/MemoryController.sv
 L0 1
 R5
 r1
 !s85 0
 31
 R17
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/MemoryController.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/MemoryController.sv|
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/MemoryController.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/MemoryController.sv|
 !i113 1
 R7
 R18
@@ -400,106 +400,106 @@ R9
 n@memory@controller
 vModulo
 R1
-R13
+R14
 !i10b 1
 !s100 8i8RWK6J[Oo>^OV4K9HGP3
-IToA`PX<cY_Wi6RCTaI_UK3
+ID86hf?WdP=eHQ>TI:ag?21
 R3
 !s105 Modulo_sv_unit
 S1
 R0
 R4
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Modulo.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Modulo.sv
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Modulo.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Modulo.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R14
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Modulo.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Modulo.sv|
+R15
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Modulo.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Modulo.sv|
 !i113 1
 R7
-R19
+R21
 R9
 n@modulo
 vMultiplicacion
 R1
-R13
+R19
 !i10b 1
 !s100 U3keQo]P?^1K[ZnbVGUPX1
-I?GN`n7eahok6CaXX]]mNB2
+IeGb^XSiOSA`0P2XfDR5562
 R3
 !s105 Multiplicacion_sv_unit
 S1
 R0
 R4
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Multiplicacion.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Multiplicacion.sv
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Multiplicacion.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Multiplicacion.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R14
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Multiplicacion.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Multiplicacion.sv|
+R20
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Multiplicacion.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Multiplicacion.sv|
 !i113 1
 R7
-R19
+R21
 R9
 n@multiplicacion
 vMux2
 R1
-R10
+Z24 !s110 1604879211
 !i10b 1
 !s100 ARXLA>an>n`lG3X:YfzEU1
-Ioz?=EFj42[ShT9GC=SDCA3
+I4oEKC@R^^cF;f687X:cJ]3
 R3
 !s105 Mux2_sv_unit
 S1
 R0
-R20
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Muxes/Mux2.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Muxes/Mux2.sv
+R4
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Muxes/Mux2.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Muxes/Mux2.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Muxes/Mux2.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Muxes|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Muxes/Mux2.sv|
+R12
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Muxes/Mux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Muxes|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Muxes/Mux2.sv|
 !i113 1
 R7
-!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Muxes
+!s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Muxes}
 R9
 n@mux2
 vMux8ALU
 R1
-R2
+R19
 !i10b 1
 !s100 zk6PDJl>a_NCj<Z>ieL]I3
-I8CzG_8@^8zAcIh:BC7;;30
+I1@PIgadcog]i:SlDb6P0@1
 R3
 !s105 Mux8ALU_sv_unit
 S1
 R0
 R4
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Modulos/Mux8ALU.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Modulos/Mux8ALU.sv
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos/Mux8ALU.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos/Mux8ALU.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Modulos/Mux8ALU.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Modulos|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Modulos/Mux8ALU.sv|
+R20
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos/Mux8ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos/Mux8ALU.sv|
 !i113 1
 R7
-!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Modulos
+!s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos}
 R9
 n@mux8@a@l@u
 vNegativo
@@ -507,22 +507,22 @@ R1
 R2
 !i10b 1
 !s100 Wd_?iz=P4Q;8JeYKm11@z3
-Ig3OLTLUaWBcbKKBG6_=@P3
+IGkJ`V0P>9O9^ICoz1EQ?`3
 R3
 !s105 Negativo_sv_unit
 S1
 R0
 R4
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Negativo.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Negativo.sv
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Negativo.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Negativo.sv
 L0 1
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Negativo.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Banderas/Negativo.sv|
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Negativo.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Negativo.sv|
 !i113 1
 R7
 R8
@@ -530,153 +530,153 @@ R9
 n@negativo
 vPipelineEx
 R1
-R10
+R24
 !i10b 1
 !s100 @K;DiQDak0LMe`R;_YJ163
-INAUX@TLFlUJe5FX`9b=TY1
+IaLIFG;ZTFF0;ND=HU6D@`0
 R3
 !s105 PipelineEx_sv_unit
 S1
 R0
-w1604807787
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineEx.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineEx.sv
+w1604876935
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineEx.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineEx.sv|
+R12
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv|
 !i113 1
 R7
-Z21 !s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline
+Z25 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline}
 R9
 n@pipeline@ex
 vPipelineMem
 R1
-R10
+R24
 !i10b 1
-!s100 ]kbEcZz9McC0]XlB0f4l62
-I097TOiEF1jeCaG0k;4ieo1
+!s100 NQnK:J@8V?hH0JQe9znFX1
+ID=^8>hX<hTIE@caTi844@2
 R3
 !s105 PipelineMem_sv_unit
 S1
 R0
-w1604875023
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineMem.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineMem.sv
+w1604876930
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineMem.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineMem.sv|
+R12
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv|
 !i113 1
 R7
-R21
+R25
 R9
 n@pipeline@mem
 vPipelineWB
 R1
-R10
+R24
 !i10b 1
 !s100 Je2hIS?kn?OAiZ60?khk=1
-IL;YJB]6[Eee<kWa9AiY6R0
+IB:W240UTj]Z@M91Mol@_c3
 R3
 !s105 PipelineWB_sv_unit
 S1
 R0
-w1604868482
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineWB.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineWB.sv
+w1604876924
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineWB.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineWB.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineWB.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineWB.sv|
+R15
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineWB.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineWB.sv|
 !i113 1
 R7
-R21
+R25
 R9
 n@pipeline@w@b
 vprocessor
 R1
-Z22 !s110 1604875041
+Z26 !s110 1604879207
 !i10b 1
 !s100 CKTTzEo6]>DXLe`^S_Hn>1
-IZQe>EQ_^OU=4mEiSN7gT;3
+I>?i;>i_6zfFzDbA[Ph0LA1
 R3
 !s105 processor_sv_unit
 S1
 R0
-w1604869314
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv
+w1604878313
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv
 L0 1
 R5
 r1
 !s85 0
 31
-Z23 !s108 1604875041.000000
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/processor.sv|
+Z27 !s108 1604879207.000000
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv|
 !i113 1
 R7
-!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU
+!s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU}
 R9
 vprocessor_tb
 R1
-R22
+R26
 !i10b 1
-!s100 U3VGOHJjME9l<5HbK?7bL1
-I_JKUhzh06;U3h=67n4W>f0
+!s100 NUEg2dhTEo;YNUB]Vk4j83
+ITX@G`d^KheOFb9P5QIMAG0
 R3
 !s105 processor_tb_sv_unit
 S1
 R0
-w1604868436
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/processor_tb.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/processor_tb.sv
+w1604876743
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R23
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/processor_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/processor_tb.sv|
+R27
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv|
 !i113 1
 R7
-!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests
+!s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests}
 R9
 vRegisterFile
 R1
-R10
+R24
 !i10b 1
 !s100 Yi0]_U=Qm_iWS=Y;a]=SG0
-IDI3B1_fWNBQ<5ooo2d2gM0
+Inz08?]coTJUE=h4T]hJl51
 R3
 !s105 RegisterFile_sv_unit
 S1
 R0
-w1604783318
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/RegisterFile.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/RegisterFile.sv
+w1604779880
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/RegisterFile.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/RegisterFile.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/RegisterFile.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Memorias/RegisterFile.sv|
+R12
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/RegisterFile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/RegisterFile.sv|
 !i113 1
 R7
 R18
@@ -684,54 +684,54 @@ R9
 n@register@file
 vResta
 R1
-R13
+R19
 !i10b 1
 !s100 b;JkH:z:187JFh^neCB<j1
-Ih@i^aZ1Sb9^>^kL0S:zZh2
+ISl[YN7OVdoU2?fAGoEcz[2
 R3
 !s105 Resta_sv_unit
 S1
 R0
 R4
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Resta.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Resta.sv
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Resta.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Resta.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R14
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Resta.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Resta.sv|
+R20
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Resta.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Resta.sv|
 !i113 1
 R7
-R19
+R21
 R9
 n@resta
 vSuma
 R1
-R13
+R19
 !i10b 1
 !s100 1ia2oaGKkjb:;5iBSRB=h1
-IQml1HeQMo_ZSm4n=KAS5?3
+I:zR[K=KREQzYJiH@Wo3;31
 R3
 !s105 Suma_sv_unit
 S1
 R0
 R4
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Suma.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Suma.sv
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Suma.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Suma.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Suma.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/Operaciones/Suma.sv|
+R20
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Suma.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Suma.sv|
 !i113 1
 R7
-R19
+R21
 R9
 n@suma
 vUnidadLogicoAritmetica
@@ -739,24 +739,24 @@ R1
 R2
 !i10b 1
 !s100 J8?F7T8T1MP<HGjd1a@N30
-IlE_DFiKHCQ^cOO4A[JO3K3
+IfZ`QAloOAUd[B>8f7_S=K3
 R3
 !s105 UnidadLogicoAritmetica_sv_unit
 S1
 R0
 R4
-8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/UnidadLogicoAritmetica.sv
-FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/UnidadLogicoAritmetica.sv
+8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv
+FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv
 L0 1
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/UnidadLogicoAritmetica.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU/UnidadLogicoAritmetica.sv|
+!s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv|
 !i113 1
 R7
-!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/ALU
+!s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU}
 R9
 n@unidad@logico@aritmetica

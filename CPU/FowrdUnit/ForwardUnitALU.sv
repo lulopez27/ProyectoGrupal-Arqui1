@@ -9,4 +9,4 @@ module ForwardUnitALU(input [31:0]R2res3,R3res3,input [3:0]R2_2,R3_2,
 	logic [31:0]Wbres3;
 	Mux2 #(32)WbR3(R3res3,Res1,R3_2==DestR_4,Wbres3);
 	Mux2 #(32)ExR3(Wbres3,Res,R3_2==DestR_3,R3res4);
-endmodule
+endmodule 
