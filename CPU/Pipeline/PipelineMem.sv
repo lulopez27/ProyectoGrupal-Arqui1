@@ -1,6 +1,6 @@
 module PipelineMem(input clk, rst,
-						input wmemi,rmemi,wregi,wpci,input[1:0] jmpi,input [2:0]ALUInsi,input [31:0]R2ri,R3ri,input [3:0] R2i,R3i,DestRi,
-						output logic wmemo,rmemo,wrego,wpco,output logic[1:0] jmpo,output logic[2:0]ALUInso,output logic[31:0]R2ro,R3ro,output logic[3:0] R2o,R3o,DestRo);
+						input wmemi,rmemi,wregi,wpci,input[1:0] jmpi,input [2:0]ALUInsi,input [31:0]R2ri,R3ri,input [3:0] R2i,R3i,DestRi,input[1:0]ExtndSeli;
+						output logic wmemo,rmemo,wrego,wpco,output logic[1:0] jmpo,output logic[2:0]ALUInso,output logic[31:0]R2ro,R3ro,output logic[3:0] R2o,R3o,DestRo ,output logic [1:0]ExtndSelo);
 		always_ff@(posedge clk or posedge rst)
 		if(rst) begin
 			R2ro = 32'h0;
@@ -14,6 +14,7 @@ module PipelineMem(input clk, rst,
 			wrego = 1'b0;
 			jmpo = 1'b0;
 			wpco = 1'b0;
+			ExtndSelo = 2'b00;
 		end
 		else begin
 			R2ro = R2ri;
@@ -27,5 +28,6 @@ module PipelineMem(input clk, rst,
 			wrego = wregi;
 			jmpo = jmpi;
 			wpco = wpci;
+			ExtndSelo=ExtndSeli;
 		end
 endmodule

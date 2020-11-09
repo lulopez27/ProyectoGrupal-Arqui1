@@ -48,15 +48,15 @@ module processor(input clk, rst);
 	//FowardUnitReg FwrdUnitReg(R2res,R3res,R2,R3,DestR_2,ALURes,DestR_3,Res,DestR_4,Res1,R2res2,R3res2);
 	
 	logic Wmem1,Rmem1,Wreg1,Wpc1;
-	logic [1:0]JmpF1;
+	logic [1:0]JmpF1,ExtndSel1;
 	logic [2:0] ALUIns1;
 	logic [31:0] R2res3,R3res3;
 	logic [3:0] R2_2,R3_2,DestR_2;
-	PipelineMem pipeMem(clk,rst|JumpEn,Wmem,Rmem,Wreg,Wpc,JmpF,ALUIns,R2res,R3res,R2,R3,DestR,
-					Wmem1,Rmem1,Wreg1,Wpc1,JmpF1,ALUIns1,R2res3,R3res3,R2_2,R3_2,DestR_2);
+	PipelineMem pipeMem(clk,rst|JumpEn,Wmem,Rmem,Wreg,Wpc,JmpF,ALUIns,R2res,R3res,R2,R3,DestR,ExtndSel,
+					Wmem1,Rmem1,Wreg1,Wpc1,JmpF1,ALUIns1,R2res3,R3res3,R2_2,R3_2,DestR_2,ExtndSel1);
 	
 	logic [31:0] R2res4,R3res4;
-	ForwardUnitALU  FwrdUnitALU(R2res3,R3res3,R2_2,R3_2,DestR_3,Res,DestR_4,Res1,R2res4,R3res4);
+	ForwardUnitALU  FwrdUnitALU(R2res3,R3res3,R2_2,R3_2,ExtndSel1,DestR_3,Res,DestR_4,Res1,R2res4,R3res4);
 	
 	logic Nflag,Zflag,Vflag,Cflag;
 	
