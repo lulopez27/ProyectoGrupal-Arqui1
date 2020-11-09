@@ -1,6 +1,6 @@
 module condUnit(input [1:0] jmpF, input wpci,Nflag,Zflag,Vflag,Cflag, output logic jmpR);
 	logic jmp;
-	always begin
+	always_comb begin
 		if(jmpF == 2'b00)
 			jmp = 1'b1;
 		else if((jmpF == 2'b11)&&(Zflag == 1'b1))

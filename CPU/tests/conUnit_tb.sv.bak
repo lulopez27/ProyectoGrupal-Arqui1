@@ -1,0 +1,8 @@
+module conUnit_tb();
+	logic [1:0]jmpF;
+	logic wpci,Nflag,Zflag,Vflag,Cflag, jmpR;
+	condUnit(jmpF, wpci,Nflag,Zflag,Vflag,Cflag,jmpR)
+	initial begin
+	
+	end
+endmodule

@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY processor
+set_global_assignment -name TOP_LEVEL_ENTITY processor_tb
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:48:50  NOVEMBER 02, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
@@ -59,14 +59,12 @@ set_global_assignment -name SYSTEMVERILOG_FILE ALU/Operaciones/Resta.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU/Operaciones/Multiplicacion.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU/Operaciones/Modulo.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Extender/Extender.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Extender/ExtenderTest.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ControlUnit/ControlUnit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Decoders/ExtendDeco.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Decoders/ControlUnitDeco.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Pipeline/PipelineWB.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Pipeline/PipelineMem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Pipeline/PipelineEx.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Pipeline/PipelineDecode.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Memorias/RegisterFile.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Memorias/InstructionMemory.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Muxes/Mux2.sv
@@ -89,10 +87,11 @@ set_global_assignment -name SYSTEMVERILOG_FILE tests/ImageROMTest.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tests/InstructionMemoryTest.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tests/UnidadLogicoAritmeticaTest.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tests/MemoryControllerTest.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ForwUnitReg.sv
 set_global_assignment -name SYSTEMVERILOG_FILE FowrdUnit/ForwardUnitALU.sv
-set_global_assignment -name SYSTEMVERILOG_FILE FowrdUnit/ForwardUnitReg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tests/conUnit_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tests/pipeline_tb.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE Pipeline/PipelineFetch.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

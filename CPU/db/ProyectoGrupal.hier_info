@@ -1,9 +1,12 @@
-|processor
+|processor_tb
+
+
+|processor_tb|processor:proce
 clk => clk.IN7
 rst => rst.IN3
 
 
-|processor|Mux2:PC_Mux
+|processor_tb|processor:proce|Mux2:PC_Mux
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -103,7 +106,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|FlipFlop:PC
+|processor_tb|processor:proce|FlipFlop:PC
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 clk => q[2]~reg0.CLK
@@ -234,7 +237,7 @@ q[30] <= q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[31] <= q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|Suma:PC_1
+|processor_tb|processor:proce|Suma:PC_1
 A[0] => Add0.IN32
 A[1] => Add0.IN31
 A[2] => Add0.IN30
@@ -334,7 +337,7 @@ C[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|InstructionMemory:InsMem
+|processor_tb|processor:proce|InstructionMemory:InsMem
 addr[0] => ROM.RADDR
 addr[1] => ROM.RADDR1
 addr[2] => ROM.RADDR2
@@ -401,138 +404,266 @@ rd[30] <= ROM.DATAOUT30
 rd[31] <= ROM.DATAOUT31
 
 
-|processor|FlipFlop:pipelineFetch
-clk => q[0]~reg0.CLK
-clk => q[1]~reg0.CLK
-clk => q[2]~reg0.CLK
-clk => q[3]~reg0.CLK
-clk => q[4]~reg0.CLK
-clk => q[5]~reg0.CLK
-clk => q[6]~reg0.CLK
-clk => q[7]~reg0.CLK
-clk => q[8]~reg0.CLK
-clk => q[9]~reg0.CLK
-clk => q[10]~reg0.CLK
-clk => q[11]~reg0.CLK
-clk => q[12]~reg0.CLK
-clk => q[13]~reg0.CLK
-clk => q[14]~reg0.CLK
-clk => q[15]~reg0.CLK
-clk => q[16]~reg0.CLK
-clk => q[17]~reg0.CLK
-clk => q[18]~reg0.CLK
-clk => q[19]~reg0.CLK
-clk => q[20]~reg0.CLK
-clk => q[21]~reg0.CLK
-clk => q[22]~reg0.CLK
-clk => q[23]~reg0.CLK
-clk => q[24]~reg0.CLK
-clk => q[25]~reg0.CLK
-clk => q[26]~reg0.CLK
-clk => q[27]~reg0.CLK
-clk => q[28]~reg0.CLK
-clk => q[29]~reg0.CLK
-clk => q[30]~reg0.CLK
-clk => q[31]~reg0.CLK
-reset => q[0]~reg0.ACLR
-reset => q[1]~reg0.ACLR
-reset => q[2]~reg0.ACLR
-reset => q[3]~reg0.ACLR
-reset => q[4]~reg0.ACLR
-reset => q[5]~reg0.ACLR
-reset => q[6]~reg0.ACLR
-reset => q[7]~reg0.ACLR
-reset => q[8]~reg0.ACLR
-reset => q[9]~reg0.ACLR
-reset => q[10]~reg0.ACLR
-reset => q[11]~reg0.ACLR
-reset => q[12]~reg0.ACLR
-reset => q[13]~reg0.ACLR
-reset => q[14]~reg0.ACLR
-reset => q[15]~reg0.ACLR
-reset => q[16]~reg0.ACLR
-reset => q[17]~reg0.ACLR
-reset => q[18]~reg0.ACLR
-reset => q[19]~reg0.ACLR
-reset => q[20]~reg0.ACLR
-reset => q[21]~reg0.ACLR
-reset => q[22]~reg0.ACLR
-reset => q[23]~reg0.ACLR
-reset => q[24]~reg0.ACLR
-reset => q[25]~reg0.ACLR
-reset => q[26]~reg0.ACLR
-reset => q[27]~reg0.ACLR
-reset => q[28]~reg0.ACLR
-reset => q[29]~reg0.ACLR
-reset => q[30]~reg0.ACLR
-reset => q[31]~reg0.ACLR
-d[0] => q[0]~reg0.DATAIN
-d[1] => q[1]~reg0.DATAIN
-d[2] => q[2]~reg0.DATAIN
-d[3] => q[3]~reg0.DATAIN
-d[4] => q[4]~reg0.DATAIN
-d[5] => q[5]~reg0.DATAIN
-d[6] => q[6]~reg0.DATAIN
-d[7] => q[7]~reg0.DATAIN
-d[8] => q[8]~reg0.DATAIN
-d[9] => q[9]~reg0.DATAIN
-d[10] => q[10]~reg0.DATAIN
-d[11] => q[11]~reg0.DATAIN
-d[12] => q[12]~reg0.DATAIN
-d[13] => q[13]~reg0.DATAIN
-d[14] => q[14]~reg0.DATAIN
-d[15] => q[15]~reg0.DATAIN
-d[16] => q[16]~reg0.DATAIN
-d[17] => q[17]~reg0.DATAIN
-d[18] => q[18]~reg0.DATAIN
-d[19] => q[19]~reg0.DATAIN
-d[20] => q[20]~reg0.DATAIN
-d[21] => q[21]~reg0.DATAIN
-d[22] => q[22]~reg0.DATAIN
-d[23] => q[23]~reg0.DATAIN
-d[24] => q[24]~reg0.DATAIN
-d[25] => q[25]~reg0.DATAIN
-d[26] => q[26]~reg0.DATAIN
-d[27] => q[27]~reg0.DATAIN
-d[28] => q[28]~reg0.DATAIN
-d[29] => q[29]~reg0.DATAIN
-d[30] => q[30]~reg0.DATAIN
-d[31] => q[31]~reg0.DATAIN
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[8] <= q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[9] <= q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[10] <= q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[11] <= q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[12] <= q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[13] <= q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[14] <= q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[15] <= q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[16] <= q[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[17] <= q[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[18] <= q[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[19] <= q[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[20] <= q[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[21] <= q[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[22] <= q[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[23] <= q[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[24] <= q[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[25] <= q[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[26] <= q[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[27] <= q[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[28] <= q[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[29] <= q[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[30] <= q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[31] <= q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|processor_tb|processor:proce|PipelineFetch:pipelineFetch
+clk => curr_pco[0]~reg0.CLK
+clk => curr_pco[1]~reg0.CLK
+clk => curr_pco[2]~reg0.CLK
+clk => curr_pco[3]~reg0.CLK
+clk => curr_pco[4]~reg0.CLK
+clk => curr_pco[5]~reg0.CLK
+clk => curr_pco[6]~reg0.CLK
+clk => curr_pco[7]~reg0.CLK
+clk => curr_pco[8]~reg0.CLK
+clk => curr_pco[9]~reg0.CLK
+clk => curr_pco[10]~reg0.CLK
+clk => curr_pco[11]~reg0.CLK
+clk => curr_pco[12]~reg0.CLK
+clk => curr_pco[13]~reg0.CLK
+clk => curr_pco[14]~reg0.CLK
+clk => curr_pco[15]~reg0.CLK
+clk => curr_pco[16]~reg0.CLK
+clk => curr_pco[17]~reg0.CLK
+clk => curr_pco[18]~reg0.CLK
+clk => curr_pco[19]~reg0.CLK
+clk => curr_pco[20]~reg0.CLK
+clk => curr_pco[21]~reg0.CLK
+clk => curr_pco[22]~reg0.CLK
+clk => curr_pco[23]~reg0.CLK
+clk => curr_pco[24]~reg0.CLK
+clk => curr_pco[25]~reg0.CLK
+clk => curr_pco[26]~reg0.CLK
+clk => curr_pco[27]~reg0.CLK
+clk => curr_pco[28]~reg0.CLK
+clk => curr_pco[29]~reg0.CLK
+clk => curr_pco[30]~reg0.CLK
+clk => curr_pco[31]~reg0.CLK
+clk => insto[0]~reg0.CLK
+clk => insto[1]~reg0.CLK
+clk => insto[2]~reg0.CLK
+clk => insto[3]~reg0.CLK
+clk => insto[4]~reg0.CLK
+clk => insto[5]~reg0.CLK
+clk => insto[6]~reg0.CLK
+clk => insto[7]~reg0.CLK
+clk => insto[8]~reg0.CLK
+clk => insto[9]~reg0.CLK
+clk => insto[10]~reg0.CLK
+clk => insto[11]~reg0.CLK
+clk => insto[12]~reg0.CLK
+clk => insto[13]~reg0.CLK
+clk => insto[14]~reg0.CLK
+clk => insto[15]~reg0.CLK
+clk => insto[16]~reg0.CLK
+clk => insto[17]~reg0.CLK
+clk => insto[18]~reg0.CLK
+clk => insto[19]~reg0.CLK
+clk => insto[20]~reg0.CLK
+clk => insto[21]~reg0.CLK
+clk => insto[22]~reg0.CLK
+clk => insto[23]~reg0.CLK
+clk => insto[24]~reg0.CLK
+clk => insto[25]~reg0.CLK
+clk => insto[26]~reg0.CLK
+clk => insto[27]~reg0.CLK
+clk => insto[28]~reg0.CLK
+clk => insto[29]~reg0.CLK
+clk => insto[30]~reg0.CLK
+clk => insto[31]~reg0.CLK
+rst => curr_pco[0]~reg0.ACLR
+rst => curr_pco[1]~reg0.ACLR
+rst => curr_pco[2]~reg0.ACLR
+rst => curr_pco[3]~reg0.ACLR
+rst => curr_pco[4]~reg0.ACLR
+rst => curr_pco[5]~reg0.ACLR
+rst => curr_pco[6]~reg0.ACLR
+rst => curr_pco[7]~reg0.ACLR
+rst => curr_pco[8]~reg0.ACLR
+rst => curr_pco[9]~reg0.ACLR
+rst => curr_pco[10]~reg0.ACLR
+rst => curr_pco[11]~reg0.ACLR
+rst => curr_pco[12]~reg0.ACLR
+rst => curr_pco[13]~reg0.ACLR
+rst => curr_pco[14]~reg0.ACLR
+rst => curr_pco[15]~reg0.ACLR
+rst => curr_pco[16]~reg0.ACLR
+rst => curr_pco[17]~reg0.ACLR
+rst => curr_pco[18]~reg0.ACLR
+rst => curr_pco[19]~reg0.ACLR
+rst => curr_pco[20]~reg0.ACLR
+rst => curr_pco[21]~reg0.ACLR
+rst => curr_pco[22]~reg0.ACLR
+rst => curr_pco[23]~reg0.ACLR
+rst => curr_pco[24]~reg0.ACLR
+rst => curr_pco[25]~reg0.ACLR
+rst => curr_pco[26]~reg0.ACLR
+rst => curr_pco[27]~reg0.ACLR
+rst => curr_pco[28]~reg0.ACLR
+rst => curr_pco[29]~reg0.ACLR
+rst => curr_pco[30]~reg0.ACLR
+rst => curr_pco[31]~reg0.ACLR
+rst => insto[0]~reg0.ACLR
+rst => insto[1]~reg0.ACLR
+rst => insto[2]~reg0.ACLR
+rst => insto[3]~reg0.ACLR
+rst => insto[4]~reg0.ACLR
+rst => insto[5]~reg0.ACLR
+rst => insto[6]~reg0.ACLR
+rst => insto[7]~reg0.ACLR
+rst => insto[8]~reg0.ACLR
+rst => insto[9]~reg0.ACLR
+rst => insto[10]~reg0.ACLR
+rst => insto[11]~reg0.ACLR
+rst => insto[12]~reg0.ACLR
+rst => insto[13]~reg0.ACLR
+rst => insto[14]~reg0.ACLR
+rst => insto[15]~reg0.ACLR
+rst => insto[16]~reg0.ACLR
+rst => insto[17]~reg0.ACLR
+rst => insto[18]~reg0.ACLR
+rst => insto[19]~reg0.ACLR
+rst => insto[20]~reg0.ACLR
+rst => insto[21]~reg0.ACLR
+rst => insto[22]~reg0.ACLR
+rst => insto[23]~reg0.ACLR
+rst => insto[24]~reg0.ACLR
+rst => insto[25]~reg0.ACLR
+rst => insto[26]~reg0.ACLR
+rst => insto[27]~reg0.ACLR
+rst => insto[28]~reg0.ACLR
+rst => insto[29]~reg0.ACLR
+rst => insto[30]~reg0.ACLR
+rst => insto[31]~reg0.ACLR
+insti[0] => insto[0]~reg0.DATAIN
+insti[1] => insto[1]~reg0.DATAIN
+insti[2] => insto[2]~reg0.DATAIN
+insti[3] => insto[3]~reg0.DATAIN
+insti[4] => insto[4]~reg0.DATAIN
+insti[5] => insto[5]~reg0.DATAIN
+insti[6] => insto[6]~reg0.DATAIN
+insti[7] => insto[7]~reg0.DATAIN
+insti[8] => insto[8]~reg0.DATAIN
+insti[9] => insto[9]~reg0.DATAIN
+insti[10] => insto[10]~reg0.DATAIN
+insti[11] => insto[11]~reg0.DATAIN
+insti[12] => insto[12]~reg0.DATAIN
+insti[13] => insto[13]~reg0.DATAIN
+insti[14] => insto[14]~reg0.DATAIN
+insti[15] => insto[15]~reg0.DATAIN
+insti[16] => insto[16]~reg0.DATAIN
+insti[17] => insto[17]~reg0.DATAIN
+insti[18] => insto[18]~reg0.DATAIN
+insti[19] => insto[19]~reg0.DATAIN
+insti[20] => insto[20]~reg0.DATAIN
+insti[21] => insto[21]~reg0.DATAIN
+insti[22] => insto[22]~reg0.DATAIN
+insti[23] => insto[23]~reg0.DATAIN
+insti[24] => insto[24]~reg0.DATAIN
+insti[25] => insto[25]~reg0.DATAIN
+insti[26] => insto[26]~reg0.DATAIN
+insti[27] => insto[27]~reg0.DATAIN
+insti[28] => insto[28]~reg0.DATAIN
+insti[29] => insto[29]~reg0.DATAIN
+insti[30] => insto[30]~reg0.DATAIN
+insti[31] => insto[31]~reg0.DATAIN
+curr_pci[0] => curr_pco[0]~reg0.DATAIN
+curr_pci[1] => curr_pco[1]~reg0.DATAIN
+curr_pci[2] => curr_pco[2]~reg0.DATAIN
+curr_pci[3] => curr_pco[3]~reg0.DATAIN
+curr_pci[4] => curr_pco[4]~reg0.DATAIN
+curr_pci[5] => curr_pco[5]~reg0.DATAIN
+curr_pci[6] => curr_pco[6]~reg0.DATAIN
+curr_pci[7] => curr_pco[7]~reg0.DATAIN
+curr_pci[8] => curr_pco[8]~reg0.DATAIN
+curr_pci[9] => curr_pco[9]~reg0.DATAIN
+curr_pci[10] => curr_pco[10]~reg0.DATAIN
+curr_pci[11] => curr_pco[11]~reg0.DATAIN
+curr_pci[12] => curr_pco[12]~reg0.DATAIN
+curr_pci[13] => curr_pco[13]~reg0.DATAIN
+curr_pci[14] => curr_pco[14]~reg0.DATAIN
+curr_pci[15] => curr_pco[15]~reg0.DATAIN
+curr_pci[16] => curr_pco[16]~reg0.DATAIN
+curr_pci[17] => curr_pco[17]~reg0.DATAIN
+curr_pci[18] => curr_pco[18]~reg0.DATAIN
+curr_pci[19] => curr_pco[19]~reg0.DATAIN
+curr_pci[20] => curr_pco[20]~reg0.DATAIN
+curr_pci[21] => curr_pco[21]~reg0.DATAIN
+curr_pci[22] => curr_pco[22]~reg0.DATAIN
+curr_pci[23] => curr_pco[23]~reg0.DATAIN
+curr_pci[24] => curr_pco[24]~reg0.DATAIN
+curr_pci[25] => curr_pco[25]~reg0.DATAIN
+curr_pci[26] => curr_pco[26]~reg0.DATAIN
+curr_pci[27] => curr_pco[27]~reg0.DATAIN
+curr_pci[28] => curr_pco[28]~reg0.DATAIN
+curr_pci[29] => curr_pco[29]~reg0.DATAIN
+curr_pci[30] => curr_pco[30]~reg0.DATAIN
+curr_pci[31] => curr_pco[31]~reg0.DATAIN
+insto[0] <= insto[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[1] <= insto[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[2] <= insto[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[3] <= insto[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[4] <= insto[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[5] <= insto[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[6] <= insto[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[7] <= insto[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[8] <= insto[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[9] <= insto[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[10] <= insto[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[11] <= insto[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[12] <= insto[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[13] <= insto[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[14] <= insto[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[15] <= insto[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[16] <= insto[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[17] <= insto[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[18] <= insto[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[19] <= insto[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[20] <= insto[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[21] <= insto[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[22] <= insto[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[23] <= insto[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[24] <= insto[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[25] <= insto[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[26] <= insto[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[27] <= insto[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[28] <= insto[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[29] <= insto[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[30] <= insto[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+insto[31] <= insto[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[0] <= curr_pco[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[1] <= curr_pco[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[2] <= curr_pco[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[3] <= curr_pco[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[4] <= curr_pco[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[5] <= curr_pco[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[6] <= curr_pco[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[7] <= curr_pco[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[8] <= curr_pco[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[9] <= curr_pco[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[10] <= curr_pco[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[11] <= curr_pco[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[12] <= curr_pco[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[13] <= curr_pco[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[14] <= curr_pco[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[15] <= curr_pco[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[16] <= curr_pco[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[17] <= curr_pco[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[18] <= curr_pco[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[19] <= curr_pco[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[20] <= curr_pco[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[21] <= curr_pco[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[22] <= curr_pco[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[23] <= curr_pco[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[24] <= curr_pco[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[25] <= curr_pco[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[26] <= curr_pco[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[27] <= curr_pco[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[28] <= curr_pco[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[29] <= curr_pco[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[30] <= curr_pco[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+curr_pco[31] <= curr_pco[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|ControlUnit:CtrlUnit
+|processor_tb|processor:proce|ControlUnit:CtrlUnit
 op[0] => ExtSel[2].IN2
 op[1] => ExtSel[3].IN2
 inst[0] => jmpF[0].IN2
@@ -551,7 +682,7 @@ ExtndSel[0] <= ExtendDeco:ExtDeco.port1
 ExtndSel[1] <= ExtendDeco:ExtDeco.port1
 
 
-|processor|ControlUnit:CtrlUnit|ControlUnitDeco:ALUDeco
+|processor_tb|processor:proce|ControlUnit:CtrlUnit|ControlUnitDeco:ALUDeco
 in[0] => Decoder0.IN4
 in[1] => Decoder0.IN3
 in[2] => Decoder0.IN2
@@ -562,7 +693,7 @@ ALUControl[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 ALUControl[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|ControlUnit:CtrlUnit|ExtendDeco:ExtDeco
+|processor_tb|processor:proce|ControlUnit:CtrlUnit|ExtendDeco:ExtDeco
 in[0] => Decoder0.IN3
 in[1] => Decoder0.IN2
 in[2] => Decoder0.IN1
@@ -571,7 +702,7 @@ ALUControl[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 ALUControl[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|RegisterFile:RegFile
+|processor_tb|processor:proce|RegisterFile:RegFile
 clk => regs.we_a.CLK
 clk => regs.waddr_a[3].CLK
 clk => regs.waddr_a[2].CLK
@@ -758,7 +889,7 @@ rd2[30] <= regs.PORTBDATAOUT30
 rd2[31] <= regs.PORTBDATAOUT31
 
 
-|processor|Extender:extnd
+|processor_tb|processor:proce|Extender:extnd
 inmeIn[0] => Mux22.IN3
 inmeIn[1] => Mux21.IN3
 inmeIn[2] => Mux20.IN3
@@ -925,7 +1056,7 @@ inmeOut[30] <= <GND>
 inmeOut[31] <= <GND>
 
 
-|processor|Mux2:Extend_Mux
+|processor_tb|processor:proce|Mux2:Extend_Mux
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -1025,7 +1156,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|Mux2:PCReg_Mux
+|processor_tb|processor:proce|Mux2:PCReg_Mux
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -1125,7 +1256,9 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|PipelineMem:pipeMem
+|processor_tb|processor:proce|PipelineMem:pipeMem
+clk => ExtndSelo[0]~reg0.CLK
+clk => ExtndSelo[1]~reg0.CLK
 clk => wpco~reg0.CLK
 clk => jmpo[0]~reg0.CLK
 clk => jmpo[1]~reg0.CLK
@@ -1211,6 +1344,8 @@ clk => R2ro[28]~reg0.CLK
 clk => R2ro[29]~reg0.CLK
 clk => R2ro[30]~reg0.CLK
 clk => R2ro[31]~reg0.CLK
+rst => ExtndSelo[0]~reg0.ACLR
+rst => ExtndSelo[1]~reg0.ACLR
 rst => wpco~reg0.ACLR
 rst => jmpo[0]~reg0.ACLR
 rst => jmpo[1]~reg0.ACLR
@@ -1381,6 +1516,8 @@ DestRi[0] => DestRo[0]~reg0.DATAIN
 DestRi[1] => DestRo[1]~reg0.DATAIN
 DestRi[2] => DestRo[2]~reg0.DATAIN
 DestRi[3] => DestRo[3]~reg0.DATAIN
+ExtndSeli[0] => ExtndSelo[0]~reg0.DATAIN
+ExtndSeli[1] => ExtndSelo[1]~reg0.DATAIN
 wmemo <= wmemo~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rmemo <= rmemo~reg0.DB_MAX_OUTPUT_PORT_TYPE
 wrego <= wrego~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1466,9 +1603,11 @@ DestRo[0] <= DestRo[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DestRo[1] <= DestRo[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DestRo[2] <= DestRo[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DestRo[3] <= DestRo[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ExtndSelo[0] <= ExtndSelo[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ExtndSelo[1] <= ExtndSelo[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|ForwardUnitALU:FwrdUnitALU
+|processor_tb|processor:proce|ForwardUnitALU:FwrdUnitALU
 R2res3[0] => R2res3[0].IN1
 R2res3[1] => R2res3[1].IN1
 R2res3[2] => R2res3[2].IN1
@@ -1533,30 +1672,37 @@ R3res3[28] => R3res3[28].IN1
 R3res3[29] => R3res3[29].IN1
 R3res3[30] => R3res3[30].IN1
 R3res3[31] => R3res3[31].IN1
-R2_2[0] => comb.IN0
-R2_2[0] => comb.IN0
-R2_2[1] => comb.IN0
-R2_2[1] => comb.IN0
-R2_2[2] => comb.IN0
-R2_2[2] => comb.IN0
-R2_2[3] => comb.IN0
-R2_2[3] => comb.IN0
-R3_2[0] => comb.IN0
-R3_2[0] => comb.IN0
-R3_2[1] => comb.IN0
-R3_2[1] => comb.IN0
-R3_2[2] => comb.IN0
-R3_2[2] => comb.IN0
-R3_2[3] => comb.IN0
-R3_2[3] => comb.IN0
-DestR_3[0] => comb.IN1
-DestR_3[0] => comb.IN1
-DestR_3[1] => comb.IN1
-DestR_3[1] => comb.IN1
-DestR_3[2] => comb.IN1
-DestR_3[2] => comb.IN1
-DestR_3[3] => comb.IN1
-DestR_3[3] => comb.IN1
+R2_2[0] => Equal0.IN3
+R2_2[0] => Equal1.IN3
+R2_2[1] => Equal0.IN2
+R2_2[1] => Equal1.IN2
+R2_2[2] => Equal0.IN1
+R2_2[2] => Equal1.IN1
+R2_2[3] => Equal0.IN0
+R2_2[3] => Equal1.IN0
+R3_2[0] => Equal2.IN3
+R3_2[0] => Equal3.IN3
+R3_2[1] => Equal2.IN2
+R3_2[1] => Equal3.IN2
+R3_2[2] => Equal2.IN1
+R3_2[2] => Equal3.IN1
+R3_2[3] => Equal2.IN0
+R3_2[3] => Equal3.IN0
+ExtndSel1[0] => ~NO_FANOUT~
+ExtndSel1[1] => comb.IN1
+ExtndSel1[1] => comb.IN1
+ExtndSel1[1] => comb.IN1
+ExtndSel1[1] => comb.IN1
+ExtndSel1[1] => comb.IN1
+ExtndSel1[1] => comb.IN1
+DestR_3[0] => Equal1.IN7
+DestR_3[0] => Equal3.IN7
+DestR_3[1] => Equal1.IN6
+DestR_3[1] => Equal3.IN6
+DestR_3[2] => Equal1.IN5
+DestR_3[2] => Equal3.IN5
+DestR_3[3] => Equal1.IN4
+DestR_3[3] => Equal3.IN4
 Res[0] => Res[0].IN2
 Res[1] => Res[1].IN2
 Res[2] => Res[2].IN2
@@ -1589,14 +1735,14 @@ Res[28] => Res[28].IN2
 Res[29] => Res[29].IN2
 Res[30] => Res[30].IN2
 Res[31] => Res[31].IN2
-DestR_4[0] => comb.IN1
-DestR_4[0] => comb.IN1
-DestR_4[1] => comb.IN1
-DestR_4[1] => comb.IN1
-DestR_4[2] => comb.IN1
-DestR_4[2] => comb.IN1
-DestR_4[3] => comb.IN1
-DestR_4[3] => comb.IN1
+DestR_4[0] => Equal0.IN7
+DestR_4[0] => Equal2.IN7
+DestR_4[1] => Equal0.IN6
+DestR_4[1] => Equal2.IN6
+DestR_4[2] => Equal0.IN5
+DestR_4[2] => Equal2.IN5
+DestR_4[3] => Equal0.IN4
+DestR_4[3] => Equal2.IN4
 Res1[0] => Res1[0].IN2
 Res1[1] => Res1[1].IN2
 Res1[2] => Res1[2].IN2
@@ -1695,7 +1841,7 @@ R3res4[30] <= Mux2:ExR3.port3
 R3res4[31] <= Mux2:ExR3.port3
 
 
-|processor|ForwardUnitALU:FwrdUnitALU|Mux2:WbR2
+|processor_tb|processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:WbR2
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -1795,7 +1941,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|ForwardUnitALU:FwrdUnitALU|Mux2:ExR2
+|processor_tb|processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:ExR2
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -1895,7 +2041,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|ForwardUnitALU:FwrdUnitALU|Mux2:WbR3
+|processor_tb|processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:WbR3
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -1995,7 +2141,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|ForwardUnitALU:FwrdUnitALU|Mux2:ExR3
+|processor_tb|processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:ExR3
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -2095,7 +2241,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU
 A[0] => A[0].IN5
 A[1] => A[1].IN5
 A[2] => A[2].IN5
@@ -2201,7 +2347,7 @@ banDesborde <= Desborde:BanOve.port4
 banAcarreo <= Acarreo:BanCar.port4
 
 
-|processor|UnidadLogicoAritmetica:ALU|Suma:Sum
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Suma:Sum
 A[0] => Add0.IN32
 A[1] => Add0.IN31
 A[2] => Add0.IN30
@@ -2301,7 +2447,7 @@ C[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Resta:Res
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Resta:Res
 A[0] => Add0.IN64
 A[1] => Add0.IN63
 A[2] => Add0.IN62
@@ -2401,7 +2547,7 @@ C[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Multiplicacion:Mul
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Multiplicacion:Mul
 A[0] => Mult0.IN31
 A[1] => Mult0.IN30
 A[2] => Mult0.IN29
@@ -2501,7 +2647,7 @@ C[31] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Modulo:Mod
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Modulo:Mod
 A[0] => Mod0.IN31
 A[1] => Mod0.IN30
 A[2] => Mod0.IN29
@@ -2600,7 +2746,7 @@ C[30] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
 C[31] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|DesplazamientoDerecha:DespDer
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|DesplazamientoDerecha:DespDer
 A[0] => ShiftRight0.IN32
 A[1] => ShiftRight0.IN31
 A[2] => ShiftRight0.IN30
@@ -2699,7 +2845,7 @@ C[30] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
 C[31] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Mux8ALU:Mux8
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Mux8ALU:Mux8
 result0[0] => Mux0.IN2
 result0[1] => Mux1.IN2
 result0[2] => Mux2.IN2
@@ -3025,13 +3171,13 @@ Out[30] <= Out[30].DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Negativo:BanNeg
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Negativo:BanNeg
 UltBit => Res.IN0
 Sel => Res.IN1
 Res <= Res.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Cero:BanCer
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Cero:BanCer
 C[0] => Equal0.IN31
 C[1] => Equal0.IN30
 C[2] => Equal0.IN29
@@ -3068,7 +3214,7 @@ Sel => Res.IN1
 Res <= Res.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Desborde:BanOve
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Desborde:BanOve
 MSBA => SignoOperandos.IN0
 MSBA => CambioSigno.IN0
 MSBB => SignoOperandos.IN1
@@ -3079,7 +3225,7 @@ Sel[2] => Equal0.IN0
 Res <= Res.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|UnidadLogicoAritmetica:ALU|Acarreo:BanCar
+|processor_tb|processor:proce|UnidadLogicoAritmetica:ALU|Acarreo:BanCar
 CarSuma => Res.IN1
 CarResta => Res.IN1
 CarMultiplicacion => Res.IN1
@@ -3095,7 +3241,7 @@ Sel[2] => Equal2.IN1
 Res <= Res.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|condUnit:CondUnit
+|processor_tb|processor:proce|condUnit:CondUnit
 jmpF[0] => Equal0.IN1
 jmpF[0] => Equal1.IN1
 jmpF[1] => Equal0.IN0
@@ -3109,7 +3255,7 @@ Cflag => ~NO_FANOUT~
 jmpR <= jmpR.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|PipelineEx:pipeEx
+|processor_tb|processor:proce|PipelineEx:pipeEx
 clk => rmemo~reg0.CLK
 clk => wmemo~reg0.CLK
 clk => wrego~reg0.CLK
@@ -3396,7 +3542,7 @@ destRego[2] <= destRego[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 destRego[3] <= destRego[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|MemoryController:ChipSel
+|processor_tb|processor:proce|MemoryController:ChipSel
 clk => clk.IN1
 we => we.IN1
 addr[0] => LessThan0.IN64
@@ -3666,7 +3812,7 @@ GPIO[7] <= DataMemory:RAM.port5
 GPIOEn <= DataMemory:RAM.port6
 
 
-|processor|MemoryController:ChipSel|DataMemory:RAM
+|processor_tb|processor:proce|MemoryController:ChipSel|DataMemory:RAM
 clk => RAM1.we_a.CLK
 clk => RAM1.waddr_a[13].CLK
 clk => RAM1.waddr_a[12].CLK
@@ -4034,6 +4180,9 @@ clk => RAM16.data_a[2].CLK
 clk => RAM16.data_a[1].CLK
 clk => RAM16.data_a[0].CLK
 clk => RAMD.we_a.CLK
+clk => RAMD.waddr_a[10].CLK
+clk => RAMD.waddr_a[9].CLK
+clk => RAMD.waddr_a[8].CLK
 clk => RAMD.waddr_a[7].CLK
 clk => RAMD.waddr_a[6].CLK
 clk => RAMD.waddr_a[5].CLK
@@ -6285,7 +6434,7 @@ GPIO[7] <= GPIO[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 GPIOEn <= GPIOEn~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|MemoryController:ChipSel|ImageROM:ROM
+|processor_tb|processor:proce|MemoryController:ChipSel|ImageROM:ROM
 addr[0] => LessThan0.IN64
 addr[0] => LessThan1.IN64
 addr[0] => LessThan2.IN64
@@ -7838,7 +7987,7 @@ rd[30] <= <GND>
 rd[31] <= <GND>
 
 
-|processor|Mux2:MemMux
+|processor_tb|processor:proce|Mux2:MemMux
 result0[0] => Out.DATAA
 result0[1] => Out.DATAA
 result0[2] => Out.DATAA
@@ -7938,7 +8087,7 @@ Out[30] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor|PipelineWB:pipeWb
+|processor_tb|processor:proce|PipelineWB:pipeWb
 clk => wrego~reg0.CLK
 clk => DestRo[0]~reg0.CLK
 clk => DestRo[1]~reg0.CLK
