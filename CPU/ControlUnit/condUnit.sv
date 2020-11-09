@@ -5,7 +5,7 @@ module condUnit(input [1:0] jmpF, input wpci,Nflag,Zflag,Vflag,Cflag, output log
 			jmp = 1'b1;
 		else if((jmpF == 2'b11)&&(Zflag == 1'b1))
 			jmp = 1'b1;
-		else if((jmpF == 2'b11)&&(~Zflag&~(Nflag^Vflag)))
+		else if((jmpF == 2'b01)&&(~Zflag&~(Nflag^Vflag)))
 			jmp = 1'b1;
 		else
 			jmp = 1'b0;

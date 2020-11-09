@@ -44,7 +44,7 @@ class Gui:
         self.OutputTextArea = Text(self.MainWindow)
         self.OutputTextArea.place(x=10, y=535, width=980, height=260)
 
-        archi1 = open('D:/Isaac Porras/Semestre 8/Arqui/Proyecto2/FantasmCompiler/TestFiles/test.txt', "r", encoding="utf-8")
+        archi1 = open('TestFiles/test.txt', "r", encoding="utf-8")
         contenido = archi1.read()
         archi1.close()
         self.setCodeTextArea(contenido)

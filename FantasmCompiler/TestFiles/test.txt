@@ -1,9 +1,22 @@
 INICIO:
 
-  DDR R11,R3,1;
-  SUM R1,R2,R3;
+  MOVI R1,0;
+  MOVI R2,152100;
+  MOVI R4,1;
+  SAL Ciclo;
+
+Ciclo:
+  CMPI R1,152100;
+  SIG Terminar;
+  CAR R3,R1;
+  SUM R1,R1,R4;
+  GDR R2,R3;
+  SUM R2,R2,R4;
+  SAL Ciclo;
+
+Terminar:
+  SAL Terminar;
 
 FIN
 
-11001 0000000000000000001 0011 1011
 

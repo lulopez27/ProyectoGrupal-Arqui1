@@ -1,4 +1,4 @@
-module processor(input clk, rst);
+module processor(input clk, rst, output logic [7:0] GPIO,output logic GPIOEn);
 	logic [31:0]next_pc;
 	logic[31:0] pc_p1;
 	logic [31:0]ALURes;
@@ -70,8 +70,6 @@ module processor(input clk, rst);
 	PipelineEx pipeEx(clk,rst,Wmem1,Rmem1,Wreg1,ALURes,R3res4,DestR_2,Wreg2,Rmem2,Wmem2,ALURes1,R3res5,DestR_3);
 	
 	logic [31:0]CS;
-	logic [7:0] GPIO;
-	logic GPIOEn;
 	MemoryController ChipSel(clk,Wmem2,ALURes1,R3res5,CS,GPIO,GPIOEn);
 	Mux2 #(32)MemMux(ALURes1,CS,Rmem2,Res);
 	PipelineWB pipeWb(clk,rst,Wreg2,Res,DestR_3,Wreg3,Res1,DestR_4);
