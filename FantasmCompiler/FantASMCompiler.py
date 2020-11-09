@@ -82,7 +82,7 @@ def compile(codigo):
     print(binInstructions)
     with open('./OutputFiles/outputFile.txt', 'w') as f:
         for item in hexInstructions:
-            f.write("%s\n" % item)
+            f.write("%s\n" % item[2:])
 
 
 def analiceInst(inst, pc):
@@ -113,10 +113,18 @@ def analiceInst(inst, pc):
 
     elif str(inst[0]) in arithmeticInst:
         binCode += str(format(arithmeticInst.get(inst[0]), '#010b'))[5:]
-        binCode += bitsBasura15
-        binCode += registerNumber.get(str(inst[3])) + registerNumber.get(str(inst[2])) + registerNumber.get(
-            str(inst[1]))
 
+
+        print('La operación es: ' + str(inst[3]))
+        if not isinstance(inst[3], int):
+            print('La operación es artimetica normal')
+            binCode += bitsBasura15
+            binCode += registerNumber.get(str(inst[3])) + registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1]))
+        else:
+            print('La operación es un DDR')
+            imm = shiftNumber(str(format(inst[3], '#00010b'))[2:], 19)
+            binCode = binCode + imm + registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1]))
+            print(imm)
     elif str(inst[0]) in compInst:
         if not isinstance(inst[2], int):  # Si es una operacion de comparacion R-R
             binCode += str(format(compInst.get(inst[0]), '#010b'))[5:]
