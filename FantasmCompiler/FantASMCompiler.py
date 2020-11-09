@@ -82,7 +82,7 @@ def compile(codigo):
     print(binInstructions)
     with open('./OutputFiles/outputFile.txt', 'w') as f:
         for item in hexInstructions:
-            f.write("%s\n" % item)
+            f.write("%s\n" % item[2:])
 
 
 def analiceInst(inst, pc):
