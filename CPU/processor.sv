@@ -34,7 +34,7 @@ module processor(input clk, rst, output logic [7:0] GPIO,output logic GPIOEn);
 	logic [1:0] JmpF;
 	logic [2:0]ALUIns;
 	logic [1:0]ExtndSel;
-	ControlUnit  CtrlUnit(num_op,inst,immF,Wmem,Rmem,Wreg,Wpc,JmpF,ALUIns,ExtndSel);
+	ControlUnit  CtrlUnit(num_op,inst,immF,Wmem,Rmem,Wreg,Wpc,CondEn,JmpF,ALUIns,ExtndSel);
 	logic [31:0]R2r,R3r;
 	RegisterFile RegFile(clk,Wreg3,R2,R3,DestR_4,Res1,R2r,R3r);
 	logic [31:0]ExtendRes;
@@ -52,8 +52,8 @@ module processor(input clk, rst, output logic [7:0] GPIO,output logic GPIOEn);
 	logic [2:0] ALUIns1;
 	logic [31:0] R2res3,R3res3;
 	logic [3:0] R2_2,R3_2,DestR_2;
-	PipelineMem pipeMem(clk,rst,Wmem,Rmem,Wreg,Wpc,JmpF,ALUIns,R2res,R3res,R2,R3,DestR,ExtndSel,
-					Wmem1,Rmem1,Wreg1,Wpc1,JmpF1,ALUIns1,R2res3,R3res3,R2_2,R3_2,DestR_2,ExtndSel1);
+	PipelineMem pipeMem(clk,rst,Wmem,Rmem,Wreg,Wpc,CondEn,JmpF,ALUIns,R2res,R3res,R2,R3,DestR,ExtndSel,
+					Wmem1,Rmem1,Wreg1,Wpc1,CondEn1,JmpF1,ALUIns1,R2res3,R3res3,R2_2,R3_2,DestR_2,ExtndSel1);
 	
 	logic [31:0] R2res4,R3res4;
 	ForwardUnitALU  FwrdUnitALU(R2res3,R3res3,R2_2,R3_2,ExtndSel1,DestR_3,Res,DestR_4,Res1,R2res4,R3res4);
@@ -62,7 +62,7 @@ module processor(input clk, rst, output logic [7:0] GPIO,output logic GPIOEn);
 	
 	UnidadLogicoAritmetica #(32)ALU(R2res4,R3res4,ALUIns1,ALURes,Nflag,Zflag,Vflag,Cflag);
 
-	condUnit CondUnit(JmpF1,Wpc1,Nflag,Zflag,Vflag,Cflag,JumpEn);
+	condUnit CondUnit(clk,rst,JmpF1,Wpc1,CondEn1,Nflag,Zflag,Vflag,Cflag,JumpEn);
 	
 	logic Wreg2,Rmem2,Wmem2;
 	logic [31:0]ALURes1,R3res5;
