@@ -19,7 +19,7 @@
     <SUITE FILE_PATH="coverage/FantasmCompiler$FantASMIDE.coverage" NAME="FantASMIDE Coverage Results" MODIFIED="1604600473681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FantasmCompiler$FantASMSintax.coverage" NAME="FantASMSintax Coverage Results" MODIFIED="1604794885516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FantasmCompiler$FantASMLexer.coverage" NAME="FantASMLexer Coverage Results" MODIFIED="1604794887441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FantasmCompiler$FantASMCompiler.coverage" NAME="FantASMCompiler Coverage Results" MODIFIED="1604911081896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FantasmCompiler$FantASMCompiler.coverage" NAME="FantASMCompiler Coverage Results" MODIFIED="1604957429806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,8 +42,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+<<<<<<< HEAD
   <component name="JupyterTrust" id="f38e88cc-b653-4544-9d43-8e340c1ec76f" />
   <component name="ProjectId" id="1k4GJmJMY7Mype2Z61l3oJuleaq" />
+=======
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/PsmLexer.py" />
+        <option value="$PROJECT_DIR$/FantASMIDE.py" />
+        <option value="$PROJECT_DIR$/FantASMLexer.py" />
+        <option value="$PROJECT_DIR$/FantASMSintax.py" />
+        <option value="$PROJECT_DIR$/FantASMCompiler.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="950" />
+    <option name="y" value="-10" />
+    <option name="width" value="979" />
+    <option name="height" value="1099" />
+  </component>
+>>>>>>> main
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />

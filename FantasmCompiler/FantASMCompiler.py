@@ -182,10 +182,7 @@ def analiceInst(inst, pc):
 
 
 
-        print('Hubo un jump')
-        binCode = "010000000000000000000000"
-        binInstructions.append(binCode)
-        hexInstructions.append('0x40000000')
+
     else:
 
         binCode = int(binCode, 2)
