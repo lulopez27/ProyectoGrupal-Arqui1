@@ -10,6 +10,7 @@
 # Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+<<<<<<< HEAD
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 # Start time: 17:46:47 on Nov 08,2020
@@ -184,30 +185,55 @@
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 # Start time: 17:46:50 on Nov 08,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineWB.sv 
+=======
+# vlog -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline {C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineWB.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:24:46 on Nov 08,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline" C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineWB.sv 
+>>>>>>> main
 # -- Compiling module PipelineWB
 # 
 # Top level modules:
 # 	PipelineWB
+<<<<<<< HEAD
 # End time: 17:46:51 on Nov 08,2020, Elapsed time: 0:00:01
+=======
+# End time: 17:24:46 on Nov 08,2020, Elapsed time: 0:00:00
+>>>>>>> main
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Pipeline {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+<<<<<<< HEAD
 # Start time: 17:46:51 on Nov 08,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv 
+=======
+# Start time: 17:24:46 on Nov 08,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline" C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineMem.sv 
+>>>>>>> main
 # -- Compiling module PipelineMem
 # 
 # Top level modules:
 # 	PipelineMem
+<<<<<<< HEAD
 # End time: 17:46:51 on Nov 08,2020, Elapsed time: 0:00:00
+=======
+# End time: 17:24:46 on Nov 08,2020, Elapsed time: 0:00:00
+>>>>>>> main
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Pipeline {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+<<<<<<< HEAD
 # Start time: 17:46:51 on Nov 08,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv 
+=======
+# Start time: 17:24:46 on Nov 08,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline" C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineEx.sv 
+>>>>>>> main
 # -- Compiling module PipelineEx
 # 
 # Top level modules:
 # 	PipelineEx
+<<<<<<< HEAD
 # End time: 17:46:51 on Nov 08,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Memorias {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/RegisterFile.sv}
@@ -304,36 +330,30 @@
 vsim work.processor_tb
 # vsim work.processor_tb 
 # Start time: 17:47:21 on Nov 08,2020
+=======
+# End time: 17:24:46 on Nov 08,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests {C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/pipeline_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:24:46 on Nov 08,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests" C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/pipeline_tb.sv 
+# -- Compiling module pipeline_tb
+# 
+# Top level modules:
+# 	pipeline_tb
+# End time: 17:24:47 on Nov 08,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vsim work.pipeline_tb
+# vsim work.pipeline_tb 
+# Start time: 17:24:50 on Nov 08,2020
+>>>>>>> main
 # Loading sv_std.std
-# Loading work.processor_tb
-# Loading work.processor
-# Loading work.Mux2
-# Loading work.FlipFlop
-# Loading work.Suma
-# Loading work.InstructionMemory
-# Loading work.ControlUnit
-# Loading work.ControlUnitDeco
-# Loading work.ExtendDeco
-# Loading work.RegisterFile
-# Loading work.Extender
+# Loading work.pipeline_tb
 # Loading work.PipelineMem
-# Loading work.ForwardUnitALU
-# Loading work.UnidadLogicoAritmetica
-# Loading work.Resta
-# Loading work.Multiplicacion
-# Loading work.Modulo
-# Loading work.DesplazamientoDerecha
-# Loading work.Mux8ALU
-# Loading work.Negativo
-# Loading work.Cero
-# Loading work.Desborde
-# Loading work.Acarreo
-# Loading work.condUnit
 # Loading work.PipelineEx
-# Loading work.MemoryController
-# Loading work.DataMemory
-# Loading work.ImageROM
 # Loading work.PipelineWB
+<<<<<<< HEAD
 add wave -position end  sim:/processor_tb/rst
 add wave -position end  sim:/processor_tb/proce/ALUIns
 add wave -position end  sim:/processor_tb/proce/ALUIns1
@@ -407,3 +427,88 @@ add wave -position 16  sim:/processor_tb/proce/R3_2
 run 500
 # End time: 18:13:32 on Nov 08,2020, Elapsed time: 0:26:11
 # Errors: 1, Warnings: 2
+=======
+add wave -position end  sim:/pipeline_tb/clk
+add wave -position end  sim:/pipeline_tb/rst
+add wave -position end  sim:/pipeline_tb/Wmem
+add wave -position end  sim:/pipeline_tb/Rmem
+add wave -position end  sim:/pipeline_tb/Wreg
+add wave -position end  sim:/pipeline_tb/Wpc
+add wave -position end  sim:/pipeline_tb/Wmem1
+add wave -position end  sim:/pipeline_tb/Rmem1
+add wave -position end  sim:/pipeline_tb/Wreg1
+add wave -position end  sim:/pipeline_tb/Wpc1
+add wave -position end  sim:/pipeline_tb/Wreg2
+add wave -position end  sim:/pipeline_tb/Rmem2
+add wave -position end  sim:/pipeline_tb/Wmem2
+add wave -position end  sim:/pipeline_tb/ALURes
+add wave -position end  sim:/pipeline_tb/DestR_3
+add wave -position end  sim:/pipeline_tb/Res
+add wave -position end  sim:/pipeline_tb/Res1
+add wave -position end  sim:/pipeline_tb/Wreg3
+add wave -position end  sim:/pipeline_tb/DestR_4
+add wave -position end  sim:/pipeline_tb/R2
+add wave -position end  sim:/pipeline_tb/R3
+add wave -position end  sim:/pipeline_tb/DestR
+add wave -position end  sim:/pipeline_tb/JmpF
+add wave -position end  sim:/pipeline_tb/ALUIns
+add wave -position end  sim:/pipeline_tb/R3res
+add wave -position end  sim:/pipeline_tb/R2res
+add wave -position end  sim:/pipeline_tb/JmpF1
+add wave -position end  sim:/pipeline_tb/ALUIns1
+add wave -position end  sim:/pipeline_tb/R2res3
+add wave -position end  sim:/pipeline_tb/R3res3
+add wave -position end  sim:/pipeline_tb/R2_2
+add wave -position end  sim:/pipeline_tb/R3_2
+add wave -position end  sim:/pipeline_tb/DestR_2
+add wave -position end  sim:/pipeline_tb/R2res4
+add wave -position end  sim:/pipeline_tb/R3res4
+add wave -position end  sim:/pipeline_tb/ALURes1
+add wave -position end  sim:/pipeline_tb/R3res5
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: luisd  Hostname: DESKTOP-6I0S59P  ProcessID: 14184
+#           Attempting to use alternate WLF file "./wlfthy8w3v".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthy8w3v
+add wave -position end  sim:/pipeline_tb/ALUIns
+add wave -position end  sim:/pipeline_tb/ALUIns1
+add wave -position end  sim:/pipeline_tb/ALURes
+add wave -position end  sim:/pipeline_tb/ALURes1
+add wave -position end  sim:/pipeline_tb/clk
+add wave -position end  sim:/pipeline_tb/DestR
+add wave -position end  sim:/pipeline_tb/DestR_2
+add wave -position end  sim:/pipeline_tb/DestR_3
+add wave -position end  sim:/pipeline_tb/DestR_4
+add wave -position end  sim:/pipeline_tb/JmpF
+add wave -position end  sim:/pipeline_tb/JmpF1
+add wave -position end  sim:/pipeline_tb/R2
+add wave -position end  sim:/pipeline_tb/R2_2
+add wave -position end  sim:/pipeline_tb/R2res
+add wave -position end  sim:/pipeline_tb/R2res3
+add wave -position end  sim:/pipeline_tb/R2res4
+add wave -position end  sim:/pipeline_tb/R3
+add wave -position end  sim:/pipeline_tb/R3_2
+add wave -position end  sim:/pipeline_tb/R3res
+add wave -position end  sim:/pipeline_tb/R3res3
+add wave -position end  sim:/pipeline_tb/R3res4
+add wave -position end  sim:/pipeline_tb/R3res5
+add wave -position end  sim:/pipeline_tb/Res
+add wave -position end  sim:/pipeline_tb/Res1
+add wave -position end  sim:/pipeline_tb/Rmem
+add wave -position end  sim:/pipeline_tb/Rmem1
+add wave -position end  sim:/pipeline_tb/Rmem2
+add wave -position end  sim:/pipeline_tb/rst
+add wave -position end  sim:/pipeline_tb/Wmem
+add wave -position end  sim:/pipeline_tb/Wmem1
+add wave -position end  sim:/pipeline_tb/Wmem2
+add wave -position end  sim:/pipeline_tb/Wpc
+add wave -position end  sim:/pipeline_tb/Wpc1
+add wave -position end  sim:/pipeline_tb/Wreg
+add wave -position end  sim:/pipeline_tb/Wreg1
+add wave -position end  sim:/pipeline_tb/Wreg2
+add wave -position end  sim:/pipeline_tb/Wreg3
+run 100
+# A time value could not be extracted from the current line
+# End time: 17:32:38 on Nov 08,2020, Elapsed time: 0:07:48
+# Errors: 0, Warnings: 2
+>>>>>>> main

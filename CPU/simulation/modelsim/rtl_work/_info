@@ -7,6 +7,7 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
+<<<<<<< HEAD
 Z0 dC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/simulation/modelsim
 vAcarreo
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
@@ -21,11 +22,28 @@ R0
 Z4 w1604621189
 8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv
 FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv
+=======
+Z0 dC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/simulation/modelsim
+vpipeline_tb
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1604877887
+!i10b 1
+!s100 Pm?lAACH=W_Hh=3IcKi:91
+ILj0W;hOYflG?g@o94gU<?2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 pipeline_tb_sv_unit
+S1
+R0
+w1604877844
+8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/pipeline_tb.sv
+FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/pipeline_tb.sv
+>>>>>>> main
 L0 1
-Z5 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
+<<<<<<< HEAD
 Z6 !s108 1604879208.000000
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv|
@@ -535,6 +553,22 @@ R24
 !s100 @K;DiQDak0LMe`R;_YJ163
 IaLIFG;ZTFF0;ND=HU6D@`0
 R3
+=======
+Z4 !s108 1604877886.000000
+!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/pipeline_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests/pipeline_tb.sv|
+!i113 1
+Z5 o-sv -work work
+!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/tests
+Z6 tCvgOpt 0
+vPipelineEx
+R1
+Z7 !s110 1604877886
+!i10b 1
+!s100 @K;DiQDak0LMe`R;_YJ163
+INAUX@TLFlUJe5FX`9b=TY1
+R2
+>>>>>>> main
 !s105 PipelineEx_sv_unit
 S1
 R0
@@ -542,10 +576,11 @@ w1604876935
 8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv
 FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv
 L0 1
-R5
+R3
 r1
 !s85 0
 31
+<<<<<<< HEAD
 R12
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv|
@@ -567,11 +602,35 @@ R0
 w1604876930
 8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv
 FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv
-L0 1
+=======
+R4
+!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineEx.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineEx.sv|
+!i113 1
 R5
+Z8 !s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline
+R6
+n@pipeline@ex
+vPipelineMem
+R1
+R7
+!i10b 1
+!s100 NQnK:J@8V?hH0JQe9znFX1
+I0`nX[;DbE4lAN6>_M:3ng1
+R2
+!s105 PipelineMem_sv_unit
+S1
+R0
+w1604875268
+8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineMem.sv
+FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineMem.sv
+>>>>>>> main
+L0 1
+R3
 r1
 !s85 0
 31
+<<<<<<< HEAD
 R12
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv|
@@ -587,6 +646,23 @@ R24
 !s100 Je2hIS?kn?OAiZ60?khk=1
 IB:W240UTj]Z@M91Mol@_c3
 R3
+=======
+R4
+!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineMem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineMem.sv|
+!i113 1
+R5
+R8
+R6
+n@pipeline@mem
+vPipelineWB
+R1
+R7
+!i10b 1
+!s100 Je2hIS?kn?OAiZ60?khk=1
+IL;YJB]6[Eee<kWa9AiY6R0
+R2
+>>>>>>> main
 !s105 PipelineWB_sv_unit
 S1
 R0
@@ -594,6 +670,7 @@ w1604876924
 8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineWB.sv
 FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineWB.sv
 L0 1
+<<<<<<< HEAD
 R5
 r1
 !s85 0
@@ -748,11 +825,20 @@ R4
 8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv
 FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv
 L0 1
-R5
+=======
+R3
 r1
 !s85 0
 31
+R4
+!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineWB.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/CPU/Pipeline/PipelineWB.sv|
+!i113 1
+>>>>>>> main
+R5
+R8
 R6
+<<<<<<< HEAD
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv|
 !i113 1
@@ -760,3 +846,6 @@ R7
 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU}
 R9
 n@unidad@logico@aritmetica
+=======
+n@pipeline@w@b
+>>>>>>> main
