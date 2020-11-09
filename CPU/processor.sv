@@ -15,8 +15,8 @@ module processor(input clk, rst);
 	Suma #(32)PC_1(curr_pc,32'h1,pc_p1,none);
 	logic [31:0] AcIns;
 	InstructionMemory InsMem(curr_pc,AcIns);
-	logic [31:0] instruction;
-	FlipFlop  #(32)pipelineFetch(clk,rst|JumpEn,AcIns,instruction);
+	logic [31:0] instruction, curr_pc1;
+	PipelineFetch pipelineFetch(clk,rst|JumpEn,AcIns,curr_pc,instruction, curr_pc1);
 	//##########################################
 	logic [1:0]num_op,inst;
 	logic immF;
@@ -42,7 +42,7 @@ module processor(input clk, rst);
 	logic [31:0]R3res;
 	Mux2 #(32)Extend_Mux(R3r,ExtendRes,immF,R3res);
 	logic [31:0]R2res;
-	Mux2 #(32)PCReg_Mux(R2r,curr_pc,Wpc,R2res);
+	Mux2 #(32)PCReg_Mux(R2r,curr_pc1,Wpc,R2res);
 	
 	//logic [31:0]R2res2,R3res2;
 	//FowardUnitReg FwrdUnitReg(R2res,R3res,R2,R3,DestR_2,ALURes,DestR_3,Res,DestR_4,Res1,R2res2,R3res2);
@@ -52,7 +52,7 @@ module processor(input clk, rst);
 	logic [2:0] ALUIns1;
 	logic [31:0] R2res3,R3res3;
 	logic [3:0] R2_2,R3_2,DestR_2;
-	PipelineMem pipeMem(clk,rst|JumpEn,Wmem,Rmem,Wreg,Wpc,JmpF,ALUIns,R2res,R3res,R2,R3,DestR,ExtndSel,
+	PipelineMem pipeMem(clk,rst,Wmem,Rmem,Wreg,Wpc,JmpF,ALUIns,R2res,R3res,R2,R3,DestR,ExtndSel,
 					Wmem1,Rmem1,Wreg1,Wpc1,JmpF1,ALUIns1,R2res3,R3res3,R2_2,R3_2,DestR_2,ExtndSel1);
 	
 	logic [31:0] R2res4,R3res4;
