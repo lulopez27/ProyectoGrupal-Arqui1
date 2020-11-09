@@ -16,7 +16,7 @@ module UnidadLogicoAritmetica #(parameter N = 32) (input logic [N-1:0] A, B,
 	Modulo #(N) Mod(A, B, CModulo);
 	DesplazamientoDerecha #(N) DespDer(A, B, CDesplazamientoDerecha);
 	
-	Mux8ALU #(N) Mux8(CSuma, CResta, CMultiplicacion, CModulo, CDesplazamientoDerecha, B, Sel, C);
+	Mux8ALU #(N) Mux8(CSuma, CResta, CMultiplicacion, CModulo, CDesplazamientoDerecha, B, A, Sel, C);
 			
 	Negativo BanNeg(C[N-1], Sel[2], banNegativo);
 	Cero #(N) BanCer(C, Sel[2], banCero);

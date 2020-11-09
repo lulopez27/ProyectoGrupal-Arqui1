@@ -10,7 +10,7 @@ module ControlUnitDeco(input [4:0] in, output logic [2:0] ALUControl);
 			5'b11110 : ALUControl = 3'b010; //MUL
 			5'b11100 : ALUControl = 3'b011; //MOD
 			5'b11001 : ALUControl = 3'b100; //LSR
-			5'b10100 : ALUControl = 3'b101; //MOVR
+			5'b10100 : ALUControl = 3'b111; //MOVR
 			5'b10101 : ALUControl = 3'b101; //MOVI			
 			default  : ALUControl = 3'b111; //NONE
 		endcase

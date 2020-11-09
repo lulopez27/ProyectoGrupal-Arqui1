@@ -1,4 +1,4 @@
-module Mux8ALU #(parameter N = 32) (input logic[N-1:0] result0, result1, result2, result3, result4, result5,
+module Mux8ALU #(parameter N = 32) (input logic[N-1:0] result0, result1, result2, result3, result4, result5, result7,
 											 input logic[2:0] Sel,
 											 output logic[N-1:0] Out);
 	
@@ -10,7 +10,8 @@ module Mux8ALU #(parameter N = 32) (input logic[N-1:0] result0, result1, result2
 			3'd3 : Out = result3;
 			3'd4 : Out = result4;
 			3'd5 : Out = result5;
-			default : Out = 'z;
+			3'd7 : Out = result7;
+			default : Out = '0;
 		endcase
 		
 endmodule 
