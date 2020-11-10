@@ -178,7 +178,7 @@ def analiceInst(inst, pc):
             hexCode = '0x' + hexCode
 
 
-        hexInstructions.append(hexCode)
+        hexInstructions.append(hexCode+ str(inst) + ' - ' + str(bin(binCode)))
 
 
 
@@ -194,7 +194,7 @@ def analiceInst(inst, pc):
                 hexCode = '0' + hexCode
                 lenHexCode += 1
             hexCode = '0x' + hexCode
-        hexInstructions.append(hexCode)
+        hexInstructions.append(hexCode + str(inst)  + ' - ' + str(bin(binCode)))
 
 
 

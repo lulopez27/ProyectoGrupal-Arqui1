@@ -1,9 +1,310 @@
+
 INICIO:
 
-  DDR R11,R3,1;
-  SUM R1,R2,R3;
+  MOVI R1,0;
+  MOVI R2,304200;
+  MOVI R3,0;
+  MOVI R4,0;
+  MOVI R5,0;
+  MOVI R7,0;
+  
+CFD:
+
+  CMPI R5,256;
+  SIG IE2;
+  SAL CVPR;
+  
+  
+FVP:
+  
+  MOVI R3,0;
+  SUM  R13,R2,R4;
+  GDR  R13,R7;
+  MOVI R7,0;
+  MOVI R14,1;
+  SUM  R4,R4,R14;
+  SUM  R5,R5,R14;
+  SAL  CFD;
+  
+CVPR:
+
+  CMPI R3,152100;
+  SIG  FVP;
+  SUM  R14,R1,R3;
+  CAR  R6,R14;
+  CMPR R6,R5;
+  SIG  SUM1;
+  
+FS1:
+
+  MOVI R14,1;
+  SUM  R3,R3,R14;
+  SAL  CVPR;
+    
+SUM1:
+
+  MOVI R14,1;
+  SUM  R7,R7,R14;
+  SAL  FS1;
+  
+  
+
+  
+IE2:
+
+  MOVI R1,304456;
+  MOVI R3,0;
+  MOVI R4,0;
+  SUM  R13,R2,R3;
+  CAR  R5,R13;
+  SUM  R13,R1,R4;
+  GDR  R13,R5;
+  MOVI R14,1;
+  SUM  R3,R3,R14;
+  
+CDSF:
+
+  CMPI R3,256;
+  SIG  IE3;
+  SUM  R13,R2,R3;
+  CAR  R5,R13;
+  SUM  R13,R1,R4;
+  CAR  R6,R13;
+  SUM  R7,R5,R6;
+  MOVI R14,1;
+  SUM  R4,R4,R14;
+  SUM  R13,R1,R4;
+  GDR  R13,R7;
+  MOVI R14,1;
+  SUM  R3,R3,R14;
+  SAL  CDSF;
+  
+  
+
+  
+IE3:
+
+  MOVI R3,304712;
+  MOVI R13,255;
+  SUM  R14,R1,R13;
+  CAR  R4,R14;
+  MOVI R5,256;
+  MOD  R8,R4,R5;
+  DDR  R9,R4,8;
+  MOVI R6,0;
+  CMPI R8,0;
+  SIG  CM0;
+  SAL  CMD0;
+  
+CM0:
+
+  CMPI R6,256;
+  SIG  IE4;
+  SUM  R13,R3,R6;
+  GDR  R13,R9;
+  MOVI R14,1;
+  SUM  R6,R6,R14;
+  SAL  CM0;
+  
+  
+CMD0:
+
+  MOVI R7,255;
+  MUL  R10,R9,R7;
+  RES  R11,R4,R10;
+  SUM  R13,R3,R6;
+  GDR  R13,R11;
+  MOVI R14,1;
+  SUM  R6,R6,R14;
+  
+  
+CMD02:
+
+  CMPI R6,256;
+  SIG  IE4;
+  SUM  R13,R3,R6;
+  GDR  R13,R9;
+  MOVI R14,1;
+  SUM  R6,R6,R14;
+  SAL  CMD02;
+  
+
+  
+IE4:
+
+  MOVI R4,304968;
+  MOVI R5,0;
+  MOVI R6,0;
+  SUM  R13,R3,R5;
+  CAR  R7,R13;
+  SUM  R13,R4,R6;
+  GDR  R13,R7;
+  MOVI R14,1;
+  SUM  R5,R5,R14;
+  
+  
+  
+CDSF2:
+
+  CMPI R5,256;
+  SIG  IE5;
+  SUM  R13,R3,R5;
+  CAR  R7,R13;
+  SUM  R13,R4,R6;
+  CAR  R8,R13;
+  SUM  R9,R7,R8;
+  MOVI R14,1;
+  SUM  R6,R6,R14;
+  SUM  R13,R4,R6;
+  GDR  R13,R9;
+  MOVI R14,1;
+  SUM  R5,R5,R14;
+  SAL  CDSF2;
+  
+  
+
+  
+IE5:
+
+  MOVI R1,304456;
+  MOVI R2,304968;
+  MOVI R3,305224;
+  MOVI R4,305480;
+  MOVI R5,0;
+  MOVI R6,0;
+  MOVI R7,0;
+  MOVI R8,0;
+  
+  
+CPM:
+
+  CMPI R5,256;
+  SIG IE6;
+  SUM R13,R1,R5;
+  CAR R9,R13;
+  SAL CCC;
+  
+  
+FCPM:
+
+  SUM  R13,R4,R5;
+  GDR  R13,R7;
+  MOVI R14,1;
+  SUM  R5,R5,R14;
+  MOVI R6,0;
+  MOVI R7,0;
+  MOVI R8,0;
+  SAL  CPM;
+  
+CCC:
+
+  CMPI R6,256;
+  SIG  RESET1;
+  SUM  R13,R2,R6;
+  CAR  R10,R13;
+  SUM  R13,R3,R8;
+  GDR  R13,R10;
+  MOVI R14,1;
+  SUM  R6,R6,R14;
+  SUM  R8,R8,R14;
+  SAL  CCC;
+  
+  
+RESET1:
+
+  MOVI R8,0;
+  SUM  R13,R3,R8;
+  CAR  R10,R13;
+  
+CSM:
+
+  CMPR R9,R10;
+  SIG  FCPM;
+  CMPR R9,R10;
+  SMY  MS;
+  SAL  MR;
+  
+MS:
+
+  MOVI R14,1;
+  SUM  R10,R10,R14;
+  SUM  R13,R3,R8;
+  GDR  R13,R10;
+  SUM  R8,R8,R14;
+  SUM  R7,R7,R14;
+  CMPI R8,256;
+  SIG  RS;
+  
+RSF:
+
+  SUM R13,R3,R8;
+  CAR R10,R13;
+  SAL CSM;
+  
+
+MR:
+
+  MOVI R14,1;
+  RES  R10,R10,R14;
+  SUM  R13,R3,R8;
+  GDR  R13,R10;
+  SUM  R8,R8,R14;
+  SUM  R7,R7,R14;
+  CMPI R8,256;
+  SIG  RR;
+  
+RRF:
+
+  SUM R13,R3,R8;
+  CAR R10,R13;
+  SAL CSM;
+  
+  
+RS:
+
+  MOVI R7,0;
+  MOVI R8,0;
+  SAL  RSF;
+  
+RR:
+
+  MOVI R7,0;
+  MOVI R8,0;
+  SAL  RRF;
+  
+  
+ 
+IE6:
+
+  MOVI R1,0;
+  MOVI R2,152100;
+  MOVI R3,305480;
+  MOVI R4,0;
+  MOVI R5,1;
+  
+CE:
+
+  CMPI  R4,152100;
+  SIG   STOP;
+  SUM   R13,R1,R4;
+  CAR   R6,R13;
+  MUL   R7,R6,R5;
+  SUM   R13,R3,R7;
+  CAR   R8,R13;
+  SUM   R13,R2,R4;
+  GDR   R13,R8;
+  MOVI  R14,1;
+  SUM   R4,R4,R14;
+  SAL   CE;
+  
+  
+STOP:
+
+  SAL STOP;
+
+
 
 FIN
 
-11001 0000000000000000001 0011 1011
+
 
