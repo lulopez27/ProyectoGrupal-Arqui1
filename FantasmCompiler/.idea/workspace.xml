@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bef9ab57-7f5c-4d32-8ce0-8c60f9be9fb7" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="bef9ab57-7f5c-4d32-8ce0-8c60f9be9fb7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FantasmCompiler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FantasmCompiler.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FantASMIDE.py" beforeDir="false" afterPath="$PROJECT_DIR$/FantASMIDE.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OutputFiles/outputFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/OutputFiles/outputFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFiles/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestFiles/test.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,6 +91,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+<<<<<<< HEAD
+  <component name="JupyterTrust" id="f38e88cc-b653-4544-9d43-8e340c1ec76f" />
+  <component name="ProjectId" id="1k4GJmJMY7Mype2Z61l3oJuleaq" />
+=======
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -100,53 +111,19 @@
     <option name="width" value="977" />
     <option name="height" value="1088" />
   </component>
+>>>>>>> main
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FantasmCompiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FantasmCompiler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FantasmCompiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FantasmCompiler" type="462c0819:PsiDirectoryNode" />
-              <item name="TestFiles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FantasmCompiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.FantASMCompiler">
     <configuration name="FantASMCompiler" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -240,12 +217,13 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.FantASMCompiler" />
+        <item itemvalue="Python.FantASMIDE" />
         <item itemvalue="Python.FantASMLexer" />
         <item itemvalue="Python.FantASMSintax" />
-        <item itemvalue="Python.FantASMIDE" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -302,7 +280,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/FantASMLexer.py">
@@ -342,5 +320,9 @@
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FantasmCompiler$FantASMIDE.coverage" NAME="FantASMIDE Coverage Results" MODIFIED="1604952629445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FantasmCompiler$FantASMCompiler.coverage" NAME="FantASMCompiler Coverage Results" MODIFIED="1604953107419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
