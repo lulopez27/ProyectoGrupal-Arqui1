@@ -1,7 +1,7 @@
 module condUnit(input clk, rst,input [1:0] jmpF, input wpci,CondEn1,Nflag,Zflag,Vflag,Cflag, output logic jmpR);
 	logic jmp;
 	logic [3:0] flags,flagso;
-	assign flags = Nflag,Zflag,Vflag,Cflag;
+	assign flags = {Nflag,Zflag,Vflag,Cflag};
 	always_comb begin
 		if(jmpF == 2'b00)
 			jmp = 1'b1;
@@ -13,5 +13,5 @@ module condUnit(input clk, rst,input [1:0] jmpF, input wpci,CondEn1,Nflag,Zflag,
 			jmp = 1'b0;
 		end
 	assign jmpR = jmp&wpci;
-	FLipFlop #(4)flipiflopi(~clk,rst,flags,flagso)
-endmodule
+	FlipFlop #(4)flipiflopi(CondEn1&~clk,rst,flags,flagso);
+endmodule 

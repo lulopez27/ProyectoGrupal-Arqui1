@@ -2,8 +2,8 @@
 
 
 |processor_tb|processor:proce
-clk => clk.IN7
-rst => rst.IN4
+clk => clk.IN8
+rst => rst.IN5
 GPIO[0] <= MemoryController:ChipSel.port5
 GPIO[1] <= MemoryController:ChipSel.port5
 GPIO[2] <= MemoryController:ChipSel.port5
@@ -682,6 +682,7 @@ wmem <= wmem.DB_MAX_OUTPUT_PORT_TYPE
 rmem <= rmem.DB_MAX_OUTPUT_PORT_TYPE
 wreg <= wreg.DB_MAX_OUTPUT_PORT_TYPE
 wpc <= wpc.DB_MAX_OUTPUT_PORT_TYPE
+CondEn <= CondEn.DB_MAX_OUTPUT_PORT_TYPE
 jmpF[0] <= jmpF[0].DB_MAX_OUTPUT_PORT_TYPE
 jmpF[1] <= jmpF[1].DB_MAX_OUTPUT_PORT_TYPE
 ALUins[0] <= ControlUnitDeco:ALUDeco.port1
@@ -1284,6 +1285,7 @@ Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 |processor_tb|processor:proce|PipelineMem:pipeMem
 clk => ExtndSelo[0]~reg0.CLK
 clk => ExtndSelo[1]~reg0.CLK
+clk => CondEno~reg0.CLK
 clk => wpco~reg0.CLK
 clk => jmpo[0]~reg0.CLK
 clk => jmpo[1]~reg0.CLK
@@ -1371,6 +1373,7 @@ clk => R2ro[30]~reg0.CLK
 clk => R2ro[31]~reg0.CLK
 rst => ExtndSelo[0]~reg0.ACLR
 rst => ExtndSelo[1]~reg0.ACLR
+rst => CondEno~reg0.ACLR
 rst => wpco~reg0.ACLR
 rst => jmpo[0]~reg0.ACLR
 rst => jmpo[1]~reg0.ACLR
@@ -1460,6 +1463,7 @@ wmemi => wmemo~reg0.DATAIN
 rmemi => rmemo~reg0.DATAIN
 wregi => wrego~reg0.DATAIN
 wpci => wpco~reg0.DATAIN
+CondEni => CondEno~reg0.DATAIN
 jmpi[0] => jmpo[0]~reg0.DATAIN
 jmpi[1] => jmpo[1]~reg0.DATAIN
 ALUInsi[0] => ALUInso[0]~reg0.DATAIN
@@ -1547,6 +1551,7 @@ wmemo <= wmemo~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rmemo <= rmemo~reg0.DB_MAX_OUTPUT_PORT_TYPE
 wrego <= wrego~reg0.DB_MAX_OUTPUT_PORT_TYPE
 wpco <= wpco~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CondEno <= CondEno~reg0.DB_MAX_OUTPUT_PORT_TYPE
 jmpo[0] <= jmpo[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 jmpo[1] <= jmpo[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ALUInso[0] <= ALUInso[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -3296,6 +3301,8 @@ Res <= Res.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |processor_tb|processor:proce|condUnit:CondUnit
+clk => comb.IN0
+rst => rst.IN1
 jmpF[0] => Equal0.IN1
 jmpF[0] => Equal1.IN1
 jmpF[0] => Equal2.IN0
@@ -3303,12 +3310,31 @@ jmpF[1] => Equal0.IN0
 jmpF[1] => Equal1.IN0
 jmpF[1] => Equal2.IN1
 wpci => jmpR.IN1
-Nflag => always0.IN0
-Zflag => always0.IN1
-Zflag => always0.IN1
-Vflag => always0.IN1
-Cflag => ~NO_FANOUT~
+CondEn1 => comb.IN1
+Nflag => flags[3].IN1
+Zflag => flags[2].IN1
+Vflag => flags[1].IN1
+Cflag => flags[0].IN1
 jmpR <= jmpR.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processor_tb|processor:proce|condUnit:CondUnit|FlipFlop:flipiflopi
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+reset => q[0]~reg0.ACLR
+reset => q[1]~reg0.ACLR
+reset => q[2]~reg0.ACLR
+reset => q[3]~reg0.ACLR
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |processor_tb|processor:proce|PipelineEx:pipeEx

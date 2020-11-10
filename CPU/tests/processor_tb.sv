@@ -14,18 +14,18 @@ module processor_tb();
 		#5
 		clk = ~clk;
 	end
-	int f, i;
-	initial begin
-		f = $fopen("output.txt", "w");
-		#5;
-		for (i = 0; i<152100; i++) begin
-			@(negedge GPIOEn);
-			$fwrite(f, "%h\n", GPIO);
-		end
-		
-		$fclose(f);
-		$finish;
-			
-	end
+//	int f, i;
+//	initial begin
+//		f = $fopen("output.txt", "w");
+//		#5;
+//		for (i = 0; i<152100; i++) begin
+//			@(negedge GPIOEn);
+//			$fwrite(f, "%h\n", GPIO);
+//		end
+//		
+//		$fclose(f);
+//		$finish;
+//			
+//	end
 	
 endmodule 
