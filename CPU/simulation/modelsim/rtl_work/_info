@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/simulation/modelsim
 vAcarreo
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1605055383
+Z2 !s110 1605059223
 !i10b 1
 !s100 oHD;DNJQfBiGoMzbEKe=l1
 Iz<[[ia_57hXS=1No:W>=C0
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1605055383.000000
+Z6 !s108 1605059223.000000
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv|
 !i113 1
@@ -62,7 +62,7 @@ R9
 n@cero
 vcondUnit
 R1
-Z10 !s110 1605055385
+Z10 !s110 1605059225
 !i10b 1
 !s100 SijA7<h`n0LFSn9>XH5XL0
 I=zJnL]6;i]9:kB_SRzEFD2
@@ -78,7 +78,7 @@ R5
 r1
 !s85 0
 31
-Z11 !s108 1605055385.000000
+Z11 !s108 1605059225.000000
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv|
 !i113 1
@@ -88,7 +88,7 @@ R9
 ncond@unit
 vControlUnit
 R1
-Z13 !s110 1605055384
+Z13 !s110 1605059224
 !i10b 1
 !s100 9]96WMeQbNDP7DGLfle<T2
 IUGZIEJJ=:Rc3U;3@@Mb>60
@@ -104,7 +104,7 @@ R5
 r1
 !s85 0
 31
-Z14 !s108 1605055384.000000
+Z14 !s108 1605059224.000000
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv|
 !i113 1
@@ -182,7 +182,7 @@ R5
 r1
 !s85 0
 31
-R6
+Z17 !s108 1605059222.000000
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Desborde.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Desborde.sv|
 !i113 1
@@ -213,7 +213,7 @@ R6
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv|
 !i113 1
 R7
-Z17 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones}
+Z18 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones}
 R9
 n@desplazamiento@derecha
 vExtendDeco
@@ -296,7 +296,7 @@ R9
 n@flip@flop
 vForwardUnitALU
 R1
-Z18 !s110 1605055386
+R10
 !i10b 1
 !s100 n6Ri`UEC<0D:N8[@c1Hh@2
 Ic]bz96Cc9lDOU`j:3jLEO0
@@ -312,7 +312,7 @@ R5
 r1
 !s85 0
 31
-Z19 !s108 1605055386.000000
+R11
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit/ForwardUnitALU.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit/ForwardUnitALU.sv|
 !i113 1
@@ -322,7 +322,7 @@ R9
 n@forward@unit@a@l@u
 vImageROM
 R1
-R18
+Z19 !s110 1605059226
 !i10b 1
 !s100 365j7?Z[2[W_YSGCz>WW_1
 I;^1ljCIDJK50;cI7P9XZO1
@@ -338,7 +338,7 @@ R5
 r1
 !s85 0
 31
-R19
+Z20 !s108 1605059226.000000
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv|
 !i113 1
@@ -348,7 +348,7 @@ R9
 n@image@r@o@m
 vInstructionMemory
 R1
-R18
+R19
 !i10b 1
 !s100 MFc[@RDKlzZ0KK`56S_XV1
 IA<:M^Ci==^MZ41oKQVKUc3
@@ -364,7 +364,7 @@ R5
 r1
 !s85 0
 31
-R19
+R20
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv|
 !i113 1
@@ -421,12 +421,12 @@ R14
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Modulo.sv|
 !i113 1
 R7
-R17
+R18
 R9
 n@modulo
 vMultiplicacion
 R1
-R13
+R2
 !i10b 1
 !s100 U3keQo]P?^1K[ZnbVGUPX1
 IeGb^XSiOSA`0P2XfDR5562
@@ -442,12 +442,12 @@ R5
 r1
 !s85 0
 31
-R14
+R6
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Multiplicacion.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Multiplicacion.sv|
 !i113 1
 R7
-R17
+R18
 R9
 n@multiplicacion
 vMux2
@@ -504,7 +504,7 @@ R9
 n@mux8@a@l@u
 vNegativo
 R1
-R2
+Z21 !s110 1605059222
 !i10b 1
 !s100 Wd_?iz=P4Q;8JeYKm11@z3
 IGkJ`V0P>9O9^ICoz1EQ?`3
@@ -520,7 +520,7 @@ R5
 r1
 !s85 0
 31
-Z20 !s108 1605055382.000000
+R17
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Negativo.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Negativo.sv|
 !i113 1
@@ -530,7 +530,7 @@ R9
 n@negativo
 vPipelineEx
 R1
-R10
+R13
 !i10b 1
 !s100 @K;DiQDak0LMe`R;_YJ163
 IaLIFG;ZTFF0;ND=HU6D@`0
@@ -546,17 +546,17 @@ R5
 r1
 !s85 0
 31
-R11
+R14
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv|
 !i113 1
 R7
-Z21 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline}
+Z22 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline}
 R9
 n@pipeline@ex
 vPipelineFetch
 R1
-R18
+R19
 !i10b 1
 !s100 9GT;A1l2eSPZFK_YdXK?n2
 IfYg1]mEimhL6F^EiNBz^I2
@@ -572,17 +572,17 @@ R5
 r1
 !s85 0
 31
-R19
+R20
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineFetch.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineFetch.sv|
 !i113 1
 R7
-R21
+R22
 R9
 n@pipeline@fetch
 vPipelineMem
 R1
-R10
+R13
 !i10b 1
 !s100 QVK2]dgFOQIf?oZh57i>U2
 I6R=MbOHlJekfB^fDOl`UL0
@@ -603,7 +603,7 @@ R14
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv|
 !i113 1
 R7
-R21
+R22
 R9
 n@pipeline@mem
 vPipelineWB
@@ -629,12 +629,12 @@ R14
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineWB.sv|
 !i113 1
 R7
-R21
+R22
 R9
 n@pipeline@w@b
 vprocessor
 R1
-Z22 !s110 1605055382
+R21
 !i10b 1
 !s100 1bCicA:8D9PGbHTfkNX9g3
 IHgIVikE_mT:m[X=QKfcz>2
@@ -650,7 +650,7 @@ R5
 r1
 !s85 0
 31
-R20
+R17
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv|
 !i113 1
@@ -659,15 +659,15 @@ R7
 R9
 vprocessor_tb
 R1
-!s110 1605055399
+!s110 1605059237
 !i10b 1
-!s100 NQQl;SKAh1diFZHQm1`EI2
-I^JXYI3V3D_[EWbzO03kXb1
+!s100 Pfjo1O<`K<BReQUKY5ELK1
+InO9OTVA77d<EWj[IRSK_21
 R3
 !s105 processor_tb_sv_unit
 S1
 R0
-w1605055351
+w1605059232
 8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv
 FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv
 L0 2
@@ -675,7 +675,7 @@ R5
 r1
 !s85 0
 31
-!s108 1605055399.000000
+!s108 1605059237.000000
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv|
 !i113 1
@@ -731,7 +731,7 @@ R6
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Resta.sv|
 !i113 1
 R7
-R17
+R18
 R9
 n@resta
 vSuma
@@ -757,12 +757,12 @@ R6
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Suma.sv|
 !i113 1
 R7
-R17
+R18
 R9
 n@suma
 vUnidadLogicoAritmetica
 R1
-R22
+R21
 !i10b 1
 !s100 bV;E@UI1VgVf4DjY1=A[`3
 I^`j4KK6HdIlE6J<BD?[R01
@@ -778,7 +778,7 @@ R5
 r1
 !s85 0
 31
-R20
+R17
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv|
 !i113 1

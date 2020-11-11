@@ -12,318 +12,318 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:02 on Nov 10,2020
+# Start time: 19:47:02 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv 
 # -- Compiling module processor
 # 
 # Top level modules:
 # 	processor
-# End time: 18:43:02 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:02 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/tests {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:02 on Nov 10,2020
+# Start time: 19:47:02 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv 
 # -- Compiling module processor_tb
 # 
 # Top level modules:
 # 	processor_tb
-# End time: 18:43:02 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:02 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:02 on Nov 10,2020
+# Start time: 19:47:02 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv 
 # -- Compiling module UnidadLogicoAritmetica
 # 
 # Top level modules:
 # 	UnidadLogicoAritmetica
-# End time: 18:43:02 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:02 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Negativo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:02 on Nov 10,2020
+# Start time: 19:47:02 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Negativo.sv 
 # -- Compiling module Negativo
 # 
 # Top level modules:
 # 	Negativo
-# End time: 18:43:03 on Nov 10,2020, Elapsed time: 0:00:01
+# End time: 19:47:02 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Desborde.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:03 on Nov 10,2020
+# Start time: 19:47:02 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Desborde.sv 
 # -- Compiling module Desborde
 # 
 # Top level modules:
 # 	Desborde
-# End time: 18:43:03 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:03 on Nov 10,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Cero.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:03 on Nov 10,2020
+# Start time: 19:47:03 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Cero.sv 
 # -- Compiling module Cero
 # 
 # Top level modules:
 # 	Cero
-# End time: 18:43:03 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:03 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:03 on Nov 10,2020
+# Start time: 19:47:03 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv 
 # -- Compiling module Acarreo
 # 
 # Top level modules:
 # 	Acarreo
-# End time: 18:43:03 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:03 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos/Mux8ALU.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:03 on Nov 10,2020
+# Start time: 19:47:03 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos/Mux8ALU.sv 
 # -- Compiling module Mux8ALU
 # 
 # Top level modules:
 # 	Mux8ALU
-# End time: 18:43:03 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:03 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:03 on Nov 10,2020
+# Start time: 19:47:03 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv 
 # -- Compiling module DesplazamientoDerecha
 # 
 # Top level modules:
 # 	DesplazamientoDerecha
-# End time: 18:43:03 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:03 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Suma.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:03 on Nov 10,2020
+# Start time: 19:47:03 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Suma.sv 
 # -- Compiling module Suma
 # 
 # Top level modules:
 # 	Suma
-# End time: 18:43:03 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:03 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Resta.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:03 on Nov 10,2020
+# Start time: 19:47:03 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Resta.sv 
 # -- Compiling module Resta
 # 
 # Top level modules:
 # 	Resta
-# End time: 18:43:04 on Nov 10,2020, Elapsed time: 0:00:01
+# End time: 19:47:03 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Multiplicacion.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:04 on Nov 10,2020
+# Start time: 19:47:03 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Multiplicacion.sv 
 # -- Compiling module Multiplicacion
 # 
 # Top level modules:
 # 	Multiplicacion
-# End time: 18:43:04 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:03 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Modulo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:04 on Nov 10,2020
+# Start time: 19:47:04 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Modulo.sv 
 # -- Compiling module Modulo
 # 
 # Top level modules:
 # 	Modulo
-# End time: 18:43:04 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:04 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Extender {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender/Extender.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:04 on Nov 10,2020
+# Start time: 19:47:04 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender/Extender.sv 
 # -- Compiling module Extender
 # 
 # Top level modules:
 # 	Extender
-# End time: 18:43:04 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:04 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ControlUnit {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:04 on Nov 10,2020
+# Start time: 19:47:04 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv 
 # -- Compiling module ControlUnit
 # 
 # Top level modules:
 # 	ControlUnit
-# End time: 18:43:04 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:04 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Decoders {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ExtendDeco.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:04 on Nov 10,2020
+# Start time: 19:47:04 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ExtendDeco.sv 
 # -- Compiling module ExtendDeco
 # 
 # Top level modules:
 # 	ExtendDeco
-# End time: 18:43:04 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:04 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Decoders {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ControlUnitDeco.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:04 on Nov 10,2020
+# Start time: 19:47:04 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ControlUnitDeco.sv 
 # -- Compiling module ControlUnitDeco
 # 
 # Top level modules:
 # 	ControlUnitDeco
-# End time: 18:43:04 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:04 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Pipeline {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineWB.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:04 on Nov 10,2020
+# Start time: 19:47:04 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineWB.sv 
 # -- Compiling module PipelineWB
 # 
 # Top level modules:
 # 	PipelineWB
-# End time: 18:43:04 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:04 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Pipeline {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:04 on Nov 10,2020
+# Start time: 19:47:04 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv 
 # -- Compiling module PipelineMem
 # 
 # Top level modules:
 # 	PipelineMem
-# End time: 18:43:05 on Nov 10,2020, Elapsed time: 0:00:01
+# End time: 19:47:04 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Pipeline {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:05 on Nov 10,2020
+# Start time: 19:47:04 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv 
 # -- Compiling module PipelineEx
 # 
 # Top level modules:
 # 	PipelineEx
-# End time: 18:43:05 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:05 on Nov 10,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Memorias {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/RegisterFile.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:05 on Nov 10,2020
+# Start time: 19:47:05 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/RegisterFile.sv 
 # -- Compiling module RegisterFile
 # 
 # Top level modules:
 # 	RegisterFile
-# End time: 18:43:05 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:05 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Muxes {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Muxes/Mux2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:05 on Nov 10,2020
+# Start time: 19:47:05 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Muxes" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Muxes/Mux2.sv 
 # -- Compiling module Mux2
 # 
 # Top level modules:
 # 	Mux2
-# End time: 18:43:05 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:05 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/ControlUnit {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:05 on Nov 10,2020
+# Start time: 19:47:05 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv 
 # -- Compiling module condUnit
 # 
 # Top level modules:
 # 	condUnit
-# End time: 18:43:05 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:05 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Fliflops {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:05 on Nov 10,2020
+# Start time: 19:47:05 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Fliflops" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv 
 # -- Compiling module FlipFlop
 # 
 # Top level modules:
 # 	FlipFlop
-# End time: 18:43:05 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:05 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Memorias {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:05 on Nov 10,2020
+# Start time: 19:47:05 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemory.sv 
 # -- Compiling module DataMemory
 # 
 # Top level modules:
 # 	DataMemory
-# End time: 18:43:05 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:05 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Memorias {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/MemoryController.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:05 on Nov 10,2020
+# Start time: 19:47:05 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/MemoryController.sv 
 # -- Compiling module MemoryController
 # 
 # Top level modules:
 # 	MemoryController
-# End time: 18:43:05 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:05 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit/ForwardUnitALU.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:06 on Nov 10,2020
+# Start time: 19:47:05 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit/ForwardUnitALU.sv 
 # -- Compiling module ForwardUnitALU
 # 
 # Top level modules:
 # 	ForwardUnitALU
-# End time: 18:43:06 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:06 on Nov 10,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Pipeline {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineFetch.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:06 on Nov 10,2020
+# Start time: 19:47:06 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineFetch.sv 
 # -- Compiling module PipelineFetch
 # 
 # Top level modules:
 # 	PipelineFetch
-# End time: 18:43:06 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:06 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Memorias {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:06 on Nov 10,2020
+# Start time: 19:47:06 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv 
 # -- Compiling module InstructionMemory
 # 
 # Top level modules:
 # 	InstructionMemory
-# End time: 18:43:06 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:06 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ I/Proyecto\ 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:06 on Nov 10,2020
+# Start time: 19:47:06 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv 
 # -- Compiling module ImageROM
 # 
 # Top level modules:
 # 	ImageROM
-# End time: 18:43:06 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:06 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vlog -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests} {C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:43:19 on Nov 10,2020
+# Start time: 19:47:17 on Nov 10,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests" C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv 
 # -- Compiling module processor_tb
 # 
 # Top level modules:
 # 	processor_tb
-# End time: 18:43:19 on Nov 10,2020, Elapsed time: 0:00:00
+# End time: 19:47:17 on Nov 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.processor_tb
 # vsim work.processor_tb 
-# Start time: 18:43:20 on Nov 10,2020
+# Start time: 19:47:18 on Nov 10,2020
 # Loading sv_std.std
 # Loading work.processor_tb
 # Loading work.processor
@@ -355,23 +355,40 @@ vsim work.processor_tb
 # Loading work.DataMemory
 # Loading work.ImageROM
 # Loading work.PipelineWB
-add wave -position end  sim:/processor_tb/GPIO
-add wave -position end  sim:/processor_tb/GPIOEn
-add wave -position end  sim:/processor_tb/clk
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: skryf  Hostname: DESKTOP-VRFLMRQ  ProcessID: 20064
-#           Attempting to use alternate WLF file "./wlft2qq8g6".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft2qq8g6
-add wave -position end  sim:/processor_tb/proce/curr_pc
-add wave -position end  sim:/processor_tb/proce/AcIns
-run -all
-add watch \
-sim:/processor_tb/proce/curr_pc 
+add wave -position end  sim:/processor_tb/rst
+add wave -position end  sim:/processor_tb/proce/ALUIns
+add wave -position end  sim:/processor_tb/proce/ALUIns1
+add wave -position end  sim:/processor_tb/proce/ALURes
+add wave -position end  sim:/processor_tb/proce/ALURes1
+add wave -position end  sim:/processor_tb/proce/DestR
+add wave -position end  sim:/processor_tb/proce/DestR_2
+add wave -position end  sim:/processor_tb/proce/DestR_3
+add wave -position end  sim:/processor_tb/proce/DestR_4
 add wave -position end  sim:/processor_tb/proce/R2
 add wave -position end  sim:/processor_tb/proce/R2res
-run -all
-# Break key hit
-# Simulation stop requested.
-# End time: 18:54:54 on Nov 10,2020, Elapsed time: 0:11:34
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: skryf  Hostname: DESKTOP-VRFLMRQ  ProcessID: 20064
+#           Attempting to use alternate WLF file "./wlft4w9msh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4w9msh
+add wave -position end  sim:/processor_tb/proce/R2res3
+add wave -position end  sim:/processor_tb/proce/R2res4
+add wave -position end  sim:/processor_tb/proce/R3
+add wave -position end  sim:/processor_tb/proce/R3res
+add wave -position end  sim:/processor_tb/proce/R3res3
+add wave -position end  sim:/processor_tb/proce/R3res4
+add wave -position end  sim:/processor_tb/proce/R3res5
+add wave -position end  sim:/processor_tb/proce/Res
+add wave -position end  sim:/processor_tb/proce/Res1
+add wave -position 2  sim:/processor_tb/proce/instruction
+add wave -position 3  sim:/processor_tb/proce/AcIns
+add wave -position 0  sim:/processor_tb/clk
+add wave -position end  sim:/processor_tb/GPIO
+add wave -position end  sim:/processor_tb/GPIOEn
+run 100000
+add wave -position end sim:/processor_tb/proce/FwrdUnitALU/*
+# checkArgs: WlfValueId has no logfile info.
+restart
+run 500
+# End time: 20:22:33 on Nov 10,2020, Elapsed time: 0:35:15
 # Errors: 0, Warnings: 2
