@@ -673,11 +673,11 @@ curr_pco[31] <= curr_pco[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |processor_tb|processor:proce|ControlUnit:CtrlUnit
-op[0] => ExtSel[2].IN2
-op[1] => ExtSel[3].IN2
+op[0] => ALUinst[3].IN2
+op[1] => ALUinst[4].IN2
 inst[0] => jmpF[0].IN2
 inst[1] => jmpF[1].IN2
-immin => ALUinst[0].IN1
+immin => ALUinst[0].IN2
 wmem <= wmem.DB_MAX_OUTPUT_PORT_TYPE
 rmem <= rmem.DB_MAX_OUTPUT_PORT_TYPE
 wreg <= wreg.DB_MAX_OUTPUT_PORT_TYPE
@@ -704,10 +704,12 @@ ALUControl[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |processor_tb|processor:proce|ControlUnit:CtrlUnit|ExtendDeco:ExtDeco
-in[0] => Decoder0.IN3
-in[1] => Decoder0.IN2
-in[2] => Decoder0.IN1
-in[3] => Decoder0.IN0
+in[0] => Decoder0.IN5
+in[1] => Decoder0.IN4
+in[2] => Decoder0.IN3
+in[3] => Decoder0.IN2
+in[4] => Decoder0.IN1
+in[5] => Decoder0.IN0
 ALUControl[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 ALUControl[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -1285,6 +1287,7 @@ Out[31] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 |processor_tb|processor:proce|PipelineMem:pipeMem
 clk => ExtndSelo[0]~reg0.CLK
 clk => ExtndSelo[1]~reg0.CLK
+clk => immFo~reg0.CLK
 clk => CondEno~reg0.CLK
 clk => wpco~reg0.CLK
 clk => jmpo[0]~reg0.CLK
@@ -1373,6 +1376,7 @@ clk => R2ro[30]~reg0.CLK
 clk => R2ro[31]~reg0.CLK
 rst => ExtndSelo[0]~reg0.ACLR
 rst => ExtndSelo[1]~reg0.ACLR
+rst => immFo~reg0.ACLR
 rst => CondEno~reg0.ACLR
 rst => wpco~reg0.ACLR
 rst => jmpo[0]~reg0.ACLR
@@ -1464,6 +1468,7 @@ rmemi => rmemo~reg0.DATAIN
 wregi => wrego~reg0.DATAIN
 wpci => wpco~reg0.DATAIN
 CondEni => CondEno~reg0.DATAIN
+immFi => immFo~reg0.DATAIN
 jmpi[0] => jmpo[0]~reg0.DATAIN
 jmpi[1] => jmpo[1]~reg0.DATAIN
 ALUInsi[0] => ALUInso[0]~reg0.DATAIN
@@ -1552,6 +1557,7 @@ rmemo <= rmemo~reg0.DB_MAX_OUTPUT_PORT_TYPE
 wrego <= wrego~reg0.DB_MAX_OUTPUT_PORT_TYPE
 wpco <= wpco~reg0.DB_MAX_OUTPUT_PORT_TYPE
 CondEno <= CondEno~reg0.DB_MAX_OUTPUT_PORT_TYPE
+immFo <= immFo~reg0.DB_MAX_OUTPUT_PORT_TYPE
 jmpo[0] <= jmpo[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 jmpo[1] <= jmpo[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ALUInso[0] <= ALUInso[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1718,12 +1724,16 @@ R3_2[2] => Equal2.IN1
 R3_2[2] => Equal3.IN1
 R3_2[3] => Equal2.IN0
 R3_2[3] => Equal3.IN0
-ExtndSel1[0] => comb.IN1
-ExtndSel1[0] => comb.IN1
+ExtndSel1[0] => comb.IN0
+ExtndSel1[0] => comb.IN0
+ExtndSel1[1] => comb.IN0
+ExtndSel1[1] => comb.IN0
 ExtndSel1[1] => comb.IN1
 ExtndSel1[1] => comb.IN1
-ExtndSel1[1] => comb.IN1
-ExtndSel1[1] => comb.IN1
+immF => comb.IN1
+immF => comb.IN1
+immF => comb.IN1
+immF => comb.IN1
 DestR_3[0] => Equal1.IN7
 DestR_3[0] => Equal3.IN7
 DestR_3[1] => Equal1.IN6

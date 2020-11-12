@@ -1,4 +1,4 @@
-module ForwardUnitALU(input [31:0]R2res3,R3res3,input [3:0]R2_2,R3_2,input[1:0]ExtndSel1,,input immF,
+module ForwardUnitALU(input [31:0]R2res3,R3res3,input [3:0]R2_2,R3_2,input[1:0]ExtndSel1,input immF,
 											input [3:0]DestR_3,input [31:0]Res,
 											input [3:0]DestR_4,input [31:0]Res1,
 											output logic [31:0]R2res4,R3res4);

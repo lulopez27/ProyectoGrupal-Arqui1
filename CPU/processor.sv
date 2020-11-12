@@ -30,7 +30,7 @@ module processor(input clk, rst, output logic [7:0] GPIO,output logic GPIOEn);
 	assign R2 = instruction[7:4];
 	assign R3 = instruction[11:8];
 	//##########################################
-	logic Wmem,Rmem,Wreg,Wpc;
+	logic Wmem,Rmem,Wreg,Wpc,CondEn;
 	logic [1:0] JmpF;
 	logic [2:0]ALUIns;
 	logic [1:0]ExtndSel;
@@ -47,7 +47,7 @@ module processor(input clk, rst, output logic [7:0] GPIO,output logic GPIOEn);
 	//logic [31:0]R2res2,R3res2;
 	//FowardUnitReg FwrdUnitReg(R2res,R3res,R2,R3,DestR_2,ALURes,DestR_3,Res,DestR_4,Res1,R2res2,R3res2);
 	
-	logic Wmem1,Rmem1,Wreg1,Wpc1;
+	logic Wmem1,Rmem1,Wreg1,Wpc1,CondEn1,immF1;
 	logic [1:0]JmpF1,ExtndSel1;
 	logic [2:0] ALUIns1;
 	logic [31:0] R2res3,R3res3;
