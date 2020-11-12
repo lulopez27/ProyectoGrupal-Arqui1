@@ -55,39 +55,34 @@ RRP     MOV     R2,#0
 IE1     LDR     R1,=EII
         LDR     R2,=EFD
 		MOV     R3,#0   ;Contador de la imagen
-		MOV     R4,#0   ;Contador donde se guarda el array de la frecuencia
-		MOV     R5,#0   ;Contador de los valores del rango 0-255
-		MOV     R7,#0   ;Contador de la frecuencia
+		MOV     R4,#4   
+		MOV     R5,#0   ;Pixel actual
+		MOV     R6,#0   ;Frecuencia del pixel actual
+		MOV     R0,#0
+		MOV     R7,#0
+		
+		
+LEFD    CMP     R0,#1024
+        BEQ     CFD
+        STR     R7,[R2,R0]
+        ADD     R0,R0,#4
+        B       LEFD		
 
 ;CFD: Ciclo de Frecuencia de Distribución
-;Básicamente para cada valor del rango 0-255, se comprueba cuantas veces se repite en toda la imagen
 
-CFD     CMP     R5,#256    ;El ciclo se termina cuando se verificaron los 256 valores del rango
-        BEQ     IE2        ;IE2: Inicio de la etapa 2
-		B       CVPR
-FVP		MOV     R3,#0      ;Se resetea el contador de la imagen, cuando ya se recorrió completa para verificar el valor actual del rango
-        STR     R7,[R2,R4] ;Para el valor actual del rango, se almacena la cantidad de veces que se repite en la imagen
-		MOV     R7,#0      ;Se resetea R7, que es el resultado de cada conteo
-		ADD     R4,R4,#4   ;El contador del array es de 4 en 4
-		ADD     R5,R5,#1   ;Se incrementa el contador del rango
-		B       CFD
-
-;CVPR: Ciclo de Verificar el pixel actual con el valor del rango actual
-
-CVPR   MOV      R10,#900
+CFD    MOV      R10,#900
        MOV      R11,#169
-	   MUL      R12,R10,R11 ;R12 almacena el valor de 900x169=152100
+	   MUL      R12,R10,R11
 	   CMP      R3,R12
-       BEQ      FVP         ;FVP: Fin de verificar pixeles
-	   LDRB     R6,[R1,R3]  ;Se usa LDRB debido a que la imagen se almacena byte por byte, para STR no hay bronca
-	   CMP      R6,R5       ;Se compara el valor actual del rango con el valor de la imagen
-	   BEQ      SUM1        ;Si son iguales se incrementa en 1 el resultado de la frecuencia de distribución
-FS1	   ADD      R3,R3,#1    ;Se incrementa en 1 el contador de la imagen
-	   B        CVPR
-	   
-	   
-SUM1   ADD      R7,R7,#1
-       B        FS1     ;FS1: Fin de sumar 1
+	   BEQ      IE2
+	   LDRB     R5,[R1,R3]
+	   MUL      R7,R5,R4
+	   LDR      R6,[R2,R7]
+	   ADD      R6,R6,#1
+	   STR      R6,[R2,R7]
+	   ADD      R3,R3,#1
+	   B        CFD
+		
 		
 ; Etapa 2: Se obtiene la frecuencia acumulada
 
@@ -187,92 +182,121 @@ CDSF2  CMP      R5,#1024
 
 ; Etapa 5: Se obtiene el array del mapeo
 ; La esencia del algoritmo, es encontrar el valor más cercano del CuFeq a CuF
-; Para cada valor del CuF, lo comparo con todos los valores del CuFeq, si son iguales se acabó la búsqueda.
-; Si no son iguales, se verifica si el número es mayor o menor al de interés , donde el algoritmo tomará dos caminos.
-; Si el número es mayor que el de interés, se le restará 1, si es menor se le sumará 1.
-; Lo anterior se repite para todos los valores del CuFeq, hasta que se encuentre el primero que sea igual, ya que eso representa el valor más cercano.
-; El valor que se lleva como resultado en R7 es de la posición del array, que es lo que se ocupa al final.
-; Hay un bloque donde se hace copia del CuFeq (se conserva el original), para cada valor de CuF, esto se debe a que el arreglo se está modificando con sumas y restas hasta encontrar el valor más cercano.
 
 
-IE5    LDR      R1,=EFA
-	   LDR      R2,=EFA2
-	   LDR      R3,=EBBM
-	   LDR      R4,=ERM
-	   MOV      R5,#0    ;Contador del CuF y del I prima del mapeo
-	   MOV      R6,#0    ;Contador del CuFeq
-	   MOV      R7,#0    ;Contador de la posición final
-	   MOV      R8,#0    ;Contador del bloque borrador del mapeo
-	   
-	   
-	   
+
+IE5    LDR      R1,=EFA  ;CuF
+	   LDR      R2,=EFA2 ;CuFeq
+	   LDR      R3,=ERM  ;Resultado final del mapeo
+	   MOV      R4,#0    ;Contador del CuF y del resultado del mapeo
+	   MOV      R5,#0    ;Límite inferior
+	   MOV      R6,#255  ;Límite Superior
+	   MOV      R7,#0    ;Centro
+	   MOV      R8,#0    ;Valor buscado
+	   MOV      R9,#0    ;Valor del límite inferior
+	   MOV      R10,#0   ;Valor del límite  superior
+	   MOV      R11,#0   ;Nuevo pixel mapeado
+	   MOV      R12,#0   ;Valor del centro
+
+
 ;CPM: Ciclo principal del mapeo
 
-CPM    CMP      R5,#1024
-	   BEQ      IE6
-	   LDR      R9,[R1,R5]
-	   B        CCC  
-FCPM   STR      R7,[R4,R5]
-       ADD      R5,R5,#4
-	   MOV      R6,#0
-	   MOV      R7,#0
-	   MOV      R8,#0
-	   B        CPM 
 
-;CCC: Ciclo que hace la copia del CuFeq en el borrador
+CPM    CMP      R4,#1024
+       BEQ      IE6 
+	   LDR      R8,[R1,R4]
+	   B        BBM
+FBBM   STR      R11,[R3,R4]
+       ADD      R4,R4,#4
+	   MOV      R5,#0
+	   MOV      R6,#255
+	   B        CPM
+	   
+;BBM: Búsqueda binaria modificada
 
-CCC    CMP      R6,#1024
-       BEQ      RESET1
-	   LDR      R10,[R2,R6]
-	   STR      R10,[R3,R8]
-	   ADD      R6,R6,#4
-	   ADD      R8,R8,#4
-	   B        CCC
-	   
-RESET1 MOV      R8,#0
-	   LDR      R10,[R3,R8]
-       
-;CSM: Ciclo secundario del mapeo
+BBM    ADD      R7,R5,R6
+       ASR      R7,R7,#1
+	   MOV      R11,#4
+	   MUL      R11,R7,R11
+	   LDR      R12,[R2,R11]
+	   CMP      R12,R8
+	   BEQ      AR1
+	   CMP      R7,R5
+	   BEQ      ESR1
+	   CMP      R12,R8
+	   BGT      ALS
+	   B        ALI
 
-CSM    CMP      R9,R10
-       BEQ      FCPM
-	   CMP      R9,R10
-	   BGT      MS   
-	   B        MR           
- 
-; MS: Mapeo de sumas         
-	   
-MS     ADD      R10,R10,#1
-       STR      R10,[R3,R8]
-	   ADD      R8,R8,#4
-	   ADD      R7,R7,#1
-	   CMP      R8,#1024
-	   BEQ      RS
-RSF	   LDR      R10,[R3,R8]
-	   B        CSM
-	   
-; MR: Mapeo de restas 
-	   
-MR     SUB      R10,R10,#1
-       STR      R10,[R3,R8]
-	   ADD      R8,R8,#4
-	   ADD      R7,R7,#1
-	   CMP      R8,#1024
-	   BEQ      RR
-RRF	   LDR      R10,[R3,R8]
-	   B        CSM
-	   
-; RS: Reset de las sumas
+;AR1: Asignar resultado 1
 
-RS     MOV      R7,#0
-	   MOV      R8,#0
-	   B        RSF
-	         
-; RR: Reset de las restas
+AR1    MOV      R11,R7
+       B        FBBM
+	   
+;ALS: Asignar límite superior
 
-RR     MOV      R7,#0
-	   MOV      R8,#0
-	   B        RRF
+ALS    MOV      R6,R7
+       B        BBM
+	   
+;ALI: Asignar límite inferior
+
+ALI    MOV      R5,R7
+       B        BBM
+	   
+;ESR1:Etapa de sumas y restas parte 1
+
+ESR1   MOV      R11,#4
+       MUL      R11,R5,R11
+       LDR      R9,[R2,R11]
+       MOV      R11,#4
+       MUL      R11,R6,R11
+       LDR      R10,[R2,R11]
+
+;ESR2:Etapa de sumas y restas parte 2
+
+ESR2   CMP      R9,R8
+       BEQ      AR2
+	   CMP      R9,R8
+	   BGT      ER1I
+	   B        ES1I
+FESR2  CMP      R10,R8
+       BEQ      AR3
+	   CMP      R10,R8
+	   BGT      ER1S
+	   B        ES1S
+	   
+;AR2: Asignar resultado 2
+
+AR2    MOV      R11,R5
+       B        FBBM
+	   
+;AR3: Asignar resultado 3
+
+AR3    MOV      R11,R6
+       B        FBBM	   
+	   
+;ER1I: Restar 1 al dato del límite inferior
+
+ER1I   SUB      R9,R9,#1
+       B        FESR2
+	   
+;ES1I: Sumar 1 al dato del límite inferior
+
+ES1I   ADD      R9,R9,#1
+       B        FESR2
+
+
+;ER1S: Restar 1 al dato del límite superior
+
+ER1S   SUB      R10,R10,#1
+       B        ESR2
+	   
+;ES1S: Sumar 1 al dato del límite superior
+
+ES1S   ADD      R10,R10,#1
+       B        ESR2
+	  
+
+
 	   
 ; Etapa 6: Se mapea la imagen original en su forma ecualizada
 ; Básicamente para cada valor de la imagen original, se multiplica por 4, para obtener la posición del array del mapeo

@@ -134,429 +134,398 @@ ARM Macro Assembler    Page 2
 ARM Macro Assembler    Page 3 
 
 
-   56 00000038 4A7A            LDR              R2,=EFD
+   56 00000038 4A7E            LDR              R2,=EFD
    57 0000003A F04F 0300       MOV              R3,#0       ;Contador de la ima
                                                             gen
-   58 0000003E F04F 0400       MOV              R4,#0       ;Contador donde se 
-                                                            guarda el array de 
-                                                            la frecuencia
-   59 00000042 F04F 0500       MOV              R5,#0       ;Contador de los va
-                                                            lores del rango 0-2
-                                                            55
-   60 00000046 F04F 0700       MOV              R7,#0       ;Contador de la fre
-                                                            cuencia
-   61 0000004A         
-   62 0000004A         ;CFD: Ciclo de Frecuencia de Distribución
-   63 0000004A         ;Básicamente para cada valor del rango 0-255, se comprue
-                       ba cuantas veces se repite en toda la imagen
-   64 0000004A         
-   65 0000004A F5B5 7F80 
-                       CFD     CMP              R5,#256     ;El ciclo se termin
-                                                            a cuando se verific
-                                                            aron los 256 valore
-                                                            s del rango
-   66 0000004E D01B            BEQ              IE2         ;IE2: Inicio de la 
-                                                            etapa 2
-   67 00000050 E009            B                CVPR
-   68 00000052 F04F 0300 
-                       FVP     MOV              R3,#0       ;Se resetea el cont
-                                                            ador de la imagen, 
-                                                            cuando ya se recorr
-                                                            ió completa para ve
-                                                            rificar el valor ac
-                                                            tual del rango
-   69 00000056 5117            STR              R7,[R2,R4]  ;Para el valor actu
-                                                            al del rango, se al
-                                                            macena la cantidad 
-                                                            de veces que se rep
-                                                            ite en la imagen
-   70 00000058 F04F 0700       MOV              R7,#0       ;Se resetea R7, que
-                                                             es el resultado de
-                                                             cada conteo
-   71 0000005C F104 0404       ADD              R4,R4,#4    ;El contador del ar
-                                                            ray es de 4 en 4
-   72 00000060 F105 0501       ADD              R5,R5,#1    ;Se incrementa el c
-                                                            ontador del rango
-   73 00000064 E7F1            B                CFD
-   74 00000066         
-   75 00000066         ;CVPR: Ciclo de Verificar el pixel actual con el valor d
-                       el rango actual
-   76 00000066         
-   77 00000066 F44F 7A61 
-                       CVPR    MOV              R10,#900
-   78 0000006A F04F 0BA9       MOV              R11,#169
-   79 0000006E FB0A FC0B       MUL              R12,R10,R11 ;R12 almacena el va
-                                                            lor de 900x169=1521
-                                                            00
-   80 00000072 4563            CMP              R3,R12
-   81 00000074 D0ED            BEQ              FVP         ;FVP: Fin de verifi
-                                                            car pixeles
-   82 00000076 5CCE            LDRB             R6,[R1,R3]  ;Se usa LDRB debido
-                                                             a que la imagen se
+   58 0000003E F04F 0404       MOV              R4,#4
+   59 00000042 F04F 0500       MOV              R5,#0       ;Pixel actual
+   60 00000046 F04F 0600       MOV              R6,#0       ;Frecuencia del pix
+                                                            el actual
+   61 0000004A F04F 0000       MOV              R0,#0
+   62 0000004E F04F 0700       MOV              R7,#0
+   63 00000052         
+   64 00000052         
+   65 00000052 F5B0 6F80 
+                       LEFD    CMP              R0,#1024
+   66 00000056 D003            BEQ              CFD
+   67 00000058 5017            STR              R7,[R2,R0]
+   68 0000005A F100 0004       ADD              R0,R0,#4
+   69 0000005E E7F8            B                LEFD
+   70 00000060         
+   71 00000060         ;CFD: Ciclo de Frecuencia de Distribución
+   72 00000060         
+   73 00000060 F44F 7A61 
+                       CFD     MOV              R10,#900
+   74 00000064 F04F 0BA9       MOV              R11,#169
+   75 00000068 FB0A FC0B       MUL              R12,R10,R11
+   76 0000006C 4563            CMP              R3,R12
+   77 0000006E D009            BEQ              IE2
+   78 00000070 5CCD            LDRB             R5,[R1,R3]
+   79 00000072 FB05 F704       MUL              R7,R5,R4
+   80 00000076 59D6            LDR              R6,[R2,R7]
+   81 00000078 F106 0601       ADD              R6,R6,#1
+   82 0000007C 51D6            STR              R6,[R2,R7]
+   83 0000007E F103 0301       ADD              R3,R3,#1
+   84 00000082 E7ED            B                CFD
+   85 00000084         
+   86 00000084         
+   87 00000084         ; Etapa 2: Se obtiene la frecuencia acumulada
+   88 00000084         
+   89 00000084 496C    IE2     LDR              R1,=EFA
+   90 00000086 F04F 0300       MOV              R3,#0       ;Contador del bloqu
+                                                            e de frecuencia de 
+                                                            distribución
+   91 0000008A F04F 0400       MOV              R4,#0       ;Contador del bloqu
+                                                            e de frecuencia acu
+                                                            mulada
+   92 0000008E 58D5            LDR              R5,[R2,R3]  ;Se obtiene el prim
+                                                            er valor de la frec
+                                                            uencia de distribuc
+                                                            ión
+   93 00000090 510D            STR              R5,[R1,R4]  ;Se hace copia dire
+                                                            cta del primer valo
+                                                            r del f(I) en el ar
+                                                            ray del CuF
+   94 00000092 F103 0304       ADD              R3,R3,#4    ;Se incrementa el c
+                                                            ontador del f(I), y
+                                                            a que se va sumando
+                                                             el valor actual de
+                                                             f(I) con el valor 
+                                                            anterior del CuF
+   95 00000096         
 
 
 
 ARM Macro Assembler    Page 4 
 
 
-                                                             almacena byte por 
-                                                            byte, para STR no h
-                                                            ay bronca
-   83 00000078 42AE            CMP              R6,R5       ;Se compara el valo
-                                                            r actual del rango 
-                                                            con el valor de la 
-                                                            imagen
-   84 0000007A D002            BEQ              SUM1        ;Si son iguales se 
-                                                            incrementa en 1 el 
-                                                            resultado de la fre
-                                                            cuencia de distribu
-                                                            ción
-   85 0000007C F103 0301 
-                       FS1     ADD              R3,R3,#1    ;Se incrementa en 1
-                                                             el contador de la 
-                                                            imagen
-   86 00000080 E7F1            B                CVPR
-   87 00000082         
-   88 00000082         
-   89 00000082 F107 0701 
-                       SUM1    ADD              R7,R7,#1
-   90 00000086 E7F9            B                FS1         ;FS1: Fin de sumar 
-                                                            1
-   91 00000088         
-   92 00000088         ; Etapa 2: Se obtiene la frecuencia acumulada
-   93 00000088         
-   94 00000088 4967    IE2     LDR              R1,=EFA
-   95 0000008A F04F 0300       MOV              R3,#0       ;Contador del bloqu
-                                                            e de frecuencia de 
-                                                            distribución
-   96 0000008E F04F 0400       MOV              R4,#0       ;Contador del bloqu
-                                                            e de frecuencia acu
-                                                            mulada
-   97 00000092 58D5            LDR              R5,[R2,R3]  ;Se obtiene el prim
-                                                            er valor de la frec
-                                                            uencia de distribuc
-                                                            ión
-   98 00000094 510D            STR              R5,[R1,R4]  ;Se hace copia dire
-                                                            cta del primer valo
-                                                            r del f(I) en el ar
-                                                            ray del CuF
-   99 00000096 F103 0304       ADD              R3,R3,#4    ;Se incrementa el c
-                                                            ontador del f(I), y
-                                                            a que se va sumando
-                                                             el valor actual de
-                                                             f(I) con el valor 
-                                                            anterior del CuF
-  100 0000009A         
-  101 0000009A         ; CDSF: Ciclo de sumar frecuencias
-  102 0000009A         ;Básicamente para obtener el nuevo valor del CuF, se sum
+   96 00000096         ; CDSF: Ciclo de sumar frecuencias
+   97 00000096         ;Básicamente para obtener el nuevo valor del CuF, se sum
                        a el valor actual del f(I) con el valor anterior del CuF
                        
-  103 0000009A         ;Es por esto que el contador del f(I) va adelantado en 1
+   98 00000096         ;Es por esto que el contador del f(I) va adelantado en 1
                         al del CuF. Como se  mencionó previamente, el primer va
                        lor se hace copia directa
-  104 0000009A         
-  105 0000009A F5B3 6F80 
+   99 00000096         
+  100 00000096 F5B3 6F80 
                        CDSF    CMP              R3,#1024    ;El límite son 256x
                                                             4=1024. Cantidad to
+                                                            tales de bloques de
+                                                             los arrays
+  101 0000009A D009            BEQ              IE3
+  102 0000009C 58D5            LDR              R5,[R2,R3]
+  103 0000009E 590E            LDR              R6,[R1,R4]
+  104 000000A0 EB05 0706       ADD              R7,R5,R6
+  105 000000A4 F104 0404       ADD              R4,R4,#4
+  106 000000A8 510F            STR              R7,[R1,R4]
+  107 000000AA F103 0304       ADD              R3,R3,#4
+  108 000000AE E7F2            B                CDSF
+  109 000000B0         
+  110 000000B0         
+  111 000000B0         ; Etapa 3: Se distribuye uniformemente la frecuencia acu
+                       mulada
+  112 000000B0         
+  113 000000B0 4B62    IE3     LDR              R3,=EDUF
+  114 000000B2 F8D1 43FC       LDR              R4,[R1,#1020] ;El valor de 1020
+                                                             se obtiene de 255x
+                                                            4. Me permite obten
+                                                            er la última posici
+                                                            ón del array del Cu
+                                                            F
+  115 000000B6 F44F 7580       MOV              R5,#256     ;El módulo se calcu
+                                                            la con 256, que es 
+                                                            la cantidad máxima 
+                                                            de posibilidades pa
+                                                            ra 1 byte
+  116 000000BA         
+  117 000000BA         ;Se calcula el módulo del valor máximo de CuF entre el v
+                       alor máximo del rango
+  118 000000BA FBB4 F6F5       UDIV             R6,R4,R5
+  119 000000BE FB06 F705       MUL              R7,R6,R5
+  120 000000C2 EBA4 0807       SUB              R8,R4,R7
+  121 000000C6         
+  122 000000C6         ;Se calcula la parte entera de el valor máximo de CuF en
+                       tre el valor máximo del rango(N = 256 = 2**8)
+  123 000000C6         ;Para hacer esta división se utiliza el corrimiento arit
+                       mético a la derecha con 8 bits
+  124 000000C6 EA4F 2924       ASR              R9,R4,#8
+  125 000000CA         
+  126 000000CA         ;Se utiliza el R6 como contador del bloque Feq
+  127 000000CA F04F 0600       MOV              R6,#0
+  128 000000CE         
+  129 000000CE         ;Se toman dos caminos dependiendo del módulo
+  130 000000CE F1B8 0F00       CMP              R8,#0
+  131 000000D2 D000            BEQ              CM0         ;CM0:  Ciclo cuando
+                                                             el módulo es cero
+  132 000000D4 E007            B                CMD0        ;CMDO: Ciclo cuando
 
 
 
 ARM Macro Assembler    Page 5 
 
 
-                                                            tales de bloques de
-                                                             los arrays
-  106 0000009E D009            BEQ              IE3
-  107 000000A0 58D5            LDR              R5,[R2,R3]
-  108 000000A2 590E            LDR              R6,[R1,R4]
-  109 000000A4 EB05 0706       ADD              R7,R5,R6
-  110 000000A8 F104 0404       ADD              R4,R4,#4
-  111 000000AC 510F            STR              R7,[R1,R4]
-  112 000000AE F103 0304       ADD              R3,R3,#4
-  113 000000B2 E7F2            B                CDSF
-  114 000000B4         
-  115 000000B4         
-  116 000000B4         ; Etapa 3: Se distribuye uniformemente la frecuencia acu
-                       mulada
-  117 000000B4         
-  118 000000B4 4B5D    IE3     LDR              R3,=EDUF
-  119 000000B6 F8D1 43FC       LDR              R4,[R1,#1020] ;El valor de 1020
-                                                             se obtiene de 255x
-                                                            4. Me permite obten
-                                                            er la última posici
-                                                            ón del array del Cu
-                                                            F
-  120 000000BA F44F 7580       MOV              R5,#256     ;El módulo se calcu
-                                                            la con 256, que es 
-                                                            la cantidad máxima 
-                                                            de posibilidades pa
-                                                            ra 1 byte
-  121 000000BE         
-  122 000000BE         ;Se calcula el módulo del valor máximo de CuF entre el v
-                       alor máximo del rango
-  123 000000BE FBB4 F6F5       UDIV             R6,R4,R5
-  124 000000C2 FB06 F705       MUL              R7,R6,R5
-  125 000000C6 EBA4 0807       SUB              R8,R4,R7
-  126 000000CA         
-  127 000000CA         ;Se calcula la parte entera de el valor máximo de CuF en
-                       tre el valor máximo del rango(N = 256 = 2**8)
-  128 000000CA         ;Para hacer esta división se utiliza el corrimiento arit
-                       mético a la derecha con 8 bits
-  129 000000CA EA4F 2924       ASR              R9,R4,#8
-  130 000000CE         
-  131 000000CE         ;Se utiliza el R6 como contador del bloque Feq
-  132 000000CE F04F 0600       MOV              R6,#0
-  133 000000D2         
-  134 000000D2         ;Se toman dos caminos dependiendo del módulo
-  135 000000D2 F1B8 0F00       CMP              R8,#0
-  136 000000D6 D000            BEQ              CM0         ;CM0:  Ciclo cuando
-                                                             el módulo es cero
-  137 000000D8 E007            B                CMD0        ;CMDO: Ciclo cuando
                                                              el módulo es difer
                                                             ente de cero
-  138 000000DA         
-  139 000000DA         ;Cuando el módulo es cero, se distribuye uniformemente e
+  133 000000D6         
+  134 000000D6         ;Cuando el módulo es cero, se distribuye uniformemente e
                        l valor obtenido al dividir el máximo de CuF entre 256
-  140 000000DA         
-  141 000000DA F5B6 6F80 
+  135 000000D6         
+  136 000000D6 F5B6 6F80 
                        CM0     CMP              R6,#1024
-  142 000000DE D016            BEQ              IE4
-  143 000000E0 F843 9006       STR              R9,[R3,R6]
-  144 000000E4 F106 0604       ADD              R6,R6,#4
+  137 000000DA D016            BEQ              IE4
+  138 000000DC F843 9006       STR              R9,[R3,R6]
+  139 000000E0 F106 0604       ADD              R6,R6,#4
+  140 000000E4 E7F7            B                CM0
+  141 000000E6         
+  142 000000E6         ;Cuando el módulo es diferente de cero, se debe obtener 
+                       el valor faltante para completar el máximo del CuF a la 
+                       hora de hacer la distribución
+  143 000000E6         ;La ecuación es: X = MaxCuF - (cocienteEntero x 255 )
+  144 000000E6         ;Este valor se puede almacenar en cualquier lugar, por s
+                       implicidad se almacena de primero
+  145 000000E6         
+  146 000000E6 F04F 07FF 
+                       CMD0    MOV              R7,#255
+  147 000000EA FB09 FA07       MUL              R10,R9,R7
+  148 000000EE EBA4 0B0A       SUB              R11,R4,R10
+  149 000000F2 F843 B006       STR              R11,[R3,R6]
+  150 000000F6 F106 0604       ADD              R6,R6,#4
+  151 000000FA         
+  152 000000FA         ;Ciclo para almacenar el cocienteEntero de MaxCuF/256, e
+                       n el resto de campos del array del Feq
+  153 000000FA         
+  154 000000FA F5B6 6F80 
+                       CMD02   CMP              R6,#1024
+  155 000000FE D004            BEQ              IE4
+  156 00000100 F843 9006       STR              R9,[R3,R6]
+  157 00000104 F106 0604       ADD              R6,R6,#4
+  158 00000108 E7F7            B                CMD02
+  159 0000010A         
+  160 0000010A         ; Etapa 4: Se obtiene la frecuencia acumulada de la frec
+                       uencia distribuida
+  161 0000010A         ; Mismo algoritmo de la etapa 2, solo que en este caso s
+                       e obtiene la frecuencia acumulada del Feq
+  162 0000010A         
+  163 0000010A 4C4D    IE4     LDR              R4,=EFA2
+  164 0000010C F04F 0500       MOV              R5,#0       ; Contador del bloq
+                                                            ue de frecuencia di
+                                                            stribuida
+  165 00000110 F04F 0600       MOV              R6,#0       ; Contador del bloq
+                                                            ue de frecuencia ac
+                                                            umulada parte 2
+  166 00000114 595F            LDR              R7,[R3,R5]
+  167 00000116 51A7            STR              R7,[R4,R6]
+  168 00000118 F105 0504       ADD              R5,R5,#4
+  169 0000011C         
+  170 0000011C         ; CDSF2: Ciclo de sumar frecuencias2
+  171 0000011C         
+  172 0000011C F5B5 6F80 
+                       CDSF2   CMP              R5,#1024
+  173 00000120 D00B            BEQ              IE5
+  174 00000122 595F            LDR              R7,[R3,R5]
 
 
 
 ARM Macro Assembler    Page 6 
 
 
-  145 000000E8 E7F7            B                CM0
-  146 000000EA         
-  147 000000EA         ;Cuando el módulo es diferente de cero, se debe obtener 
-                       el valor faltante para completar el máximo del CuF a la 
-                       hora de hacer la distribución
-  148 000000EA         ;La ecuación es: X = MaxCuF - (cocienteEntero x 255 )
-  149 000000EA         ;Este valor se puede almacenar en cualquier lugar, por s
-                       implicidad se almacena de primero
-  150 000000EA         
-  151 000000EA F04F 07FF 
-                       CMD0    MOV              R7,#255
-  152 000000EE FB09 FA07       MUL              R10,R9,R7
-  153 000000F2 EBA4 0B0A       SUB              R11,R4,R10
-  154 000000F6 F843 B006       STR              R11,[R3,R6]
-  155 000000FA F106 0604       ADD              R6,R6,#4
-  156 000000FE         
-  157 000000FE         ;Ciclo para almacenar el cocienteEntero de MaxCuF/256, e
-                       n el resto de campos del array del Feq
-  158 000000FE         
-  159 000000FE F5B6 6F80 
-                       CMD02   CMP              R6,#1024
-  160 00000102 D004            BEQ              IE4
-  161 00000104 F843 9006       STR              R9,[R3,R6]
-  162 00000108 F106 0604       ADD              R6,R6,#4
-  163 0000010C E7F7            B                CMD02
-  164 0000010E         
-  165 0000010E         ; Etapa 4: Se obtiene la frecuencia acumulada de la frec
-                       uencia distribuida
-  166 0000010E         ; Mismo algoritmo de la etapa 2, solo que en este caso s
-                       e obtiene la frecuencia acumulada del Feq
-  167 0000010E         
-  168 0000010E 4C48    IE4     LDR              R4,=EFA2
-  169 00000110 F04F 0500       MOV              R5,#0       ; Contador del bloq
-                                                            ue de frecuencia di
-                                                            stribuida
-  170 00000114 F04F 0600       MOV              R6,#0       ; Contador del bloq
-                                                            ue de frecuencia ac
-                                                            umulada parte 2
-  171 00000118 595F            LDR              R7,[R3,R5]
-  172 0000011A 51A7            STR              R7,[R4,R6]
-  173 0000011C F105 0504       ADD              R5,R5,#4
-  174 00000120         
-  175 00000120         ; CDSF2: Ciclo de sumar frecuencias2
-  176 00000120         
-  177 00000120 F5B5 6F80 
-                       CDSF2   CMP              R5,#1024
-  178 00000124 D00B            BEQ              IE5
-  179 00000126 595F            LDR              R7,[R3,R5]
-  180 00000128 F854 8006       LDR              R8,[R4,R6]
-  181 0000012C EB07 0908       ADD              R9,R7,R8
-  182 00000130 F106 0604       ADD              R6,R6,#4
-  183 00000134 F844 9006       STR              R9,[R4,R6]
-  184 00000138 F105 0504       ADD              R5,R5,#4
-  185 0000013C E7F0            B                CDSF2
-  186 0000013E         
-  187 0000013E         
-  188 0000013E         ; Etapa 5: Se obtiene el array del mapeo
-  189 0000013E         ; La esencia del algoritmo, es encontrar el valor más ce
+  175 00000124 F854 8006       LDR              R8,[R4,R6]
+  176 00000128 EB07 0908       ADD              R9,R7,R8
+  177 0000012C F106 0604       ADD              R6,R6,#4
+  178 00000130 F844 9006       STR              R9,[R4,R6]
+  179 00000134 F105 0504       ADD              R5,R5,#4
+  180 00000138 E7F0            B                CDSF2
+  181 0000013A         
+  182 0000013A         
+  183 0000013A         ; Etapa 5: Se obtiene el array del mapeo
+  184 0000013A         ; La esencia del algoritmo, es encontrar el valor más ce
                        rcano del CuFeq a CuF
+  185 0000013A         
+  186 0000013A         
+  187 0000013A         
+  188 0000013A 493F    IE5     LDR              R1,=EFA     ;CuF
+  189 0000013C 4A40            LDR              R2,=EFA2    ;CuFeq
+  190 0000013E 4B41            LDR              R3,=ERM     ;Resultado final de
+                                                            l mapeo
+  191 00000140 F04F 0400       MOV              R4,#0       ;Contador del CuF y
+                                                             del resultado del 
+                                                            mapeo
+  192 00000144 F04F 0500       MOV              R5,#0       ;Límite inferior
+  193 00000148 F04F 06FF       MOV              R6,#255     ;Límite Superior
+  194 0000014C F04F 0700       MOV              R7,#0       ;Centro
+  195 00000150 F04F 0800       MOV              R8,#0       ;Valor buscado
+  196 00000154 F04F 0900       MOV              R9,#0       ;Valor del límite i
+                                                            nferior
+  197 00000158 F04F 0A00       MOV              R10,#0      ;Valor del límite  
+                                                            superior
+  198 0000015C F04F 0B00       MOV              R11,#0      ;Nuevo pixel mapead
+                                                            o
+  199 00000160 F04F 0C00       MOV              R12,#0      ;Valor del centro
+  200 00000164         
+  201 00000164         
+  202 00000164         ;CPM: Ciclo principal del mapeo
+  203 00000164         
+  204 00000164         
+  205 00000164 F5B4 6F80 
+                       CPM     CMP              R4,#1024
+  206 00000168 D048            BEQ              IE6
+  207 0000016A F851 8004       LDR              R8,[R1,R4]
+  208 0000016E E008            B                BBM
+  209 00000170 F843 B004 
+                       FBBM    STR              R11,[R3,R4]
+  210 00000174 F104 0404       ADD              R4,R4,#4
+  211 00000178 F04F 0500       MOV              R5,#0
+  212 0000017C F04F 06FF       MOV              R6,#255
+  213 00000180 E7F0            B                CPM
+  214 00000182         
+  215 00000182         ;BBM: Búsqueda binaria modificada
+  216 00000182         
+  217 00000182 EB05 0706 
+                       BBM     ADD              R7,R5,R6
+  218 00000186 EA4F 0767       ASR              R7,R7,#1
+  219 0000018A F04F 0B04       MOV              R11,#4
+  220 0000018E FB07 FB0B       MUL              R11,R7,R11
+  221 00000192 F852 C00B       LDR              R12,[R2,R11]
+  222 00000196 45C4            CMP              R12,R8
+  223 00000198 D004            BEQ              AR1
 
 
 
 ARM Macro Assembler    Page 7 
 
 
-  190 0000013E         ; Para cada valor del CuF, lo comparo con todos los valo
-                       res del CuFeq, si son iguales se acabó la búsqueda.
-  191 0000013E         ; Si no son iguales, se verifica si el número es mayor o
-                        menor al de interés , donde el algoritmo tomará dos cam
-                       inos.
-  192 0000013E         ; Si el número es mayor que el de interés, se le restará
-                        1, si es menor se le sumará 1.
-  193 0000013E         ; Lo anterior se repite para todos los valores del CuFeq
-                       , hasta que se encuentre el primero que sea igual, ya qu
-                       e eso representa el valor más cercano.
-  194 0000013E         ; El valor que se lleva como resultado en R7 es de la po
-                       sición del array, que es lo que se ocupa al final.
-  195 0000013E         ; Hay un bloque donde se hace copia del CuFeq (se conser
-                       va el original), para cada valor de CuF, esto se debe a 
-                       que el arreglo se está modificando con sumas y restas ha
-                       sta encontrar el valor más cercano.
-  196 0000013E         
-  197 0000013E         
-  198 0000013E 493A    IE5     LDR              R1,=EFA
-  199 00000140 4A3B            LDR              R2,=EFA2
-  200 00000142 4B3C            LDR              R3,=EBBM
-  201 00000144 4C3C            LDR              R4,=ERM
-  202 00000146 F04F 0500       MOV              R5,#0       ;Contador del CuF y
-                                                             del I prima del ma
-                                                            peo
-  203 0000014A F04F 0600       MOV              R6,#0       ;Contador del CuFeq
-                                                            
-  204 0000014E F04F 0700       MOV              R7,#0       ;Contador de la pos
-                                                            ición final
-  205 00000152 F04F 0800       MOV              R8,#0       ;Contador del bloqu
-                                                            e borrador del mape
-                                                            o
-  206 00000156         
-  207 00000156         
-  208 00000156         
-  209 00000156         ;CPM: Ciclo principal del mapeo
-  210 00000156         
-  211 00000156 F5B5 6F80 
-                       CPM     CMP              R5,#1024
-  212 0000015A D047            BEQ              IE6
-  213 0000015C F851 9005       LDR              R9,[R1,R5]
-  214 00000160 E009            B                CCC
-  215 00000162 5167    FCPM    STR              R7,[R4,R5]
-  216 00000164 F105 0504       ADD              R5,R5,#4
-  217 00000168 F04F 0600       MOV              R6,#0
-  218 0000016C F04F 0700       MOV              R7,#0
-  219 00000170 F04F 0800       MOV              R8,#0
-  220 00000174 E7EF            B                CPM
-  221 00000176         
-  222 00000176         ;CCC: Ciclo que hace la copia del CuFeq en el borrador
-  223 00000176         
-  224 00000176 F5B6 6F80 
-                       CCC     CMP              R6,#1024
-  225 0000017A D008            BEQ              RESET1
-  226 0000017C F852 A006       LDR              R10,[R2,R6]
-  227 00000180 F843 A008       STR              R10,[R3,R8]
-  228 00000184 F106 0604       ADD              R6,R6,#4
-  229 00000188 F108 0804       ADD              R8,R8,#4
-  230 0000018C E7F3            B                CCC
+  224 0000019A 42AF            CMP              R7,R5
+  225 0000019C D008            BEQ              ESR1
+  226 0000019E 45C4            CMP              R12,R8
+  227 000001A0 DC02            BGT              ALS
+  228 000001A2 E003            B                ALI
+  229 000001A4         
+  230 000001A4         ;AR1: Asignar resultado 1
+  231 000001A4         
+  232 000001A4 46BB    AR1     MOV              R11,R7
+  233 000001A6 E7E3            B                FBBM
+  234 000001A8         
+  235 000001A8         ;ALS: Asignar límite superior
+  236 000001A8         
+  237 000001A8 463E    ALS     MOV              R6,R7
+  238 000001AA E7EA            B                BBM
+  239 000001AC         
+  240 000001AC         ;ALI: Asignar límite inferior
+  241 000001AC         
+  242 000001AC 463D    ALI     MOV              R5,R7
+  243 000001AE E7E8            B                BBM
+  244 000001B0         
+  245 000001B0         ;ESR1:Etapa de sumas y restas parte 1
+  246 000001B0         
+  247 000001B0 F04F 0B04 
+                       ESR1    MOV              R11,#4
+  248 000001B4 FB05 FB0B       MUL              R11,R5,R11
+  249 000001B8 F852 900B       LDR              R9,[R2,R11]
+  250 000001BC F04F 0B04       MOV              R11,#4
+  251 000001C0 FB06 FB0B       MUL              R11,R6,R11
+  252 000001C4 F852 A00B       LDR              R10,[R2,R11]
+  253 000001C8         
+  254 000001C8         ;ESR2:Etapa de sumas y restas parte 2
+  255 000001C8         
+  256 000001C8 45C1    ESR2    CMP              R9,R8
+  257 000001CA D007            BEQ              AR2
+  258 000001CC 45C1            CMP              R9,R8
+  259 000001CE DC09            BGT              ER1I
+  260 000001D0 E00B            B                ES1I
+  261 000001D2 45C2    FESR2   CMP              R10,R8
+  262 000001D4 D004            BEQ              AR3
+  263 000001D6 45C2            CMP              R10,R8
+  264 000001D8 DC0A            BGT              ER1S
+  265 000001DA E00C            B                ES1S
+  266 000001DC         
+  267 000001DC         ;AR2: Asignar resultado 2
+  268 000001DC         
+  269 000001DC 46AB    AR2     MOV              R11,R5
+  270 000001DE E7C7            B                FBBM
+  271 000001E0         
+  272 000001E0         ;AR3: Asignar resultado 3
+  273 000001E0         
+  274 000001E0 46B3    AR3     MOV              R11,R6
+  275 000001E2 E7C5            B                FBBM
+  276 000001E4         
+  277 000001E4         ;ER1I: Restar 1 al dato del límite inferior
+  278 000001E4         
+  279 000001E4 F1A9 0901 
+                       ER1I    SUB              R9,R9,#1
+  280 000001E8 E7F3            B                FESR2
 
 
 
 ARM Macro Assembler    Page 8 
 
 
-  231 0000018E         
-  232 0000018E F04F 0800 
-                       RESET1  MOV              R8,#0
-  233 00000192 F853 A008       LDR              R10,[R3,R8]
-  234 00000196         
-  235 00000196         ;CSM: Ciclo secundario del mapeo
-  236 00000196         
-  237 00000196 45D1    CSM     CMP              R9,R10
-  238 00000198 D0E3            BEQ              FCPM
-  239 0000019A 45D1            CMP              R9,R10
-  240 0000019C DC00            BGT              MS
-  241 0000019E E00D            B                MR
-  242 000001A0         
-  243 000001A0         ; MS: Mapeo de sumas         
-  244 000001A0         
-  245 000001A0 F10A 0A01 
-                       MS      ADD              R10,R10,#1
-  246 000001A4 F843 A008       STR              R10,[R3,R8]
-  247 000001A8 F108 0804       ADD              R8,R8,#4
-  248 000001AC F107 0701       ADD              R7,R7,#1
-  249 000001B0 F5B8 6F80       CMP              R8,#1024
-  250 000001B4 D010            BEQ              RS
-  251 000001B6 F853 A008 
-                       RSF     LDR              R10,[R3,R8]
-  252 000001BA E7EC            B                CSM
-  253 000001BC         
-  254 000001BC         ; MR: Mapeo de restas 
-  255 000001BC         
-  256 000001BC F1AA 0A01 
-                       MR      SUB              R10,R10,#1
-  257 000001C0 F843 A008       STR              R10,[R3,R8]
-  258 000001C4 F108 0804       ADD              R8,R8,#4
-  259 000001C8 F107 0701       ADD              R7,R7,#1
-  260 000001CC F5B8 6F80       CMP              R8,#1024
-  261 000001D0 D007            BEQ              RR
-  262 000001D2 F853 A008 
-                       RRF     LDR              R10,[R3,R8]
-  263 000001D6 E7DE            B                CSM
-  264 000001D8         
-  265 000001D8         ; RS: Reset de las sumas
-  266 000001D8         
-  267 000001D8 F04F 0700 
-                       RS      MOV              R7,#0
-  268 000001DC F04F 0800       MOV              R8,#0
-  269 000001E0 E7E9            B                RSF
-  270 000001E2         
-  271 000001E2         ; RR: Reset de las restas
-  272 000001E2         
-  273 000001E2 F04F 0700 
-                       RR      MOV              R7,#0
-  274 000001E6 F04F 0800       MOV              R8,#0
-  275 000001EA E7F2            B                RRF
-  276 000001EC         
-  277 000001EC         ; Etapa 6: Se mapea la imagen original en su forma ecual
+  281 000001EA         
+  282 000001EA         ;ES1I: Sumar 1 al dato del límite inferior
+  283 000001EA         
+  284 000001EA F109 0901 
+                       ES1I    ADD              R9,R9,#1
+  285 000001EE E7F0            B                FESR2
+  286 000001F0         
+  287 000001F0         
+  288 000001F0         ;ER1S: Restar 1 al dato del límite superior
+  289 000001F0         
+  290 000001F0 F1AA 0A01 
+                       ER1S    SUB              R10,R10,#1
+  291 000001F4 E7E8            B                ESR2
+  292 000001F6         
+  293 000001F6         ;ES1S: Sumar 1 al dato del límite superior
+  294 000001F6         
+  295 000001F6 F10A 0A01 
+                       ES1S    ADD              R10,R10,#1
+  296 000001FA E7E5            B                ESR2
+  297 000001FC         
+  298 000001FC         
+  299 000001FC         
+  300 000001FC         
+  301 000001FC         ; Etapa 6: Se mapea la imagen original en su forma ecual
                        izada
-  278 000001EC         ; Básicamente para cada valor de la imagen original, se 
+  302 000001FC         ; Básicamente para cada valor de la imagen original, se 
                        multiplica por 4, para obtener la posición del array del
                         mapeo
-  279 000001EC         ; El valor obtenido del array del mapeo, será el nuevo p
+  303 000001FC         ; El valor obtenido del array del mapeo, será el nuevo p
+                       ixel
+  304 000001FC         
+  305 000001FC F04F 5100 
+                       IE6     LDR              R1,=EII
+  306 00000200 4A11            LDR              R2,=EIF
+  307 00000202 4B10            LDR              R3,=ERM
+  308 00000204 F04F 0400       MOV              R4,#0       ;Contador de la ima
+                                                            gen
+  309 00000208 F04F 0504       MOV              R5,#4
+  310 0000020C         
+  311 0000020C         ; CE: Ciclo de la ecualización
+  312 0000020C         
+  313 0000020C F44F 7A61 
+                       CE      MOV              R10,#900
+  314 00000210 F04F 0BA9       MOV              R11,#169
+  315 00000214 FB0A FC0B       MUL              R12,R10,R11
+  316 00000218 4564            CMP              R4,R12
+  317 0000021A D009            BEQ              STOP
+  318 0000021C 5D0E            LDRB             R6,[R1,R4]
+  319 0000021E FB06 F705       MUL              R7,R6,R5
+  320 00000222 F853 8007       LDR              R8,[R3,R7]
+  321 00000226 F842 8004       STR              R8,[R2,R4]
+  322 0000022A F104 0401       ADD              R4,R4,#1
+  323 0000022E E7ED            B                CE
+  324 00000230         
+  325 00000230 E7FE    STOP    B                STOP
+  326 00000232         
+  327 00000232                 END
+              00 00 20025224 
+              20025624 
 
 
 
 ARM Macro Assembler    Page 9 
 
 
-                       ixel
-  280 000001EC         
-  281 000001EC F04F 5100 
-                       IE6     LDR              R1,=EII
-  282 000001F0 4A12            LDR              R2,=EIF
-  283 000001F2 4B11            LDR              R3,=ERM
-  284 000001F4 F04F 0400       MOV              R4,#0       ;Contador de la ima
-                                                            gen
-  285 000001F8 F04F 0504       MOV              R5,#4
-  286 000001FC         
-  287 000001FC         ; CE: Ciclo de la ecualización
-  288 000001FC         
-  289 000001FC F44F 7A61 
-                       CE      MOV              R10,#900
-  290 00000200 F04F 0BA9       MOV              R11,#169
-  291 00000204 FB0A FC0B       MUL              R12,R10,R11
-  292 00000208 4564            CMP              R4,R12
-  293 0000020A D009            BEQ              STOP
-  294 0000020C 5D0E            LDRB             R6,[R1,R4]
-  295 0000020E FB06 F705       MUL              R7,R6,R5
-  296 00000212 F853 8007       LDR              R8,[R3,R7]
-  297 00000216 F842 8004       STR              R8,[R2,R4]
-  298 0000021A F104 0401       ADD              R4,R4,#1
-  299 0000021E E7ED            B                CE
-  300 00000220         
-  301 00000220 E7FE    STOP    B                STOP
-  302 00000222         
-  303 00000222                 END
-              00 00 20025224 
-              20025624 
               20025A24 
               20025E24 
-              20026224 
               20026624 
               20026A24 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
@@ -572,6 +541,56 @@ ngs\main.lst main.s
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Relocatable symbols
 
+ALI 000001AC
+
+Symbol: ALI
+   Definitions
+      At line 242 in file main.s
+   Uses
+      At line 228 in file main.s
+Comment: ALI used once
+ALS 000001A8
+
+Symbol: ALS
+   Definitions
+      At line 237 in file main.s
+   Uses
+      At line 227 in file main.s
+Comment: ALS used once
+AR1 000001A4
+
+Symbol: AR1
+   Definitions
+      At line 232 in file main.s
+   Uses
+      At line 223 in file main.s
+Comment: AR1 used once
+AR2 000001DC
+
+Symbol: AR2
+   Definitions
+      At line 269 in file main.s
+   Uses
+      At line 257 in file main.s
+Comment: AR2 used once
+AR3 000001E0
+
+Symbol: AR3
+   Definitions
+      At line 274 in file main.s
+   Uses
+      At line 262 in file main.s
+Comment: AR3 used once
+BBM 00000182
+
+Symbol: BBM
+   Definitions
+      At line 217 in file main.s
+   Uses
+      At line 208 in file main.s
+      At line 238 in file main.s
+      At line 243 in file main.s
+
 CAI 00000018
 
 Symbol: CAI
@@ -582,119 +601,69 @@ Symbol: CAI
 Comment: CAI used once
 CCAI 00000022
 
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+
 Symbol: CCAI
    Definitions
       At line 42 in file main.s
    Uses
       At line 48 in file main.s
 Comment: CCAI used once
-CCC 00000176
-
-Symbol: CCC
-   Definitions
-      At line 224 in file main.s
-   Uses
-      At line 214 in file main.s
-      At line 230 in file main.s
-
-CDSF 0000009A
+CDSF 00000096
 
 Symbol: CDSF
    Definitions
-      At line 105 in file main.s
+      At line 100 in file main.s
    Uses
-      At line 113 in file main.s
+      At line 108 in file main.s
 Comment: CDSF used once
-CDSF2 00000120
+CDSF2 0000011C
 
 Symbol: CDSF2
    Definitions
-      At line 177 in file main.s
+      At line 172 in file main.s
    Uses
-      At line 185 in file main.s
+      At line 180 in file main.s
 Comment: CDSF2 used once
-CE 000001FC
+CE 0000020C
 
 Symbol: CE
    Definitions
-      At line 289 in file main.s
+      At line 313 in file main.s
    Uses
-      At line 299 in file main.s
+      At line 323 in file main.s
 Comment: CE used once
-CFD 0000004A
+CFD 00000060
 
 Symbol: CFD
    Definitions
-      At line 65 in file main.s
-   Uses
       At line 73 in file main.s
-Comment: CFD used once
-CM0 000000DA
+   Uses
+      At line 66 in file main.s
+      At line 84 in file main.s
 
-
-
-
-ARM Macro Assembler    Page 2 Alphabetic symbol ordering
-Relocatable symbols
+CM0 000000D6
 
 Symbol: CM0
    Definitions
-      At line 141 in file main.s
-   Uses
       At line 136 in file main.s
-      At line 145 in file main.s
+   Uses
+      At line 131 in file main.s
+      At line 140 in file main.s
 
-CMD0 000000EA
+CMD0 000000E6
 
 Symbol: CMD0
    Definitions
-      At line 151 in file main.s
+      At line 146 in file main.s
    Uses
-      At line 137 in file main.s
+      At line 132 in file main.s
 Comment: CMD0 used once
-CMD02 000000FE
-
-Symbol: CMD02
-   Definitions
-      At line 159 in file main.s
-   Uses
-      At line 163 in file main.s
-Comment: CMD02 used once
-CPM 00000156
-
-Symbol: CPM
-   Definitions
-      At line 211 in file main.s
-   Uses
-      At line 220 in file main.s
-Comment: CPM used once
-CSM 00000196
-
-Symbol: CSM
-   Definitions
-      At line 237 in file main.s
-   Uses
-      At line 252 in file main.s
-      At line 263 in file main.s
-
-CVPR 00000066
-
-Symbol: CVPR
-   Definitions
-      At line 77 in file main.s
-   Uses
-      At line 67 in file main.s
-      At line 86 in file main.s
-
-FCPM 00000162
-
-Symbol: FCPM
-   Definitions
-      At line 215 in file main.s
-   Uses
-      At line 238 in file main.s
-Comment: FCPM used once
-FS1 0000007C
+CMD02 000000FA
 
 
 
@@ -702,20 +671,94 @@ FS1 0000007C
 ARM Macro Assembler    Page 3 Alphabetic symbol ordering
 Relocatable symbols
 
-Symbol: FS1
+Symbol: CMD02
    Definitions
-      At line 85 in file main.s
+      At line 154 in file main.s
    Uses
-      At line 90 in file main.s
-Comment: FS1 used once
-FVP 00000052
+      At line 158 in file main.s
+Comment: CMD02 used once
+CPM 00000164
 
-Symbol: FVP
+Symbol: CPM
    Definitions
-      At line 68 in file main.s
+      At line 205 in file main.s
    Uses
-      At line 81 in file main.s
-Comment: FVP used once
+      At line 213 in file main.s
+Comment: CPM used once
+ER1I 000001E4
+
+Symbol: ER1I
+   Definitions
+      At line 279 in file main.s
+   Uses
+      At line 259 in file main.s
+Comment: ER1I used once
+ER1S 000001F0
+
+Symbol: ER1S
+   Definitions
+      At line 290 in file main.s
+   Uses
+      At line 264 in file main.s
+Comment: ER1S used once
+ES1I 000001EA
+
+Symbol: ES1I
+   Definitions
+      At line 284 in file main.s
+   Uses
+      At line 260 in file main.s
+Comment: ES1I used once
+ES1S 000001F6
+
+Symbol: ES1S
+   Definitions
+      At line 295 in file main.s
+   Uses
+      At line 265 in file main.s
+Comment: ES1S used once
+ESR1 000001B0
+
+Symbol: ESR1
+   Definitions
+      At line 247 in file main.s
+   Uses
+      At line 225 in file main.s
+Comment: ESR1 used once
+ESR2 000001C8
+
+Symbol: ESR2
+   Definitions
+      At line 256 in file main.s
+
+
+
+ARM Macro Assembler    Page 4 Alphabetic symbol ordering
+Relocatable symbols
+
+   Uses
+      At line 291 in file main.s
+      At line 296 in file main.s
+
+FBBM 00000170
+
+Symbol: FBBM
+   Definitions
+      At line 209 in file main.s
+   Uses
+      At line 233 in file main.s
+      At line 270 in file main.s
+      At line 275 in file main.s
+
+FESR2 000001D2
+
+Symbol: FESR2
+   Definitions
+      At line 261 in file main.s
+   Uses
+      At line 280 in file main.s
+      At line 285 in file main.s
+
 IE1 00000034
 
 Symbol: IE1
@@ -724,69 +767,61 @@ Symbol: IE1
    Uses
       At line 39 in file main.s
 Comment: IE1 used once
-IE2 00000088
+IE2 00000084
 
 Symbol: IE2
    Definitions
-      At line 94 in file main.s
+      At line 89 in file main.s
    Uses
-      At line 66 in file main.s
+      At line 77 in file main.s
 Comment: IE2 used once
-IE3 000000B4
+IE3 000000B0
 
 Symbol: IE3
    Definitions
-      At line 118 in file main.s
+      At line 113 in file main.s
    Uses
-      At line 106 in file main.s
+      At line 101 in file main.s
 Comment: IE3 used once
-IE4 0000010E
+IE4 0000010A
 
 Symbol: IE4
    Definitions
-      At line 168 in file main.s
+      At line 163 in file main.s
    Uses
-      At line 142 in file main.s
-      At line 160 in file main.s
+      At line 137 in file main.s
+      At line 155 in file main.s
 
-IE5 0000013E
+IE5 0000013A
 
 Symbol: IE5
+
+
+
+ARM Macro Assembler    Page 5 Alphabetic symbol ordering
+Relocatable symbols
+
    Definitions
-      At line 198 in file main.s
+      At line 188 in file main.s
    Uses
-      At line 178 in file main.s
+      At line 173 in file main.s
 Comment: IE5 used once
-IE6 000001EC
+IE6 000001FC
 
 Symbol: IE6
    Definitions
-
-
-
-ARM Macro Assembler    Page 4 Alphabetic symbol ordering
-Relocatable symbols
-
-      At line 281 in file main.s
+      At line 305 in file main.s
    Uses
-      At line 212 in file main.s
+      At line 206 in file main.s
 Comment: IE6 used once
-MR 000001BC
+LEFD 00000052
 
-Symbol: MR
+Symbol: LEFD
    Definitions
-      At line 256 in file main.s
+      At line 65 in file main.s
    Uses
-      At line 241 in file main.s
-Comment: MR used once
-MS 000001A0
-
-Symbol: MS
-   Definitions
-      At line 245 in file main.s
-   Uses
-      At line 240 in file main.s
-Comment: MS used once
+      At line 69 in file main.s
+Comment: LEFD used once
 Main 00000000
 
 Symbol: Main
@@ -795,30 +830,6 @@ Symbol: Main
    Uses
       None
 Comment: Main unused
-RESET1 0000018E
-
-Symbol: RESET1
-   Definitions
-      At line 232 in file main.s
-   Uses
-      At line 225 in file main.s
-Comment: RESET1 used once
-RR 000001E2
-
-Symbol: RR
-   Definitions
-      At line 273 in file main.s
-   Uses
-      At line 261 in file main.s
-Comment: RR used once
-RRF 000001D2
-
-Symbol: RRF
-   Definitions
-      At line 262 in file main.s
-   Uses
-      At line 275 in file main.s
-Comment: RRF used once
 RRP 0000002E
 
 Symbol: RRP
@@ -826,46 +837,16 @@ Symbol: RRP
       At line 47 in file main.s
    Uses
       At line 41 in file main.s
-
-
-
-ARM Macro Assembler    Page 5 Alphabetic symbol ordering
-Relocatable symbols
-
 Comment: RRP used once
-RS 000001D8
-
-Symbol: RS
-   Definitions
-      At line 267 in file main.s
-   Uses
-      At line 250 in file main.s
-Comment: RS used once
-RSF 000001B6
-
-Symbol: RSF
-   Definitions
-      At line 251 in file main.s
-   Uses
-      At line 269 in file main.s
-Comment: RSF used once
-STOP 00000220
+STOP 00000230
 
 Symbol: STOP
    Definitions
-      At line 301 in file main.s
+      At line 325 in file main.s
    Uses
-      At line 293 in file main.s
-      At line 301 in file main.s
+      At line 317 in file main.s
+      At line 325 in file main.s
 
-SUM1 00000082
-
-Symbol: SUM1
-   Definitions
-      At line 89 in file main.s
-   Uses
-      At line 84 in file main.s
-Comment: SUM1 used once
 __main 00000000
 
 Symbol: __main
@@ -874,7 +855,7 @@ Symbol: __main
    Uses
       At line 20 in file main.s
 Comment: __main used once
-34 symbols
+35 symbols
 
 
 
@@ -887,15 +868,15 @@ Symbol: EBBM
    Definitions
       At line 8 in file main.s
    Uses
-      At line 200 in file main.s
-Comment: EBBM used once
+      None
+Comment: EBBM unused
 EDUF 20025A24
 
 Symbol: EDUF
    Definitions
       At line 6 in file main.s
    Uses
-      At line 118 in file main.s
+      At line 113 in file main.s
 Comment: EDUF used once
 EFA 20025624
 
@@ -903,8 +884,8 @@ Symbol: EFA
    Definitions
       At line 5 in file main.s
    Uses
-      At line 94 in file main.s
-      At line 198 in file main.s
+      At line 89 in file main.s
+      At line 188 in file main.s
 
 EFA2 20025E24
 
@@ -912,8 +893,8 @@ Symbol: EFA2
    Definitions
       At line 7 in file main.s
    Uses
-      At line 168 in file main.s
-      At line 199 in file main.s
+      At line 163 in file main.s
+      At line 189 in file main.s
 
 EFD 20025224
 
@@ -929,7 +910,7 @@ Symbol: EIF
    Definitions
       At line 10 in file main.s
    Uses
-      At line 282 in file main.s
+      At line 306 in file main.s
 Comment: EIF used once
 EII 20000000
 
@@ -939,7 +920,7 @@ Symbol: EII
    Uses
       At line 29 in file main.s
       At line 55 in file main.s
-      At line 281 in file main.s
+      At line 305 in file main.s
 
 
 
@@ -953,8 +934,8 @@ Symbol: ERM
    Definitions
       At line 9 in file main.s
    Uses
-      At line 201 in file main.s
-      At line 283 in file main.s
+      At line 190 in file main.s
+      At line 307 in file main.s
 
 8 symbols
-379 symbols in table
+380 symbols in table
