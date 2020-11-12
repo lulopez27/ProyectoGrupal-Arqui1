@@ -134,7 +134,7 @@ ARM Macro Assembler    Page 2
 ARM Macro Assembler    Page 3 
 
 
-   56 00000038 4A7E            LDR              R2,=EFD
+   56 00000038 4A81            LDR              R2,=EFD
    57 0000003A F04F 0300       MOV              R3,#0       ;Contador de la ima
                                                             gen
    58 0000003E F04F 0404       MOV              R4,#4
@@ -171,7 +171,7 @@ ARM Macro Assembler    Page 3
    86 00000084         
    87 00000084         ; Etapa 2: Se obtiene la frecuencia acumulada
    88 00000084         
-   89 00000084 496C    IE2     LDR              R1,=EFA
+   89 00000084 496F    IE2     LDR              R1,=EFA
    90 00000086 F04F 0300       MOV              R3,#0       ;Contador del bloqu
                                                             e de frecuencia de 
                                                             distribución
@@ -225,7 +225,7 @@ ARM Macro Assembler    Page 4
   111 000000B0         ; Etapa 3: Se distribuye uniformemente la frecuencia acu
                        mulada
   112 000000B0         
-  113 000000B0 4B62    IE3     LDR              R3,=EDUF
+  113 000000B0 4B65    IE3     LDR              R3,=EDUF
   114 000000B2 F8D1 43FC       LDR              R4,[R1,#1020] ;El valor de 1020
                                                              se obtiene de 255x
                                                             4. Me permite obten
@@ -306,7 +306,7 @@ ARM Macro Assembler    Page 5
   161 0000010A         ; Mismo algoritmo de la etapa 2, solo que en este caso s
                        e obtiene la frecuencia acumulada del Feq
   162 0000010A         
-  163 0000010A 4C4D    IE4     LDR              R4,=EFA2
+  163 0000010A 4C50    IE4     LDR              R4,=EFA2
   164 0000010C F04F 0500       MOV              R5,#0       ; Contador del bloq
                                                             ue de frecuencia di
                                                             stribuida
@@ -343,191 +343,187 @@ ARM Macro Assembler    Page 6
   185 0000013A         
   186 0000013A         
   187 0000013A         
-  188 0000013A 493F    IE5     LDR              R1,=EFA     ;CuF
-  189 0000013C 4A40            LDR              R2,=EFA2    ;CuFeq
-  190 0000013E 4B41            LDR              R3,=ERM     ;Resultado final de
+  188 0000013A         ; Etapa 5: Se obtiene el array del mapeo
+  189 0000013A         
+  190 0000013A 4942    IE5     LDR              R1,=EFA     ;CuF
+  191 0000013C 4A43            LDR              R2,=EFA2    ;CuFeq
+  192 0000013E 4B44            LDR              R3,=ERM     ;Resultado final de
                                                             l mapeo
-  191 00000140 F04F 0400       MOV              R4,#0       ;Contador del CuF y
+  193 00000140 F04F 0400       MOV              R4,#0       ;Contador del CuF y
                                                              del resultado del 
                                                             mapeo
-  192 00000144 F04F 0500       MOV              R5,#0       ;Límite inferior
-  193 00000148 F04F 06FF       MOV              R6,#255     ;Límite Superior
-  194 0000014C F04F 0700       MOV              R7,#0       ;Centro
-  195 00000150 F04F 0800       MOV              R8,#0       ;Valor buscado
-  196 00000154 F04F 0900       MOV              R9,#0       ;Valor del límite i
+  194 00000144 F04F 0500       MOV              R5,#0       ;Límite inferior
+  195 00000148 F04F 06FF       MOV              R6,#255     ;Límite Superior
+  196 0000014C F04F 0700       MOV              R7,#0       ;Centro
+  197 00000150 F04F 0800       MOV              R8,#0       ;Valor buscado
+  198 00000154 F04F 0900       MOV              R9,#0       ;Valor del límite i
                                                             nferior
-  197 00000158 F04F 0A00       MOV              R10,#0      ;Valor del límite  
+  199 00000158 F04F 0A00       MOV              R10,#0      ;Valor del límite  
                                                             superior
-  198 0000015C F04F 0B00       MOV              R11,#0      ;Nuevo pixel mapead
+  200 0000015C F04F 0B00       MOV              R11,#0      ;Nuevo pixel mapead
                                                             o
-  199 00000160 F04F 0C00       MOV              R12,#0      ;Valor del centro
-  200 00000164         
-  201 00000164         
-  202 00000164         ;CPM: Ciclo principal del mapeo
+  201 00000160 F04F 0C00       MOV              R12,#0      ;Valor del centro
+  202 00000164         
   203 00000164         
-  204 00000164         
-  205 00000164 F5B4 6F80 
+  204 00000164         ;CPM: Ciclo principal del mapeo
+  205 00000164         
+  206 00000164         
+  207 00000164 F5B4 6F80 
                        CPM     CMP              R4,#1024
-  206 00000168 D048            BEQ              IE6
-  207 0000016A F851 8004       LDR              R8,[R1,R4]
-  208 0000016E E008            B                BBM
-  209 00000170 F843 B004 
+  208 00000168 D04F            BEQ              IE6
+  209 0000016A F851 8004       LDR              R8,[R1,R4]
+  210 0000016E E008            B                BBM
+  211 00000170 F843 B004 
                        FBBM    STR              R11,[R3,R4]
-  210 00000174 F104 0404       ADD              R4,R4,#4
-  211 00000178 F04F 0500       MOV              R5,#0
-  212 0000017C F04F 06FF       MOV              R6,#255
-  213 00000180 E7F0            B                CPM
-  214 00000182         
-  215 00000182         ;BBM: Búsqueda binaria modificada
+  212 00000174 F104 0404       ADD              R4,R4,#4
+  213 00000178 F04F 0500       MOV              R5,#0
+  214 0000017C F04F 06FF       MOV              R6,#255
+  215 00000180 E7F0            B                CPM
   216 00000182         
-  217 00000182 EB05 0706 
+  217 00000182         ;BBM: Búsqueda binaria modificada
+  218 00000182         
+  219 00000182 EB05 0706 
                        BBM     ADD              R7,R5,R6
-  218 00000186 EA4F 0767       ASR              R7,R7,#1
-  219 0000018A F04F 0B04       MOV              R11,#4
-  220 0000018E FB07 FB0B       MUL              R11,R7,R11
-  221 00000192 F852 C00B       LDR              R12,[R2,R11]
-  222 00000196 45C4            CMP              R12,R8
-  223 00000198 D004            BEQ              AR1
+  220 00000186 EA4F 0767       ASR              R7,R7,#1
+  221 0000018A F04F 0B04       MOV              R11,#4
+  222 0000018E FB07 FB0B       MUL              R11,R7,R11
+  223 00000192 F852 C00B       LDR              R12,[R2,R11]
 
 
 
 ARM Macro Assembler    Page 7 
 
 
-  224 0000019A 42AF            CMP              R7,R5
-  225 0000019C D008            BEQ              ESR1
-  226 0000019E 45C4            CMP              R12,R8
-  227 000001A0 DC02            BGT              ALS
-  228 000001A2 E003            B                ALI
-  229 000001A4         
-  230 000001A4         ;AR1: Asignar resultado 1
+  224 00000196 45C4            CMP              R12,R8
+  225 00000198 D004            BEQ              AR1
+  226 0000019A 42AF            CMP              R7,R5
+  227 0000019C D008            BEQ              EVA1
+  228 0000019E 45C4            CMP              R12,R8
+  229 000001A0 DC02            BGT              ALS
+  230 000001A2 E003            B                ALI
   231 000001A4         
-  232 000001A4 46BB    AR1     MOV              R11,R7
-  233 000001A6 E7E3            B                FBBM
-  234 000001A8         
-  235 000001A8         ;ALS: Asignar límite superior
+  232 000001A4         ;AR1: Asignar resultado 1
+  233 000001A4         
+  234 000001A4 46BB    AR1     MOV              R11,R7
+  235 000001A6 E7E3            B                FBBM
   236 000001A8         
-  237 000001A8 463E    ALS     MOV              R6,R7
-  238 000001AA E7EA            B                BBM
-  239 000001AC         
-  240 000001AC         ;ALI: Asignar límite inferior
+  237 000001A8         ;ALS: Asignar límite superior
+  238 000001A8         
+  239 000001A8 463E    ALS     MOV              R6,R7
+  240 000001AA E7EA            B                BBM
   241 000001AC         
-  242 000001AC 463D    ALI     MOV              R5,R7
-  243 000001AE E7E8            B                BBM
-  244 000001B0         
-  245 000001B0         ;ESR1:Etapa de sumas y restas parte 1
+  242 000001AC         ;ALI: Asignar límite inferior
+  243 000001AC         
+  244 000001AC 463D    ALI     MOV              R5,R7
+  245 000001AE E7E8            B                BBM
   246 000001B0         
-  247 000001B0 F04F 0B04 
-                       ESR1    MOV              R11,#4
-  248 000001B4 FB05 FB0B       MUL              R11,R5,R11
-  249 000001B8 F852 900B       LDR              R9,[R2,R11]
-  250 000001BC F04F 0B04       MOV              R11,#4
-  251 000001C0 FB06 FB0B       MUL              R11,R6,R11
-  252 000001C4 F852 A00B       LDR              R10,[R2,R11]
-  253 000001C8         
-  254 000001C8         ;ESR2:Etapa de sumas y restas parte 2
+  247 000001B0         ;EVA1:Etapa del valor absoluto parte 1
+  248 000001B0         
+  249 000001B0 F04F 0B04 
+                       EVA1    MOV              R11,#4
+  250 000001B4 FB05 FB0B       MUL              R11,R5,R11
+  251 000001B8 F852 900B       LDR              R9,[R2,R11]
+  252 000001BC F04F 0B04       MOV              R11,#4
+  253 000001C0 FB06 FB0B       MUL              R11,R6,R11
+  254 000001C4 F852 A00B       LDR              R10,[R2,R11]
   255 000001C8         
-  256 000001C8 45C1    ESR2    CMP              R9,R8
-  257 000001CA D007            BEQ              AR2
-  258 000001CC 45C1            CMP              R9,R8
-  259 000001CE DC09            BGT              ER1I
-  260 000001D0 E00B            B                ES1I
-  261 000001D2 45C2    FESR2   CMP              R10,R8
-  262 000001D4 D004            BEQ              AR3
-  263 000001D6 45C2            CMP              R10,R8
-  264 000001D8 DC0A            BGT              ER1S
-  265 000001DA E00C            B                ES1S
-  266 000001DC         
-  267 000001DC         ;AR2: Asignar resultado 2
-  268 000001DC         
-  269 000001DC 46AB    AR2     MOV              R11,R5
-  270 000001DE E7C7            B                FBBM
-  271 000001E0         
-  272 000001E0         ;AR3: Asignar resultado 3
-  273 000001E0         
-  274 000001E0 46B3    AR3     MOV              R11,R6
-  275 000001E2 E7C5            B                FBBM
-  276 000001E4         
-  277 000001E4         ;ER1I: Restar 1 al dato del límite inferior
-  278 000001E4         
-  279 000001E4 F1A9 0901 
-                       ER1I    SUB              R9,R9,#1
-  280 000001E8 E7F3            B                FESR2
+  256 000001C8         ;EVA2:Etapa del valor absoluto parte 2
+  257 000001C8         
+  258 000001C8 45C1    EVA2    CMP              R9,R8
+  259 000001CA D010            BEQ              AR2
+  260 000001CC 45C2            CMP              R10,R8
+  261 000001CE D010            BEQ              AR3
+  262 000001D0 EBA8 0909       SUB              R9,R8,R9
+  263 000001D4 EBA8 0A0A       SUB              R10,R8,R10
+  264 000001D8 F1B9 0F00       CMP              R9,#0
+  265 000001DC DC00            BGT              CEVA2
+  266 000001DE E00A            B                ABS1
+  267 000001E0 F1BA 0F00 
+                       CEVA2   CMP              R10,#0
+  268 000001E4 DC00            BGT              FEVA2
+  269 000001E6 E00B            B                ABS2
+  270 000001E8 45D1    FEVA2   CMP              R9,R10
+  271 000001EA DC02            BGT              AR3
+  272 000001EC E7FF            B                AR2
+  273 000001EE         
+  274 000001EE         ;AR2: Asignar resultado 2
+  275 000001EE         
+  276 000001EE 46AB    AR2     MOV              R11,R5
+  277 000001F0 E7BE            B                FBBM
+  278 000001F2         
+  279 000001F2         ;AR3: Asignar resultado 3
+  280 000001F2         
 
 
 
 ARM Macro Assembler    Page 8 
 
 
-  281 000001EA         
-  282 000001EA         ;ES1I: Sumar 1 al dato del límite inferior
-  283 000001EA         
-  284 000001EA F109 0901 
-                       ES1I    ADD              R9,R9,#1
-  285 000001EE E7F0            B                FESR2
-  286 000001F0         
-  287 000001F0         
-  288 000001F0         ;ER1S: Restar 1 al dato del límite superior
-  289 000001F0         
-  290 000001F0 F1AA 0A01 
-                       ER1S    SUB              R10,R10,#1
-  291 000001F4 E7E8            B                ESR2
-  292 000001F6         
-  293 000001F6         ;ES1S: Sumar 1 al dato del límite superior
-  294 000001F6         
-  295 000001F6 F10A 0A01 
-                       ES1S    ADD              R10,R10,#1
-  296 000001FA E7E5            B                ESR2
-  297 000001FC         
-  298 000001FC         
-  299 000001FC         
-  300 000001FC         
-  301 000001FC         ; Etapa 6: Se mapea la imagen original en su forma ecual
+  281 000001F2 46B3    AR3     MOV              R11,R6
+  282 000001F4 E7BC            B                FBBM
+  283 000001F6         
+  284 000001F6         ;ABS1: ABS parte 1
+  285 000001F6         
+  286 000001F6 F04F 0B00 
+                       ABS1    MOV              R11,#0
+  287 000001FA EBAB 0909       SUB              R9,R11,R9
+  288 000001FE E7EF            B                CEVA2
+  289 00000200         
+  290 00000200         ;ABS2: ABS parte 2
+  291 00000200         
+  292 00000200 F04F 0B00 
+                       ABS2    MOV              R11,#0
+  293 00000204 EBAB 0A0A       SUB              R10,R11,R10
+  294 00000208 E7EE            B                FEVA2
+  295 0000020A         
+  296 0000020A         
+  297 0000020A         
+  298 0000020A         ; Etapa 6: Se mapea la imagen original en su forma ecual
                        izada
-  302 000001FC         ; Básicamente para cada valor de la imagen original, se 
+  299 0000020A         ; Básicamente para cada valor de la imagen original, se 
                        multiplica por 4, para obtener la posición del array del
                         mapeo
-  303 000001FC         ; El valor obtenido del array del mapeo, será el nuevo p
+  300 0000020A         ; El valor obtenido del array del mapeo, será el nuevo p
                        ixel
-  304 000001FC         
-  305 000001FC F04F 5100 
+  301 0000020A         
+  302 0000020A F04F 5100 
                        IE6     LDR              R1,=EII
-  306 00000200 4A11            LDR              R2,=EIF
-  307 00000202 4B10            LDR              R3,=ERM
-  308 00000204 F04F 0400       MOV              R4,#0       ;Contador de la ima
+  303 0000020E 4A11            LDR              R2,=EIF
+  304 00000210 4B0F            LDR              R3,=ERM
+  305 00000212 F04F 0400       MOV              R4,#0       ;Contador de la ima
                                                             gen
-  309 00000208 F04F 0504       MOV              R5,#4
-  310 0000020C         
-  311 0000020C         ; CE: Ciclo de la ecualización
-  312 0000020C         
-  313 0000020C F44F 7A61 
+  306 00000216 F04F 0504       MOV              R5,#4
+  307 0000021A         
+  308 0000021A         ; CE: Ciclo de la ecualización
+  309 0000021A         
+  310 0000021A F44F 7A61 
                        CE      MOV              R10,#900
-  314 00000210 F04F 0BA9       MOV              R11,#169
-  315 00000214 FB0A FC0B       MUL              R12,R10,R11
-  316 00000218 4564            CMP              R4,R12
-  317 0000021A D009            BEQ              STOP
-  318 0000021C 5D0E            LDRB             R6,[R1,R4]
-  319 0000021E FB06 F705       MUL              R7,R6,R5
-  320 00000222 F853 8007       LDR              R8,[R3,R7]
-  321 00000226 F842 8004       STR              R8,[R2,R4]
-  322 0000022A F104 0401       ADD              R4,R4,#1
-  323 0000022E E7ED            B                CE
-  324 00000230         
-  325 00000230 E7FE    STOP    B                STOP
-  326 00000232         
-  327 00000232                 END
-              00 00 20025224 
+  311 0000021E F04F 0BA9       MOV              R11,#169
+  312 00000222 FB0A FC0B       MUL              R12,R10,R11
+  313 00000226 4564            CMP              R4,R12
+  314 00000228 D009            BEQ              STOP
+  315 0000022A 5D0E            LDRB             R6,[R1,R4]
+  316 0000022C FB06 F705       MUL              R7,R6,R5
+  317 00000230 F853 8007       LDR              R8,[R3,R7]
+  318 00000234 F842 8004       STR              R8,[R2,R4]
+  319 00000238 F104 0401       ADD              R4,R4,#1
+  320 0000023C E7ED            B                CE
+  321 0000023E         
+  322 0000023E E7FE    STOP    B                STOP
+  323 00000240         
+  324 00000240                 END
+              20025224 
               20025624 
+              20025A24 
+              20025E24 
+              20026624 
+              20026A24 
 
 
 
 ARM Macro Assembler    Page 9 
 
 
-              20025A24 
-              20025E24 
-              20026624 
-              20026A24 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=.\objects\main.d -o.\objects\main.o -I.\RTE\_Cortex_M3 -IC:\Users\
 User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include -IC:\Users\User
@@ -541,55 +537,79 @@ ngs\main.lst main.s
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Relocatable symbols
 
+ABS1 000001F6
+
+Symbol: ABS1
+   Definitions
+      At line 286 in file main.s
+   Uses
+      At line 266 in file main.s
+Comment: ABS1 used once
+ABS2 00000200
+
+Symbol: ABS2
+   Definitions
+      At line 292 in file main.s
+   Uses
+      At line 269 in file main.s
+Comment: ABS2 used once
 ALI 000001AC
 
 Symbol: ALI
    Definitions
-      At line 242 in file main.s
+      At line 244 in file main.s
    Uses
-      At line 228 in file main.s
+      At line 230 in file main.s
 Comment: ALI used once
 ALS 000001A8
 
 Symbol: ALS
    Definitions
-      At line 237 in file main.s
+      At line 239 in file main.s
    Uses
-      At line 227 in file main.s
+      At line 229 in file main.s
 Comment: ALS used once
 AR1 000001A4
 
 Symbol: AR1
    Definitions
-      At line 232 in file main.s
+      At line 234 in file main.s
    Uses
-      At line 223 in file main.s
+      At line 225 in file main.s
 Comment: AR1 used once
-AR2 000001DC
+AR2 000001EE
 
 Symbol: AR2
    Definitions
-      At line 269 in file main.s
+      At line 276 in file main.s
    Uses
-      At line 257 in file main.s
-Comment: AR2 used once
-AR3 000001E0
+      At line 259 in file main.s
+      At line 272 in file main.s
+
+AR3 000001F2
 
 Symbol: AR3
    Definitions
-      At line 274 in file main.s
+      At line 281 in file main.s
    Uses
-      At line 262 in file main.s
-Comment: AR3 used once
+      At line 261 in file main.s
+      At line 271 in file main.s
+
 BBM 00000182
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
 
 Symbol: BBM
    Definitions
-      At line 217 in file main.s
+      At line 219 in file main.s
    Uses
-      At line 208 in file main.s
-      At line 238 in file main.s
-      At line 243 in file main.s
+      At line 210 in file main.s
+      At line 240 in file main.s
+      At line 245 in file main.s
 
 CAI 00000018
 
@@ -600,12 +620,6 @@ Symbol: CAI
       At line 45 in file main.s
 Comment: CAI used once
 CCAI 00000022
-
-
-
-ARM Macro Assembler    Page 2 Alphabetic symbol ordering
-Relocatable symbols
-
 
 Symbol: CCAI
    Definitions
@@ -629,15 +643,30 @@ Symbol: CDSF2
    Uses
       At line 180 in file main.s
 Comment: CDSF2 used once
-CE 0000020C
+CE 0000021A
 
 Symbol: CE
    Definitions
-      At line 313 in file main.s
+      At line 310 in file main.s
    Uses
-      At line 323 in file main.s
+      At line 320 in file main.s
 Comment: CE used once
+CEVA2 000001E0
+
+Symbol: CEVA2
+   Definitions
+      At line 267 in file main.s
+   Uses
+      At line 265 in file main.s
+      At line 288 in file main.s
+
 CFD 00000060
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+Relocatable symbols
+
 
 Symbol: CFD
    Definitions
@@ -665,12 +694,6 @@ Symbol: CMD0
 Comment: CMD0 used once
 CMD02 000000FA
 
-
-
-
-ARM Macro Assembler    Page 3 Alphabetic symbol ordering
-Relocatable symbols
-
 Symbol: CMD02
    Definitions
       At line 154 in file main.s
@@ -681,83 +704,50 @@ CPM 00000164
 
 Symbol: CPM
    Definitions
-      At line 205 in file main.s
+      At line 207 in file main.s
    Uses
-      At line 213 in file main.s
+      At line 215 in file main.s
 Comment: CPM used once
-ER1I 000001E4
+EVA1 000001B0
 
-Symbol: ER1I
+Symbol: EVA1
    Definitions
-      At line 279 in file main.s
+      At line 249 in file main.s
    Uses
-      At line 259 in file main.s
-Comment: ER1I used once
-ER1S 000001F0
+      At line 227 in file main.s
+Comment: EVA1 used once
+EVA2 000001C8
 
-Symbol: ER1S
+Symbol: EVA2
    Definitions
-      At line 290 in file main.s
+      At line 258 in file main.s
    Uses
-      At line 264 in file main.s
-Comment: ER1S used once
-ES1I 000001EA
+      None
+Comment: EVA2 unused
+FBBM 00000170
 
-Symbol: ES1I
-   Definitions
-      At line 284 in file main.s
-   Uses
-      At line 260 in file main.s
-Comment: ES1I used once
-ES1S 000001F6
-
-Symbol: ES1S
-   Definitions
-      At line 295 in file main.s
-   Uses
-      At line 265 in file main.s
-Comment: ES1S used once
-ESR1 000001B0
-
-Symbol: ESR1
-   Definitions
-      At line 247 in file main.s
-   Uses
-      At line 225 in file main.s
-Comment: ESR1 used once
-ESR2 000001C8
-
-Symbol: ESR2
-   Definitions
-      At line 256 in file main.s
 
 
 
 ARM Macro Assembler    Page 4 Alphabetic symbol ordering
 Relocatable symbols
 
-   Uses
-      At line 291 in file main.s
-      At line 296 in file main.s
-
-FBBM 00000170
-
 Symbol: FBBM
    Definitions
-      At line 209 in file main.s
+      At line 211 in file main.s
    Uses
-      At line 233 in file main.s
-      At line 270 in file main.s
-      At line 275 in file main.s
+      At line 235 in file main.s
+      At line 277 in file main.s
+      At line 282 in file main.s
 
-FESR2 000001D2
+FEVA2 000001E8
 
-Symbol: FESR2
+Symbol: FEVA2
    Definitions
-      At line 261 in file main.s
+      At line 270 in file main.s
    Uses
-      At line 280 in file main.s
-      At line 285 in file main.s
+      At line 268 in file main.s
+      At line 294 in file main.s
 
 IE1 00000034
 
@@ -795,24 +785,24 @@ Symbol: IE4
 IE5 0000013A
 
 Symbol: IE5
+   Definitions
+      At line 190 in file main.s
+   Uses
+      At line 173 in file main.s
+Comment: IE5 used once
+IE6 0000020A
 
 
 
 ARM Macro Assembler    Page 5 Alphabetic symbol ordering
 Relocatable symbols
 
-   Definitions
-      At line 188 in file main.s
-   Uses
-      At line 173 in file main.s
-Comment: IE5 used once
-IE6 000001FC
 
 Symbol: IE6
    Definitions
-      At line 305 in file main.s
+      At line 302 in file main.s
    Uses
-      At line 206 in file main.s
+      At line 208 in file main.s
 Comment: IE6 used once
 LEFD 00000052
 
@@ -838,14 +828,14 @@ Symbol: RRP
    Uses
       At line 41 in file main.s
 Comment: RRP used once
-STOP 00000230
+STOP 0000023E
 
 Symbol: STOP
    Definitions
-      At line 325 in file main.s
+      At line 322 in file main.s
    Uses
-      At line 317 in file main.s
-      At line 325 in file main.s
+      At line 314 in file main.s
+      At line 322 in file main.s
 
 __main 00000000
 
@@ -855,7 +845,7 @@ Symbol: __main
    Uses
       At line 20 in file main.s
 Comment: __main used once
-35 symbols
+34 symbols
 
 
 
@@ -885,7 +875,7 @@ Symbol: EFA
       At line 5 in file main.s
    Uses
       At line 89 in file main.s
-      At line 188 in file main.s
+      At line 190 in file main.s
 
 EFA2 20025E24
 
@@ -894,7 +884,7 @@ Symbol: EFA2
       At line 7 in file main.s
    Uses
       At line 163 in file main.s
-      At line 189 in file main.s
+      At line 191 in file main.s
 
 EFD 20025224
 
@@ -910,7 +900,7 @@ Symbol: EIF
    Definitions
       At line 10 in file main.s
    Uses
-      At line 306 in file main.s
+      At line 303 in file main.s
 Comment: EIF used once
 EII 20000000
 
@@ -920,7 +910,7 @@ Symbol: EII
    Uses
       At line 29 in file main.s
       At line 55 in file main.s
-      At line 305 in file main.s
+      At line 302 in file main.s
 
 
 
@@ -934,8 +924,8 @@ Symbol: ERM
    Definitions
       At line 9 in file main.s
    Uses
-      At line 190 in file main.s
-      At line 307 in file main.s
+      At line 192 in file main.s
+      At line 304 in file main.s
 
 8 symbols
-380 symbols in table
+379 symbols in table

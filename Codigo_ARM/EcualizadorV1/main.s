@@ -271,7 +271,7 @@ BBM    ADD      R7,R5,R6
 	   CMP      R12,R8
 	   BEQ      AR1
 	   CMP      R7,R5
-	   BEQ      ESR1
+	   BEQ      EVA1
 	   CMP      R12,R8
 	   BGT      ALS
 	   B        ALI
@@ -291,27 +291,32 @@ ALS    MOV      R6,R7
 ALI    MOV      R5,R7
        B        BBM
 	   
-;ESR1:Etapa de sumas y restas parte 1
+;EVA1:Etapa del valor absoluto parte 1
 
-ESR1   MOV      R11,#4
+EVA1   MOV      R11,#4
        MUL      R11,R5,R11
        LDR      R9,[R2,R11]
        MOV      R11,#4
        MUL      R11,R6,R11
        LDR      R10,[R2,R11]
 
-;ESR2:Etapa de sumas y restas parte 2
+;EVA2:Etapa del valor absoluto parte 2
 
-ESR2   CMP      R9,R8
+EVA2   CMP      R9,R8
        BEQ      AR2
-	   CMP      R9,R8
-	   BGT      ER1I
-	   B        ES1I
-FESR2  CMP      R10,R8
-       BEQ      AR3
 	   CMP      R10,R8
-	   BGT      ER1S
-	   B        ES1S
+	   BEQ      AR3
+	   SUB      R9,R8,R9
+	   SUB      R10,R8,R10
+	   CMP      R9,#0
+	   BGT      CEVA2
+	   B        ABS1
+CEVA2  CMP      R10,#0
+       BGT      FEVA2
+	   B        ABS2
+FEVA2  CMP      R9,R10
+       BGT      AR3
+	   B        AR2
 	   
 ;AR2: Asignar resultado 2
 
@@ -323,30 +328,17 @@ AR2    MOV      R11,R5
 AR3    MOV      R11,R6
        B        FBBM	   
 	   
-;ER1I: Restar 1 al dato del límite inferior
+;ABS1: ABS parte 1
 
-ER1I   SUB      R9,R9,#1
-       B        FESR2
+ABS1   MOV      R11,#0
+       SUB      R9,R11,R9
+	   B        CEVA2
 	   
-;ES1I: Sumar 1 al dato del límite inferior
+;ABS2: ABS parte 2
 
-ES1I   ADD      R9,R9,#1
-       B        FESR2
-
-
-;ER1S: Restar 1 al dato del límite superior
-
-ER1S   SUB      R10,R10,#1
-       B        ESR2
-	   
-;ES1S: Sumar 1 al dato del límite superior
-
-ES1S   ADD      R10,R10,#1
-       B        ESR2
-	  
-	  
-	  
-	  
+ABS2   MOV      R11,#0
+       SUB      R10,R11,R10
+	   B        FEVA2
 	   
 ; Etapa 6: Se mapea la imagen original en su forma ecualizada
 
