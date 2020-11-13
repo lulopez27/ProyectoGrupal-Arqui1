@@ -2,7 +2,8 @@
 module processor_tb();
 	logic clk, rst, GPIOEn;
 	logic [7:0] GPIO;
-	processor proce(clk,rst, GPIO, GPIOEn);
+	logic [31:0] GPIOaddr;
+	processor proce(clk,rst,GPIOaddr, GPIO, GPIOEn);
 	initial begin
 		clk = 1'b1;
 		rst = 1'b0;
@@ -15,15 +16,20 @@ module processor_tb();
 		#1
 		clk = ~clk;
 	end
+	
 	int f, i;
 	initial begin
 		f = $fopen("output.txt", "w");
+		i = 0;
 		#5;
-		for (i = 0; i<152100; i++) begin
-			@(negedge GPIOEn);
-			$fwrite(f, "%h\n", GPIO);
+		while (i<25) begin
+			@(negedge clk);
+				if (GPIOaddr >= 'd152100 && GPIOaddr <= 'd304199 && GPIOEn == 'd1) begin
+					$fwrite(f, "%h\n", GPIO);
+					i = i + 1;
+					end
 		end
-		
+	
 		$fclose(f);
 		$finish;
 			
