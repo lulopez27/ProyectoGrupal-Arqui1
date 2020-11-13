@@ -47,13 +47,15 @@ module processor(input clk, rst, output logic[31:0] GPIOaddr, output logic [7:0]
 	Mux2 #(4)MuxR2(R2,4'h0,ExtndSel[1],R2_1);
 	logic [3:0]R3_1;
 	Mux2 #(4)MuxR3(R3,4'h0,immF,R3_1);
+	logic [3:0]DestR_1;
+	Mux2 #(4)MuxRDest(DestR,4'h0,ExtndSel[1]&ExtndSel[0],DestR_1);
 	
 	logic Wmem1,Rmem1,Wreg1,Wpc1,CondEn1,immF1;
 	logic [1:0]JmpF1,ExtndSel1;
 	logic [2:0] ALUIns1;
 	logic [31:0] R2res3,R3res3;
 	logic [3:0] R2_2,R3_2,DestR_2;
-	PipelineMem pipeMem(clk,rst,Wmem,Rmem,Wreg,Wpc,CondEn,immF,JmpF,ALUIns,R2res,R3res,R2_1,R3_1,DestR,ExtndSel,
+	PipelineMem pipeMem(clk,rst,Wmem,Rmem,Wreg,Wpc,CondEn,immF,JmpF,ALUIns,R2res,R3res,R2_1,R3_1,DestR_1,ExtndSel,
 					Wmem1,Rmem1,Wreg1,Wpc1,CondEn1,immF1,JmpF1,ALUIns1,R2res3,R3res3,R2_2,R3_2,DestR_2,ExtndSel1);
 	
 	logic [31:0] R2res4,R3res4;
