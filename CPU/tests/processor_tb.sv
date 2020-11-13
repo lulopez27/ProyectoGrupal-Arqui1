@@ -22,7 +22,7 @@ module processor_tb();
 		f = $fopen("output.txt", "w");
 		i = 0;
 		#5;
-		while (i<25) begin
+		while (i<152100) begin
 			@(negedge clk);
 				if (GPIOaddr >= 'd152100 && GPIOaddr <= 'd304199 && GPIOEn == 'd1) begin
 					$fwrite(f, "%h\n", GPIO);

@@ -103,7 +103,11 @@ module DataMemory (input logic clk, we,
 		end
 		
 //					if (addr >= 'd0 && addr <= 'd152099)begin
-	assign GPIOEn = ~(addr[17]&addr[14]&addr[12]&(addr[11]|addr[10]|addr[8]|addr[7]|addr[6]|addr[4]|addr[3]|addr[2]));
+	//assign GPIOEn = ~(addr[17]&addr[14]&addr[12]&(addr[11]|addr[10]|addr[8]|addr[7]|addr[6]|addr[4]|addr[3]|addr[2]));
+	
+		assign GPIOaddr = addr + 'd152100;
+		assign GPIO = wd[7:0];
+		assign GPIOEn = we;
 				
 		
 endmodule 
