@@ -102,18 +102,7 @@ module DataMemory (input logic clk, we,
 				end
 		end
 		
-		always_ff @(posedge clk) begin
-			if (we) 
-					if (addr >= 'd0 && addr <= 'd152099)begin
-						GPIO = wd[7:0];
-						end
-		end
-				
-		always_latch begin
-			if (addr >= 'd0 && addr <= 'd152099)begin
-					GPIOEn = we;
-			end
-		end
+	assign GPIOEn = ~(addr[17]&addr[14]&addr[12]&(addr[11]|addr[10]|addr[8]|addr[7]|addr[6]|addr[4]|addr[3]|addr[2]));
 				
 		
 endmodule 

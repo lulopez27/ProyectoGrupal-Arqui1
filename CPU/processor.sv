@@ -43,16 +43,17 @@ module processor(input clk, rst, output logic [7:0] GPIO,output logic GPIOEn);
 	Mux2 #(32)Extend_Mux(R3r,ExtendRes,immF,R3res);
 	logic [31:0]R2res;
 	Mux2 #(32)PCReg_Mux(R2r,curr_pc1,Wpc,R2res);
-	
-	//logic [31:0]R2res2,R3res2;
-	//FowardUnitReg FwrdUnitReg(R2res,R3res,R2,R3,DestR_2,ALURes,DestR_3,Res,DestR_4,Res1,R2res2,R3res2);
+	logic [3:0]R2_1;
+	Mux2 #(4)MuxR2(R2,4'h0,ExtndSel[1],R2_1);
+	logic [3:0]R3_1;
+	Mux2 #(4)MuxR3(R3,4'h0,immF,R3_1);
 	
 	logic Wmem1,Rmem1,Wreg1,Wpc1,CondEn1,immF1;
 	logic [1:0]JmpF1,ExtndSel1;
 	logic [2:0] ALUIns1;
 	logic [31:0] R2res3,R3res3;
 	logic [3:0] R2_2,R3_2,DestR_2;
-	PipelineMem pipeMem(clk,rst,Wmem,Rmem,Wreg,Wpc,CondEn,immF,JmpF,ALUIns,R2res,R3res,R2,R3,DestR,ExtndSel,
+	PipelineMem pipeMem(clk,rst,Wmem,Rmem,Wreg,Wpc,CondEn,immF,JmpF,ALUIns,R2res,R3res,R2_1,R3_1,DestR,ExtndSel,
 					Wmem1,Rmem1,Wreg1,Wpc1,CondEn1,immF1,JmpF1,ALUIns1,R2res3,R3res3,R2_2,R3_2,DestR_2,ExtndSel1);
 	
 	logic [31:0] R2res4,R3res4;
