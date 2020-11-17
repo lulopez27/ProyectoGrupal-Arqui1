@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3543efb-d36e-441a-abd1-41a73795c460" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="c3543efb-d36e-441a-abd1-41a73795c460" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../CPU/Memorias/DataMemory.sv" beforeDir="false" afterPath="$PROJECT_DIR$/../CPU/Memorias/DataMemory.sv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CPU/Memorias/MemoryController.sv" beforeDir="false" afterPath="$PROJECT_DIR$/../CPU/Memorias/MemoryController.sv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CPU/ProyectoGrupal.qws" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CPU/db/ProyectoGrupal.db_info" beforeDir="false" afterPath="$PROJECT_DIR$/../CPU/db/ProyectoGrupal.db_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CPU/processor.sv" beforeDir="false" afterPath="$PROJECT_DIR$/../CPU/processor.sv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CPU/tests/processor_tb.sv" beforeDir="false" afterPath="$PROJECT_DIR$/../CPU/tests/processor_tb.sv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/image9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/photo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/photo.jpg" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,22 +50,6 @@
     <expand />
     <select />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ImageConverter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -51,55 +60,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/ImageConverter.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1088" />
-  </component>
+  <component name="JupyterTrust" id="f38e88cc-b653-4544-9d43-8e340c1ec76f" />
+  <component name="ProjectId" id="1kLqQER9y3iGne4px2bAJktruJ8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ImageConverter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ImageConverter" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FantasmCompiler" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="ImageConverter" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -109,9 +81,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Anaconda3\envs\KeystoneTest\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -130,6 +102,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -141,51 +114,36 @@
       <option name="presentableId" value="Default" />
       <updated>1604976412750</updated>
       <workItem from="1604976428936" duration="9888000" />
+      <workItem from="1605490203146" duration="136000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9888000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.020134227" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3297587" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3230563" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" weight="0.4854369" />
-      <window_info anchor="right" id="Database" weight="0.3295302" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ImageConverter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605490260214">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1605490260214" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1605490340726">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1605490340726" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1605490340726">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1605490340726" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1605490340726">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1605490340726" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1605490340726">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1605490340726" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ImageConverter$ImageConverter.coverage" NAME="ImageConverter Coverage Results" MODIFIED="1605490277171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

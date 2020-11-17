@@ -1,6 +1,6 @@
 module DataMemory (input logic clk, we,
 						 input logic [31:0] addr, wd,
-						 output logic [31:0] rd, GPIOaddr, output logic [7:0] GPIO,output logic GPIOEn);
+						 output logic [31:0] rd, output logic [7:0] GPIO,output logic GPIOEn);
 				
 	logic [7:0] RAM1[9999:0];
 	logic [7:0] RAM2[9999:0];
@@ -102,12 +102,19 @@ module DataMemory (input logic clk, we,
 				end
 		end
 		
-//					if (addr >= 'd0 && addr <= 'd152099)begin
-	//assign GPIOEn = ~(addr[17]&addr[14]&addr[12]&(addr[11]|addr[10]|addr[8]|addr[7]|addr[6]|addr[4]|addr[3]|addr[2]));
-	
-		assign GPIOaddr = addr + 'd152100;
-		assign GPIO = wd[7:0];
-		assign GPIOEn = we;
-				
+		always_comb
+			begin
+				if (addr >= 'd0 && addr <= 'd152099 && we == 1'b1)
+					begin
+						GPIO = wd[7:0];
+						GPIOEn = we;
+					end
+				else
+					begin
+						GPIO = 8'b0;
+						GPIOEn = 1'b0;
+					end
+			end
+		
 		
 endmodule 

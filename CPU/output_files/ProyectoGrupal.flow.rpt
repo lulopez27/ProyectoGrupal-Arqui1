@@ -1,5 +1,5 @@
 Flow report for ProyectoGrupal
-Thu Nov 12 19:42:40 2020
+Tue Nov 17 08:47:10 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Thu Nov 12 19:42:40 2020       ;
+; Flow Status                 ; Successful - Tue Nov 17 08:47:10 2020       ;
 ; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name               ; ProyectoGrupal                              ;
 ; Top-level Entity Name       ; processor_tb                                ;
@@ -63,30 +63,34 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/12/2020 19:42:21 ;
+; Start date & time ; 11/17/2020 08:46:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ProyectoGrupal      ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                              ;
-+-------------------------------------+----------------------------------------+----------------+--------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name  ; Section Id     ;
-+-------------------------------------+----------------------------------------+----------------+--------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 134660530029841.160523174113760        ; --             ; --           ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --             ; --           ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>         ; --           ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --           ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --           ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; processor_tb ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; processor_tb ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; processor_tb ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --           ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --           ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --           ; --             ;
-; TOP_LEVEL_ENTITY                    ; processor_tb                           ; ProyectoGrupal ; --           ; --             ;
-+-------------------------------------+----------------------------------------+----------------+--------------+----------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                       ;
++----------------------------------------------+----------------------------------------+----------------+--------------+----------------+
+; Assignment Name                              ; Value                                  ; Default Value  ; Entity Name  ; Section Id     ;
++----------------------------------------------+----------------------------------------+----------------+--------------+----------------+
+; ADVANCED_PHYSICAL_OPTIMIZATION               ; Off                                    ; On             ; --           ; --             ;
+; ALM_REGISTER_PACKING_EFFORT                  ; Low                                    ; Medium         ; --           ; --             ;
+; COMPILER_SIGNATURE_ID                        ; 134660530029841.160562440101224        ; --             ; --           ; --             ;
+; EDA_OUTPUT_DATA_FORMAT                       ; Systemverilog Hdl                      ; --             ; --           ; eda_simulation ;
+; EDA_SIMULATION_TOOL                          ; ModelSim-Altera (SystemVerilog)        ; <None>         ; --           ; --             ;
+; FITTER_EFFORT                                ; Fast Fit                               ; Auto Fit       ; --           ; --             ;
+; MAX_CORE_JUNCTION_TEMP                       ; 85                                     ; --             ; --           ; --             ;
+; MAX_NUMBER_OF_REGISTERS_FROM_UNINFERRED_RAMS ; -1                                     ; -1 (Unlimited) ; --           ; --             ;
+; MIN_CORE_JUNCTION_TEMP                       ; 0                                      ; --             ; --           ; --             ;
+; PARTITION_COLOR                              ; -- (Not supported for targeted family) ; --             ; processor_tb ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL          ; -- (Not supported for targeted family) ; --             ; processor_tb ; Top            ;
+; PARTITION_NETLIST_TYPE                       ; -- (Not supported for targeted family) ; --             ; processor_tb ; Top            ;
+; POWER_BOARD_THERMAL_MODEL                    ; None (CONSERVATIVE)                    ; --             ; --           ; --             ;
+; POWER_PRESET_COOLING_SOLUTION                ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --           ; --             ;
+; PROJECT_OUTPUT_DIRECTORY                     ; output_files                           ; --             ; --           ; --             ;
+; TOP_LEVEL_ENTITY                             ; processor_tb                           ; ProyectoGrupal ; --           ; --             ;
++----------------------------------------------+----------------------------------------+----------------+--------------+----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -94,8 +98,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:19     ; 1.0                     ; 5002 MB             ; 00:00:36                           ;
-; Total                  ; 00:00:19     ; --                      ; --                  ; 00:00:36                           ;
+; Analysis & Elaboration ; 00:00:31     ; 1.0                     ; 5085 MB             ; 00:00:37                           ;
+; Total                  ; 00:00:31     ; --                      ; --                  ; 00:00:37                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
