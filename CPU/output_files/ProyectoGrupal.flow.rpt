@@ -1,5 +1,5 @@
 Flow report for ProyectoGrupal
-Mon Nov 16 20:08:36 2020
+Tue Nov 17 08:43:44 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Mon Nov 16 20:08:36 2020       ;
+; Flow Status                 ; Successful - Tue Nov 17 08:43:44 2020       ;
 ; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name               ; ProyectoGrupal                              ;
 ; Top-level Entity Name       ; conUnit_tb                                  ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/16/2020 20:08:25 ;
+; Start date & time ; 11/17/2020 08:43:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ProyectoGrupal      ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+----------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+----------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 93180993733489.160557890513748         ; --             ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 93180993733489.160562421000212         ; --             ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --             ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>         ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --          ; --             ;
@@ -94,8 +94,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:12     ; 1.0                     ; 4773 MB             ; 00:00:28                           ;
-; Total                  ; 00:00:12     ; --                      ; --                  ; 00:00:28                           ;
+; Analysis & Elaboration ; 00:00:15     ; 1.0                     ; 4773 MB             ; 00:00:32                           ;
+; Total                  ; 00:00:15     ; --                      ; --                  ; 00:00:32                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

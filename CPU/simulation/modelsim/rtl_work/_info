@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/simulation/modelsim
 vcondUnit
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1605578927
+Z2 !s110 1605624243
 !i10b 1
 !s100 SijA7<h`n0LFSn9>XH5XL0
 IR52OmTnoZXD`aimjabL1>2
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1605578927.000000
+Z6 !s108 1605624243.000000
 !s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ControlUnit|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv|
 !i113 1
@@ -36,15 +36,15 @@ Z8 tCvgOpt 0
 ncond@unit
 vconUnit_tb
 R1
-!s110 1605578928
+!s110 1605624244
 !i10b 1
-!s100 Tom:QEK=@jSgYFz`;4R[I0
-IzXd;42iOT8Na14oIEF5]k2
+!s100 aRIJR_2V5[Nfn3=@ed2Zh0
+I:d1Fa0c[ValW?iM71gGGC2
 R3
 !s105 conUnit_tb_sv_unit
 S1
 R0
-w1605572117
+w1605578997
 8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/conUnit_tb.sv
 FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/conUnit_tb.sv
 L0 1
@@ -52,7 +52,7 @@ R5
 r1
 !s85 0
 31
-!s108 1605578928.000000
+!s108 1605624244.000000
 !s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/conUnit_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/conUnit_tb.sv|
 !i113 1
