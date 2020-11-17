@@ -7,25 +7,30 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/simulation/modelsim
-vAcarreo
+Z0 dC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/simulation/modelsim
+vcondUnit
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+<<<<<<< HEAD
 Z2 !s110 1605624455
+=======
+Z2 !s110 1605624243
+>>>>>>> main
 !i10b 1
-!s100 oHD;DNJQfBiGoMzbEKe=l1
-Iz<[[ia_57hXS=1No:W>=C0
+!s100 SijA7<h`n0LFSn9>XH5XL0
+IR52OmTnoZXD`aimjabL1>2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 Acarreo_sv_unit
+!s105 condUnit_sv_unit
 S1
 R0
-Z4 w1605051311
-8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv
-FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv
+Z4 w1605221896
+8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv
+FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv
 L0 1
 Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
+<<<<<<< HEAD
 Z6 !s108 1605624455.000000
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv|
@@ -85,25 +90,39 @@ Z11 !s108 1605624457.000000
 R7
 Z12 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit}
 R9
+=======
+Z6 !s108 1605624243.000000
+!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ControlUnit|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv|
+!i113 1
+Z7 o-sv -work work
+!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ControlUnit
+Z8 tCvgOpt 0
+>>>>>>> main
 ncond@unit
-vControlUnit
+vconUnit_tb
 R1
+<<<<<<< HEAD
 Z13 !s110 1605624456
+=======
+!s110 1605624244
+>>>>>>> main
 !i10b 1
-!s100 U_b>9b[]dLI[E7L=9R6M53
-I9fVI;2`G`O:]XI[>KGZQH2
+!s100 aRIJR_2V5[Nfn3=@ed2Zh0
+I:d1Fa0c[ValW?iM71gGGC2
 R3
-!s105 ControlUnit_sv_unit
+!s105 conUnit_tb_sv_unit
 S1
 R0
-w1605066667
-8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv
-FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv
+w1605578997
+8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/conUnit_tb.sv
+FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/conUnit_tb.sv
 L0 1
 R5
 r1
 !s85 0
 31
+<<<<<<< HEAD
 Z14 !s108 1605624456.000000
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv|
@@ -185,9 +204,16 @@ r1
 R6
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Desborde.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Desborde.sv|
+=======
+!s108 1605624244.000000
+!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/conUnit_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/conUnit_tb.sv|
+>>>>>>> main
 !i113 1
 R7
+!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests
 R8
+<<<<<<< HEAD
 R9
 n@desborde
 vDesplazamientoDerecha
@@ -268,17 +294,21 @@ R7
 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender}
 R9
 n@extender
+=======
+ncon@unit_tb
+>>>>>>> main
 vFlipFlop
 R1
-R10
+R2
 !i10b 1
 !s100 8m7P;[7^g3cl6_Lcah8kK0
-Ie1<W=S_ZV<hZ[0?Ma09Pe2
+Ih32>gm;dD3NcO602m]^ko2
 R3
 !s105 FlipFlop_sv_unit
 S1
 R0
 R4
+<<<<<<< HEAD
 8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv
 FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv
 L0 1
@@ -489,12 +519,17 @@ R0
 R4
 8C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos/Mux8ALU.sv
 FC:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos/Mux8ALU.sv
+=======
+8C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv
+FC:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv
+>>>>>>> main
 L0 1
 R5
 r1
 !s85 0
 31
 R6
+<<<<<<< HEAD
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos/Mux8ALU.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos/Mux8ALU.sv|
 !i113 1
@@ -523,9 +558,15 @@ r1
 Z21 !s108 1605624454.000000
 !s107 C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Negativo.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas|C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Negativo.sv|
+=======
+!s107 C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Fliflops|C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv|
+>>>>>>> main
 !i113 1
 R7
+!s92 -sv -work work +incdir+C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Fliflops
 R8
+<<<<<<< HEAD
 R9
 n@negativo
 vPipelineEx
@@ -786,3 +827,6 @@ R7
 !s92 -sv -work work {+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU}
 R9
 n@unidad@logico@aritmetica
+=======
+n@flip@flop
+>>>>>>> main

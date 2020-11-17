@@ -1,6 +1,7 @@
-|processor_tb
+|conUnit_tb
 
 
+<<<<<<< HEAD
 |processor_tb|processor:proce
 clk => clk.IN8
 rst => rst.IN5
@@ -3342,6 +3343,9 @@ Res <= Res.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |processor_tb|processor:proce|condUnit:CondUnit
+=======
+|conUnit_tb|condUnit:condtst
+>>>>>>> main
 clk => comb.IN0
 rst => rst.IN1
 jmpF[0] => Equal0.IN1
@@ -3359,7 +3363,7 @@ Cflag => flags[0].IN1
 jmpR <= jmpR.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processor_tb|processor:proce|condUnit:CondUnit|FlipFlop:flipiflopi
+|conUnit_tb|condUnit:condtst|FlipFlop:flipiflopi
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 clk => q[2]~reg0.CLK
@@ -3378,6 +3382,7 @@ q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+<<<<<<< HEAD
 |processor_tb|processor:proce|PipelineEx:pipeEx
 clk => rmemo~reg0.CLK
 clk => wmemo~reg0.CLK
@@ -8378,3 +8383,5 @@ DestRo[2] <= DestRo[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DestRo[3] <= DestRo[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+=======
+>>>>>>> main

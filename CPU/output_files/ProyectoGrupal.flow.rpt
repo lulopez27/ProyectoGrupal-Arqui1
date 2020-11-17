@@ -1,5 +1,9 @@
 Flow report for ProyectoGrupal
+<<<<<<< HEAD
 Tue Nov 17 08:47:10 2020
+=======
+Tue Nov 17 08:43:44 2020
+>>>>>>> main
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,10 +45,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Flow Status                 ; Successful - Tue Nov 17 08:47:10 2020       ;
+=======
+; Flow Status                 ; Successful - Tue Nov 17 08:43:44 2020       ;
+>>>>>>> main
 ; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name               ; ProyectoGrupal                              ;
-; Top-level Entity Name       ; processor_tb                                ;
+; Top-level Entity Name       ; conUnit_tb                                  ;
 ; Family                      ; Cyclone V                                   ;
 ; Device                      ; 5CSEMA5F31C6                                ;
 ; Timing Models               ; Final                                       ;
@@ -63,12 +71,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< HEAD
 ; Start date & time ; 11/17/2020 08:46:41 ;
+=======
+; Start date & time ; 11/17/2020 08:43:30 ;
+>>>>>>> main
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ProyectoGrupal      ;
 +-------------------+---------------------+
 
 
+<<<<<<< HEAD
 +----------------------------------------------------------------------------------------------------------------------------------------+
 ; Flow Non-Default Global Settings                                                                                                       ;
 +----------------------------------------------+----------------------------------------+----------------+--------------+----------------+
@@ -91,6 +104,26 @@ https://fpgasoftware.intel.com/eula.
 ; PROJECT_OUTPUT_DIRECTORY                     ; output_files                           ; --             ; --           ; --             ;
 ; TOP_LEVEL_ENTITY                             ; processor_tb                           ; ProyectoGrupal ; --           ; --             ;
 +----------------------------------------------+----------------------------------------+----------------+--------------+----------------+
+=======
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 93180993733489.160562421000212         ; --             ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --             ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>         ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; conUnit_tb  ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; conUnit_tb  ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; conUnit_tb  ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; conUnit_tb                             ; ProyectoGrupal ; --          ; --             ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
+>>>>>>> main
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -98,8 +131,13 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Elaboration ; 00:00:31     ; 1.0                     ; 5085 MB             ; 00:00:37                           ;
 ; Total                  ; 00:00:31     ; --                      ; --                  ; 00:00:37                           ;
+=======
+; Analysis & Elaboration ; 00:00:15     ; 1.0                     ; 4773 MB             ; 00:00:32                           ;
+; Total                  ; 00:00:15     ; --                      ; --                  ; 00:00:32                           ;
+>>>>>>> main
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -108,7 +146,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+------------------+------------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; DESKTOP-VRFLMRQ  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Elaboration ; DESKTOP-6I0S59P  ; Windows 10 ; 10.0       ; x86_64         ;
 +------------------------+------------------+------------+------------+----------------+
 
 
