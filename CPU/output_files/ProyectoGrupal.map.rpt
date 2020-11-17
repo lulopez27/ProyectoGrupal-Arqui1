@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ProyectoGrupal
-Thu Nov 12 19:42:40 2020
+Mon Nov 16 20:08:36 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -9,36 +9,11 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: processor:proce|Mux2:PC_Mux
-  5. Parameter Settings for User Entity Instance: processor:proce|FlipFlop:PC
-  6. Parameter Settings for User Entity Instance: processor:proce|Suma:PC_1
-  7. Parameter Settings for User Entity Instance: processor:proce|Mux2:Extend_Mux
-  8. Parameter Settings for User Entity Instance: processor:proce|Mux2:PCReg_Mux
-  9. Parameter Settings for User Entity Instance: processor:proce|Mux2:MuxR2
- 10. Parameter Settings for User Entity Instance: processor:proce|Mux2:MuxR3
- 11. Parameter Settings for User Entity Instance: processor:proce|Mux2:MuxRDest
- 12. Parameter Settings for User Entity Instance: processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:WbR2
- 13. Parameter Settings for User Entity Instance: processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:ExR2
- 14. Parameter Settings for User Entity Instance: processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:WbR3
- 15. Parameter Settings for User Entity Instance: processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:ExR3
- 16. Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU
- 17. Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|Suma:Sum
- 18. Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|Resta:Res
- 19. Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|Multiplicacion:Mul
- 20. Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|Modulo:Mod
- 21. Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|DesplazamientoDerecha:DespDer
- 22. Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|Mux8ALU:Mux8
- 23. Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|Cero:BanCer
- 24. Parameter Settings for User Entity Instance: processor:proce|condUnit:CondUnit|FlipFlop:flipiflopi
- 25. Parameter Settings for User Entity Instance: processor:proce|Mux2:MemMux
- 26. Analysis & Elaboration Settings
- 27. Port Connectivity Checks: "processor:proce|condUnit:CondUnit|FlipFlop:flipiflopi"
- 28. Port Connectivity Checks: "processor:proce|Mux2:MuxRDest"
- 29. Port Connectivity Checks: "processor:proce|Mux2:MuxR3"
- 30. Port Connectivity Checks: "processor:proce|Mux2:MuxR2"
- 31. Port Connectivity Checks: "processor:proce|Suma:PC_1"
- 32. Port Connectivity Checks: "processor:proce"
- 33. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: condUnit:condtst|FlipFlop:flipiflopi
+  5. Analysis & Elaboration Settings
+  6. Port Connectivity Checks: "condUnit:condtst|FlipFlop:flipiflopi"
+  7. Port Connectivity Checks: "condUnit:condtst"
+  8. Analysis & Elaboration Messages
 
 
 
@@ -65,10 +40,10 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Nov 12 19:42:40 2020       ;
+; Analysis & Elaboration Status ; Successful - Mon Nov 16 20:08:36 2020       ;
 ; Quartus Prime Version         ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                 ; ProyectoGrupal                              ;
-; Top-level Entity Name         ; processor_tb                                ;
+; Top-level Entity Name         ; conUnit_tb                                  ;
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -85,8 +60,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -96,223 +71,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|Mux2:PC_Mux ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; N              ; 32    ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|FlipFlop:PC ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; N              ; 32    ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|Suma:PC_1 ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; N              ; 32    ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|Mux2:Extend_Mux ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; N              ; 32    ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|Mux2:PCReg_Mux ;
-+----------------+-------+----------------------------------------------------+
-; Parameter Name ; Value ; Type                                               ;
-+----------------+-------+----------------------------------------------------+
-; N              ; 32    ; Signed Integer                                     ;
-+----------------+-------+----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|Mux2:MuxR2 ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; N              ; 4     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|Mux2:MuxR3 ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; N              ; 4     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|Mux2:MuxRDest ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; N              ; 4     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:WbR2 ;
-+----------------+-------+--------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                           ;
-+----------------+-------+--------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:ExR2 ;
-+----------------+-------+--------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                           ;
-+----------------+-------+--------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:WbR3 ;
-+----------------+-------+--------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                           ;
-+----------------+-------+--------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|ForwardUnitALU:FwrdUnitALU|Mux2:ExR3 ;
-+----------------+-------+--------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                           ;
-+----------------+-------+--------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                 ;
-+----------------+-------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|Suma:Sum ;
-+----------------+-------+-------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                    ;
-+----------------+-------+-------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                          ;
-+----------------+-------+-------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|Resta:Res ;
-+----------------+-------+--------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                           ;
-+----------------+-------+--------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|Multiplicacion:Mul ;
-+----------------+-------+-----------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                              ;
-+----------------+-------+-----------------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                                    ;
-+----------------+-------+-----------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|Modulo:Mod ;
-+----------------+-------+---------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                            ;
-+----------------+-------+---------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|DesplazamientoDerecha:DespDer ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                         ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|Mux8ALU:Mux8 ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                        ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                              ;
-+----------------+-------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|UnidadLogicoAritmetica:ALU|Cero:BanCer ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|condUnit:CondUnit|FlipFlop:flipiflopi ;
-+----------------+-------+---------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------+
-; N              ; 4     ; Signed Integer                                                            ;
-+----------------+-------+---------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:proce|Mux2:MemMux ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; N              ; 32    ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: condUnit:condtst|FlipFlop:flipiflopi ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -322,7 +87,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; processor_tb       ; ProyectoGrupal     ;
+; Top-level entity name                                                           ; conUnit_tb         ; ProyectoGrupal     ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -404,7 +169,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:proce|condUnit:CondUnit|FlipFlop:flipiflopi"                              ;
+; Port Connectivity Checks: "condUnit:condtst|FlipFlop:flipiflopi"                                               ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -412,53 +177,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "processor:proce|Mux2:MuxRDest" ;
-+---------+-------+----------+------------------------------+
-; Port    ; Type  ; Severity ; Details                      ;
-+---------+-------+----------+------------------------------+
-; result1 ; Input ; Info     ; Stuck at GND                 ;
-+---------+-------+----------+------------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "processor:proce|Mux2:MuxR3" ;
-+---------+-------+----------+---------------------------+
-; Port    ; Type  ; Severity ; Details                   ;
-+---------+-------+----------+---------------------------+
-; result1 ; Input ; Info     ; Stuck at GND              ;
-+---------+-------+----------+---------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "processor:proce|Mux2:MuxR2" ;
-+---------+-------+----------+---------------------------+
-; Port    ; Type  ; Severity ; Details                   ;
-+---------+-------+----------+---------------------------+
-; result1 ; Input ; Info     ; Stuck at GND              ;
-+---------+-------+----------+---------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:proce|Suma:PC_1"                                                              ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; B[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; B[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; Cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:proce"                                                                        ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; GPIOaddr ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; GPIO     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; GPIOEn   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "condUnit:condtst"                                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; jmpR ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------+
@@ -467,181 +192,99 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Thu Nov 12 19:42:21 2020
+    Info: Processing started: Mon Nov 16 20:08:24 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoGrupal -c ProyectoGrupal --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file processor.sv
-    Info (12023): Found entity 1: processor File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 1
+    Info (12023): Found entity 1: processor File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/processor_tb.sv
-    Info (12023): Found entity 1: processor_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv Line: 2
+    Info (12023): Found entity 1: processor_tb File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu/unidadlogicoaritmetica.sv
-    Info (12023): Found entity 1: UnidadLogicoAritmetica File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv Line: 1
+    Info (12023): Found entity 1: UnidadLogicoAritmetica File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/banderas/negativo.sv
-    Info (12023): Found entity 1: Negativo File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Negativo.sv Line: 1
+    Info (12023): Found entity 1: Negativo File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Negativo.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/banderas/desborde.sv
-    Info (12023): Found entity 1: Desborde File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Desborde.sv Line: 1
+    Info (12023): Found entity 1: Desborde File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Desborde.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/banderas/cero.sv
-    Info (12023): Found entity 1: Cero File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Cero.sv Line: 1
+    Info (12023): Found entity 1: Cero File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Cero.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/banderas/acarreo.sv
-    Info (12023): Found entity 1: Acarreo File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv Line: 1
+    Info (12023): Found entity 1: Acarreo File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ALU/Banderas/Acarreo.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/modulos/mux8alu.sv
-    Info (12023): Found entity 1: Mux8ALU File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Modulos/Mux8ALU.sv Line: 1
+    Info (12023): Found entity 1: Mux8ALU File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ALU/Modulos/Mux8ALU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/operaciones/desplazamientoderecha.sv
-    Info (12023): Found entity 1: DesplazamientoDerecha File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv Line: 1
+    Info (12023): Found entity 1: DesplazamientoDerecha File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/DesplazamientoDerecha.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/operaciones/suma.sv
-    Info (12023): Found entity 1: Suma File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Suma.sv Line: 1
+    Info (12023): Found entity 1: Suma File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Suma.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/operaciones/resta.sv
-    Info (12023): Found entity 1: Resta File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Resta.sv Line: 1
+    Info (12023): Found entity 1: Resta File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Resta.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/operaciones/multiplicacion.sv
-    Info (12023): Found entity 1: Multiplicacion File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Multiplicacion.sv Line: 1
+    Info (12023): Found entity 1: Multiplicacion File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Multiplicacion.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/operaciones/modulo.sv
-    Info (12023): Found entity 1: Modulo File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Modulo.sv Line: 1
+    Info (12023): Found entity 1: Modulo File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ALU/Operaciones/Modulo.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file extender/extender.sv
-    Info (12023): Found entity 1: Extender File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Extender/Extender.sv Line: 1
+    Info (12023): Found entity 1: Extender File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Extender/Extender.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file controlunit/controlunit.sv
-    Info (12023): Found entity 1: ControlUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv Line: 1
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoders/extenddeco.sv
-    Info (12023): Found entity 1: ExtendDeco File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ExtendDeco.sv Line: 1
+    Info (12023): Found entity 1: ExtendDeco File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Decoders/ExtendDeco.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoders/controlunitdeco.sv
-    Info (12023): Found entity 1: ControlUnitDeco File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Decoders/ControlUnitDeco.sv Line: 1
+    Info (12023): Found entity 1: ControlUnitDeco File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Decoders/ControlUnitDeco.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinewb.sv
-    Info (12023): Found entity 1: PipelineWB File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineWB.sv Line: 1
+    Info (12023): Found entity 1: PipelineWB File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineWB.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinemem.sv
-    Info (12023): Found entity 1: PipelineMem File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv Line: 1
+    Info (12023): Found entity 1: PipelineMem File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineMem.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelineex.sv
-    Info (12023): Found entity 1: PipelineEx File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv Line: 1
+    Info (12023): Found entity 1: PipelineEx File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineEx.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memorias/registerfile.sv
-    Info (12023): Found entity 1: RegisterFile File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/RegisterFile.sv Line: 1
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Memorias/RegisterFile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memorias/instructionmemory.sv
-    Info (12023): Found entity 1: InstructionMemory File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv Line: 1
+    Info (12023): Found entity 1: InstructionMemory File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux2.sv
-    Info (12023): Found entity 1: Mux2 File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Muxes/Mux2.sv Line: 1
+    Info (12023): Found entity 1: Mux2 File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Muxes/Mux2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file controlunit/condunit.sv
-    Info (12023): Found entity 1: condUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv Line: 1
+    Info (12023): Found entity 1: condUnit File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fliflops/flipflop.sv
-    Info (12023): Found entity 1: FlipFlop File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file tests/ctrlunit_tb.sv
-    Info (12023): Found entity 1: ctrlunit_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/ctrlunit_tb.sv Line: 1
+    Info (12023): Found entity 1: FlipFlop File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Fliflops/FlipFlop.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux8.sv
-    Info (12023): Found entity 1: Mux8 File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Muxes/Mux8.sv Line: 1
+    Info (12023): Found entity 1: Mux8 File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Muxes/Mux8.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memorias/datamemory.sv
-    Info (12023): Found entity 1: DataMemory File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemory.sv Line: 1
+    Info (12023): Found entity 1: DataMemory File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Memorias/DataMemory.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memorias/imagerom/imagerom.sv
-    Info (12023): Found entity 1: ImageROM File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 1
+    Info (12023): Found entity 1: ImageROM File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/registerfiletest.sv
-    Info (12023): Found entity 1: RegisterFileTest File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/RegisterFileTest.sv Line: 1
+    Info (12023): Found entity 1: RegisterFileTest File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/RegisterFileTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memorias/memorycontroller.sv
-    Info (12023): Found entity 1: MemoryController File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/MemoryController.sv Line: 1
+    Info (12023): Found entity 1: MemoryController File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Memorias/MemoryController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/datamemorytest.sv
-    Info (12023): Found entity 1: DataMemoryTest File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/DataMemoryTest.sv Line: 1
+    Info (12023): Found entity 1: DataMemoryTest File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/DataMemoryTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/imageromtest.sv
-    Info (12023): Found entity 1: ImageROMTest File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/ImageROMTest.sv Line: 1
+    Info (12023): Found entity 1: ImageROMTest File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/ImageROMTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/instructionmemorytest.sv
-    Info (12023): Found entity 1: InstructionMemoryTest File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/InstructionMemoryTest.sv Line: 1
+    Info (12023): Found entity 1: InstructionMemoryTest File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/InstructionMemoryTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/unidadlogicoaritmeticatest.sv
-    Info (12023): Found entity 1: UnidadLogicoAritmeticaTest File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/UnidadLogicoAritmeticaTest.sv Line: 1
+    Info (12023): Found entity 1: UnidadLogicoAritmeticaTest File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/UnidadLogicoAritmeticaTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/memorycontrollertest.sv
-    Info (12023): Found entity 1: MemoryControllerTest File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/MemoryControllerTest.sv Line: 1
+    Info (12023): Found entity 1: MemoryControllerTest File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/MemoryControllerTest.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fowrdunit/forwardunitalu.sv
-    Info (12023): Found entity 1: ForwardUnitALU File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/FowrdUnit/ForwardUnitALU.sv Line: 1
+    Info (12023): Found entity 1: ForwardUnitALU File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/FowrdUnit/ForwardUnitALU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/conunit_tb.sv
-    Info (12023): Found entity 1: conUnit_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/conUnit_tb.sv Line: 1
+    Info (12023): Found entity 1: conUnit_tb File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/conUnit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/pipeline_tb.sv
-    Info (12023): Found entity 1: pipeline_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/pipeline_tb.sv Line: 1
+    Info (12023): Found entity 1: pipeline_tb File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/pipeline_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinefetch.sv
-    Info (12023): Found entity 1: PipelineFetch File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineFetch.sv Line: 1
-Info (12127): Elaborating entity "processor_tb" for the top level hierarchy
-Warning (10755): Verilog HDL warning at processor_tb.sv(16): assignments to clk create a combinational loop File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv Line: 16
-Info (12128): Elaborating entity "processor" for hierarchy "processor:proce" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv Line: 6
-Info (12128): Elaborating entity "Mux2" for hierarchy "processor:proce|Mux2:PC_Mux" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 11
-Info (12128): Elaborating entity "FlipFlop" for hierarchy "processor:proce|FlipFlop:PC" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 13
-Info (12128): Elaborating entity "Suma" for hierarchy "processor:proce|Suma:PC_1" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 15
-Info (12128): Elaborating entity "InstructionMemory" for hierarchy "processor:proce|InstructionMemory:InsMem" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 17
-Warning (10850): Verilog HDL warning at InstructionMemory.sv(7): number of words (195) in memory file does not match the number of elements in the address range [0:255] File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv Line: 7
-Warning (10030): Net "ROM.data_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv Line: 4
-Warning (10030): Net "ROM.waddr_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv Line: 4
-Warning (10030): Net "ROM.we_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/InstructionMemory.sv Line: 4
-Info (12128): Elaborating entity "PipelineFetch" for hierarchy "processor:proce|PipelineFetch:pipelineFetch" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 19
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "processor:proce|ControlUnit:CtrlUnit" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 37
-Info (12128): Elaborating entity "ControlUnitDeco" for hierarchy "processor:proce|ControlUnit:CtrlUnit|ControlUnitDeco:ALUDeco" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv Line: 12
-Info (12128): Elaborating entity "ExtendDeco" for hierarchy "processor:proce|ControlUnit:CtrlUnit|ExtendDeco:ExtDeco" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/ControlUnit.sv Line: 13
-Info (12128): Elaborating entity "RegisterFile" for hierarchy "processor:proce|RegisterFile:RegFile" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 39
-Info (12128): Elaborating entity "Extender" for hierarchy "processor:proce|Extender:extnd" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 41
-Info (12128): Elaborating entity "Mux2" for hierarchy "processor:proce|Mux2:MuxR2" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 47
-Info (12128): Elaborating entity "PipelineMem" for hierarchy "processor:proce|PipelineMem:pipeMem" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 59
-Info (12128): Elaborating entity "ForwardUnitALU" for hierarchy "processor:proce|ForwardUnitALU:FwrdUnitALU" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 62
-Info (12128): Elaborating entity "UnidadLogicoAritmetica" for hierarchy "processor:proce|UnidadLogicoAritmetica:ALU" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 66
-Info (12128): Elaborating entity "Resta" for hierarchy "processor:proce|UnidadLogicoAritmetica:ALU|Resta:Res" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv Line: 14
-Info (12128): Elaborating entity "Multiplicacion" for hierarchy "processor:proce|UnidadLogicoAritmetica:ALU|Multiplicacion:Mul" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv Line: 15
-Info (12128): Elaborating entity "Modulo" for hierarchy "processor:proce|UnidadLogicoAritmetica:ALU|Modulo:Mod" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv Line: 16
-Info (12128): Elaborating entity "DesplazamientoDerecha" for hierarchy "processor:proce|UnidadLogicoAritmetica:ALU|DesplazamientoDerecha:DespDer" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv Line: 17
-Info (12128): Elaborating entity "Mux8ALU" for hierarchy "processor:proce|UnidadLogicoAritmetica:ALU|Mux8ALU:Mux8" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv Line: 19
-Info (12128): Elaborating entity "Negativo" for hierarchy "processor:proce|UnidadLogicoAritmetica:ALU|Negativo:BanNeg" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv Line: 21
-Info (12128): Elaborating entity "Cero" for hierarchy "processor:proce|UnidadLogicoAritmetica:ALU|Cero:BanCer" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv Line: 22
-Info (12128): Elaborating entity "Desborde" for hierarchy "processor:proce|UnidadLogicoAritmetica:ALU|Desborde:BanOve" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv Line: 23
-Info (12128): Elaborating entity "Acarreo" for hierarchy "processor:proce|UnidadLogicoAritmetica:ALU|Acarreo:BanCar" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ALU/UnidadLogicoAritmetica.sv Line: 24
-Info (12128): Elaborating entity "condUnit" for hierarchy "processor:proce|condUnit:CondUnit" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 68
-Info (12128): Elaborating entity "FlipFlop" for hierarchy "processor:proce|condUnit:CondUnit|FlipFlop:flipiflopi" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv Line: 16
-Info (12128): Elaborating entity "PipelineEx" for hierarchy "processor:proce|PipelineEx:pipeEx" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 73
-Info (12128): Elaborating entity "MemoryController" for hierarchy "processor:proce|MemoryController:ChipSel" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 76
-Info (12128): Elaborating entity "DataMemory" for hierarchy "processor:proce|MemoryController:ChipSel|DataMemory:RAM" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/MemoryController.sv Line: 7
-Info (12128): Elaborating entity "ImageROM" for hierarchy "processor:proce|MemoryController:ChipSel|ImageROM:ROM" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/MemoryController.sv Line: 8
-Warning (10030): Net "ROM1.data_a" at ImageROM.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 4
-Warning (10030): Net "ROM1.waddr_a" at ImageROM.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 4
-Warning (10030): Net "ROM2.data_a" at ImageROM.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 5
-Warning (10030): Net "ROM2.waddr_a" at ImageROM.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 5
-Warning (10030): Net "ROM3.data_a" at ImageROM.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 6
-Warning (10030): Net "ROM3.waddr_a" at ImageROM.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 6
-Warning (10030): Net "ROM4.data_a" at ImageROM.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 7
-Warning (10030): Net "ROM4.waddr_a" at ImageROM.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 7
-Warning (10030): Net "ROM5.data_a" at ImageROM.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 8
-Warning (10030): Net "ROM5.waddr_a" at ImageROM.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 8
-Warning (10030): Net "ROM6.data_a" at ImageROM.sv(9) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 9
-Warning (10030): Net "ROM6.waddr_a" at ImageROM.sv(9) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 9
-Warning (10030): Net "ROM7.data_a" at ImageROM.sv(10) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 10
-Warning (10030): Net "ROM7.waddr_a" at ImageROM.sv(10) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 10
-Warning (10030): Net "ROM8.data_a" at ImageROM.sv(11) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 11
-Warning (10030): Net "ROM8.waddr_a" at ImageROM.sv(11) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 11
-Warning (10030): Net "ROM9.data_a" at ImageROM.sv(12) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 12
-Warning (10030): Net "ROM9.waddr_a" at ImageROM.sv(12) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 12
-Warning (10030): Net "ROM10.data_a" at ImageROM.sv(13) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 13
-Warning (10030): Net "ROM10.waddr_a" at ImageROM.sv(13) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 13
-Warning (10030): Net "ROM11.data_a" at ImageROM.sv(14) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 14
-Warning (10030): Net "ROM11.waddr_a" at ImageROM.sv(14) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 14
-Warning (10030): Net "ROM12.data_a" at ImageROM.sv(15) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 15
-Warning (10030): Net "ROM12.waddr_a" at ImageROM.sv(15) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 15
-Warning (10030): Net "ROM13.data_a" at ImageROM.sv(16) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 16
-Warning (10030): Net "ROM13.waddr_a" at ImageROM.sv(16) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 16
-Warning (10030): Net "ROM14.data_a" at ImageROM.sv(17) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 17
-Warning (10030): Net "ROM14.waddr_a" at ImageROM.sv(17) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 17
-Warning (10030): Net "ROM15.data_a" at ImageROM.sv(18) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 18
-Warning (10030): Net "ROM15.waddr_a" at ImageROM.sv(18) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 18
-Warning (10030): Net "ROM16.data_a" at ImageROM.sv(19) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 19
-Warning (10030): Net "ROM16.waddr_a" at ImageROM.sv(19) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 19
-Warning (10030): Net "ROM1.we_a" at ImageROM.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 4
-Warning (10030): Net "ROM2.we_a" at ImageROM.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 5
-Warning (10030): Net "ROM3.we_a" at ImageROM.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 6
-Warning (10030): Net "ROM4.we_a" at ImageROM.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 7
-Warning (10030): Net "ROM5.we_a" at ImageROM.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 8
-Warning (10030): Net "ROM6.we_a" at ImageROM.sv(9) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 9
-Warning (10030): Net "ROM7.we_a" at ImageROM.sv(10) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 10
-Warning (10030): Net "ROM8.we_a" at ImageROM.sv(11) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 11
-Warning (10030): Net "ROM9.we_a" at ImageROM.sv(12) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 12
-Warning (10030): Net "ROM10.we_a" at ImageROM.sv(13) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 13
-Warning (10030): Net "ROM11.we_a" at ImageROM.sv(14) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 14
-Warning (10030): Net "ROM12.we_a" at ImageROM.sv(15) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 15
-Warning (10030): Net "ROM13.we_a" at ImageROM.sv(16) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 16
-Warning (10030): Net "ROM14.we_a" at ImageROM.sv(17) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 17
-Warning (10030): Net "ROM15.we_a" at ImageROM.sv(18) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 18
-Warning (10030): Net "ROM16.we_a" at ImageROM.sv(19) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/Memorias/ImageROM/ImageROM.sv Line: 19
-Info (12128): Elaborating entity "PipelineWB" for hierarchy "processor:proce|PipelineWB:pipeWb" File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/processor.sv Line: 78
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/skryf/Documents/Arquitectura de Computadores I/Proyecto 2/ProyectoGrupal-Arqui1/CPU/tests/processor_tb.sv Line: 3
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 56 warnings
-    Info: Peak virtual memory: 5002 megabytes
-    Info: Processing ended: Thu Nov 12 19:42:40 2020
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:36
+    Info (12023): Found entity 1: PipelineFetch File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/Pipeline/PipelineFetch.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tests/ctrlunit_tb.sv
+    Info (12023): Found entity 1: ctrlUnit_tb File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/ctrlUnit_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tests/frwrdunit_tb.sv
+    Info (12023): Found entity 1: frwrdUnit_tb File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/frwrdUnit_tb.sv Line: 1
+Info (12127): Elaborating entity "conUnit_tb" for the top level hierarchy
+Info (12128): Elaborating entity "condUnit" for hierarchy "condUnit:condtst" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/tests/conUnit_tb.sv Line: 4
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "condUnit:condtst|FlipFlop:flipiflopi" File: C:/Users/luisd/Documents/ProjectsFPGA/ProyectoGrupalArqui1/ProyectoGrupal-Arqui1/CPU/ControlUnit/condUnit.sv Line: 16
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4773 megabytes
+    Info: Processing ended: Mon Nov 16 20:08:36 2020
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:28
 
 

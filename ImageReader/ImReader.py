@@ -20,8 +20,9 @@ for line in file:
         else:
             A[i,j] = byte;
             byte = 0;
-print(A)
-ax1.imshow (A,cmap='gray');
-B = plt.imread("testimage.png")
-ax2.imshow(B,cmap='gray');
+B = plt.imread("photo.png")
+ax1.imshow(B,cmap='gray');
+ax1.set_title("Imagen Original")
+ax2.imshow (A,cmap='gray');
+ax2.set_title("Imagen Ecualizada")
 plt.show();
